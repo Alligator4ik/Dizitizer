@@ -68,6 +68,15 @@
     <ClCompile Include="SettingsWindowController.cpp">
       <Filter>Source Files\Controller</Filter>
     </ClCompile>
+    <ClCompile Include="ErrorLogWindowController.cpp">
+      <Filter>Source Files\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ErrorLogWindowController.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ErrorLogWindowController.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="mainwindow.ui">
@@ -85,6 +94,12 @@
     <CustomBuild Include="mainwindow.h">
       <Filter>Header Files\Controller</Filter>
     </CustomBuild>
+    <CustomBuild Include="errorlogwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ErrorLogWindowController.h">
+      <Filter>Header Files\Controller</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_mainwindow.h">
@@ -100,6 +115,9 @@
       <Filter>Resource Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_settingswindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_errorlogwindow.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
