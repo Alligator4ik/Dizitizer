@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include <fstream>
 #include <thread>
+#include <ToRussianTextForQString.h>
+#include "DataAnalyzer.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
 : QMainWindow(parent, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowMinMaxButtonsHint) {
@@ -20,6 +23,21 @@ MainWindow::MainWindow(QWidget *parent)
 	auto thresholdSpinBoxes = ui.WDFTabWidget->findChildren<QSpinBox*>(QRegExp("thresholdSpinBox"), Qt::FindChildrenRecursively);
 	for each (auto spinBox in thresholdSpinBoxes)
 		connect(spinBox, SIGNAL(valueChanged(int)), this, SLOT(changeThresholdSlot(int)));
+
+	//connect samples spinboxes
+	auto samplesSpinBoxes = ui.WDFTabWidget->findChildren<QSpinBox*>(QRegExp("samplesSpinBox"), Qt::FindChildrenRecursively);
+	for each (auto spinBox in samplesSpinBoxes)
+		connect(spinBox, SIGNAL(valueChanged(int)), this, SLOT(changeSampleSlot(int)));
+
+	//connect DC offset spinboxes
+	auto DCOffsetSpinBoxes = ui.WDFTabWidget->findChildren<QSpinBox*>(QRegExp("DACOffsetSpinBox"), Qt::FindChildrenRecursively);
+	for each (auto spinBox in DCOffsetSpinBoxes)
+		connect(spinBox, SIGNAL(valueChanged(int)), this, SLOT(changeDCOffsetSlot(int)));
+
+	//connect reset buttons
+	auto DCResetButtons = ui.settingsBlock->findChildren<QPushButton*>(QRegExp("ResetButton"), Qt::FindChildrenRecursively);
+	for each (auto button in DCResetButtons)
+		connect(button, SIGNAL(clicked()), this, SLOT(resetParameterSlot()));
 }
 
 MainWindow::~MainWindow() {
@@ -36,6 +54,15 @@ MainWindow::~MainWindow() {
 
 VMECommunication& MainWindow::getVME() {
 	return vme;
+}
+
+void MainWindow::updateData() {
+	DataAnalyzer vmeData(vme);
+	while (acquisitionWasStarted) {
+		CAEN_DGTZ_WriteRegister(0, CAEN_DGTZ_BLT_EVENT_NUM_ADD, 0x1);
+		CAEN_DGTZ_WriteRegister(1, CAEN_DGTZ_BLT_EVENT_NUM_ADD, 0x1);
+		vmeData.getData();
+	}
 }
 
 void MainWindow::readSettings() {
@@ -55,12 +82,12 @@ void MainWindow::connectSlot() {
 		vme.connect();
 		if (vme.isConnected()) {
 			//enable control buttons
-			ui.connectButton->setToolTip("Disconnect");
+			ui.connectButton->setToolTip(toRussian("Отключить"));
 			ui.startStopButton->setEnabled(true);
 			ui.drawSignalsButton->setEnabled(true);
 			ui.recordButton->setEnabled(true);
-			ui.postTriggerBox->setEnabled(true);
-			ui.bufferBox->setEnabled(true);
+			ui.triggerSettingBox->setEnabled(true);
+			ui.bufferComboBox->setEnabled(true);
 			//enable WDF tabs
 			for (auto i = 0; i < vme.numberOfWDF; i++) {
 				if (vme.WDFIsEnabled[i]) {
@@ -70,51 +97,56 @@ void MainWindow::connectSlot() {
 					ui.WDFTabWidget->setTabText(i, modelName);
 				}
 			}
-		}
+		} else
+			ui.connectButton->setChecked(false);							//if connection wasn't established
 	}
 	else {
-		//disable control buttons
-		ui.connectButton->setToolTip("Connect");
-		ui.startStopButton->setEnabled(false);
-		ui.drawSignalsButton->setEnabled(false);
-		ui.recordButton->setEnabled(false);
-		ui.postTriggerBox->setEnabled(false);
-		ui.bufferBox->setEnabled(false);
-		//disable WDF tabs
-		for (auto tabNumber = 0; tabNumber < vme.numberOfWDF; tabNumber++)
-			ui.WDFTabWidget->setTabEnabled(tabNumber, false);
-		//disconnect from VME
-		vme.disconnect();
-	}
-}
-
-void startAcq(bool& acquisitionWasStarted, Ui::MainWindowClass& ui) {
-	auto i = 0;
-	while (acquisitionWasStarted) {
-		qInfo("acquisitionWasStarted %i times\n", i++);
-		Sleep(1);
+			//set control buttons disabled
+			ui.connectButton->setToolTip(toRussian("Включить"));
+			ui.startStopButton->setEnabled(false);
+			ui.drawSignalsButton->setEnabled(false);
+			ui.recordButton->setEnabled(false);
+			ui.triggerSettingBox->setEnabled(false);
+			ui.bufferComboBox->setEnabled(false);
+			//disable WDF tabs
+			for (auto tabNumber = 0; tabNumber < vme.numberOfWDF; tabNumber++)
+				ui.WDFTabWidget->setTabEnabled(tabNumber, false);
+			//disconnect from VME
+			vme.disconnect();
 	}
 }
 
 void MainWindow::startStopSlot() {
 	if (!acquisitionWasStarted) {
-		acquisitionWasStarted = true;
-		ui.startStopButton->setToolTip("Stop");
-		ui.connectButton->setEnabled(false);
-		ui.exitButton->setEnabled(false);
-		ui.bufferBox->setEnabled(false);
-		//vme.startAcquisition();
-		acquisitionThread = std::thread(startAcq, std::ref(acquisitionWasStarted), std::ref(ui));
-		acquisitionThread.detach();
+		if (vme.startAcquisition() == CAEN_DGTZ_Success) {
+			acquisitionWasStarted = true;
+			ui.startStopButton->setToolTip(toRussian("Стоп"));
+			ui.connectButton->setEnabled(false);
+			ui.exitButton->setEnabled(false);
+			ui.bufferComboBox->setEnabled(false);
+			//updateData();
+			acquisitionThread = std::thread(&MainWindow::updateData, this);
+			acquisitionThread.detach();
+		}
 	}
 	else {
-		//vme.stopAcquisition();
+		vme.stopAcquisition();
 		acquisitionWasStarted = false;
-		ui.startStopButton->setToolTip("Start");
+		ui.startStopButton->setToolTip(toRussian("Старт"));
 		ui.connectButton->setEnabled(true);
 		ui.exitButton->setEnabled(true);
-		ui.bufferBox->setEnabled(true);
+		ui.bufferComboBox->setEnabled(true);
 	}
+}
+
+void MainWindow::startStopWritingDataSlot() {
+	if (!writingDataWasStarted) {
+		vme.clearData();
+	}
+	else {
+		
+	}
+	writingDataWasStarted = !writingDataWasStarted;
 }
 
 void MainWindow::openSettingsSlot() {
@@ -142,9 +174,15 @@ void MainWindow::changeTriggerSettingsSlot() {
 
 	auto channelBoxName = "chanel" + std::to_string(channelNumber) + "SettingsBox_" + std::to_string(WDFNumber+1);
 	auto channelButtonsBox = ui.WDFTabWidget->findChildren<QObject*>(QString(channelBoxName.c_str()), Qt::FindChildrenRecursively);
-	auto channelButtons = channelButtonsBox[0]->findChildren<QWidget*>(QRegExp("^(?!.*changeTriggerButton|samplesSpinBox).*$"), Qt::FindDirectChildrenOnly);
-	auto blockSamplesButton = channelButtonsBox[0]->findChildren<QPushButton*>(QRegExp("blockSamplesButton"), Qt::FindDirectChildrenOnly);
+		
+	auto channelButtons = channelButtonsBox[0]->findChildren<QWidget*>(QRegExp("^(?!.*changeTriggerButton|samplesSpinBox|blockSamplesButton|thresholdSpinBox|thresholdIsDrawingButton).*$"), Qt::FindDirectChildrenOnly);
+	
 	auto samplesSpinBox = channelButtonsBox[0]->findChildren<QSpinBox*>(QRegExp("samplesSpinBox"), Qt::FindDirectChildrenOnly);
+	auto blockSamplesButton = channelButtonsBox[0]->findChildren<QPushButton*>(QRegExp("blockSamplesButton"), Qt::FindDirectChildrenOnly);
+	auto thresholdSpinBox = channelButtonsBox[0]->findChildren<QSpinBox*>(QRegExp("thresholdSpinBox"), Qt::FindDirectChildrenOnly);
+	auto thresholdIsDrawingButton = channelButtonsBox[0]->findChildren<QPushButton*>(QRegExp("thresholdIsDrawingButton"), Qt::FindDirectChildrenOnly);
+		
+	
 
 	switch (color) {
 			//if red
@@ -152,16 +190,20 @@ void MainWindow::changeTriggerSettingsSlot() {
 							//make channel buttons active
 							for each (auto button in channelButtons)
 								button->setEnabled(true);
-							if (!(blockSamplesButton[0]->isChecked()))
-								samplesSpinBox[0]->setEnabled(true);
-							buttonPressed->setText("Active");
+							buttonPressed->setText(toRussian("Вкл."));
+							buttonPressed->setToolTip(toRussian("Включен"));
 							buttonPressed->setStyleSheet("background-color: lime");
 							vme.channelActiveEnableMask[WDFNumber] = vme.channelActiveEnableMask[WDFNumber] ^ channelMask;
 							break;
 		}
 			//if green
 		case 255000: {
-							buttonPressed->setText("Trigger");
+							thresholdSpinBox[0]->setEnabled(true);
+							thresholdIsDrawingButton[0]->setEnabled(true);
+							blockSamplesButton[0]->setEnabled(true);
+							if (!(blockSamplesButton[0]->isChecked()))
+								samplesSpinBox[0]->setEnabled(true);
+							buttonPressed->setText(toRussian("Триггер"));
 							buttonPressed->setStyleSheet("background-color: yellow");
 							vme.channelTriggerEnableMask[WDFNumber] = vme.channelTriggerEnableMask[WDFNumber] ^ channelMask;
 							break;
@@ -171,8 +213,12 @@ void MainWindow::changeTriggerSettingsSlot() {
 							//make channel buttons inactive
 							for each (auto button in channelButtons)
 								button->setEnabled(false);
+							thresholdSpinBox[0]->setEnabled(false);
+							thresholdIsDrawingButton[0]->setEnabled(false);
+							blockSamplesButton[0]->setEnabled(false);
 							samplesSpinBox[0]->setEnabled(false);
-							buttonPressed->setText("Inactive");
+							buttonPressed->setText(toRussian("Выкл."));
+							buttonPressed->setToolTip(toRussian("Выключен"));
 							buttonPressed->setStyleSheet("background-color: red");
 							vme.channelActiveEnableMask[WDFNumber] = vme.channelActiveEnableMask[WDFNumber] ^ channelMask;
 							vme.channelTriggerEnableMask[WDFNumber] = vme.channelTriggerEnableMask[WDFNumber] ^ channelMask;
@@ -187,7 +233,38 @@ void MainWindow::changeThresholdSlot(int newThreshold) {
 	auto spinBoxNameList = spinBox->objectName().split("_");
 	auto WDFNumber = spinBoxNameList[1].toInt() - 1;
 	auto channelNumber = spinBoxNameList[2].toInt();
-	vme.threshold[WDFNumber][channelNumber] = newThreshold;
+	vme.setChannelThreshold(WDFNumber, channelNumber, newThreshold);
+}
+
+void MainWindow::changeSampleSlot(int newSample) {
+	auto spinBox = static_cast<QSpinBox*>(sender());
+	auto spinBoxNameList = spinBox->objectName().split("_");
+	auto WDFNumber = spinBoxNameList[1].toInt() - 1;
+	auto channelNumber = spinBoxNameList[2].toInt();
+	vme.setChannelSample(WDFNumber, channelNumber, newSample);
+}
+
+void MainWindow::changeDCOffsetSlot(int newOffset) {
+	auto spinBox = static_cast<QSpinBox*>(sender());
+	auto spinBoxNameList = spinBox->objectName().split("_");
+	auto WDFNumber = spinBoxNameList[1].toInt() - 1;
+	auto channelNumber = spinBoxNameList[2].toInt();
+	vme.setChannelOffset(WDFNumber, channelNumber, newOffset);
+}
+
+void MainWindow::resetParameterSlot() const {
+	auto resetButton = static_cast<QPushButton*>(sender());
+	auto resetButtonNameList = resetButton->objectName().split("_");
+	auto senderName = resetButtonNameList[0];
+	auto WDFNumber = resetButtonNameList[1];
+	auto channelNumber = resetButtonNameList[2];
+	QString recieverName;
+	if (senderName == QString("DACOffsetResetButton"))
+		recieverName = QString("DACOffsetSpinBox") + QString("_") + WDFNumber + QString("_") + channelNumber;
+	if (senderName == QString("positionResetButton"))
+		recieverName = QString("positionSpinBox") + QString("_") + WDFNumber + QString("_") + channelNumber;
+	auto reciever = ui.settingsBlock->findChild<QSpinBox*>(recieverName, Qt::FindChildrenRecursively);
+	reciever->setValue(0);
 }
 
 void MainWindow::changeEdgeSettingSlot(int indexOfEdge) {
@@ -205,10 +282,19 @@ void MainWindow::changeEdgeSettingSlot(int indexOfEdge) {
 }
 
 void MainWindow::bufferChangedSlot(int newBufferSizeIndex) {
-	auto newRecordLength = static_cast<int>(pow(2, newBufferSizeIndex+1));	//from index to KB
+	auto newRecordLength = static_cast<uint16_t>(pow(2, newBufferSizeIndex+1));	//from index to KB
 	vme.setRecordLength(newRecordLength, ui.postTriggerSpinBox->value());
+}
+
+void MainWindow::setPostTriggerLengthSlot(int newPostTriggerInPercent) {
+	vme.setPostTriggerLength(newPostTriggerInPercent);
 }
 
 void MainWindow::makeSoftwareTriggerSlot() {
 	vme.createSoftwareTrigger();
+}
+
+void MainWindow::changeExternalTriggerSlot() {
+	auto button = static_cast<QPushButton*>(sender());
+	vme.changeExternalTrigger(button->isChecked());
 }

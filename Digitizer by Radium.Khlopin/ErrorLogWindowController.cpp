@@ -1,6 +1,6 @@
 ﻿#include "ErrorLogWindowController.h"
 #include <QTime>
-#include <QTextCodec>
+#include <ToRussianTextForQString.h>
 
 class MainWindow;
 
@@ -20,15 +20,7 @@ QDialog(parent) {
 		ui.mainWidget->sortByColumn(0, Qt::DescendingOrder);
 }
 
-ErrorLogWindowController::~ErrorLogWindowController()
-{
-	qInfo("lalala destruct");
-}
-
-QString toRussian(const char * text)
-{
-	// подбираем нужную кодировку, другой вариант UTF8
-	return QTextCodec::codecForName("CP1251")->toUnicode(text);
+ErrorLogWindowController::~ErrorLogWindowController() {
 }
 
 QString ErrorLogWindowController::getErrorInfo(CAEN_DGTZ_ErrorCode errorCode) {
@@ -43,30 +35,27 @@ QString ErrorLogWindowController::getErrorInfo(CAEN_DGTZ_ErrorCode errorCode) {
 	case (-7)  : return toRussian("Операция недоступна на данном типе платы");
 	case (-8)  : return toRussian("Недопустимый уровень прерывания");
 	case (-9)  : return toRussian("Неправильное число событий");
-	case (-10) : return toRussian("");
-	case (-11) : return toRussian("");
-	case (-12) : return toRussian("");
-	case (-13) : return toRussian("");
-	case (-14) : return toRussian("");
-	case (-15) : return toRussian("");
-	case (-16) : return toRussian("");
-	case (-17) : return toRussian("");
-	case (-18) : return toRussian("");
+	case (-10) : return toRussian("Невозможно прочитать реестр");
+	case (-11) : return toRussian("Невозможно записать в реестр");
+	case (-13) : return toRussian("Канал занят");
+	case (-14) : return toRussian("Неверный номер канала");
+	case (-15) : return toRussian("Режим FPIO недопустим");
+	case (-16) : return toRussian("Неверный режим сбора данных");
+	case (-17) : return toRussian("Эта функция не разрешена для данного модуля");
+	case (-18) : return toRussian("Тайм-аут связи");
 	case (-19) : return toRussian("Недопустимый буфер");
-	case (-20) : return toRussian("");
-	case (-21) : return toRussian("");
-	case (-22) : return toRussian("");
-	case (-23) : return toRussian("");
-	case (-24) : return toRussian("");
-	case (-25) : return toRussian("");
-	case (-26) : return toRussian("");
-	case (-27) : return toRussian("");
-	case (-28) : return toRussian("");
-	case (-29) : return toRussian("");
-	case (-30) : return toRussian("");
-	case (-31) : return toRussian("");
-	case (-32) : return toRussian("");
-	case (-33) : return toRussian("");
-	case (-99) : return toRussian("");
+	case (-20) : return toRussian("Событие не найдено");
+	case (-21) : return toRussian("Недействительное событие");
+	case (-22) : return toRussian("Недостаточно памяти");
+	case (-23) : return toRussian("Невозможно выполнить калибровку платы");
+	case (-24) : return toRussian("Невозможно открыть оцифровщик");
+	case (-25) : return toRussian("Оцифровщик уже открыт");
+	case (-26) : return toRussian("Оцифровщик не готов к работе");
+	case (-27) : return toRussian("Отсутствует IRQ конфигурация оцифровщика");
+	case (-28) : return toRussian("Флеш память оцифровщика повреждена");
+	case (-29) : return toRussian("DDP прошивка оцифровщика не поддерживается в этой версии Lib");
+	case (-30) : return toRussian("Недействительная лицензия прошивки");
+	case (-31) : return toRussian("Оцифровщик находится в поврежденном состоянии");
+	default	   : return toRussian("Функция еще не реализована");
 	}
 }

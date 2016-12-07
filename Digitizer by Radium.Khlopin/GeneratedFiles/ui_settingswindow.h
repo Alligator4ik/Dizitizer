@@ -106,7 +106,7 @@ public:
         if (SettingsWindowController->objectName().isEmpty())
             SettingsWindowController->setObjectName(QStringLiteral("SettingsWindowController"));
         SettingsWindowController->setEnabled(true);
-        SettingsWindowController->resize(613, 364);
+        SettingsWindowController->resize(635, 364);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -289,7 +289,7 @@ public:
         __qtablewidgetitem51->setTextAlignment(Qt::AlignCenter);
         VMECommSetting->setItem(8, 4, __qtablewidgetitem51);
         VMECommSetting->setObjectName(QStringLiteral("VMECommSetting"));
-        VMECommSetting->setGeometry(QRect(10, 7, 441, 301));
+        VMECommSetting->setGeometry(QRect(10, 7, 461, 301));
         VMECommSetting->setRowCount(9);
         VMECommSetting->setColumnCount(5);
         VMECommSetting->horizontalHeader()->setDefaultSectionSize(83);
@@ -387,7 +387,7 @@ public:
         __qtablewidgetitem72->setTextAlignment(Qt::AlignCenter);
         ColorSetting->setItem(7, 0, __qtablewidgetitem72);
         ColorSetting->setObjectName(QStringLiteral("ColorSetting"));
-        ColorSetting->setGeometry(QRect(10, 7, 421, 271));
+        ColorSetting->setGeometry(QRect(10, 7, 461, 271));
         ColorSetting->setLineWidth(1);
         ColorSetting->horizontalHeader()->setCascadingSectionResizes(false);
         ColorSetting->horizontalHeader()->setDefaultSectionSize(80);
@@ -533,52 +533,52 @@ public:
         WidthSignal_CH_1->setGeometry(QRect(178, 65, 40, 20));
         WidthTrigger_CH_5 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_5->setObjectName(QStringLiteral("WidthTrigger_CH_5"));
-        WidthTrigger_CH_5->setGeometry(QRect(335, 185, 40, 20));
+        WidthTrigger_CH_5->setGeometry(QRect(400, 185, 40, 20));
         WidthTrigger_CH_1 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_1->setObjectName(QStringLiteral("WidthTrigger_CH_1"));
-        WidthTrigger_CH_1->setGeometry(QRect(335, 65, 40, 20));
+        WidthTrigger_CH_1->setGeometry(QRect(400, 65, 40, 20));
         WidthTrigger_CH_3 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_3->setObjectName(QStringLiteral("WidthTrigger_CH_3"));
-        WidthTrigger_CH_3->setGeometry(QRect(335, 125, 40, 20));
+        WidthTrigger_CH_3->setGeometry(QRect(400, 125, 40, 20));
         WidthTrigger_CH_4 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_4->setObjectName(QStringLiteral("WidthTrigger_CH_4"));
-        WidthTrigger_CH_4->setGeometry(QRect(335, 155, 40, 20));
+        WidthTrigger_CH_4->setGeometry(QRect(400, 155, 40, 20));
         WidthTrigger_CH_0 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_0->setObjectName(QStringLiteral("WidthTrigger_CH_0"));
-        WidthTrigger_CH_0->setGeometry(QRect(335, 35, 40, 20));
+        WidthTrigger_CH_0->setGeometry(QRect(400, 35, 40, 20));
         WidthTrigger_CH_2 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_2->setObjectName(QStringLiteral("WidthTrigger_CH_2"));
-        WidthTrigger_CH_2->setGeometry(QRect(335, 95, 40, 20));
+        WidthTrigger_CH_2->setGeometry(QRect(400, 95, 40, 20));
         WidthTrigger_CH_6 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_6->setObjectName(QStringLiteral("WidthTrigger_CH_6"));
-        WidthTrigger_CH_6->setGeometry(QRect(335, 215, 40, 20));
+        WidthTrigger_CH_6->setGeometry(QRect(400, 215, 40, 20));
         WidthTrigger_CH_7 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_7->setObjectName(QStringLiteral("WidthTrigger_CH_7"));
-        WidthTrigger_CH_7->setGeometry(QRect(335, 245, 40, 20));
+        WidthTrigger_CH_7->setGeometry(QRect(400, 245, 40, 20));
         TrigLine_CH_0 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_0->setObjectName(QStringLiteral("TrigLine_CH_0"));
-        TrigLine_CH_0->setGeometry(QRect(240, 35, 70, 20));
+        TrigLine_CH_0->setGeometry(QRect(240, 35, 120, 20));
         TrigLine_CH_1 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_1->setObjectName(QStringLiteral("TrigLine_CH_1"));
-        TrigLine_CH_1->setGeometry(QRect(240, 65, 70, 20));
+        TrigLine_CH_1->setGeometry(QRect(240, 65, 120, 20));
         TrigLine_CH_2 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_2->setObjectName(QStringLiteral("TrigLine_CH_2"));
-        TrigLine_CH_2->setGeometry(QRect(240, 95, 70, 20));
+        TrigLine_CH_2->setGeometry(QRect(240, 95, 120, 20));
         TrigLine_CH_3 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_3->setObjectName(QStringLiteral("TrigLine_CH_3"));
-        TrigLine_CH_3->setGeometry(QRect(240, 125, 70, 20));
+        TrigLine_CH_3->setGeometry(QRect(240, 125, 120, 20));
         TrigLine_CH_4 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_4->setObjectName(QStringLiteral("TrigLine_CH_4"));
-        TrigLine_CH_4->setGeometry(QRect(240, 155, 70, 20));
+        TrigLine_CH_4->setGeometry(QRect(240, 155, 120, 20));
         TrigLine_CH_5 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_5->setObjectName(QStringLiteral("TrigLine_CH_5"));
-        TrigLine_CH_5->setGeometry(QRect(240, 185, 70, 20));
+        TrigLine_CH_5->setGeometry(QRect(240, 185, 120, 20));
         TrigLine_CH_6 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_6->setObjectName(QStringLiteral("TrigLine_CH_6"));
-        TrigLine_CH_6->setGeometry(QRect(240, 215, 70, 20));
+        TrigLine_CH_6->setGeometry(QRect(240, 215, 120, 20));
         TrigLine_CH_7 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_7->setObjectName(QStringLiteral("TrigLine_CH_7"));
-        TrigLine_CH_7->setGeometry(QRect(240, 245, 70, 20));
+        TrigLine_CH_7->setGeometry(QRect(240, 245, 120, 20));
         QIcon icon3;
         icon3.addFile(QStringLiteral("../Desktop/CAEN-UI/Setting/2.png"), QSize(), QIcon::Normal, QIcon::Off);
         tabWidget->addTab(ChannelColorSetting, icon3, QString());
@@ -586,7 +586,7 @@ public:
         ViewerSetting->setObjectName(QStringLiteral("ViewerSetting"));
         groupBox = new QGroupBox(ViewerSetting);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(10, 80, 91, 51));
+        groupBox->setGeometry(QRect(10, 70, 91, 51));
         label = new QLabel(groupBox);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(10, 20, 40, 20));
@@ -602,7 +602,7 @@ public:
         postTriggerIsDrawing->setChecked(false);
         groupBox_2 = new QGroupBox(ViewerSetting);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        groupBox_2->setGeometry(QRect(110, 80, 221, 51));
+        groupBox_2->setGeometry(QRect(110, 70, 271, 51));
         postTriggerIsDrawing_10 = new QPushButton(groupBox_2);
         postTriggerIsDrawing_10->setObjectName(QStringLiteral("postTriggerIsDrawing_10"));
         postTriggerIsDrawing_10->setGeometry(QRect(60, 20, 20, 20));
@@ -621,7 +621,7 @@ public:
         spinBox->setGeometry(QRect(90, 20, 40, 20));
         comboBox = new QComboBox(groupBox_2);
         comboBox->setObjectName(QStringLiteral("comboBox"));
-        comboBox->setGeometry(QRect(140, 20, 70, 20));
+        comboBox->setGeometry(QRect(140, 20, 121, 20));
         groupBox_3 = new QGroupBox(ViewerSetting);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
         groupBox_3->setGeometry(QRect(10, 10, 70, 50));
@@ -655,14 +655,17 @@ public:
     void retranslateUi(QMainWindow *SettingsWindowController)
     {
         SettingsWindowController->setWindowTitle(QApplication::translate("SettingsWindowController", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\270", 0));
+#ifndef QT_NO_TOOLTIP
+        tabWidget->setToolTip(QString());
+#endif // QT_NO_TOOLTIP
         QTableWidgetItem *___qtablewidgetitem = VMECommSetting->horizontalHeaderItem(1);
-        ___qtablewidgetitem->setText(QApplication::translate("SettingsWindowController", "Link type", 0));
+        ___qtablewidgetitem->setText(QApplication::translate("SettingsWindowController", "\320\242\320\270\320\277 \321\201\320\262\321\217\320\267\320\270", 0));
         QTableWidgetItem *___qtablewidgetitem1 = VMECommSetting->horizontalHeaderItem(2);
-        ___qtablewidgetitem1->setText(QApplication::translate("SettingsWindowController", "Link number", 0));
+        ___qtablewidgetitem1->setText(QApplication::translate("SettingsWindowController", "\320\235\320\276\320\274\320\265\321\200 \321\201\320\267\321\217\320\267\320\270", 0));
         QTableWidgetItem *___qtablewidgetitem2 = VMECommSetting->horizontalHeaderItem(3);
-        ___qtablewidgetitem2->setText(QApplication::translate("SettingsWindowController", "Node number", 0));
+        ___qtablewidgetitem2->setText(QApplication::translate("SettingsWindowController", "\320\235\320\276\320\274\320\265\321\200 \321\203\320\267\320\273\320\260", 0));
         QTableWidgetItem *___qtablewidgetitem3 = VMECommSetting->horizontalHeaderItem(4);
-        ___qtablewidgetitem3->setText(QApplication::translate("SettingsWindowController", "Base Address", 0));
+        ___qtablewidgetitem3->setText(QApplication::translate("SettingsWindowController", "\320\221\320\260\320\267\320\276\320\262\321\213\320\271 \320\260\320\264\321\200\320\265\321\201", 0));
         QTableWidgetItem *___qtablewidgetitem4 = VMECommSetting->verticalHeaderItem(0);
         ___qtablewidgetitem4->setText(QApplication::translate("SettingsWindowController", "1", 0));
         QTableWidgetItem *___qtablewidgetitem5 = VMECommSetting->verticalHeaderItem(1);
@@ -685,7 +688,7 @@ public:
         const bool __sortingEnabled = VMECommSetting->isSortingEnabled();
         VMECommSetting->setSortingEnabled(false);
         QTableWidgetItem *___qtablewidgetitem13 = VMECommSetting->item(0, 1);
-        ___qtablewidgetitem13->setText(QApplication::translate("SettingsWindowController", "Optical Link", 0));
+        ___qtablewidgetitem13->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem14 = VMECommSetting->item(0, 2);
         ___qtablewidgetitem14->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem15 = VMECommSetting->item(0, 3);
@@ -693,7 +696,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem16 = VMECommSetting->item(0, 4);
         ___qtablewidgetitem16->setText(QApplication::translate("SettingsWindowController", "0x32100000", 0));
         QTableWidgetItem *___qtablewidgetitem17 = VMECommSetting->item(1, 1);
-        ___qtablewidgetitem17->setText(QApplication::translate("SettingsWindowController", "Optical Link", 0));
+        ___qtablewidgetitem17->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem18 = VMECommSetting->item(1, 2);
         ___qtablewidgetitem18->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem19 = VMECommSetting->item(1, 3);
@@ -701,43 +704,43 @@ public:
         QTableWidgetItem *___qtablewidgetitem20 = VMECommSetting->item(1, 4);
         ___qtablewidgetitem20->setText(QApplication::translate("SettingsWindowController", "0x42100000", 0));
         QTableWidgetItem *___qtablewidgetitem21 = VMECommSetting->item(2, 1);
-        ___qtablewidgetitem21->setText(QApplication::translate("SettingsWindowController", "Optical Link", 0));
+        ___qtablewidgetitem21->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem22 = VMECommSetting->item(2, 2);
         ___qtablewidgetitem22->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem23 = VMECommSetting->item(2, 3);
         ___qtablewidgetitem23->setText(QApplication::translate("SettingsWindowController", "2", 0));
         QTableWidgetItem *___qtablewidgetitem24 = VMECommSetting->item(3, 1);
-        ___qtablewidgetitem24->setText(QApplication::translate("SettingsWindowController", "Optical Link", 0));
+        ___qtablewidgetitem24->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem25 = VMECommSetting->item(3, 2);
         ___qtablewidgetitem25->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem26 = VMECommSetting->item(3, 3);
         ___qtablewidgetitem26->setText(QApplication::translate("SettingsWindowController", "3", 0));
         QTableWidgetItem *___qtablewidgetitem27 = VMECommSetting->item(4, 1);
-        ___qtablewidgetitem27->setText(QApplication::translate("SettingsWindowController", "Optical Link", 0));
+        ___qtablewidgetitem27->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem28 = VMECommSetting->item(4, 2);
         ___qtablewidgetitem28->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem29 = VMECommSetting->item(4, 3);
         ___qtablewidgetitem29->setText(QApplication::translate("SettingsWindowController", "4", 0));
         QTableWidgetItem *___qtablewidgetitem30 = VMECommSetting->item(5, 1);
-        ___qtablewidgetitem30->setText(QApplication::translate("SettingsWindowController", "Optical Link", 0));
+        ___qtablewidgetitem30->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem31 = VMECommSetting->item(5, 2);
         ___qtablewidgetitem31->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem32 = VMECommSetting->item(5, 3);
         ___qtablewidgetitem32->setText(QApplication::translate("SettingsWindowController", "5", 0));
         QTableWidgetItem *___qtablewidgetitem33 = VMECommSetting->item(6, 1);
-        ___qtablewidgetitem33->setText(QApplication::translate("SettingsWindowController", "Optical Link", 0));
+        ___qtablewidgetitem33->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem34 = VMECommSetting->item(6, 2);
         ___qtablewidgetitem34->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem35 = VMECommSetting->item(6, 3);
         ___qtablewidgetitem35->setText(QApplication::translate("SettingsWindowController", "6", 0));
         QTableWidgetItem *___qtablewidgetitem36 = VMECommSetting->item(7, 1);
-        ___qtablewidgetitem36->setText(QApplication::translate("SettingsWindowController", "Optical Link", 0));
+        ___qtablewidgetitem36->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem37 = VMECommSetting->item(7, 2);
         ___qtablewidgetitem37->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem38 = VMECommSetting->item(7, 3);
         ___qtablewidgetitem38->setText(QApplication::translate("SettingsWindowController", "7", 0));
         QTableWidgetItem *___qtablewidgetitem39 = VMECommSetting->item(8, 1);
-        ___qtablewidgetitem39->setText(QApplication::translate("SettingsWindowController", "Optical Link", 0));
+        ___qtablewidgetitem39->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem40 = VMECommSetting->item(8, 2);
         ___qtablewidgetitem40->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem41 = VMECommSetting->item(8, 3);
@@ -755,15 +758,15 @@ public:
         WDF9->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(activeWDFs), QString());
         QTableWidgetItem *___qtablewidgetitem42 = ColorSetting->horizontalHeaderItem(0);
-        ___qtablewidgetitem42->setText(QApplication::translate("SettingsWindowController", "Channel", 0));
+        ___qtablewidgetitem42->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273", 0));
         QTableWidgetItem *___qtablewidgetitem43 = ColorSetting->horizontalHeaderItem(1);
-        ___qtablewidgetitem43->setText(QApplication::translate("SettingsWindowController", "Signal Color", 0));
+        ___qtablewidgetitem43->setText(QApplication::translate("SettingsWindowController", "\320\246\320\262\320\265\321\202", 0));
         QTableWidgetItem *___qtablewidgetitem44 = ColorSetting->horizontalHeaderItem(2);
-        ___qtablewidgetitem44->setText(QApplication::translate("SettingsWindowController", "Signal Width", 0));
+        ___qtablewidgetitem44->setText(QApplication::translate("SettingsWindowController", "\320\250\320\270\321\200\320\270\320\275\320\260", 0));
         QTableWidgetItem *___qtablewidgetitem45 = ColorSetting->horizontalHeaderItem(3);
-        ___qtablewidgetitem45->setText(QApplication::translate("SettingsWindowController", "Trigger Line", 0));
+        ___qtablewidgetitem45->setText(QApplication::translate("SettingsWindowController", "\320\233\320\270\320\275\320\270\321\217 \320\277\320\276\321\200\320\276\320\263\320\260", 0));
         QTableWidgetItem *___qtablewidgetitem46 = ColorSetting->horizontalHeaderItem(4);
-        ___qtablewidgetitem46->setText(QApplication::translate("SettingsWindowController", "Trigger Width", 0));
+        ___qtablewidgetitem46->setText(QApplication::translate("SettingsWindowController", "\320\250\320\270\321\200\320\270\320\275\320\260 \320\277\320\276\321\200\320\276\320\263\320\260", 0));
         QTableWidgetItem *___qtablewidgetitem47 = ColorSetting->verticalHeaderItem(0);
         ___qtablewidgetitem47->setText(QApplication::translate("SettingsWindowController", "1", 0));
         QTableWidgetItem *___qtablewidgetitem48 = ColorSetting->verticalHeaderItem(1);
@@ -810,111 +813,95 @@ public:
         Color_CH_6->setText(QString());
         Color_CH_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_0->setToolTip(QApplication::translate("SettingsWindowController", "Edit", 0));
+        EditColor_CH_0->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_1->setToolTip(QApplication::translate("SettingsWindowController", "Edit", 0));
+        EditColor_CH_1->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_2->setToolTip(QApplication::translate("SettingsWindowController", "Edit", 0));
+        EditColor_CH_2->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_3->setToolTip(QApplication::translate("SettingsWindowController", "Edit", 0));
+        EditColor_CH_3->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_4->setToolTip(QApplication::translate("SettingsWindowController", "Edit", 0));
+        EditColor_CH_4->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_5->setToolTip(QApplication::translate("SettingsWindowController", "Edit", 0));
+        EditColor_CH_5->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_6->setToolTip(QApplication::translate("SettingsWindowController", "Edit", 0));
+        EditColor_CH_6->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_7->setToolTip(QApplication::translate("SettingsWindowController", "Edit", 0));
+        EditColor_CH_7->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_7->setText(QString());
         TrigLine_CH_0->clear();
         TrigLine_CH_0->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "No Grid", 0)
-         << QApplication::translate("SettingsWindowController", "Solid", 0)
-         << QApplication::translate("SettingsWindowController", "Dashed", 0)
-         << QApplication::translate("SettingsWindowController", "Dash-Dot", 0)
-         << QApplication::translate("SettingsWindowController", "Dotted", 0)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         TrigLine_CH_1->clear();
         TrigLine_CH_1->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "No Grid", 0)
-         << QApplication::translate("SettingsWindowController", "Solid", 0)
-         << QApplication::translate("SettingsWindowController", "Dashed", 0)
-         << QApplication::translate("SettingsWindowController", "Dash-Dot", 0)
-         << QApplication::translate("SettingsWindowController", "Dotted", 0)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         TrigLine_CH_2->clear();
         TrigLine_CH_2->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "No Grid", 0)
-         << QApplication::translate("SettingsWindowController", "Solid", 0)
-         << QApplication::translate("SettingsWindowController", "Dashed", 0)
-         << QApplication::translate("SettingsWindowController", "Dash-Dot", 0)
-         << QApplication::translate("SettingsWindowController", "Dotted", 0)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         TrigLine_CH_3->clear();
         TrigLine_CH_3->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "No Grid", 0)
-         << QApplication::translate("SettingsWindowController", "Solid", 0)
-         << QApplication::translate("SettingsWindowController", "Dashed", 0)
-         << QApplication::translate("SettingsWindowController", "Dash-Dot", 0)
-         << QApplication::translate("SettingsWindowController", "Dotted", 0)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         TrigLine_CH_4->clear();
         TrigLine_CH_4->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "No Grid", 0)
-         << QApplication::translate("SettingsWindowController", "Solid", 0)
-         << QApplication::translate("SettingsWindowController", "Dashed", 0)
-         << QApplication::translate("SettingsWindowController", "Dash-Dot", 0)
-         << QApplication::translate("SettingsWindowController", "Dotted", 0)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         TrigLine_CH_5->clear();
         TrigLine_CH_5->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "No Grid", 0)
-         << QApplication::translate("SettingsWindowController", "Solid", 0)
-         << QApplication::translate("SettingsWindowController", "Dashed", 0)
-         << QApplication::translate("SettingsWindowController", "Dash-Dot", 0)
-         << QApplication::translate("SettingsWindowController", "Dotted", 0)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         TrigLine_CH_6->clear();
         TrigLine_CH_6->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "No Grid", 0)
-         << QApplication::translate("SettingsWindowController", "Solid", 0)
-         << QApplication::translate("SettingsWindowController", "Dashed", 0)
-         << QApplication::translate("SettingsWindowController", "Dash-Dot", 0)
-         << QApplication::translate("SettingsWindowController", "Dotted", 0)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         TrigLine_CH_7->clear();
         TrigLine_CH_7->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "No Grid", 0)
-         << QApplication::translate("SettingsWindowController", "Solid", 0)
-         << QApplication::translate("SettingsWindowController", "Dashed", 0)
-         << QApplication::translate("SettingsWindowController", "Dash-Dot", 0)
-         << QApplication::translate("SettingsWindowController", "Dotted", 0)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         tabWidget->setTabText(tabWidget->indexOf(ChannelColorSetting), QString());
-        groupBox->setTitle(QApplication::translate("SettingsWindowController", "Background", 0));
+        groupBox->setTitle(QApplication::translate("SettingsWindowController", "\320\227\320\260\320\264\320\275\320\270\320\271 \320\277\320\273\320\260\320\275 ", 0));
         label->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        postTriggerIsDrawing->setToolTip(QApplication::translate("SettingsWindowController", "Edit", 0));
+        postTriggerIsDrawing->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         postTriggerIsDrawing->setText(QString());
-        groupBox_2->setTitle(QApplication::translate("SettingsWindowController", "Grid", 0));
+        groupBox_2->setTitle(QApplication::translate("SettingsWindowController", "\320\241\320\265\321\202\320\272\320\260", 0));
 #ifndef QT_NO_TOOLTIP
-        postTriggerIsDrawing_10->setToolTip(QApplication::translate("SettingsWindowController", "Edit", 0));
+        postTriggerIsDrawing_10->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         postTriggerIsDrawing_10->setText(QString());
         label_10->setText(QString());
@@ -923,14 +910,13 @@ public:
 #endif // QT_NO_TOOLTIP
         comboBox->clear();
         comboBox->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "No Grid", 0)
-         << QApplication::translate("SettingsWindowController", "Solid", 0)
-         << QApplication::translate("SettingsWindowController", "Dashed", 0)
-         << QApplication::translate("SettingsWindowController", "Dash-Dot", 0)
-         << QApplication::translate("SettingsWindowController", "Dotted", 0)
+         << QApplication::translate("SettingsWindowController", "\320\221\320\265\320\267 \321\201\320\265\321\202\320\272\320\270", 0)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
 #ifndef QT_NO_TOOLTIP
-        groupBox_3->setToolTip(QApplication::translate("SettingsWindowController", "Input/Output Signal Type", 0));
+        groupBox_3->setToolTip(QApplication::translate("SettingsWindowController", "\320\242\320\270\320\277 \320\262\321\205\320\276\320\264\321\217\321\211\320\265\320\263\320\276/\320\270\321\201\321\205\320\276\320\264\321\217\321\211\320\265\320\263\320\276 \321\201\320\270\320\263\320\275\320\260\320\273\320\260", 0));
 #endif // QT_NO_TOOLTIP
         groupBox_3->setTitle(QApplication::translate("SettingsWindowController", "I/O", 0));
         comboBox_3->clear();

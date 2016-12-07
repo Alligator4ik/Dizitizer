@@ -8,7 +8,7 @@ class ErrorLogWindowController :
 {
 	Q_OBJECT
 	Ui::errorLogWindow				ui;
-	QString getErrorInfo(CAEN_DGTZ_ErrorCode errorCode);
+	static QString getErrorInfo(CAEN_DGTZ_ErrorCode errorCode);
 public:
 	ErrorLogWindowController(QWidget *parent, std::vector<std::vector<CAEN_DGTZ_ErrorCode>>& boardErrors, std::vector<std::vector<QTime>>& timeOfBoardErrors);
 	~ErrorLogWindowController();

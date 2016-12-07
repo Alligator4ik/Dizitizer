@@ -1,6 +1,5 @@
 #include "SettingsWindowController.h"
 #include "mainwindow.h"
-#include <fstream>
 
 
 SettingsWindowController::SettingsWindowController(QWidget *parent)
@@ -9,6 +8,7 @@ SettingsWindowController::SettingsWindowController(QWidget *parent)
 	ui.VMECommSetting->setColumnWidth(0, 24);
 	ui.ColorSetting->setColumnWidth(0, 55);
 	ui.ColorSetting->setColumnWidth(2, 75);
+	ui.ColorSetting->setColumnWidth(3, 130);
 
 	
 	//make active wdf visible

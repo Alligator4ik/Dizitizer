@@ -6,23 +6,25 @@ using namespace std;
 
 class VMECommunication {
 	bool								connectionToWDFIsActive = false;
-	vector<int>							WDFIdentificators;
-	vector<unsigned int>				numberOfChannels;
+	vector<int32_t>						WDFIdentificators;
+	vector<uint32_t>					numberOfChannels;
 	vector<CAEN_DGTZ_BoardInfo_t>		WDFInfo;
 	vector<vector<CAEN_DGTZ_ErrorCode>>	boardErrors;
 	vector<vector<QTime>>				timeOfBoardErrors;
 	vector<vector<string>>				stringErrors;
 	vector<vector<QTime>>				timeOfStringErrors;
-	unsigned int						numberOfBlocksTransferredDuringCycle;
-	unsigned int						recordLength;
+	uint32_t							numberOfBlocksTransferredDuringCycle;
+	uint32_t							recordLength;
 
-	void setup(short boardNumber);
+	CAEN_DGTZ_ErrorCode	setup(uint16_t boardNumber);
 public:
-	unsigned short						numberOfWDF = 9;
+	uint16_t							numberOfWDF = 9;
 	vector<bool>						WDFIsEnabled;
-	vector<int>							channelTriggerEnableMask;
-	vector<int>							channelActiveEnableMask;
-	vector<vector<int>>					threshold;
+	vector<int32_t>						channelTriggerEnableMask;
+	vector<int32_t>						channelActiveEnableMask;
+	vector<vector<ushort>>				threshold;
+	vector<vector<ushort>>				sample;
+	vector<vector<ushort>>				DCOffset;
 	CAEN_DGTZ_TriggerPolarity_t			polarity;
 
 	VMECommunication();
@@ -30,18 +32,24 @@ public:
 
 	bool									connect();
 	void									disconnect();
-	void									startAcquisition();
+	CAEN_DGTZ_ErrorCode						startAcquisition();
 	void									stopAcquisition();
 	void									createSoftwareTrigger();
+	void									changeExternalTrigger(bool externalTriggerIsActive);
+	void									clearData();
 
 	bool									isConnected() const;
 	vector<vector<QTime>>&					getTimeOfBoardErrors();
 	vector<vector<CAEN_DGTZ_ErrorCode>>&	getboardErrors();
 	vector<vector<QTime>>&					getTimeOfStringErrors();
 	vector<vector<string>>&					getStringErrors();
+	vector<int32_t>&						getWDFIdentificators();
 
-	void									setRecordLength(int newRecordLength, int postTriggerSize);
-	void									setPostTriggerLength(int postTriggerSize);
+	void									setRecordLength(int32_t newRecordLength, int32_t postTriggerSize);
+	void									setPostTriggerLength(int32_t postTriggerSize);
+	CAEN_DGTZ_ErrorCode						setChannelThreshold(ushort board, ushort channel, ushort newThreshold);
+	CAEN_DGTZ_ErrorCode						setChannelSample(ushort board, ushort channel, ushort newSample);
+	CAEN_DGTZ_ErrorCode						setChannelOffset(ushort board, ushort channel, ushort newOffsetInmV);
 
-	CAEN_DGTZ_BoardInfo_t getWDFInfo(unsigned short numberOfBoard);
+	CAEN_DGTZ_BoardInfo_t					getWDFInfo(ushort numberOfBoard);
 };
