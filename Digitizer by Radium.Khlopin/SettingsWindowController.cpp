@@ -1,5 +1,5 @@
 #include "SettingsWindowController.h"
-#include "mainwindow.h"
+#include "MainWindowController.h"
 
 
 SettingsWindowController::SettingsWindowController(QWidget *parent)

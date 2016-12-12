@@ -46,7 +46,7 @@ public:
     QPushButton *magnifierButton;
     QPushButton *recordButton;
     QPushButton *settingsButton;
-    QPushButton *drawSignalsButton;
+    QPushButton *drawButton;
     QSpacerItem *horizontalSpacer;
     QPushButton *startStopButton;
     QGroupBox *mainBox;
@@ -1181,20 +1181,20 @@ public:
 
         gridLayout_2->addWidget(settingsButton, 0, 5, 1, 1);
 
-        drawSignalsButton = new QPushButton(controlButtons);
-        drawSignalsButton->setObjectName(QStringLiteral("drawSignalsButton"));
-        drawSignalsButton->setEnabled(false);
-        drawSignalsButton->setMinimumSize(QSize(60, 60));
-        drawSignalsButton->setMaximumSize(QSize(60, 60));
+        drawButton = new QPushButton(controlButtons);
+        drawButton->setObjectName(QStringLiteral("drawButton"));
+        drawButton->setEnabled(false);
+        drawButton->setMinimumSize(QSize(60, 60));
+        drawButton->setMaximumSize(QSize(60, 60));
         QIcon icon10;
         icon10.addFile(QStringLiteral("../Desktop/CAEN-UI/Viewer.png"), QSize(), QIcon::Normal, QIcon::Off);
         icon10.addFile(QStringLiteral("../Desktop/CAEN-UI/aViewer.png"), QSize(), QIcon::Normal, QIcon::On);
-        drawSignalsButton->setIcon(icon10);
-        drawSignalsButton->setIconSize(QSize(50, 50));
-        drawSignalsButton->setCheckable(true);
-        drawSignalsButton->setChecked(true);
+        drawButton->setIcon(icon10);
+        drawButton->setIconSize(QSize(50, 50));
+        drawButton->setCheckable(true);
+        drawButton->setChecked(true);
 
-        gridLayout_2->addWidget(drawSignalsButton, 0, 2, 1, 1);
+        gridLayout_2->addWidget(drawButton, 0, 2, 1, 1);
 
         horizontalSpacer = new QSpacerItem(508, 17, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -7027,7 +7027,7 @@ public:
         tabWidget->setCurrentIndex(0);
         scaleTimeComboBox->setCurrentIndex(0);
         pushButton->setDefault(false);
-        WDFTabWidget->setCurrentIndex(8);
+        WDFTabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindowClass);
@@ -7074,9 +7074,9 @@ public:
 #endif // QT_NO_TOOLTIP
         settingsButton->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        drawSignalsButton->setToolTip(QApplication::translate("MainWindowClass", "\320\237\321\200\320\276\321\201\320\274\320\276\321\202\321\200", 0));
+        drawButton->setToolTip(QApplication::translate("MainWindowClass", "\320\237\321\200\320\276\321\201\320\274\320\276\321\202\321\200", 0));
 #endif // QT_NO_TOOLTIP
-        drawSignalsButton->setText(QString());
+        drawButton->setText(QString());
 #ifndef QT_NO_TOOLTIP
         startStopButton->setToolTip(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\200\321\202", 0));
 #endif // QT_NO_TOOLTIP

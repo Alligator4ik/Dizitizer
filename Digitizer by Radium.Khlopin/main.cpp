@@ -1,6 +1,5 @@
-#include "mainwindow.h"
-#include <QtWidgets/QApplication>
-#include <qtextcodec.h>
+#include <MainWindowController.h>
+#include <vld.h>
 
 int main(int argc, char *argv[])
 {

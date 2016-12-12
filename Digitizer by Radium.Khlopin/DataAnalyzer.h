@@ -3,10 +3,14 @@
 
 class DataAnalyzer
 {
-	VMECommunication&	vmeComm;
+	VMECommunication&			vmeComm;
+	CAEN_DGTZ_UINT16_EVENT_t*	currentEvent;
 public:
 	explicit DataAnalyzer(VMECommunication& vmeCommunication);
 	~DataAnalyzer();
 
-	void getData();
+	void readData();
+	void writeData();
+
+	CAEN_DGTZ_UINT16_EVENT_t*	getEvent() const;
 };

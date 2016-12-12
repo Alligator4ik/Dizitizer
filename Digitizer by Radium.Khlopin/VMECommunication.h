@@ -50,6 +50,8 @@ public:
 	CAEN_DGTZ_ErrorCode						setChannelThreshold(ushort board, ushort channel, ushort newThreshold);
 	CAEN_DGTZ_ErrorCode						setChannelSample(ushort board, ushort channel, ushort newSample);
 	CAEN_DGTZ_ErrorCode						setChannelOffset(ushort board, ushort channel, ushort newOffsetInmV);
+	void									addTimeOfBoardError(ushort board);
+	void									addBoardError(ushort board, CAEN_DGTZ_ErrorCode errorCode);
 
 	CAEN_DGTZ_BoardInfo_t					getWDFInfo(ushort numberOfBoard);
 };

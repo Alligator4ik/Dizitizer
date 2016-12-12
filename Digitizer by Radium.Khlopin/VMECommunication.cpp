@@ -1,6 +1,5 @@
 #include "VMECommunication.h"
 #include "Resources/CAENDigitizer.h"
-#include <iostream>
 #include <QTime>
 
 
@@ -24,7 +23,7 @@ VMECommunication::VMECommunication() {
 	DCOffset.resize(numberOfWDF);
 	for (auto i = 0; i < 8; i++)
 		DCOffset[i] = vector<ushort>(8, 0x7FFF);					//8 - number of channels, 0x7FFF - default offset
-	numberOfBlocksTransferredDuringCycle = 0x2;
+	numberOfBlocksTransferredDuringCycle = 0x5;
 	recordLength = 2048;
 	polarity = CAEN_DGTZ_TriggerOnFallingEdge;
 }
@@ -238,6 +237,14 @@ CAEN_DGTZ_ErrorCode VMECommunication::setChannelOffset(ushort board, ushort chan
 	DCOffset[board][channel] = newOffsetInmV;
 	auto newOffset = static_cast<ushort>(65535*(0.5-newOffsetInmV/1000)); //32767 = 0x7FFF => [-Vpp/2; Vpp/2]; from mV to hex
 	return CAEN_DGTZ_SetChannelDCOffset(WDFIdentificators[board], channel, newOffset);
+}
+
+void VMECommunication::addTimeOfBoardError(ushort board) {
+	timeOfBoardErrors[board].push_back(QTime::currentTime());
+}
+
+void VMECommunication::addBoardError(ushort board, CAEN_DGTZ_ErrorCode errorCode) {
+	boardErrors[board].push_back(errorCode);
 }
 
 CAEN_DGTZ_BoardInfo_t VMECommunication::getWDFInfo(unsigned short numberOfBoard) {
