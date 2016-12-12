@@ -51,7 +51,7 @@ bool VMECommunication::connect() {
 			if ((error = CAEN_DGTZ_Reset(WDFIdentificators[boardNumber])) != CAEN_DGTZ_Success) {
 				timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 				boardErrors[boardNumber].push_back(error);
-				return error;
+				continue;
 			}
 			connectionToWDFIsActive = true;
 		}
@@ -69,13 +69,6 @@ void VMECommunication::disconnect() {
 
 CAEN_DGTZ_ErrorCode	VMECommunication::setup(uint16_t boardNumber) {
 	CAEN_DGTZ_ErrorCode error;
-
-	//reset the board
-	if ((error = CAEN_DGTZ_Reset(WDFIdentificators[boardNumber])) != CAEN_DGTZ_Success) {
-		timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
-		boardErrors[boardNumber].push_back(error);
-		return error;
-	}
 	//write number of blocks transferred during cycle
 	if ((error = CAEN_DGTZ_WriteRegister(WDFIdentificators[boardNumber],
 										CAEN_DGTZ_BLT_EVENT_NUM_ADD,
@@ -114,6 +107,15 @@ CAEN_DGTZ_ErrorCode	VMECommunication::setup(uint16_t boardNumber) {
 			boardErrors[boardNumber].push_back(error);
 			return error;
 		}
+	if ((error = CAEN_DGTZ_SetInterruptConfig(WDFIdentificators[boardNumber], CAEN_DGTZ_ENABLE,
+												1/*						we connected through CONET*/, 
+												0xAAAA/*				via optical link this parameter is useless*/,
+												eventNumberToInterrupt/*number of events storred to throw interrupt*/,
+												CAEN_DGTZ_IRQ_MODE_ROAK)) != CAEN_DGTZ_Success) {
+		timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
+		boardErrors[boardNumber].push_back(error);
+		return error;
+	}
 	//all is good
 	return error;
 }
@@ -143,12 +145,13 @@ void VMECommunication::stopAcquisition() {
 
 void VMECommunication::createSoftwareTrigger() {
 	CAEN_DGTZ_ErrorCode error;
-	for (auto boardNumber = 0; boardNumber < WDFIdentificators.size(); boardNumber++)
-		if (WDFIsEnabled[boardNumber])
-			if ((error = CAEN_DGTZ_SendSWtrigger(WDFIdentificators[boardNumber])) != CAEN_DGTZ_Success) {
-				timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
-				boardErrors[boardNumber].push_back(error);
-			}
+	for (auto i = 0; i < eventNumberToInterrupt; i++)
+		for (auto boardNumber = 0; boardNumber < WDFIdentificators.size(); boardNumber++)
+			if (WDFIsEnabled[boardNumber])
+				if ((error = CAEN_DGTZ_SendSWtrigger(WDFIdentificators[boardNumber])) != CAEN_DGTZ_Success) {
+					timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
+					boardErrors[boardNumber].push_back(error);
+				}
 }
 
 void VMECommunication::changeExternalTrigger(bool externalTriggerIsActive) {

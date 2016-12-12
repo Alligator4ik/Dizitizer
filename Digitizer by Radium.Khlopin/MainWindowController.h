@@ -26,7 +26,7 @@ private:
 	std::thread						acquisitionThread;
 
 	void							updateData();
-	void							drawSignal(CAEN_DGTZ_UINT16_EVENT_t* eventToDraw);
+	void							drawSignal(CAEN_DGTZ_UINT8_EVENT_t* eventToDraw);
 	void							readSettings();
 private slots:
 	void							connectSlot();

@@ -41,7 +41,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow() {
 	//write settings to file
-	ofstream settingsOut("settings.txt");
+	ofstream settingsOut("settings.cfg");
 	if (settingsOut) {
 		//write active WDFs
 		for (auto WDF = 0; WDF < vme.WDFIsEnabled.size(); WDF++)
@@ -67,12 +67,12 @@ void MainWindow::updateData() {
 	vme.stopAcquisition();
 }
 
-void MainWindow::drawSignal(CAEN_DGTZ_UINT16_EVENT_t * eventToDraw) {
+void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 
 }
 
 void MainWindow::readSettings() {
-	ifstream settingsStream("settings.txt");
+	ifstream settingsStream("settings.cfg");
 	if (settingsStream) {
 		//read active boards
 		bool WDFIsActive;
@@ -262,6 +262,8 @@ void MainWindow::resetParameterSlot() const {
 	auto WDFNumber = resetButtonNameList[1];
 	auto channelNumber = resetButtonNameList[2];
 	QString recieverName;
+	//todo
+	//recieverName = senderName - "ResetButton" + "SpinBox"
 	if (senderName == QString("DACOffsetResetButton"))
 		recieverName = QString("DACOffsetSpinBox") + QString("_") + WDFNumber + QString("_") + channelNumber;
 	if (senderName == QString("positionResetButton"))
@@ -294,7 +296,6 @@ void MainWindow::setPostTriggerLengthSlot(int newPostTriggerInPercent) {
 }
 
 void MainWindow::makeSoftwareTriggerSlot() {
-	//doesn't work during acquistition
 	vme.createSoftwareTrigger();
 }
 

@@ -19,6 +19,7 @@ class VMECommunication {
 	CAEN_DGTZ_ErrorCode	setup(uint16_t boardNumber);
 public:
 	uint16_t							numberOfWDF = 9;
+	uint8_t								eventNumberToInterrupt = 2;
 	vector<bool>						WDFIsEnabled;
 	vector<int32_t>						channelTriggerEnableMask;
 	vector<int32_t>						channelActiveEnableMask;
