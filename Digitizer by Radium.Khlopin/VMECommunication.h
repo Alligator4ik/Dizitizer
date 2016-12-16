@@ -13,13 +13,14 @@ class VMECommunication {
 	vector<vector<QTime>>				timeOfBoardErrors;
 	vector<vector<string>>				stringErrors;
 	vector<vector<QTime>>				timeOfStringErrors;
-	uint32_t							numberOfBlocksTransferredDuringCycle;
-	uint32_t							recordLength;
+	uint32_t							numberOfBlocksTransferredDuringCycle = 0x3;
+	uint32_t							recordLength = 2048;
 
 	CAEN_DGTZ_ErrorCode	setup(uint16_t boardNumber);
 public:
+	bool								autoTriggerEnabled = false;
 	uint16_t							numberOfWDF = 9;
-	uint8_t								eventNumberToInterrupt = 2;
+	uint8_t								eventNumberToInterrupt = 1;
 	vector<bool>						WDFIsEnabled;
 	vector<int32_t>						channelTriggerEnableMask;
 	vector<int32_t>						channelActiveEnableMask;
@@ -32,12 +33,13 @@ public:
 	~VMECommunication();
 
 	bool									connect();
-	void									disconnect();
-	CAEN_DGTZ_ErrorCode						startAcquisition();
-	void									stopAcquisition();
-	void									createSoftwareTrigger();
-	void									changeExternalTrigger(bool externalTriggerIsActive);
-	void									clearData();
+	bool									disconnect();
+	bool									startAcquisition();
+	bool									stopAcquisition();
+	bool									createSoftwareTrigger();
+	bool									changeExternalTrigger(bool externalTriggerIsActive);
+	void									changePolarity();
+	bool									clearData();
 
 	bool									isConnected() const;
 	vector<vector<QTime>>&					getTimeOfBoardErrors();
@@ -46,11 +48,11 @@ public:
 	vector<vector<string>>&					getStringErrors();
 	vector<int32_t>&						getWDFIdentificators();
 
-	void									setRecordLength(int32_t newRecordLength, int32_t postTriggerSize);
-	void									setPostTriggerLength(int32_t postTriggerSize);
-	CAEN_DGTZ_ErrorCode						setChannelThreshold(ushort board, ushort channel, ushort newThreshold);
-	CAEN_DGTZ_ErrorCode						setChannelSample(ushort board, ushort channel, ushort newSample);
-	CAEN_DGTZ_ErrorCode						setChannelOffset(ushort board, ushort channel, ushort newOffsetInmV);
+	bool									setRecordLength(int32_t newRecordLength, int32_t postTriggerSize);
+	bool									setPostTriggerLength(int32_t postTriggerSize);
+	bool									setChannelThreshold(ushort board, ushort channel, ushort newThreshold);
+	bool									setChannelSample(ushort board, ushort channel, ushort newSample);
+	bool									setChannelOffset(ushort board, ushort channel, int16_t newOffsetInmV);
 	void									addTimeOfBoardError(ushort board);
 	void									addBoardError(ushort board, CAEN_DGTZ_ErrorCode errorCode);
 

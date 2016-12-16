@@ -16,18 +16,22 @@ public:
 	VMECommunication& getVME();
 
 private:
-	int								identifier;
 	Ui::MainWindowClass				ui;
 	SettingsWindowController*		settings_window_controller;
 	ErrorLogWindowController*		error_log_window_controller;
 	VMECommunication				vme;
 	bool							acquisitionWasStarted = false;
+	uint16_t						activeChannelsCount = 0;			//need to know graphs count
 	vector<vector<bool>>			samplesSpinboxIsDisabled;
 	std::thread						acquisitionThread;
 
 	void							updateData();
 	void							drawSignal(CAEN_DGTZ_UINT8_EVENT_t* eventToDraw);
 	void							readSettings();
+	void							pulseErrorButton();
+	void							setControlsEnabled(bool enabled) const;
+signals:
+	void							replot(void);
 private slots:
 	void							connectSlot();
 	void							startStopSlot();
@@ -39,9 +43,12 @@ private slots:
 	void							changeSampleSlot(int newSample);
 	void							changeDCOffsetSlot(int newOffset);
 	void							resetParameterSlot() const;
-	void							changeEdgeSettingSlot(int indexOfEdge);
 	void							bufferChangedSlot(int newBufferSizeIndex);
 	void							setPostTriggerLengthSlot(int newPostTriggerInPercent);
 	void							makeSoftwareTriggerSlot();
 	void							changeExternalTriggerSlot();
+	void							autoTriggerSlot();
+	void							changePolaritySlot();
+public slots:
+	void							replotGraph() const;
 };

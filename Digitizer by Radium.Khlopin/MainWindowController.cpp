@@ -37,6 +37,12 @@ MainWindow::MainWindow(QWidget *parent)
 	auto DCResetButtons = ui.settingsBlock->findChildren<QPushButton*>(QRegExp("ResetButton"), Qt::FindChildrenRecursively);
 	for each (auto button in DCResetButtons)
 		connect(button, SIGNAL(clicked()), this, SLOT(resetParameterSlot()));
+
+	//connect replot slot to replotting graph in main thread
+	connect(this, &MainWindow::replot, this, &MainWindow::replotGraph, Qt::BlockingQueuedConnection);
+
+	//set postTrigger disabled
+	ui.postTriggerBox->setEnabled(false);
 }
 
 MainWindow::~MainWindow() {
@@ -57,18 +63,41 @@ VMECommunication& MainWindow::getVME() {
 
 void MainWindow::updateData() {
 	DataAnalyzer vmeData(vme);
+	auto lastAutoTriggerSecond = static_cast<int>(time(nullptr));
 	while (acquisitionWasStarted) {
-		vmeData.readData();
-		if (ui.recordButton->isChecked())
-			vmeData.writeData();
-		if (ui.drawButton->isChecked())
-			drawSignal(vmeData.getEvent());
+		auto ready = false;
+		auto currentAutoTriggerSecond = static_cast<int>(time(nullptr));
+		if (vme.autoTriggerEnabled && lastAutoTriggerSecond != currentAutoTriggerSecond) {
+			lastAutoTriggerSecond = currentAutoTriggerSecond;
+			vme.createSoftwareTrigger();
+			ready = true;
+		}
+		//todo: ready = (vme.readData() return value)
+		//todo: eg if there is smth to read, it will return true
+		if (ready) {
+			vmeData.readData();
+			if (ui.recordButton->isChecked())
+				vmeData.writeData();
+			if (ui.drawButton->isChecked()) {
+				drawSignal(vmeData.getEvent());
+				if (acquisitionWasStarted)
+					emit replot();
+			}
+		}
 	}
-	vme.stopAcquisition();
+	if (!vme.stopAcquisition())
+		this->pulseErrorButton();
 }
 
 void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
-
+	QVector<double_t> data(static_cast<double_t>(eventToDraw->ChSize[0]));			//y axis in mV
+	QVector<double_t> samples(static_cast<double_t>(eventToDraw->ChSize[0]));		//x axis in ns
+	for (auto sample = 0; sample < samples.size(); sample++) {
+		samples[sample] = sample * 2;
+		data[sample] = static_cast<double_t>(eventToDraw->DataChannel[0][sample]);
+		//memcpy(&(data[sample]), &(eventToDraw->DataChannel[0][sample]), sizeof(uint8_t));
+	}
+	ui.signalWidget->graph(0)->setData(samples, data);
 }
 
 void MainWindow::readSettings() {
@@ -81,6 +110,19 @@ void MainWindow::readSettings() {
 				vme.WDFIsEnabled.push_back(WDFIsActive);
 		//read other settings
 	}
+}
+
+void MainWindow::pulseErrorButton() {
+}
+
+void MainWindow::setControlsEnabled(bool enabled) const {
+	ui.startStopButton->setToolTip(toRussian(enabled ? "Старт" : "Стоп"));
+	ui.connectButton->setEnabled(enabled);
+	ui.exitButton->setEnabled(enabled);
+	ui.bufferComboBox->setEnabled(enabled);
+	ui.polarityBox->setEnabled(enabled);
+	ui.postTriggerBox->setEnabled(!enabled);
+	ui.triggerOptionsBox->setEnabled(!enabled);
 }
 
 void MainWindow::connectSlot() {
@@ -124,22 +166,22 @@ void MainWindow::connectSlot() {
 
 void MainWindow::startStopSlot() {
 	if (!acquisitionWasStarted) {
-		if (vme.startAcquisition() == CAEN_DGTZ_Success) {
+		if (vme.startAcquisition()) {
 			acquisitionWasStarted = true;
-			ui.startStopButton->setToolTip(toRussian("Стоп"));
-			ui.connectButton->setEnabled(false);
-			ui.exitButton->setEnabled(false);
-			ui.bufferComboBox->setEnabled(false);
+			setControlsEnabled(false);
+			for (auto i = 0; i < activeChannelsCount; i++)
+				ui.signalWidget->addGraph();
+			ui.signalWidget->yAxis->setRange(0, 130);
+			ui.signalWidget->xAxis->setRange(0, 2048*(static_cast<uint16_t>(pow(2, ui.bufferComboBox->currentIndex() + 1))));
 			acquisitionThread = std::thread(&MainWindow::updateData, this);
-		}
+		} else
+			this->pulseErrorButton();
 	}
 	else {
 		acquisitionWasStarted = false;
 		acquisitionThread.join();
-		ui.startStopButton->setToolTip(toRussian("Старт"));
-		ui.connectButton->setEnabled(true);
-		ui.exitButton->setEnabled(true);
-		ui.bufferComboBox->setEnabled(true);
+		ui.signalWidget->clearGraphs();
+		setControlsEnabled(true);
 	}
 }
 
@@ -177,16 +219,12 @@ void MainWindow::changeTriggerSettingsSlot() {
 
 	auto channelBoxName = "chanel" + std::to_string(channelNumber) + "SettingsBox_" + std::to_string(WDFNumber+1);
 	auto channelButtonsBox = ui.WDFTabWidget->findChildren<QObject*>(QString(channelBoxName.c_str()), Qt::FindChildrenRecursively);
-		
 	auto channelButtons = channelButtonsBox[0]->findChildren<QWidget*>(QRegExp("^(?!.*changeTriggerButton|samplesSpinBox|blockSamplesButton|thresholdSpinBox|thresholdIsDrawingButton).*$"), Qt::FindDirectChildrenOnly);
-	
 	auto samplesSpinBox = channelButtonsBox[0]->findChildren<QSpinBox*>(QRegExp("samplesSpinBox"), Qt::FindDirectChildrenOnly);
 	auto blockSamplesButton = channelButtonsBox[0]->findChildren<QPushButton*>(QRegExp("blockSamplesButton"), Qt::FindDirectChildrenOnly);
 	auto thresholdSpinBox = channelButtonsBox[0]->findChildren<QSpinBox*>(QRegExp("thresholdSpinBox"), Qt::FindDirectChildrenOnly);
 	auto thresholdIsDrawingButton = channelButtonsBox[0]->findChildren<QPushButton*>(QRegExp("thresholdIsDrawingButton"), Qt::FindDirectChildrenOnly);
 		
-	
-
 	switch (color) {
 			//if red
 		case 255000000: {
@@ -196,6 +234,7 @@ void MainWindow::changeTriggerSettingsSlot() {
 							buttonPressed->setText(toRussian("Вкл."));
 							buttonPressed->setToolTip(toRussian("Включен"));
 							buttonPressed->setStyleSheet("background-color: lime");
+							activeChannelsCount++;
 							vme.channelActiveEnableMask[WDFNumber] = vme.channelActiveEnableMask[WDFNumber] ^ channelMask;
 							break;
 		}
@@ -223,6 +262,7 @@ void MainWindow::changeTriggerSettingsSlot() {
 							buttonPressed->setText(toRussian("Выкл."));
 							buttonPressed->setToolTip(toRussian("Выключен"));
 							buttonPressed->setStyleSheet("background-color: red");
+							activeChannelsCount--;
 							vme.channelActiveEnableMask[WDFNumber] = vme.channelActiveEnableMask[WDFNumber] ^ channelMask;
 							vme.channelTriggerEnableMask[WDFNumber] = vme.channelTriggerEnableMask[WDFNumber] ^ channelMask;
 							break;
@@ -231,12 +271,14 @@ void MainWindow::changeTriggerSettingsSlot() {
 	}
 }
 
+//todo: convert from mV to ADC counts
 void MainWindow::changeThresholdSlot(int newThreshold) {
 	auto spinBox = static_cast<QSpinBox*>(sender());
 	auto spinBoxNameList = spinBox->objectName().split("_");
 	auto WDFNumber = spinBoxNameList[1].toInt() - 1;
 	auto channelNumber = spinBoxNameList[2].toInt();
-	vme.setChannelThreshold(WDFNumber, channelNumber, newThreshold);
+	if (!vme.setChannelThreshold(WDFNumber, channelNumber, newThreshold))
+		this->pulseErrorButton();
 }
 
 void MainWindow::changeSampleSlot(int newSample) {
@@ -244,7 +286,8 @@ void MainWindow::changeSampleSlot(int newSample) {
 	auto spinBoxNameList = spinBox->objectName().split("_");
 	auto WDFNumber = spinBoxNameList[1].toInt() - 1;
 	auto channelNumber = spinBoxNameList[2].toInt();
-	vme.setChannelSample(WDFNumber, channelNumber, newSample);
+	if (!vme.setChannelSample(WDFNumber, channelNumber, newSample))
+		this->pulseErrorButton();
 }
 
 void MainWindow::changeDCOffsetSlot(int newOffset) {
@@ -252,7 +295,8 @@ void MainWindow::changeDCOffsetSlot(int newOffset) {
 	auto spinBoxNameList = spinBox->objectName().split("_");
 	auto WDFNumber = spinBoxNameList[1].toInt() - 1;
 	auto channelNumber = spinBoxNameList[2].toInt();
-	vme.setChannelOffset(WDFNumber, channelNumber, newOffset);
+	if (!vme.setChannelOffset(WDFNumber, channelNumber, newOffset))
+		this->pulseErrorButton();
 }
 
 void MainWindow::resetParameterSlot() const {
@@ -272,34 +316,36 @@ void MainWindow::resetParameterSlot() const {
 	reciever->setValue(0);
 }
 
-void MainWindow::changeEdgeSettingSlot(int indexOfEdge) {
-	switch (indexOfEdge) {
-		case 0: {
-					vme.polarity = CAEN_DGTZ_TriggerOnFallingEdge;
-					break;
-		}
-		case 1: {
-					vme.polarity = CAEN_DGTZ_TriggerOnRisingEdge;
-					break;
-		}
-		default: break;
-	}
-}
-
 void MainWindow::bufferChangedSlot(int newBufferSizeIndex) {
 	auto newRecordLength = static_cast<uint16_t>(pow(2, newBufferSizeIndex+1));	//from index to KB
-	vme.setRecordLength(newRecordLength, ui.postTriggerSpinBox->value());
+	if (!vme.setRecordLength(newRecordLength, ui.postTriggerSpinBox->value()))
+		this->pulseErrorButton();
 }
 
 void MainWindow::setPostTriggerLengthSlot(int newPostTriggerInPercent) {
-	vme.setPostTriggerLength(newPostTriggerInPercent);
+	if (!vme.setPostTriggerLength(newPostTriggerInPercent))
+		this->pulseErrorButton();
 }
 
 void MainWindow::makeSoftwareTriggerSlot() {
-	vme.createSoftwareTrigger();
+	if (!vme.createSoftwareTrigger())
+		this->pulseErrorButton();
 }
 
 void MainWindow::changeExternalTriggerSlot() {
 	auto button = static_cast<QPushButton*>(sender());
-	vme.changeExternalTrigger(button->isChecked());
+	if (!vme.changeExternalTrigger(button->isChecked()))
+		this->pulseErrorButton();
+}
+
+void MainWindow::autoTriggerSlot() {
+	vme.autoTriggerEnabled = !vme.autoTriggerEnabled;
+}
+
+void MainWindow::changePolaritySlot() {
+	vme.changePolarity();
+}
+
+void MainWindow::replotGraph() const {
+	ui.signalWidget->replot();
 }

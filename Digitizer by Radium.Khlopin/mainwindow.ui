@@ -79,7 +79,7 @@
        <string/>
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="9">
+       <item row="0" column="8">
         <widget class="QPushButton" name="helpButton">
          <property name="enabled">
           <bool>true</bool>
@@ -160,7 +160,7 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="11">
+       <item row="0" column="10">
         <widget class="QPushButton" name="exitButton">
          <property name="minimumSize">
           <size>
@@ -240,7 +240,7 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="10">
+       <item row="0" column="9">
         <widget class="QPushButton" name="errorButton">
          <property name="enabled">
           <bool>true</bool>
@@ -279,7 +279,7 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="8">
+       <item row="0" column="7">
         <widget class="QPushButton" name="journalButton">
          <property name="enabled">
           <bool>true</bool>
@@ -306,45 +306,6 @@
           <iconset>
            <normaloff>../Desktop/CAEN-UI/Journal.png</normaloff>
            <normalon>../Desktop/CAEN-UI/aJournal.png</normalon>../Desktop/CAEN-UI/Journal.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="7">
-        <widget class="QPushButton" name="magnifierButton">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="toolTip">
-          <string>Лупа</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../Desktop/CAEN-UI/Magnifier.png</normaloff>
-           <normalon>../Desktop/CAEN-UI/aMagnifier.png</normalon>../Desktop/CAEN-UI/Magnifier.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -580,34 +541,34 @@
          </widget>
         </widget>
        </item>
-       <item row="1" column="0">
+       <item row="2" column="0">
         <widget class="QGroupBox" name="settingsBlock">
          <property name="minimumSize">
           <size>
            <width>1215</width>
-           <height>250</height>
+           <height>260</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>1920</width>
-           <height>250</height>
+           <height>260</height>
           </size>
          </property>
          <property name="title">
-          <string/>
+          <string>Настройки</string>
          </property>
          <property name="flat">
           <bool>false</bool>
          </property>
          <property name="checkable">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <property name="checked">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout">
-          <item>
+         <layout class="QGridLayout" name="gridLayout_7">
+          <item row="0" column="0">
            <spacer name="horizontalSpacer_2">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -620,7 +581,7 @@
             </property>
            </spacer>
           </item>
-          <item>
+          <item row="0" column="1">
            <widget class="QGroupBox" name="timeSettingBox">
             <property name="minimumSize">
              <size>
@@ -877,7 +838,7 @@
             </widget>
            </widget>
           </item>
-          <item>
+          <item row="0" column="2">
            <widget class="QGroupBox" name="triggerSettingBox">
             <property name="enabled">
              <bool>true</bool>
@@ -899,7 +860,7 @@
             </property>
             <widget class="QGroupBox" name="postTriggerBox">
              <property name="enabled">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <property name="geometry">
               <rect>
@@ -914,7 +875,7 @@
              </property>
              <widget class="QSpinBox" name="postTriggerSpinBox">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="geometry">
                <rect>
@@ -939,7 +900,7 @@
              </widget>
              <widget class="QPushButton" name="postTriggerIsDrawing">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="geometry">
                <rect>
@@ -974,7 +935,7 @@
               </property>
              </widget>
             </widget>
-            <widget class="QGroupBox" name="edgeBox">
+            <widget class="QGroupBox" name="polarityBox">
              <property name="geometry">
               <rect>
                <x>10</x>
@@ -986,7 +947,7 @@
              <property name="title">
               <string>Запуск по спаду</string>
              </property>
-             <widget class="QPushButton" name="pushButton">
+             <widget class="QPushButton" name="polarityButton">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -1000,8 +961,8 @@
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>../Desktop/CAEN-UI/Rise.png</normaloff>
-                <normalon>../Desktop/CAEN-UI/Fall.png</normalon>../Desktop/CAEN-UI/Rise.png</iconset>
+                <normaloff>../Desktop/CAEN-UI/Fall.png</normaloff>
+                <normalon>../Desktop/CAEN-UI/Rise.png</normalon>../Desktop/CAEN-UI/Fall.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -1029,7 +990,10 @@
               </property>
              </widget>
             </widget>
-            <widget class="QGroupBox" name="groupBox">
+            <widget class="QGroupBox" name="triggerOptionsBox">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="geometry">
               <rect>
                <x>10</x>
@@ -1051,7 +1015,10 @@
                </rect>
               </property>
               <property name="toolTip">
-               <string>Внешний запуск</string>
+               <string>Внешний триггер</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>5</number>
               </property>
               <property name="text">
                <string/>
@@ -1083,7 +1050,10 @@
                </rect>
               </property>
               <property name="toolTip">
-               <string>Авто запуск</string>
+               <string>Автотриггер каждую секунду</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>5</number>
               </property>
               <property name="text">
                <string/>
@@ -1115,7 +1085,10 @@
                </rect>
               </property>
               <property name="toolTip">
-               <string>Принудительный запуск</string>
+               <string>Принудительный триггер</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>5</number>
               </property>
               <property name="text">
                <string/>
@@ -1134,7 +1107,7 @@
                <bool>false</bool>
               </property>
              </widget>
-             <widget class="QPushButton" name="sinfleTriggerButton">
+             <widget class="QPushButton" name="singleTriggerButton">
               <property name="geometry">
                <rect>
                 <x>13</x>
@@ -1166,7 +1139,7 @@
             </widget>
            </widget>
           </item>
-          <item>
+          <item row="0" column="3">
            <widget class="QGroupBox" name="channelsSettingBox">
             <property name="minimumSize">
              <size>
@@ -25051,6 +25024,28 @@
          </layout>
         </widget>
        </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>300</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>Информация</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
@@ -25142,11 +25137,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>535</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>510</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25158,11 +25153,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>630</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>605</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25174,11 +25169,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>725</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>700</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25190,11 +25185,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>820</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>795</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25206,11 +25201,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>915</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>890</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25222,11 +25217,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1010</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>985</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25238,11 +25233,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1105</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1080</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25254,11 +25249,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1200</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1175</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25270,11 +25265,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>535</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>510</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25286,11 +25281,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>630</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>605</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25302,11 +25297,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>725</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>700</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25318,11 +25313,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>820</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>795</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25334,11 +25329,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>915</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>890</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25350,11 +25345,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1010</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>985</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25366,11 +25361,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1105</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1080</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25382,11 +25377,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1200</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1175</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25398,11 +25393,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>535</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>510</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25414,11 +25409,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>630</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>605</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25430,11 +25425,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>725</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>700</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25446,11 +25441,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>820</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>795</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25462,11 +25457,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>915</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>890</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25478,11 +25473,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1010</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>985</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25494,11 +25489,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1105</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1080</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25510,11 +25505,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1200</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1175</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25526,11 +25521,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>535</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>510</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25542,11 +25537,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>630</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>605</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25558,11 +25553,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>725</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>700</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25574,11 +25569,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>820</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>795</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25590,11 +25585,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>915</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>890</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25606,11 +25601,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1010</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>985</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25622,11 +25617,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1105</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1080</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25638,11 +25633,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1200</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1175</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25654,11 +25649,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>535</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>510</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25670,11 +25665,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>630</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>605</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25686,11 +25681,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>725</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>700</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25702,11 +25697,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>820</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>795</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25718,11 +25713,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>915</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>890</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25734,11 +25729,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1010</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>985</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25750,11 +25745,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1105</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1080</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25766,11 +25761,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1200</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1175</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25782,11 +25777,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>535</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>510</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25798,11 +25793,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>630</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>605</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25814,11 +25809,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>725</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>700</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25830,11 +25825,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>820</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>795</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25846,11 +25841,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>915</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>890</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25862,11 +25857,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1010</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>985</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25878,11 +25873,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1105</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1080</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25894,11 +25889,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1200</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1175</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25910,11 +25905,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>535</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>510</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25926,11 +25921,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>630</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>605</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25942,11 +25937,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>725</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>700</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25958,11 +25953,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>820</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>795</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25974,11 +25969,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>915</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>890</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -25990,11 +25985,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1010</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>985</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26006,11 +26001,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1105</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1080</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26022,11 +26017,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1200</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1175</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26038,11 +26033,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>535</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>510</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26054,11 +26049,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>630</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>605</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26070,11 +26065,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>725</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>700</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26086,11 +26081,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>820</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>795</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26102,11 +26097,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>915</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>890</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26118,11 +26113,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1010</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>985</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26134,11 +26129,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1105</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1080</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26150,11 +26145,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1200</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1175</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26166,11 +26161,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>535</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>510</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26182,11 +26177,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>630</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>605</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26198,11 +26193,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>725</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>700</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26214,11 +26209,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>820</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>795</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26230,11 +26225,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>915</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>890</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26246,11 +26241,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1010</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>985</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26262,11 +26257,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1105</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1080</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26278,11 +26273,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>1200</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>1175</x>
-     <y>735</y>
+     <y>725</y>
     </hint>
    </hints>
   </connection>
@@ -26293,8 +26288,8 @@
    <slot>bufferChangedSlot(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>152</x>
-     <y>639</y>
+     <x>176</x>
+     <y>620</y>
     </hint>
     <hint type="destinationlabel">
      <x>154</x>
@@ -26309,8 +26304,8 @@
    <slot>setPostTriggerLengthSlot(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>237</x>
-     <y>639</y>
+     <x>277</x>
+     <y>620</y>
     </hint>
     <hint type="destinationlabel">
      <x>278</x>
@@ -26341,8 +26336,8 @@
    <slot>makeSoftwareTriggerSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>262</x>
-     <y>773</y>
+     <x>304</x>
+     <y>780</y>
     </hint>
     <hint type="destinationlabel">
      <x>454</x>
@@ -26357,8 +26352,8 @@
    <slot>changeExternalTriggerSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>224</x>
-     <y>721</y>
+     <x>260</x>
+     <y>745</y>
     </hint>
     <hint type="destinationlabel">
      <x>124</x>
@@ -26382,6 +26377,38 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>polarityButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>changePolaritySlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>254</x>
+     <y>671</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>267</x>
+     <y>821</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>autoTriggerButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>autoTriggerSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>285</x>
+     <y>743</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>222</x>
+     <y>824</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>connectSlot()</slot>
@@ -26395,5 +26422,7 @@
   <slot>makeSoftwareTriggerSlot()</slot>
   <slot>changeExternalTriggerSlot()</slot>
   <slot>startStopWritingDataSlot()</slot>
+  <slot>changePolaritySlot()</slot>
+  <slot>autoTriggerSlot()</slot>
  </slots>
 </ui>

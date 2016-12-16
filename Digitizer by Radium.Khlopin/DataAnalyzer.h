@@ -11,8 +11,8 @@ public:
 	explicit DataAnalyzer(VMECommunication& vmeCommunication);
 	~DataAnalyzer();
 
-	void readData();
-	void readDataOnBoard(uint32_t boardID);
+	bool readData();
+	bool readDataOnBoard(uint32_t boardID);
 	void writeData();
 
 	CAEN_DGTZ_UINT8_EVENT_t*	getEvent() const;
