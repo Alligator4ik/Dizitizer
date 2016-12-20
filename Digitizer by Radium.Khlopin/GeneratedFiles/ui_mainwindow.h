@@ -1057,7 +1057,7 @@ public:
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         helpButton = new QPushButton(controlButtons);
         helpButton->setObjectName(QStringLiteral("helpButton"));
-        helpButton->setEnabled(true);
+        helpButton->setEnabled(false);
         helpButton->setMinimumSize(QSize(60, 60));
         helpButton->setMaximumSize(QSize(60, 60));
         QIcon icon1;
@@ -1099,7 +1099,7 @@ public:
 
         openFileButton = new QPushButton(controlButtons);
         openFileButton->setObjectName(QStringLiteral("openFileButton"));
-        openFileButton->setEnabled(true);
+        openFileButton->setEnabled(false);
         openFileButton->setMinimumSize(QSize(60, 60));
         openFileButton->setMaximumSize(QSize(60, 60));
         QIcon icon4;
@@ -1127,7 +1127,7 @@ public:
 
         journalButton = new QPushButton(controlButtons);
         journalButton->setObjectName(QStringLiteral("journalButton"));
-        journalButton->setEnabled(true);
+        journalButton->setEnabled(false);
         journalButton->setMinimumSize(QSize(60, 60));
         journalButton->setMaximumSize(QSize(60, 60));
         QIcon icon6;
@@ -1211,6 +1211,7 @@ public:
         gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
         tabWidget = new QTabWidget(mainBox);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
+        tabWidget->setEnabled(true);
         signalTab = new QWidget();
         signalTab->setObjectName(QStringLiteral("signalTab"));
         gridLayout_4 = new QGridLayout(signalTab);
@@ -1219,6 +1220,7 @@ public:
         gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
         signalWidget = new QCustomPlot(signalTab);
         signalWidget->setObjectName(QStringLiteral("signalWidget"));
+        signalWidget->setEnabled(true);
 
         gridLayout_4->addWidget(signalWidget, 0, 0, 1, 1);
 
@@ -1252,7 +1254,7 @@ public:
 
         settingsBlock = new QGroupBox(mainBox);
         settingsBlock->setObjectName(QStringLiteral("settingsBlock"));
-        settingsBlock->setMinimumSize(QSize(1215, 260));
+        settingsBlock->setMinimumSize(QSize(1215, 0));
         settingsBlock->setMaximumSize(QSize(1920, 260));
         settingsBlock->setFlat(false);
         settingsBlock->setCheckable(true);
@@ -1286,7 +1288,7 @@ public:
         scaleTimeBox->setGeometry(QRect(10, 62, 100, 50));
         scaleTimeComboBox = new QComboBox(scaleTimeBox);
         scaleTimeComboBox->setObjectName(QStringLiteral("scaleTimeComboBox"));
-        scaleTimeComboBox->setEnabled(true);
+        scaleTimeComboBox->setEnabled(false);
         scaleTimeComboBox->setGeometry(QRect(10, 20, 81, 20));
         scaleTimeComboBox->setEditable(false);
         positionTimeBox = new QGroupBox(timeSettingBox);
@@ -1295,10 +1297,11 @@ public:
         positionTimeBox->setGeometry(QRect(10, 109, 100, 50));
         positionSpinBox_0_0 = new QSpinBox(positionTimeBox);
         positionSpinBox_0_0->setObjectName(QStringLiteral("positionSpinBox_0_0"));
+        positionSpinBox_0_0->setEnabled(false);
         positionSpinBox_0_0->setGeometry(QRect(15, 20, 50, 20));
         positionResetButton_0_0 = new QPushButton(positionTimeBox);
         positionResetButton_0_0->setObjectName(QStringLiteral("positionResetButton_0_0"));
-        positionResetButton_0_0->setEnabled(true);
+        positionResetButton_0_0->setEnabled(false);
         positionResetButton_0_0->setGeometry(QRect(70, 20, 20, 20));
         positionResetButton_0_0->setMaximumSize(QSize(20, 20));
         QIcon icon11;
@@ -1306,6 +1309,7 @@ public:
         positionResetButton_0_0->setIcon(icon11);
         inversionButton = new QPushButton(timeSettingBox);
         inversionButton->setObjectName(QStringLiteral("inversionButton"));
+        inversionButton->setEnabled(false);
         inversionButton->setGeometry(QRect(20, 170, 81, 25));
         inversionButton->setCheckable(true);
 
@@ -1330,7 +1334,7 @@ public:
         postTriggerSpinBox->setValue(80);
         postTriggerIsDrawing = new QPushButton(postTriggerBox);
         postTriggerIsDrawing->setObjectName(QStringLiteral("postTriggerIsDrawing"));
-        postTriggerIsDrawing->setEnabled(true);
+        postTriggerIsDrawing->setEnabled(false);
         postTriggerIsDrawing->setGeometry(QRect(70, 20, 20, 20));
         postTriggerIsDrawing->setMaximumSize(QSize(20, 20));
         QIcon icon12;

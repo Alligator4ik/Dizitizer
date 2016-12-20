@@ -34,6 +34,7 @@ class Ui_SettingsWindowController
 public:
     QWidget *centralWidget;
     QGridLayout *gridLayout;
+    QDialogButtonBox *buttonBox;
     QTabWidget *tabWidget;
     QWidget *activeWDFs;
     QTableWidget *VMECommSetting;
@@ -88,6 +89,8 @@ public:
     QComboBox *TrigLine_CH_5;
     QComboBox *TrigLine_CH_6;
     QComboBox *TrigLine_CH_7;
+    QLabel *currentWDFLabel;
+    QComboBox *currentWDFInColorTab;
     QWidget *ViewerSetting;
     QGroupBox *groupBox;
     QLabel *label;
@@ -99,7 +102,6 @@ public:
     QComboBox *comboBox;
     QGroupBox *groupBox_3;
     QComboBox *comboBox_3;
-    QDialogButtonBox *buttonBox;
 
     void setupUi(QMainWindow *SettingsWindowController)
     {
@@ -120,6 +122,12 @@ public:
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        buttonBox = new QDialogButtonBox(centralWidget);
+        buttonBox->setObjectName(QStringLiteral("buttonBox"));
+        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+
+        gridLayout->addWidget(buttonBox, 1, 0, 1, 1);
+
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
         tabWidget->setEnabled(true);
@@ -387,7 +395,7 @@ public:
         __qtablewidgetitem72->setTextAlignment(Qt::AlignCenter);
         ColorSetting->setItem(7, 0, __qtablewidgetitem72);
         ColorSetting->setObjectName(QStringLiteral("ColorSetting"));
-        ColorSetting->setGeometry(QRect(10, 7, 461, 271));
+        ColorSetting->setGeometry(QRect(10, 32, 461, 271));
         ColorSetting->setLineWidth(1);
         ColorSetting->horizontalHeader()->setCascadingSectionResizes(false);
         ColorSetting->horizontalHeader()->setDefaultSectionSize(80);
@@ -403,55 +411,55 @@ public:
         ColorSetting->verticalHeader()->setStretchLastSection(true);
         Color_CH_0 = new QLabel(ChannelColorSetting);
         Color_CH_0->setObjectName(QStringLiteral("Color_CH_0"));
-        Color_CH_0->setGeometry(QRect(90, 35, 40, 20));
+        Color_CH_0->setGeometry(QRect(90, 60, 40, 20));
         Color_CH_0->setAutoFillBackground(false);
         Color_CH_0->setStyleSheet(QLatin1String("border: 2px solid  #a0a0a0 ;\n"
 "background-color: rgb(0, 255, 255);"));
         Color_CH_1 = new QLabel(ChannelColorSetting);
         Color_CH_1->setObjectName(QStringLiteral("Color_CH_1"));
-        Color_CH_1->setGeometry(QRect(90, 65, 40, 20));
+        Color_CH_1->setGeometry(QRect(90, 90, 40, 20));
         Color_CH_1->setAutoFillBackground(false);
         Color_CH_1->setStyleSheet(QLatin1String("border: 2px solid  #a0a0a0 ;\n"
 "background-color: rgb(255, 128, 0);"));
         Color_CH_2 = new QLabel(ChannelColorSetting);
         Color_CH_2->setObjectName(QStringLiteral("Color_CH_2"));
-        Color_CH_2->setGeometry(QRect(90, 95, 40, 20));
+        Color_CH_2->setGeometry(QRect(90, 120, 40, 20));
         Color_CH_2->setAutoFillBackground(false);
         Color_CH_2->setStyleSheet(QLatin1String("border: 2px solid  #a0a0a0 ;\n"
 "background-color: rgb(255, 255, 128);"));
         Color_CH_3 = new QLabel(ChannelColorSetting);
         Color_CH_3->setObjectName(QStringLiteral("Color_CH_3"));
-        Color_CH_3->setGeometry(QRect(90, 125, 40, 20));
+        Color_CH_3->setGeometry(QRect(90, 150, 40, 20));
         Color_CH_3->setAutoFillBackground(false);
         Color_CH_3->setStyleSheet(QLatin1String("border: 2px solid  #a0a0a0 ;\n"
 "background-color: rgb(128, 255, 128);"));
         Color_CH_4 = new QLabel(ChannelColorSetting);
         Color_CH_4->setObjectName(QStringLiteral("Color_CH_4"));
-        Color_CH_4->setGeometry(QRect(90, 185, 40, 20));
+        Color_CH_4->setGeometry(QRect(90, 210, 40, 20));
         Color_CH_4->setAutoFillBackground(false);
         Color_CH_4->setStyleSheet(QLatin1String("border: 2px solid  #a0a0a0 ;\n"
 "background-color: rgb(255, 0, 0);"));
         Color_CH_5 = new QLabel(ChannelColorSetting);
         Color_CH_5->setObjectName(QStringLiteral("Color_CH_5"));
-        Color_CH_5->setGeometry(QRect(90, 155, 40, 20));
+        Color_CH_5->setGeometry(QRect(90, 180, 40, 20));
         Color_CH_5->setAutoFillBackground(false);
         Color_CH_5->setStyleSheet(QLatin1String("border: 2px solid  #a0a0a0 ;\n"
 "background-color: rgb(0, 0, 255);"));
         Color_CH_6 = new QLabel(ChannelColorSetting);
         Color_CH_6->setObjectName(QStringLiteral("Color_CH_6"));
-        Color_CH_6->setGeometry(QRect(90, 215, 40, 20));
+        Color_CH_6->setGeometry(QRect(90, 240, 40, 20));
         Color_CH_6->setAutoFillBackground(false);
         Color_CH_6->setStyleSheet(QLatin1String("border: 2px solid  #a0a0a0 ;\n"
 "background-color:rgb(255, 0, 255);"));
         Color_CH_7 = new QLabel(ChannelColorSetting);
         Color_CH_7->setObjectName(QStringLiteral("Color_CH_7"));
-        Color_CH_7->setGeometry(QRect(90, 245, 40, 20));
+        Color_CH_7->setGeometry(QRect(90, 270, 40, 20));
         Color_CH_7->setAutoFillBackground(false);
         Color_CH_7->setStyleSheet(QLatin1String("border: 2px solid  #a0a0a0 ;\n"
 "background-color: green;"));
         EditColor_CH_0 = new QPushButton(ChannelColorSetting);
         EditColor_CH_0->setObjectName(QStringLiteral("EditColor_CH_0"));
-        EditColor_CH_0->setGeometry(QRect(135, 35, 20, 20));
+        EditColor_CH_0->setGeometry(QRect(135, 60, 20, 20));
         EditColor_CH_0->setMaximumSize(QSize(20, 20));
         QIcon icon2;
         icon2.addFile(QStringLiteral("../Desktop/CAEN-UI/Edit.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -460,125 +468,131 @@ public:
         EditColor_CH_0->setChecked(false);
         EditColor_CH_1 = new QPushButton(ChannelColorSetting);
         EditColor_CH_1->setObjectName(QStringLiteral("EditColor_CH_1"));
-        EditColor_CH_1->setGeometry(QRect(135, 65, 20, 20));
+        EditColor_CH_1->setGeometry(QRect(135, 90, 20, 20));
         EditColor_CH_1->setMaximumSize(QSize(20, 20));
         EditColor_CH_1->setIcon(icon2);
         EditColor_CH_1->setCheckable(false);
         EditColor_CH_1->setChecked(false);
         EditColor_CH_2 = new QPushButton(ChannelColorSetting);
         EditColor_CH_2->setObjectName(QStringLiteral("EditColor_CH_2"));
-        EditColor_CH_2->setGeometry(QRect(135, 95, 20, 20));
+        EditColor_CH_2->setGeometry(QRect(135, 120, 20, 20));
         EditColor_CH_2->setMaximumSize(QSize(20, 20));
         EditColor_CH_2->setIcon(icon2);
         EditColor_CH_2->setCheckable(false);
         EditColor_CH_2->setChecked(false);
         EditColor_CH_3 = new QPushButton(ChannelColorSetting);
         EditColor_CH_3->setObjectName(QStringLiteral("EditColor_CH_3"));
-        EditColor_CH_3->setGeometry(QRect(135, 125, 20, 20));
+        EditColor_CH_3->setGeometry(QRect(135, 150, 20, 20));
         EditColor_CH_3->setMaximumSize(QSize(20, 20));
         EditColor_CH_3->setIcon(icon2);
         EditColor_CH_3->setCheckable(false);
         EditColor_CH_3->setChecked(false);
         EditColor_CH_4 = new QPushButton(ChannelColorSetting);
         EditColor_CH_4->setObjectName(QStringLiteral("EditColor_CH_4"));
-        EditColor_CH_4->setGeometry(QRect(135, 155, 20, 20));
+        EditColor_CH_4->setGeometry(QRect(135, 180, 20, 20));
         EditColor_CH_4->setMaximumSize(QSize(20, 20));
         EditColor_CH_4->setIcon(icon2);
         EditColor_CH_4->setCheckable(false);
         EditColor_CH_4->setChecked(false);
         EditColor_CH_5 = new QPushButton(ChannelColorSetting);
         EditColor_CH_5->setObjectName(QStringLiteral("EditColor_CH_5"));
-        EditColor_CH_5->setGeometry(QRect(135, 185, 20, 20));
+        EditColor_CH_5->setGeometry(QRect(135, 210, 20, 20));
         EditColor_CH_5->setMaximumSize(QSize(20, 20));
         EditColor_CH_5->setIcon(icon2);
         EditColor_CH_5->setCheckable(false);
         EditColor_CH_5->setChecked(false);
         EditColor_CH_6 = new QPushButton(ChannelColorSetting);
         EditColor_CH_6->setObjectName(QStringLiteral("EditColor_CH_6"));
-        EditColor_CH_6->setGeometry(QRect(135, 215, 20, 20));
+        EditColor_CH_6->setGeometry(QRect(135, 240, 20, 20));
         EditColor_CH_6->setMaximumSize(QSize(20, 20));
         EditColor_CH_6->setIcon(icon2);
         EditColor_CH_6->setCheckable(false);
         EditColor_CH_6->setChecked(false);
         EditColor_CH_7 = new QPushButton(ChannelColorSetting);
         EditColor_CH_7->setObjectName(QStringLiteral("EditColor_CH_7"));
-        EditColor_CH_7->setGeometry(QRect(135, 245, 20, 20));
+        EditColor_CH_7->setGeometry(QRect(135, 270, 20, 20));
         EditColor_CH_7->setMaximumSize(QSize(20, 20));
         EditColor_CH_7->setIcon(icon2);
         EditColor_CH_7->setCheckable(false);
         EditColor_CH_7->setChecked(false);
         WidthSignal_CH_3 = new QSpinBox(ChannelColorSetting);
         WidthSignal_CH_3->setObjectName(QStringLiteral("WidthSignal_CH_3"));
-        WidthSignal_CH_3->setGeometry(QRect(178, 125, 40, 20));
+        WidthSignal_CH_3->setGeometry(QRect(178, 150, 40, 20));
         WidthSignal_CH_4 = new QSpinBox(ChannelColorSetting);
         WidthSignal_CH_4->setObjectName(QStringLiteral("WidthSignal_CH_4"));
-        WidthSignal_CH_4->setGeometry(QRect(178, 155, 40, 20));
+        WidthSignal_CH_4->setGeometry(QRect(178, 180, 40, 20));
         WidthSignal_CH_5 = new QSpinBox(ChannelColorSetting);
         WidthSignal_CH_5->setObjectName(QStringLiteral("WidthSignal_CH_5"));
-        WidthSignal_CH_5->setGeometry(QRect(178, 185, 40, 20));
+        WidthSignal_CH_5->setGeometry(QRect(178, 210, 40, 20));
         WidthSignal_CH_6 = new QSpinBox(ChannelColorSetting);
         WidthSignal_CH_6->setObjectName(QStringLiteral("WidthSignal_CH_6"));
-        WidthSignal_CH_6->setGeometry(QRect(178, 215, 40, 20));
+        WidthSignal_CH_6->setGeometry(QRect(178, 240, 40, 20));
         WidthSignal_CH_7 = new QSpinBox(ChannelColorSetting);
         WidthSignal_CH_7->setObjectName(QStringLiteral("WidthSignal_CH_7"));
-        WidthSignal_CH_7->setGeometry(QRect(178, 245, 40, 20));
+        WidthSignal_CH_7->setGeometry(QRect(178, 270, 40, 20));
         WidthSignal_CH_0 = new QSpinBox(ChannelColorSetting);
         WidthSignal_CH_0->setObjectName(QStringLiteral("WidthSignal_CH_0"));
-        WidthSignal_CH_0->setGeometry(QRect(178, 35, 40, 20));
+        WidthSignal_CH_0->setGeometry(QRect(178, 60, 40, 20));
         WidthSignal_CH_2 = new QSpinBox(ChannelColorSetting);
         WidthSignal_CH_2->setObjectName(QStringLiteral("WidthSignal_CH_2"));
-        WidthSignal_CH_2->setGeometry(QRect(178, 95, 40, 20));
+        WidthSignal_CH_2->setGeometry(QRect(178, 120, 40, 20));
         WidthSignal_CH_1 = new QSpinBox(ChannelColorSetting);
         WidthSignal_CH_1->setObjectName(QStringLiteral("WidthSignal_CH_1"));
-        WidthSignal_CH_1->setGeometry(QRect(178, 65, 40, 20));
+        WidthSignal_CH_1->setGeometry(QRect(178, 90, 40, 20));
         WidthTrigger_CH_5 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_5->setObjectName(QStringLiteral("WidthTrigger_CH_5"));
-        WidthTrigger_CH_5->setGeometry(QRect(400, 185, 40, 20));
+        WidthTrigger_CH_5->setGeometry(QRect(400, 210, 40, 20));
         WidthTrigger_CH_1 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_1->setObjectName(QStringLiteral("WidthTrigger_CH_1"));
-        WidthTrigger_CH_1->setGeometry(QRect(400, 65, 40, 20));
+        WidthTrigger_CH_1->setGeometry(QRect(400, 90, 40, 20));
         WidthTrigger_CH_3 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_3->setObjectName(QStringLiteral("WidthTrigger_CH_3"));
-        WidthTrigger_CH_3->setGeometry(QRect(400, 125, 40, 20));
+        WidthTrigger_CH_3->setGeometry(QRect(400, 150, 40, 20));
         WidthTrigger_CH_4 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_4->setObjectName(QStringLiteral("WidthTrigger_CH_4"));
-        WidthTrigger_CH_4->setGeometry(QRect(400, 155, 40, 20));
+        WidthTrigger_CH_4->setGeometry(QRect(400, 180, 40, 20));
         WidthTrigger_CH_0 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_0->setObjectName(QStringLiteral("WidthTrigger_CH_0"));
-        WidthTrigger_CH_0->setGeometry(QRect(400, 35, 40, 20));
+        WidthTrigger_CH_0->setGeometry(QRect(400, 60, 40, 20));
         WidthTrigger_CH_2 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_2->setObjectName(QStringLiteral("WidthTrigger_CH_2"));
-        WidthTrigger_CH_2->setGeometry(QRect(400, 95, 40, 20));
+        WidthTrigger_CH_2->setGeometry(QRect(400, 120, 40, 20));
         WidthTrigger_CH_6 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_6->setObjectName(QStringLiteral("WidthTrigger_CH_6"));
-        WidthTrigger_CH_6->setGeometry(QRect(400, 215, 40, 20));
+        WidthTrigger_CH_6->setGeometry(QRect(400, 240, 40, 20));
         WidthTrigger_CH_7 = new QSpinBox(ChannelColorSetting);
         WidthTrigger_CH_7->setObjectName(QStringLiteral("WidthTrigger_CH_7"));
-        WidthTrigger_CH_7->setGeometry(QRect(400, 245, 40, 20));
+        WidthTrigger_CH_7->setGeometry(QRect(400, 270, 40, 20));
         TrigLine_CH_0 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_0->setObjectName(QStringLiteral("TrigLine_CH_0"));
-        TrigLine_CH_0->setGeometry(QRect(240, 35, 120, 20));
+        TrigLine_CH_0->setGeometry(QRect(240, 60, 120, 20));
         TrigLine_CH_1 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_1->setObjectName(QStringLiteral("TrigLine_CH_1"));
-        TrigLine_CH_1->setGeometry(QRect(240, 65, 120, 20));
+        TrigLine_CH_1->setGeometry(QRect(240, 90, 120, 20));
         TrigLine_CH_2 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_2->setObjectName(QStringLiteral("TrigLine_CH_2"));
-        TrigLine_CH_2->setGeometry(QRect(240, 95, 120, 20));
+        TrigLine_CH_2->setGeometry(QRect(240, 120, 120, 20));
         TrigLine_CH_3 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_3->setObjectName(QStringLiteral("TrigLine_CH_3"));
-        TrigLine_CH_3->setGeometry(QRect(240, 125, 120, 20));
+        TrigLine_CH_3->setGeometry(QRect(240, 150, 120, 20));
         TrigLine_CH_4 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_4->setObjectName(QStringLiteral("TrigLine_CH_4"));
-        TrigLine_CH_4->setGeometry(QRect(240, 155, 120, 20));
+        TrigLine_CH_4->setGeometry(QRect(240, 180, 120, 20));
         TrigLine_CH_5 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_5->setObjectName(QStringLiteral("TrigLine_CH_5"));
-        TrigLine_CH_5->setGeometry(QRect(240, 185, 120, 20));
+        TrigLine_CH_5->setGeometry(QRect(240, 210, 120, 20));
         TrigLine_CH_6 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_6->setObjectName(QStringLiteral("TrigLine_CH_6"));
-        TrigLine_CH_6->setGeometry(QRect(240, 215, 120, 20));
+        TrigLine_CH_6->setGeometry(QRect(240, 240, 120, 20));
         TrigLine_CH_7 = new QComboBox(ChannelColorSetting);
         TrigLine_CH_7->setObjectName(QStringLiteral("TrigLine_CH_7"));
-        TrigLine_CH_7->setGeometry(QRect(240, 245, 120, 20));
+        TrigLine_CH_7->setGeometry(QRect(240, 270, 120, 20));
+        currentWDFLabel = new QLabel(ChannelColorSetting);
+        currentWDFLabel->setObjectName(QStringLiteral("currentWDFLabel"));
+        currentWDFLabel->setGeometry(QRect(60, 0, 91, 16));
+        currentWDFInColorTab = new QComboBox(ChannelColorSetting);
+        currentWDFInColorTab->setObjectName(QStringLiteral("currentWDFInColorTab"));
+        currentWDFInColorTab->setGeometry(QRect(170, 0, 31, 22));
         QIcon icon3;
         icon3.addFile(QStringLiteral("../Desktop/CAEN-UI/Setting/2.png"), QSize(), QIcon::Normal, QIcon::Off);
         tabWidget->addTab(ChannelColorSetting, icon3, QString());
@@ -634,19 +648,14 @@ public:
 
         gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
-        buttonBox = new QDialogButtonBox(centralWidget);
-        buttonBox->setObjectName(QStringLiteral("buttonBox"));
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
-
-        gridLayout->addWidget(buttonBox, 1, 0, 1, 1);
-
         SettingsWindowController->setCentralWidget(centralWidget);
 
         retranslateUi(SettingsWindowController);
         QObject::connect(buttonBox, SIGNAL(rejected()), SettingsWindowController, SLOT(close()));
         QObject::connect(buttonBox, SIGNAL(accepted()), SettingsWindowController, SLOT(acceptedSlot()));
+        QObject::connect(currentWDFInColorTab, SIGNAL(currentIndexChanged(int)), SettingsWindowController, SLOT(WDFChangedInChannelTabSlot(int)));
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(SettingsWindowController);
@@ -891,6 +900,19 @@ public:
          << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
          << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
          << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+        );
+        currentWDFLabel->setText(QApplication::translate("SettingsWindowController", "\320\242\320\265\320\272\321\203\321\211\320\260\321\217 \320\277\320\273\320\260\321\202\320\260:", 0));
+        currentWDFInColorTab->clear();
+        currentWDFInColorTab->insertItems(0, QStringList()
+         << QApplication::translate("SettingsWindowController", "1", 0)
+         << QApplication::translate("SettingsWindowController", "2", 0)
+         << QApplication::translate("SettingsWindowController", "3", 0)
+         << QApplication::translate("SettingsWindowController", "4", 0)
+         << QApplication::translate("SettingsWindowController", "5", 0)
+         << QApplication::translate("SettingsWindowController", "6", 0)
+         << QApplication::translate("SettingsWindowController", "7", 0)
+         << QApplication::translate("SettingsWindowController", "8", 0)
+         << QApplication::translate("SettingsWindowController", "9", 0)
         );
         tabWidget->setTabText(tabWidget->indexOf(ChannelColorSetting), QString());
         groupBox->setTitle(QApplication::translate("SettingsWindowController", "\320\227\320\260\320\264\320\275\320\270\320\271 \320\277\320\273\320\260\320\275 ", 0));

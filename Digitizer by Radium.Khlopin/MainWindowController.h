@@ -5,6 +5,7 @@
 #include "VMECommunication.h"
 #include <thread>
 #include "qcustomplot.h"
+#include <mutex>
 
 class MainWindow : public QMainWindow
 {
@@ -13,16 +14,19 @@ class MainWindow : public QMainWindow
 public:
 	explicit MainWindow(QWidget *parent = nullptr);
 	~MainWindow();
-	VMECommunication& getVME();
-
+	VMECommunication&				getVME();
+	vector<vector<string>>&			getChannelColors();
+	mutex							colorBrushMutex;
 private:
 	Ui::MainWindowClass				ui;
 	SettingsWindowController*		settings_window_controller;
 	ErrorLogWindowController*		error_log_window_controller;
+
 	VMECommunication				vme;
 	bool							acquisitionWasStarted = false;
 	uint16_t						activeChannelsCount = 0;			//need to know graphs count
 	vector<vector<bool>>			samplesSpinboxIsDisabled;
+	vector<vector<string>>			channelsColors;
 	std::thread						acquisitionThread;
 
 	void							updateData();

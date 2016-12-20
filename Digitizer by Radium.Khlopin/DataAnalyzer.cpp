@@ -26,23 +26,26 @@ DataAnalyzer::~DataAnalyzer() {
 			}
 }
 
+//return true if there is something to read on any board
 bool DataAnalyzer::readData() {
 	auto WDFIdentificators = vmeComm.getWDFIdentificators();
 	//start acquistition cycle on all enabled boards
 	for (auto boardNumber = 0; boardNumber < WDFIdentificators.size(); boardNumber++) {
 		if (vmeComm.WDFIsEnabled[boardNumber]) {
-			boardThreads[boardNumber] = thread(&DataAnalyzer::readDataOnBoard, this, WDFIdentificators[boardNumber]);
+			boardThreads[boardNumber] = async(launch::async, &DataAnalyzer::readDataOnBoard, this, WDFIdentificators[boardNumber]);
 		}
 	}
+	auto result = false;
 	//stop acquistition cycle on all enabled boards
 	for (auto boardNumber = 0; boardNumber < WDFIdentificators.size(); boardNumber++) {
 		if (vmeComm.WDFIsEnabled[boardNumber]) {
-			boardThreads[boardNumber].join();
+			result |= boardThreads[boardNumber].get();
 		}
 	}
-	return true;		//if there is anything to read
+	return result;		//if there is anything to read
 }
 
+//return true if there is something to read on board with ID boardID
 bool DataAnalyzer::readDataOnBoard(uint32_t boardID) {
 	CAEN_DGTZ_ErrorCode error;
 	char* bufferToReadIn = nullptr;
@@ -71,11 +74,12 @@ bool DataAnalyzer::readDataOnBoard(uint32_t boardID) {
 		return false;
 	}
 	if (numberOfEventsStored > 0) {
-		//numberOfEventsStored--;
 		CAEN_DGTZ_EventInfo_t eventInfo;
 		char* eventPointer = nullptr;
-		qInfo() << "Get " << numberOfEventsStored-- << " events!";
-		if ((error = CAEN_DGTZ_GetEventInfo(boardID, bufferToReadIn, sizeOfBufferInBytes, numberOfEventsStored, &eventInfo, &eventPointer)) != CAEN_DGTZ_Success) {
+		qInfo() << "Get " << numberOfEventsStored-- << " event!";
+		//todo:make all of events readable!
+		auto currentEventToRead = numberOfEventsStored;
+		if ((error = CAEN_DGTZ_GetEventInfo(boardID, bufferToReadIn, sizeOfBufferInBytes, currentEventToRead, &eventInfo, &eventPointer)) != CAEN_DGTZ_Success) {
 			vmeComm.addTimeOfBoardError(boardID);
 			vmeComm.addBoardError(boardID, error);
 			return false;

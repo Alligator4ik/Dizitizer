@@ -30,6 +30,13 @@
     </sizepolicy>
    </property>
    <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QDialogButtonBox" name="buttonBox">
+      <property name="standardButtons">
+       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      </property>
+     </widget>
+    </item>
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="enabled">
@@ -51,7 +58,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="iconSize">
        <size>
@@ -627,7 +634,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>7</y>
+          <y>32</y>
           <width>461</width>
           <height>271</height>
          </rect>
@@ -805,7 +812,7 @@
         <property name="geometry">
          <rect>
           <x>90</x>
-          <y>35</y>
+          <y>60</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -825,7 +832,7 @@ background-color: rgb(0, 255, 255);</string>
         <property name="geometry">
          <rect>
           <x>90</x>
-          <y>65</y>
+          <y>90</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -845,7 +852,7 @@ background-color: rgb(255, 128, 0);</string>
         <property name="geometry">
          <rect>
           <x>90</x>
-          <y>95</y>
+          <y>120</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -865,7 +872,7 @@ background-color: rgb(255, 255, 128);</string>
         <property name="geometry">
          <rect>
           <x>90</x>
-          <y>125</y>
+          <y>150</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -885,7 +892,7 @@ background-color: rgb(128, 255, 128);</string>
         <property name="geometry">
          <rect>
           <x>90</x>
-          <y>185</y>
+          <y>210</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -905,7 +912,7 @@ background-color: rgb(255, 0, 0);</string>
         <property name="geometry">
          <rect>
           <x>90</x>
-          <y>155</y>
+          <y>180</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -925,7 +932,7 @@ background-color: rgb(0, 0, 255);</string>
         <property name="geometry">
          <rect>
           <x>90</x>
-          <y>215</y>
+          <y>240</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -945,7 +952,7 @@ background-color:rgb(255, 0, 255);</string>
         <property name="geometry">
          <rect>
           <x>90</x>
-          <y>245</y>
+          <y>270</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -965,7 +972,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>135</x>
-          <y>35</y>
+          <y>60</y>
           <width>20</width>
           <height>20</height>
          </rect>
@@ -997,7 +1004,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>135</x>
-          <y>65</y>
+          <y>90</y>
           <width>20</width>
           <height>20</height>
          </rect>
@@ -1029,7 +1036,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>135</x>
-          <y>95</y>
+          <y>120</y>
           <width>20</width>
           <height>20</height>
          </rect>
@@ -1061,7 +1068,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>135</x>
-          <y>125</y>
+          <y>150</y>
           <width>20</width>
           <height>20</height>
          </rect>
@@ -1093,7 +1100,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>135</x>
-          <y>155</y>
+          <y>180</y>
           <width>20</width>
           <height>20</height>
          </rect>
@@ -1125,7 +1132,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>135</x>
-          <y>185</y>
+          <y>210</y>
           <width>20</width>
           <height>20</height>
          </rect>
@@ -1157,7 +1164,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>135</x>
-          <y>215</y>
+          <y>240</y>
           <width>20</width>
           <height>20</height>
          </rect>
@@ -1189,7 +1196,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>135</x>
-          <y>245</y>
+          <y>270</y>
           <width>20</width>
           <height>20</height>
          </rect>
@@ -1221,7 +1228,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>178</x>
-          <y>125</y>
+          <y>150</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1231,7 +1238,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>178</x>
-          <y>155</y>
+          <y>180</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1241,7 +1248,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>178</x>
-          <y>185</y>
+          <y>210</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1251,7 +1258,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>178</x>
-          <y>215</y>
+          <y>240</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1261,7 +1268,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>178</x>
-          <y>245</y>
+          <y>270</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1271,7 +1278,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>178</x>
-          <y>35</y>
+          <y>60</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1281,7 +1288,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>178</x>
-          <y>95</y>
+          <y>120</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1291,7 +1298,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>178</x>
-          <y>65</y>
+          <y>90</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1301,7 +1308,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>400</x>
-          <y>185</y>
+          <y>210</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1311,7 +1318,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>400</x>
-          <y>65</y>
+          <y>90</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1321,7 +1328,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>400</x>
-          <y>125</y>
+          <y>150</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1331,7 +1338,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>400</x>
-          <y>155</y>
+          <y>180</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1341,7 +1348,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>400</x>
-          <y>35</y>
+          <y>60</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1351,7 +1358,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>400</x>
-          <y>95</y>
+          <y>120</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1361,7 +1368,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>400</x>
-          <y>215</y>
+          <y>240</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1371,7 +1378,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>400</x>
-          <y>245</y>
+          <y>270</y>
           <width>40</width>
           <height>20</height>
          </rect>
@@ -1381,7 +1388,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>35</y>
+          <y>60</y>
           <width>120</width>
           <height>20</height>
          </rect>
@@ -1406,7 +1413,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>65</y>
+          <y>90</y>
           <width>120</width>
           <height>20</height>
          </rect>
@@ -1431,7 +1438,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>95</y>
+          <y>120</y>
           <width>120</width>
           <height>20</height>
          </rect>
@@ -1456,7 +1463,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>125</y>
+          <y>150</y>
           <width>120</width>
           <height>20</height>
          </rect>
@@ -1481,7 +1488,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>155</y>
+          <y>180</y>
           <width>120</width>
           <height>20</height>
          </rect>
@@ -1506,7 +1513,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>185</y>
+          <y>210</y>
           <width>120</width>
           <height>20</height>
          </rect>
@@ -1531,7 +1538,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>215</y>
+          <y>240</y>
           <width>120</width>
           <height>20</height>
          </rect>
@@ -1556,7 +1563,7 @@ background-color: green;</string>
         <property name="geometry">
          <rect>
           <x>240</x>
-          <y>245</y>
+          <y>270</y>
           <width>120</width>
           <height>20</height>
          </rect>
@@ -1574,6 +1581,74 @@ background-color: green;</string>
         <item>
          <property name="text">
           <string>Штрихпунктирная</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="currentWDFLabel">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>0</y>
+          <width>91</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Текущая плата:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="currentWDFInColorTab">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>0</y>
+          <width>31</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>9</string>
          </property>
         </item>
        </widget>
@@ -1798,13 +1873,6 @@ background-color: rgb(192, 192, 192);</string>
       </widget>
      </widget>
     </item>
-    <item row="1" column="0">
-     <widget class="QDialogButtonBox" name="buttonBox">
-      <property name="standardButtons">
-       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-      </property>
-     </widget>
-    </item>
    </layout>
   </widget>
  </widget>
@@ -1820,8 +1888,8 @@ background-color: rgb(192, 192, 192);</string>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>519</x>
-     <y>356</y>
+     <x>528</x>
+     <y>354</y>
     </hint>
     <hint type="destinationlabel">
      <x>519</x>
@@ -1836,8 +1904,8 @@ background-color: rgb(192, 192, 192);</string>
    <slot>acceptedSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>503</x>
-     <y>356</y>
+     <x>512</x>
+     <y>354</y>
     </hint>
     <hint type="destinationlabel">
      <x>393</x>
@@ -1845,9 +1913,26 @@ background-color: rgb(192, 192, 192);</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>currentWDFInColorTab</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SettingsWindowController</receiver>
+   <slot>WDFChangedInChannelTabSlot(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>320</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>339</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>connectSlot()</slot>
   <slot>acceptedSlot()</slot>
+  <slot>WDFChangedInChannelTabSlot(int)</slot>
  </slots>
 </ui>

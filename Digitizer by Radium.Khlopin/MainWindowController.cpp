@@ -43,6 +43,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 	//set postTrigger disabled
 	ui.postTriggerBox->setEnabled(false);
+
 }
 
 MainWindow::~MainWindow() {
@@ -53,6 +54,12 @@ MainWindow::~MainWindow() {
 		for (auto WDF = 0; WDF < vme.WDFIsEnabled.size(); WDF++)
 			settingsOut << vme.WDFIsEnabled[WDF] << " ";
 		settingsOut << endl;
+		//write graph colours
+		for (auto WDF = 0; WDF < vme.numberOfWDF; WDF++) {
+			for (auto channel = 0; channel < 8; channel++)
+				settingsOut << channelsColors[WDF][channel] << " ";
+			settingsOut << endl;
+		}
 		//write other settings
 	}
 }
@@ -61,26 +68,25 @@ VMECommunication& MainWindow::getVME() {
 	return vme;
 }
 
+vector<vector<string>>& MainWindow::getChannelColors() {
+	return channelsColors;
+}
+
 void MainWindow::updateData() {
 	DataAnalyzer vmeData(vme);
 	auto lastAutoTriggerSecond = static_cast<int>(time(nullptr));
 	while (acquisitionWasStarted) {
-		auto ready = false;
 		auto currentAutoTriggerSecond = static_cast<int>(time(nullptr));
 		if (vme.autoTriggerEnabled && lastAutoTriggerSecond != currentAutoTriggerSecond) {
 			lastAutoTriggerSecond = currentAutoTriggerSecond;
 			vme.createSoftwareTrigger();
-			ready = true;
 		}
-		//todo: ready = (vme.readData() return value)
-		//todo: eg if there is smth to read, it will return true
-		if (ready) {
-			vmeData.readData();
+		if (vmeData.readData()) {					//if we have smth to show or analyze
 			if (ui.recordButton->isChecked())
 				vmeData.writeData();
 			if (ui.drawButton->isChecked()) {
 				drawSignal(vmeData.getEvent());
-				if (acquisitionWasStarted)
+				if (acquisitionWasStarted)			//to avoid deadlock on big buffers
 					emit replot();
 			}
 		}
@@ -90,14 +96,35 @@ void MainWindow::updateData() {
 }
 
 void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
-	QVector<double_t> data(static_cast<double_t>(eventToDraw->ChSize[0]));			//y axis in mV
-	QVector<double_t> samples(static_cast<double_t>(eventToDraw->ChSize[0]));		//x axis in ns
-	for (auto sample = 0; sample < samples.size(); sample++) {
-		samples[sample] = sample * 2;
-		data[sample] = static_cast<double_t>(eventToDraw->DataChannel[0][sample]);
-		//memcpy(&(data[sample]), &(eventToDraw->DataChannel[0][sample]), sizeof(uint8_t));
-	}
-	ui.signalWidget->graph(0)->setData(samples, data);
+	//starting initialize
+	auto eventSize = eventToDraw->ChSize[0];	//0 channel MUST be active
+	QVector<QCPGraphData> graphData(eventSize);
+	//current initialization
+	for (auto numberOfBoard = 0; numberOfBoard < vme.numberOfWDF; numberOfBoard++)												//по всем доскам
+		if (vme.WDFIsEnabled[numberOfBoard])																					//если доска включена
+			for (auto channelNumber = 0; channelNumber < vme.getWDFInfo(numberOfBoard).Channels; channelNumber++)				//по всем каналам этой доски
+				if (eventToDraw->ChSize[channelNumber] != 0)																	//если на канале что-то есть
+					if (ui.WDFTabWidget->findChild<QPushButton*>(QString("channelIsDrawingButton_" + QString::number(numberOfBoard + 1) + "_" + QString::number(channelNumber)))->isChecked()) {	//если нажата кнопка отображения сигнала
+						//initializing the graph
+						auto graphDataContainer = ui.signalWidget->graph(channelNumber)->data().data();
+						auto it = graphData.begin();
+						const auto itEnd = graphData.end();
+						auto sample = 0;
+						while (it != itEnd) {
+							it->key = 2 * sample;
+							it->value = eventToDraw->DataChannel[channelNumber][sample] * 3.92 - 500;		//from [0;255] to [-500;500]
+							++it;
+							++sample;
+						}
+						graphDataContainer->set(graphData, true);
+						//graph's visual setup
+						colorBrushMutex.lock();
+						ui.signalWidget->graph(channelNumber)->setPen(QPen(QColor(channelsColors[numberOfBoard][channelNumber].c_str())));
+						colorBrushMutex.unlock();
+					}
+					else {
+						ui.signalWidget->graph(channelNumber)->setVisible(false);
+					}
 }
 
 void MainWindow::readSettings() {
@@ -108,6 +135,13 @@ void MainWindow::readSettings() {
 		for (auto WDF = 0; WDF < vme.numberOfWDF; WDF++)
 			if (settingsStream >> WDFIsActive)
 				vme.WDFIsEnabled.push_back(WDFIsActive);
+		//read graph colors
+		channelsColors.resize(vme.numberOfWDF);
+		string color;
+		for (auto WDF = 0; WDF < vme.numberOfWDF; WDF++)
+			for (auto channel = 0; channel < 8; channel++)
+				if (settingsStream >> color)
+					channelsColors[WDF].push_back(color);
 		//read other settings
 	}
 }
@@ -171,7 +205,7 @@ void MainWindow::startStopSlot() {
 			setControlsEnabled(false);
 			for (auto i = 0; i < activeChannelsCount; i++)
 				ui.signalWidget->addGraph();
-			ui.signalWidget->yAxis->setRange(0, 130);
+			ui.signalWidget->yAxis->setRange(-550, 550);
 			ui.signalWidget->xAxis->setRange(0, 2048*(static_cast<uint16_t>(pow(2, ui.bufferComboBox->currentIndex() + 1))));
 			acquisitionThread = std::thread(&MainWindow::updateData, this);
 		} else
@@ -271,7 +305,6 @@ void MainWindow::changeTriggerSettingsSlot() {
 	}
 }
 
-//todo: convert from mV to ADC counts
 void MainWindow::changeThresholdSlot(int newThreshold) {
 	auto spinBox = static_cast<QSpinBox*>(sender());
 	auto spinBoxNameList = spinBox->objectName().split("_");
@@ -305,13 +338,7 @@ void MainWindow::resetParameterSlot() const {
 	auto senderName = resetButtonNameList[0];
 	auto WDFNumber = resetButtonNameList[1];
 	auto channelNumber = resetButtonNameList[2];
-	QString recieverName;
-	//todo
-	//recieverName = senderName - "ResetButton" + "SpinBox"
-	if (senderName == QString("DACOffsetResetButton"))
-		recieverName = QString("DACOffsetSpinBox") + QString("_") + WDFNumber + QString("_") + channelNumber;
-	if (senderName == QString("positionResetButton"))
-		recieverName = QString("positionSpinBox") + QString("_") + WDFNumber + QString("_") + channelNumber;
+	auto recieverName = senderName.replace("ResetButton", "SpinBox") + QString("_") + WDFNumber + QString("_") + channelNumber;
 	auto reciever = ui.settingsBlock->findChild<QSpinBox*>(recieverName, Qt::FindChildrenRecursively);
 	reciever->setValue(0);
 }

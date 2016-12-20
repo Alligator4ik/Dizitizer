@@ -16,7 +16,7 @@ VMECommunication::VMECommunication() {
 	timeOfStringErrors.resize(numberOfWDF);
 	threshold.resize(numberOfWDF);
 	for (auto i = 0; i < 8; i++)
-		threshold[i] = vector<ushort>(8, 20);						//8 - number of channels, 20 - default threshold
+		threshold[i] = vector<ushort>(8, 133);						//8 - number of channels, 133 - default threshold (20 mV)
 	sample.resize(numberOfWDF);
 	for (auto i = 0; i < 8; i++)
 		sample[i] = vector<ushort>(8, 10);							//8 - number of channels, 10 - default sample
@@ -77,9 +77,9 @@ CAEN_DGTZ_ErrorCode	VMECommunication::setup(uint16_t boardNumber) {
 		boardErrors[boardNumber].push_back(error);
 		return error;
 	}
-	//write channels can generate self-board and OUT_EXT trigger mask
+	//write channels can generate self-board trigger mask
 	if ((error = CAEN_DGTZ_SetChannelSelfTrigger(WDFIdentificators[boardNumber],
-												CAEN_DGTZ_TRGMODE_ACQ_AND_EXTOUT,
+												CAEN_DGTZ_TRGMODE_ACQ_ONLY,
 												channelTriggerEnableMask[boardNumber])) != CAEN_DGTZ_Success){
 		timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 		boardErrors[boardNumber].push_back(error);
@@ -94,8 +94,11 @@ CAEN_DGTZ_ErrorCode	VMECommunication::setup(uint16_t boardNumber) {
 	}
 	//write thresholds
 	for (auto channel = 0; channel < numberOfChannels[boardNumber]; channel++)
-		if (!setChannelThreshold(boardNumber, channel, threshold[boardNumber][channel]))
-			return CAEN_DGTZ_NotYetImplemented;
+		if ((error = CAEN_DGTZ_SWStopAcquisition(WDFIdentificators[boardNumber])) != CAEN_DGTZ_Success) {
+			timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
+			boardErrors[boardNumber].push_back(error);
+			return error;
+		}
 	//write DC offset
 	for (auto channel = 0; channel < numberOfChannels[boardNumber]; channel++)
 		if ((error = CAEN_DGTZ_SetChannelDCOffset(WDFIdentificators[boardNumber], channel, DCOffset[boardNumber][channel])) != CAEN_DGTZ_Success) {
@@ -125,7 +128,7 @@ CAEN_DGTZ_ErrorCode	VMECommunication::setup(uint16_t boardNumber) {
 }
 
 bool VMECommunication::startAcquisition() {
-	auto error = CAEN_DGTZ_Success;
+	CAEN_DGTZ_ErrorCode error;
 	for (auto boardNumber = 0; boardNumber < numberOfWDF; boardNumber++)
 		if (WDFIsEnabled[boardNumber])
 			if (setup(boardNumber) == CAEN_DGTZ_Success)
@@ -146,7 +149,7 @@ bool VMECommunication::stopAcquisition() {
 			boardErrors[boardNumber].push_back(error);
 			return false;
 		}
-	return true;
+	return clearData();
 }
 
 bool VMECommunication::createSoftwareTrigger() {
@@ -257,10 +260,12 @@ bool VMECommunication::setPostTriggerLength(int32_t postTriggerSize) {
 	return true;
 }
 
-bool VMECommunication::setChannelThreshold(ushort board, ushort channel, ushort newThreshold) {
-	threshold[board][channel] = newThreshold;
+bool VMECommunication::setChannelThreshold(ushort board, ushort channel, int16_t newThresholdInmV) {
+	//changing mV to ADC counts
+	auto newThresholdInADCCounts = static_cast<uint32_t>((newThresholdInmV + 500)*0.255);
+	threshold[board][channel] = newThresholdInADCCounts;
 	CAEN_DGTZ_ErrorCode error;
-	if ((error = CAEN_DGTZ_SetChannelTriggerThreshold(WDFIdentificators[board], channel, newThreshold)) != CAEN_DGTZ_Success) {
+	if ((error = CAEN_DGTZ_SetChannelTriggerThreshold(WDFIdentificators[board], channel, newThresholdInADCCounts)) != CAEN_DGTZ_Success) {
 		timeOfBoardErrors[board].push_back(QTime::currentTime());
 		boardErrors[board].push_back(error);
 		return false;
@@ -280,8 +285,8 @@ bool VMECommunication::setChannelSample(ushort board, ushort channel, ushort new
 }
 
 bool VMECommunication::setChannelOffset(ushort board, ushort channel, int16_t newOffsetInmV) {
-	DCOffset[board][channel] = newOffsetInmV;
 	auto newOffset = static_cast<uint32_t>(65535*(0.5-newOffsetInmV/1000.0)); //32767 = 0x7FFF => [-Vpp/2; Vpp/2]; from mV to hex
+	DCOffset[board][channel] = newOffset;
 	CAEN_DGTZ_ErrorCode error;
 	if ((error = CAEN_DGTZ_SetChannelDCOffset(WDFIdentificators[board], channel, newOffset)) != CAEN_DGTZ_Success) {
 		timeOfBoardErrors[board].push_back(QTime::currentTime());

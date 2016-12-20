@@ -82,7 +82,7 @@
        <item row="0" column="8">
         <widget class="QPushButton" name="helpButton">
          <property name="enabled">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="minimumSize">
           <size>
@@ -204,7 +204,7 @@
        <item row="0" column="6">
         <widget class="QPushButton" name="openFileButton">
          <property name="enabled">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="minimumSize">
           <size>
@@ -282,7 +282,7 @@
        <item row="0" column="7">
         <widget class="QPushButton" name="journalButton">
          <property name="enabled">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="minimumSize">
           <size>
@@ -506,6 +506,9 @@
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
         <widget class="QTabWidget" name="tabWidget">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="currentIndex">
           <number>0</number>
          </property>
@@ -515,7 +518,11 @@
           </attribute>
           <layout class="QGridLayout" name="gridLayout_4">
            <item row="0" column="0">
-            <widget class="QCustomPlot" name="signalWidget" native="true"/>
+            <widget class="QCustomPlot" name="signalWidget" native="true">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -546,7 +553,7 @@
          <property name="minimumSize">
           <size>
            <width>1215</width>
-           <height>260</height>
+           <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -711,7 +718,7 @@
              </property>
              <widget class="QComboBox" name="scaleTimeComboBox">
               <property name="enabled">
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
               <property name="geometry">
                <rect>
@@ -781,6 +788,9 @@
               <string>Позиция</string>
              </property>
              <widget class="QSpinBox" name="positionSpinBox_0_0">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="geometry">
                <rect>
                 <x>15</x>
@@ -792,7 +802,7 @@
              </widget>
              <widget class="QPushButton" name="positionResetButton_0_0">
               <property name="enabled">
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
               <property name="geometry">
                <rect>
@@ -821,6 +831,9 @@
              </widget>
             </widget>
             <widget class="QPushButton" name="inversionButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="geometry">
               <rect>
                <x>20</x>
@@ -900,7 +913,7 @@
              </widget>
              <widget class="QPushButton" name="postTriggerIsDrawing">
               <property name="enabled">
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
               <property name="geometry">
                <rect>

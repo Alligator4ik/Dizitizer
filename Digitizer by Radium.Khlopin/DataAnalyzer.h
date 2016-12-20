@@ -1,12 +1,12 @@
 #pragma once
 #include "VMECommunication.h"
-#include <thread>
+#include <future>
 
 class DataAnalyzer
 {
 	VMECommunication&			vmeComm;
 	CAEN_DGTZ_UINT8_EVENT_t*	currentEvent;
-	vector<std::thread>			boardThreads;
+	vector<future<bool>>		boardThreads;
 public:
 	explicit DataAnalyzer(VMECommunication& vmeCommunication);
 	~DataAnalyzer();
