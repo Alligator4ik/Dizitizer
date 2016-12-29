@@ -1,5 +1,6 @@
 #include "MainWindowController.h"
 #include <fstream>
+#include <algorithm>
 #include <thread>
 #include <ToRussianTextForQString.h>
 #include "DataAnalyzer.h"
@@ -85,7 +86,12 @@ void MainWindow::updateData() {
 			if (ui.recordButton->isChecked())
 				vmeData.writeData();
 			if (ui.drawButton->isChecked()) {
-				drawSignal(vmeData.getEvent());
+				drawSignal(vmeData.getEventForDraw());
+				if (acquisitionWasStarted)			//to avoid deadlock on big buffers
+					emit replot();
+			}
+			if (ui.amplifySpectrumButton->isChecked()) {
+				drawSpectrum(vmeData);
 				if (acquisitionWasStarted)			//to avoid deadlock on big buffers
 					emit replot();
 			}
@@ -97,7 +103,8 @@ void MainWindow::updateData() {
 
 void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 	//starting initialize
-	auto eventSize = eventToDraw->ChSize[0];	//0 channel MUST be active
+	auto graphNumber = 0;
+	auto eventSize = *max_element(eventToDraw->ChSize, eventToDraw->ChSize + 8);
 	QVector<QCPGraphData> graphData(eventSize);
 	//current initialization
 	for (auto numberOfBoard = 0; numberOfBoard < vme.numberOfWDF; numberOfBoard++)												//по всем доскам
@@ -106,7 +113,7 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 				if (eventToDraw->ChSize[channelNumber] != 0)																	//если на канале что-то есть
 					if (ui.WDFTabWidget->findChild<QPushButton*>(QString("channelIsDrawingButton_" + QString::number(numberOfBoard + 1) + "_" + QString::number(channelNumber)))->isChecked()) {	//если нажата кнопка отображения сигнала
 						//initializing the graph
-						auto graphDataContainer = ui.signalWidget->graph(channelNumber)->data().data();
+						auto graphDataContainer = ui.signalWidget->graph(graphNumber)->data().data();
 						auto it = graphData.begin();
 						const auto itEnd = graphData.end();
 						auto sample = 0;
@@ -119,11 +126,32 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 						graphDataContainer->set(graphData, true);
 						//graph's visual setup
 						colorBrushMutex.lock();
-						ui.signalWidget->graph(channelNumber)->setPen(QPen(QColor(channelsColors[numberOfBoard][channelNumber].c_str())));
+						ui.signalWidget->graph(graphNumber)->setPen(QPen(QColor(channelsColors[numberOfBoard][channelNumber].c_str())));
+						ui.signalWidget->graph(graphNumber++)->setName(QString("Channel %1").arg(channelNumber));
 						colorBrushMutex.unlock();
 					}
 					else {
-						ui.signalWidget->graph(channelNumber)->setVisible(false);
+						ui.signalWidget->graph(graphNumber++)->setVisible(false);
+					}
+	ui.signalWidget->legend->setVisible(true);
+}
+
+void MainWindow::drawSpectrum(DataAnalyzer& vmeData) {
+	//todo:fix bugs
+	auto graphNumber = 0;
+	for (auto numberOfBoard = 0; numberOfBoard < vme.numberOfWDF; numberOfBoard++)												//по всем доскам
+		if (vme.WDFIsEnabled[numberOfBoard])																					//если доска включена
+			for (auto channelNumber = 0; channelNumber < vme.getWDFInfo(numberOfBoard).Channels; channelNumber++)				//по всем каналам этой доски
+				if (vme.channelActiveEnableMask[numberOfBoard] & 1 << channelNumber)											//если канал включен
+					if (ui.WDFTabWidget->findChild<QPushButton*>(QString("channelIsDrawingButton_" + QString::number(numberOfBoard + 1) + "_" + QString::number(channelNumber)))->isChecked()) {	//если нажата кнопка отображения
+						auto amplitudes = vmeData.getApmlitudesForSpectre(numberOfBoard, channelNumber);
+						auto ampl = amplitudes;
+						for (auto amplitude : amplitudes) {
+							auto graphDataContainer = ui.spectrumWidget->graph(graphNumber)->data().data();
+							auto it = graphDataContainer->at(amplitude);
+							it->value++;
+						}
+						graphNumber++;
 					}
 }
 
@@ -220,12 +248,8 @@ void MainWindow::startStopSlot() {
 }
 
 void MainWindow::startStopWritingDataSlot() {
-	if (!(ui.recordButton->isChecked())) {
+	if (!(ui.recordButton->isChecked()))
 		vme.clearData();
-	}
-	else {
-		
-	}
 }
 
 void MainWindow::openSettingsSlot() {
@@ -369,10 +393,30 @@ void MainWindow::autoTriggerSlot() {
 	vme.autoTriggerEnabled = !vme.autoTriggerEnabled;
 }
 
+void MainWindow::amplifySpectrumSlot() const {
+	if (static_cast<QPushButton*>(sender())->isChecked()) {
+		auto maxAmplitude = 500;
+		QVector<double_t> keys(maxAmplitude);
+		for (auto i = 0; i < maxAmplitude; i++)
+			keys[i] = i;
+		QVector<double_t> values(maxAmplitude, 0);
+		for (auto i = 0; i < activeChannelsCount; i++) {
+			ui.spectrumWidget->addGraph();
+			ui.spectrumWidget->graph(i)->setData(keys, values, true);
+		}
+		ui.spectrumWidget->yAxis->setRange(-10, 500);					//max 500 одинаковых значений амплитуды
+		ui.spectrumWidget->xAxis->setRange(0, maxAmplitude);			//max 500 mV
+		ui.spectrumWidget->replot();
+	} else {
+		ui.spectrumWidget->clearGraphs();
+	}
+}
+
 void MainWindow::changePolaritySlot() {
 	vme.changePolarity();
 }
 
 void MainWindow::replotGraph() const {
 	ui.signalWidget->replot();
+	ui.spectrumWidget->replot();
 }

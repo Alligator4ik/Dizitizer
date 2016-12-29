@@ -531,7 +531,51 @@
            <string>Спектр</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_5">
-           <item row="0" column="0">
+           <item row="1" column="3">
+            <widget class="QPushButton" name="pushButton_4">
+             <property name="text">
+              <string>PushButton</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="amplifySpectrumButton">
+             <property name="text">
+              <string>Амплитудный</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="pushButton_3">
+             <property name="text">
+              <string>PushButton</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="pushButton_2">
+             <property name="text">
+              <string>PushButton</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="0" colspan="5">
             <widget class="QCustomPlot" name="spectrumWidget" native="true"/>
            </item>
           </layout>
@@ -829,25 +873,6 @@
                 <normaloff>../Desktop/CAEN-UI/Reset.png</normaloff>../Desktop/CAEN-UI/Reset.png</iconset>
               </property>
              </widget>
-            </widget>
-            <widget class="QPushButton" name="inversionButton">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="geometry">
-              <rect>
-               <x>20</x>
-               <y>170</y>
-               <width>81</width>
-               <height>25</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Инверсия</string>
-             </property>
-             <property name="checkable">
-              <bool>true</bool>
-             </property>
             </widget>
            </widget>
           </item>
@@ -1680,6 +1705,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_1_0">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="channelLabelBox_1">
                  <property name="geometry">
@@ -2168,6 +2210,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_1_1">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel2SettingsBox_1">
                  <property name="geometry">
@@ -2533,6 +2592,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_1_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -2902,6 +2978,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_1_5">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel4SettingsBox_1">
                  <property name="geometry">
@@ -3269,6 +3362,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_1_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel3SettingsBox_1">
                  <property name="geometry">
@@ -3634,6 +3744,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_1_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -4006,6 +4133,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_1_7">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel6SettingsBox_1">
                  <property name="geometry">
@@ -4373,6 +4517,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_1_6">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                </widget>
                <widget class="QWidget" name="WDF2Widget">
@@ -4693,6 +4854,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_2_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel6SettingsBox_2">
                  <property name="geometry">
@@ -5001,6 +5179,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_2_6">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -5313,6 +5508,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_2_5">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel3SettingsBox_2">
                  <property name="geometry">
@@ -5621,6 +5833,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_2_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -5933,6 +6162,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_2_1">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel4SettingsBox_2">
                  <property name="geometry">
@@ -6241,6 +6487,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_2_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -6556,6 +6819,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_1_8">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel7SettingsBox_2">
                  <property name="geometry">
@@ -6864,6 +7144,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_6_7">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -7298,6 +7595,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_3_0">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel1SettingsBox_3">
                  <property name="geometry">
@@ -7603,6 +7917,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_3_1">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -7912,6 +8243,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_3_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel4SettingsBox_3">
                  <property name="geometry">
@@ -8217,6 +8565,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_3_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -8526,6 +8891,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_3_6">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel5SettingsBox_3">
                  <property name="geometry">
@@ -8831,6 +9213,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_3_5">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -9140,6 +9539,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_3_7">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel3SettingsBox_3">
                  <property name="geometry">
@@ -9445,6 +9861,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_3_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -9879,6 +10312,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_4_0">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel1SettingsBox_4">
                  <property name="geometry">
@@ -10184,6 +10634,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_4_1">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -10493,6 +10960,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_4_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel4SettingsBox_4">
                  <property name="geometry">
@@ -10798,6 +11282,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_4_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -11107,6 +11608,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_4_6">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel5SettingsBox_4">
                  <property name="geometry">
@@ -11412,6 +11930,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_4_5">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -11721,6 +12256,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_4_7">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel3SettingsBox_4">
                  <property name="geometry">
@@ -12026,6 +12578,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_4_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -12457,6 +13026,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_5_0">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel1SettingsBox_5">
                  <property name="geometry">
@@ -12759,6 +13345,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_5_1">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -13065,6 +13668,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_5_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel4SettingsBox_5">
                  <property name="geometry">
@@ -13367,6 +13987,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_5_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -13673,6 +14310,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_5_6">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel5SettingsBox_5">
                  <property name="geometry">
@@ -13975,6 +14629,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_5_5">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -14281,6 +14952,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_5_7">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel3SettingsBox_5">
                  <property name="geometry">
@@ -14583,6 +15271,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_5_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -15017,6 +15722,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_6_0">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel1SettingsBox_6">
                  <property name="geometry">
@@ -15322,6 +16044,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_6_1">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -15631,6 +16370,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_6_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel4SettingsBox_6">
                  <property name="geometry">
@@ -15936,6 +16692,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_6_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -16245,6 +17018,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_6_6">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel5SettingsBox_6">
                  <property name="geometry">
@@ -16550,6 +17340,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_6_5">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -16859,6 +17666,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_6_8">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel3SettingsBox_6">
                  <property name="geometry">
@@ -17164,6 +17988,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_6_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -17598,6 +18439,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_7_0">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel1SettingsBox_7">
                  <property name="geometry">
@@ -17903,6 +18761,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_7_1">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -18212,6 +19087,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_7_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel4SettingsBox_7">
                  <property name="geometry">
@@ -18517,6 +19409,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_7_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -18826,6 +19735,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_7_6">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel5SettingsBox_7">
                  <property name="geometry">
@@ -19131,6 +20057,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_7_5">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -19440,6 +20383,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_7_7">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel3SettingsBox_7">
                  <property name="geometry">
@@ -19745,6 +20705,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_7_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -20179,6 +21156,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_8_0">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel1SettingsBox_8">
                  <property name="geometry">
@@ -20484,6 +21478,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_8_1">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -20793,6 +21804,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_8_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel4SettingsBox_8">
                  <property name="geometry">
@@ -21098,6 +22126,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_8_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -21407,6 +22452,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_8_6">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel5SettingsBox_8">
                  <property name="geometry">
@@ -21712,6 +22774,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_8_5">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -22021,6 +23100,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_8_7">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel3SettingsBox_8">
                  <property name="geometry">
@@ -22326,6 +23422,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_8_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -22760,6 +23873,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_9_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel7SettingsBox_9">
                  <property name="geometry">
@@ -23067,6 +24197,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_1_71">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel0SettingsBox_9">
                  <property name="geometry">
@@ -23372,6 +24519,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_9_0">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -23684,6 +24848,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_9_1">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel4SettingsBox_9">
                  <property name="geometry">
@@ -23989,6 +25170,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_9_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -24298,6 +25496,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_9_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="chanel5SettingsBox_9">
                  <property name="geometry">
@@ -24603,6 +25818,23 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="colorLabel_9_5">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -24912,6 +26144,23 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                 <widget class="QLabel" name="colorLabel_9_6">
+                  <property name="geometry">
+                   <rect>
+                    <x>65</x>
+                    <y>145</y>
+                    <width>20</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: gray;
+border-radius: 5</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
                 </widget>
                 <widget class="QGroupBox" name="channelLabelBox_9">
                  <property name="geometry">
@@ -25117,7 +26366,7 @@
    <slot>openSettingsSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>833</x>
+     <x>899</x>
      <y>78</y>
     </hint>
     <hint type="destinationlabel">
@@ -25143,18 +26392,130 @@
    </hints>
   </connection>
   <connection>
-   <sender>blockSamplesButton_1_0</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>samplesSpinBox_1_0</receiver>
-   <slot>setDisabled(bool)</slot>
+   <sender>bufferComboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>bufferChangedSlot(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>535</x>
-     <y>725</y>
+     <x>176</x>
+     <y>620</y>
     </hint>
     <hint type="destinationlabel">
-     <x>510</x>
-     <y>725</y>
+     <x>154</x>
+     <y>821</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>postTriggerSpinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>setPostTriggerLengthSlot(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>277</x>
+     <y>620</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>278</x>
+     <y>822</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>errorButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>openErrorsSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1120</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1143</x>
+     <y>103</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>forceTriggerButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>makeSoftwareTriggerSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>304</x>
+     <y>780</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>454</x>
+     <y>822</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>externalTriggerButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>changeExternalTriggerSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>260</x>
+     <y>745</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>124</x>
+     <y>820</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>recordButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>startStopWritingDataSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>240</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>91</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>polarityButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>changePolaritySlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>254</x>
+     <y>671</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>267</x>
+     <y>821</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>autoTriggerButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>autoTriggerSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>285</x>
+     <y>743</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>222</x>
+     <y>824</y>
     </hint>
    </hints>
   </connection>
@@ -25202,6 +26563,22 @@
     </hint>
     <hint type="destinationlabel">
      <x>795</x>
+     <y>725</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>blockSamplesButton_1_0</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>samplesSpinBox_1_0</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>535</x>
+     <y>725</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>510</x>
      <y>725</y>
     </hint>
    </hints>
@@ -25282,6 +26659,22 @@
     </hint>
     <hint type="destinationlabel">
      <x>510</x>
+     <y>725</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>blockSamplesButton_4_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>samplesSpinBox_4_1</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>630</x>
+     <y>725</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>605</x>
      <y>725</y>
     </hint>
    </hints>
@@ -25538,22 +26931,6 @@
     </hint>
     <hint type="destinationlabel">
      <x>510</x>
-     <y>725</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>blockSamplesButton_4_1</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>samplesSpinBox_4_1</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>630</x>
-     <y>725</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>605</x>
      <y>725</y>
     </hint>
    </hints>
@@ -26295,130 +27672,18 @@
    </hints>
   </connection>
   <connection>
-   <sender>bufferComboBox</sender>
-   <signal>currentIndexChanged(int)</signal>
-   <receiver>MainWindowClass</receiver>
-   <slot>bufferChangedSlot(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>176</x>
-     <y>620</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>154</x>
-     <y>821</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>postTriggerSpinBox</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>MainWindowClass</receiver>
-   <slot>setPostTriggerLengthSlot(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>277</x>
-     <y>620</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>278</x>
-     <y>822</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>errorButton</sender>
+   <sender>amplifySpectrumButton</sender>
    <signal>clicked()</signal>
    <receiver>MainWindowClass</receiver>
-   <slot>openErrorsSlot()</slot>
+   <slot>amplifySpectrumSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1120</x>
-     <y>61</y>
+     <x>72</x>
+     <y>441</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1143</x>
-     <y>103</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>forceTriggerButton</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindowClass</receiver>
-   <slot>makeSoftwareTriggerSlot()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>304</x>
-     <y>780</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>454</x>
-     <y>822</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>externalTriggerButton</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindowClass</receiver>
-   <slot>changeExternalTriggerSlot()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>260</x>
-     <y>745</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>124</x>
-     <y>820</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>recordButton</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindowClass</receiver>
-   <slot>startStopWritingDataSlot()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>240</x>
-     <y>50</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>400</x>
-     <y>91</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>polarityButton</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindowClass</receiver>
-   <slot>changePolaritySlot()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>254</x>
-     <y>671</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>267</x>
-     <y>821</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>autoTriggerButton</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindowClass</receiver>
-   <slot>autoTriggerSlot()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>285</x>
-     <y>743</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>222</x>
-     <y>824</y>
+     <x>6</x>
+     <y>469</y>
     </hint>
    </hints>
   </connection>
@@ -26437,5 +27702,6 @@
   <slot>startStopWritingDataSlot()</slot>
   <slot>changePolaritySlot()</slot>
   <slot>autoTriggerSlot()</slot>
+  <slot>amplifySpectrumSlot()</slot>
  </slots>
 </ui>

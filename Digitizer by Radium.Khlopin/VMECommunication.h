@@ -11,9 +11,9 @@ class VMECommunication {
 	vector<CAEN_DGTZ_BoardInfo_t>			WDFInfo;
 	vector<vector<CAEN_DGTZ_ErrorCode>>		boardErrors;
 	vector<vector<QTime>>					timeOfBoardErrors;
-	vector<vector<string>>					stringErrors;
+	vector<vector<QString>>					stringErrors;
 	vector<vector<QTime>>					timeOfStringErrors;
-	uint32_t								numberOfBlocksTransferredDuringCycle = 0xff;
+	uint32_t								numberOfBlocksTransferredDuringCycle = 0xf;
 	uint32_t								recordLength = 2048;
 
 	CAEN_DGTZ_ErrorCode	setup(uint16_t boardNumber);
@@ -45,7 +45,7 @@ public:
 	vector<vector<QTime>>&					getTimeOfBoardErrors();
 	vector<vector<CAEN_DGTZ_ErrorCode>>&	getboardErrors();
 	vector<vector<QTime>>&					getTimeOfStringErrors();
-	vector<vector<string>>&					getStringErrors();
+	vector<vector<QString>>&				getStringErrors();
 	vector<int32_t>&						getWDFIdentificators();
 
 	bool									setRecordLength(int32_t newRecordLength, int32_t postTriggerSize);
@@ -55,6 +55,7 @@ public:
 	bool									setChannelOffset(ushort board, ushort channel, int16_t newOffsetInmV);
 	void									addTimeOfBoardError(ushort board);
 	void									addBoardError(ushort board, CAEN_DGTZ_ErrorCode errorCode);
+	void									addStringError(uint16_t board, QString functionDescription);
 
 	CAEN_DGTZ_BoardInfo_t					getWDFInfo(ushort numberOfBoard);
 };

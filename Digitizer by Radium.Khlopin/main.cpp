@@ -1,5 +1,4 @@
 #include <MainWindowController.h>
-#include <vld.h>
 
 int main(int argc, char *argv[])
 {

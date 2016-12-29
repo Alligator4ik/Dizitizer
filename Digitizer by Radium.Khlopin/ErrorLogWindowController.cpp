@@ -18,6 +18,8 @@ QDialog(parent) {
 				ui.mainWidget->setItem(0, 3, new QTableWidgetItem(getErrorInfo(boardErrors[boardNumber][errorNumber])));
 			}
 		ui.mainWidget->sortByColumn(0, Qt::DescendingOrder);
+		ui.mainWidget->setColumnWidth(2, 80);
+		ui.mainWidget->setColumnWidth(3, 200);
 }
 
 ErrorLogWindowController::~ErrorLogWindowController() {

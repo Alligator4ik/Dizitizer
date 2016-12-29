@@ -30,12 +30,12 @@ public:
     {
         if (errorLogWindow->objectName().isEmpty())
             errorLogWindow->setObjectName(QStringLiteral("errorLogWindow"));
-        errorLogWindow->resize(680, 440);
+        errorLogWindow->resize(998, 471);
         gridLayout = new QGridLayout(errorLogWindow);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         mainWidget = new QTableWidget(errorLogWindow);
-        if (mainWidget->columnCount() < 4)
-            mainWidget->setColumnCount(4);
+        if (mainWidget->columnCount() < 5)
+            mainWidget->setColumnCount(5);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
         __qtablewidgetitem->setTextAlignment(Qt::AlignCenter);
         mainWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
@@ -46,12 +46,18 @@ public:
         __qtablewidgetitem2->setTextAlignment(Qt::AlignCenter);
         mainWidget->setHorizontalHeaderItem(2, __qtablewidgetitem2);
         QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
+        __qtablewidgetitem3->setTextAlignment(Qt::AlignCenter);
         mainWidget->setHorizontalHeaderItem(3, __qtablewidgetitem3);
+        QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
+        __qtablewidgetitem4->setTextAlignment(Qt::AlignCenter);
+        mainWidget->setHorizontalHeaderItem(4, __qtablewidgetitem4);
         mainWidget->setObjectName(QStringLiteral("mainWidget"));
         mainWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
         mainWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
         mainWidget->setTextElideMode(Qt::ElideNone);
         mainWidget->setSortingEnabled(true);
+        mainWidget->horizontalHeader()->setDefaultSectionSize(50);
+        mainWidget->horizontalHeader()->setMinimumSectionSize(30);
         mainWidget->horizontalHeader()->setProperty("showSortIndicator", QVariant(true));
         mainWidget->horizontalHeader()->setStretchLastSection(true);
 
@@ -73,7 +79,9 @@ public:
         QTableWidgetItem *___qtablewidgetitem2 = mainWidget->horizontalHeaderItem(2);
         ___qtablewidgetitem2->setText(QApplication::translate("errorLogWindow", "\320\232\320\276\320\264 \320\276\321\210\320\270\320\261\320\272\320\270", 0));
         QTableWidgetItem *___qtablewidgetitem3 = mainWidget->horizontalHeaderItem(3);
-        ___qtablewidgetitem3->setText(QApplication::translate("errorLogWindow", "\320\236\320\277\320\270\321\201\320\260\320\275\320\270\320\265", 0));
+        ___qtablewidgetitem3->setText(QApplication::translate("errorLogWindow", "\320\227\320\275\320\260\321\207\320\265\320\275\320\270\320\265", 0));
+        QTableWidgetItem *___qtablewidgetitem4 = mainWidget->horizontalHeaderItem(4);
+        ___qtablewidgetitem4->setText(QApplication::translate("errorLogWindow", "\320\236\320\277\320\270\321\201\320\260\320\275\320\270\320\265", 0));
     } // retranslateUi
 
 };

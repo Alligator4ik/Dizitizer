@@ -2407,6 +2407,7 @@ public:
   iterator end() { return mData.end(); }
   const_iterator findBegin(double sortKey, bool expandedRange=true) const;
   const_iterator findEnd(double sortKey, bool expandedRange=true) const;
+  iterator at(int index) { return begin() + qBound(0, index, size()); }
   const_iterator at(int index) const { return constBegin()+qBound(0, index, size()); }
   QCPRange keyRange(bool &foundRange, QCP::SignDomain signDomain=QCP::sdBoth);
   QCPRange valueRange(bool &foundRange, QCP::SignDomain signDomain=QCP::sdBoth, const QCPRange &inKeyRange=QCPRange());

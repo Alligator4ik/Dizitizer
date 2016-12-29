@@ -55,6 +55,11 @@ public:
     QCustomPlot *signalWidget;
     QWidget *spectrumTab;
     QGridLayout *gridLayout_5;
+    QPushButton *pushButton_4;
+    QPushButton *amplifySpectrumButton;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_2;
+    QSpacerItem *horizontalSpacer_3;
     QCustomPlot *spectrumWidget;
     QWidget *dataTab;
     QGridLayout *gridLayout_6;
@@ -70,7 +75,6 @@ public:
     QGroupBox *positionTimeBox;
     QSpinBox *positionSpinBox_0_0;
     QPushButton *positionResetButton_0_0;
-    QPushButton *inversionButton;
     QGroupBox *triggerSettingBox;
     QGroupBox *postTriggerBox;
     QSpinBox *postTriggerSpinBox;
@@ -98,6 +102,7 @@ public:
     QPushButton *channelIsDrawingButton_1_0;
     QPushButton *thresholdIsDrawingButton_1_0;
     QPushButton *blockSamplesButton_1_0;
+    QLabel *colorLabel_1_0;
     QGroupBox *channelLabelBox_1;
     QLabel *thresholdLabel_1;
     QLabel *samplesLabel_1;
@@ -117,6 +122,7 @@ public:
     QPushButton *channelIsDrawingButton_1_1;
     QPushButton *thresholdIsDrawingButton_1_1;
     QPushButton *blockSamplesButton_1_1;
+    QLabel *colorLabel_1_1;
     QGroupBox *chanel2SettingsBox_1;
     QPushButton *changeTriggerButton_1_2;
     QSpinBox *positionSpinBox_1_2;
@@ -129,6 +135,7 @@ public:
     QPushButton *channelIsDrawingButton_1_2;
     QPushButton *thresholdIsDrawingButton_1_2;
     QPushButton *blockSamplesButton_1_2;
+    QLabel *colorLabel_1_2;
     QGroupBox *chanel5SettingsBox_1;
     QPushButton *changeTriggerButton_1_5;
     QSpinBox *positionSpinBox_1_5;
@@ -141,6 +148,7 @@ public:
     QPushButton *channelIsDrawingButton_1_5;
     QPushButton *thresholdIsDrawingButton_1_5;
     QPushButton *blockSamplesButton_1_5;
+    QLabel *colorLabel_1_5;
     QGroupBox *chanel4SettingsBox_1;
     QPushButton *changeTriggerButton_1_4;
     QSpinBox *positionSpinBox_1_4;
@@ -153,6 +161,7 @@ public:
     QPushButton *channelIsDrawingButton_1_4;
     QPushButton *thresholdIsDrawingButton_1_4;
     QPushButton *blockSamplesButton_1_4;
+    QLabel *colorLabel_1_4;
     QGroupBox *chanel3SettingsBox_1;
     QPushButton *changeTriggerButton_1_3;
     QSpinBox *positionSpinBox_1_3;
@@ -165,6 +174,7 @@ public:
     QPushButton *channelIsDrawingButton_1_3;
     QPushButton *thresholdIsDrawingButton_1_3;
     QPushButton *blockSamplesButton_1_3;
+    QLabel *colorLabel_1_3;
     QGroupBox *chanel7SettingsBox_1;
     QPushButton *changeTriggerButton_1_7;
     QSpinBox *positionSpinBox_1_7;
@@ -177,6 +187,7 @@ public:
     QPushButton *channelIsDrawingButton_1_7;
     QPushButton *thresholdIsDrawingButton_1_7;
     QPushButton *blockSamplesButton_1_7;
+    QLabel *colorLabel_1_7;
     QGroupBox *chanel6SettingsBox_1;
     QPushButton *changeTriggerButton_1_6;
     QSpinBox *positionSpinBox_1_6;
@@ -189,6 +200,7 @@ public:
     QPushButton *channelIsDrawingButton_1_6;
     QPushButton *thresholdIsDrawingButton_1_6;
     QPushButton *blockSamplesButton_1_6;
+    QLabel *colorLabel_1_6;
     QWidget *WDF2Widget;
     QGroupBox *chanel2SettingsBox_2;
     QPushButton *changeTriggerButton_2_2;
@@ -202,6 +214,7 @@ public:
     QPushButton *channelIsDrawingButton_2_2;
     QPushButton *thresholdIsDrawingButton_2_2;
     QPushButton *blockSamplesButton_2_2;
+    QLabel *colorLabel_2_2;
     QGroupBox *chanel6SettingsBox_2;
     QPushButton *changeTriggerButton_2_6;
     QSpinBox *positionSpinBox_2_6;
@@ -214,6 +227,7 @@ public:
     QPushButton *channelIsDrawingButton_2_6;
     QPushButton *thresholdIsDrawingButton_2_6;
     QPushButton *blockSamplesButton_2_6;
+    QLabel *colorLabel_2_6;
     QGroupBox *chanel5SettingsBox_2;
     QPushButton *changeTriggerButton_2_5;
     QSpinBox *positionSpinBox_2_5;
@@ -226,6 +240,7 @@ public:
     QPushButton *channelIsDrawingButton_2_5;
     QPushButton *thresholdIsDrawingButton_2_5;
     QPushButton *blockSamplesButton_2_5;
+    QLabel *colorLabel_2_5;
     QGroupBox *chanel3SettingsBox_2;
     QPushButton *changeTriggerButton_2_3;
     QSpinBox *positionSpinBox_2_3;
@@ -238,6 +253,7 @@ public:
     QPushButton *channelIsDrawingButton_2_3;
     QPushButton *thresholdIsDrawingButton_2_3;
     QPushButton *blockSamplesButton_2_3;
+    QLabel *colorLabel_2_3;
     QGroupBox *chanel1SettingsBox_2;
     QPushButton *changeTriggerButton_2_1;
     QSpinBox *positionSpinBox_2_1;
@@ -250,6 +266,7 @@ public:
     QPushButton *channelIsDrawingButton_2_1;
     QPushButton *thresholdIsDrawingButton_2_1;
     QPushButton *blockSamplesButton_2_1;
+    QLabel *colorLabel_2_1;
     QGroupBox *chanel4SettingsBox_2;
     QPushButton *changeTriggerButton_2_4;
     QSpinBox *positionSpinBox_2_4;
@@ -262,6 +279,7 @@ public:
     QPushButton *channelIsDrawingButton_2_4;
     QPushButton *thresholdIsDrawingButton_2_4;
     QPushButton *blockSamplesButton_2_4;
+    QLabel *colorLabel_2_4;
     QGroupBox *chanel0SettingsBox_2;
     QPushButton *changeTriggerButton_2_0;
     QSpinBox *positionSpinBox_2_0;
@@ -274,6 +292,7 @@ public:
     QPushButton *channelIsDrawingButton_2_0;
     QPushButton *thresholdIsDrawingButton_2_0;
     QPushButton *blockSamplesButton_2_0;
+    QLabel *colorLabel_1_8;
     QGroupBox *chanel7SettingsBox_2;
     QPushButton *changeTriggerButton_2_7;
     QSpinBox *positionSpinBox_2_7;
@@ -286,6 +305,7 @@ public:
     QPushButton *channelIsDrawingButton_2_7;
     QPushButton *thresholdIsDrawingButton_2_7;
     QPushButton *blockSamplesButton_2_7;
+    QLabel *colorLabel_6_7;
     QGroupBox *channelLabelBox_2;
     QLabel *thresholdLabel_2;
     QLabel *samplesLabel_2;
@@ -306,6 +326,7 @@ public:
     QPushButton *channelIsDrawingButton_3_0;
     QPushButton *thresholdIsDrawingButton_3_0;
     QPushButton *blockSamplesButton_3_0;
+    QLabel *colorLabel_3_0;
     QGroupBox *chanel1SettingsBox_3;
     QPushButton *changeTriggerButton_3_1;
     QSpinBox *positionSpinBox_3_1;
@@ -318,6 +339,7 @@ public:
     QPushButton *channelIsDrawingButton_3_1;
     QPushButton *thresholdIsDrawingButton_3_1;
     QPushButton *blockSamplesButton_3_1;
+    QLabel *colorLabel_3_1;
     QGroupBox *chanel2SettingsBox_3;
     QPushButton *changeTriggerButton_3_2;
     QSpinBox *positionSpinBox_3_2;
@@ -330,6 +352,7 @@ public:
     QPushButton *channelIsDrawingButton_3_2;
     QPushButton *thresholdIsDrawingButton_3_2;
     QPushButton *blockSamplesButton_3_2;
+    QLabel *colorLabel_3_2;
     QGroupBox *chanel4SettingsBox_3;
     QPushButton *changeTriggerButton_3_4;
     QSpinBox *positionSpinBox_3_4;
@@ -342,6 +365,7 @@ public:
     QPushButton *channelIsDrawingButton_3_4;
     QPushButton *thresholdIsDrawingButton_3_4;
     QPushButton *blockSamplesButton_3_4;
+    QLabel *colorLabel_3_4;
     QGroupBox *chanel6SettingsBox_3;
     QPushButton *changeTriggerButton_3_6;
     QSpinBox *positionSpinBox_3_6;
@@ -354,6 +378,7 @@ public:
     QPushButton *channelIsDrawingButton_3_6;
     QPushButton *thresholdIsDrawingButton_3_6;
     QPushButton *blockSamplesButton_3_6;
+    QLabel *colorLabel_3_6;
     QGroupBox *chanel5SettingsBox_3;
     QPushButton *changeTriggerButton_3_5;
     QSpinBox *positionSpinBox_3_5;
@@ -366,6 +391,7 @@ public:
     QPushButton *channelIsDrawingButton_3_5;
     QPushButton *thresholdIsDrawingButton_3_5;
     QPushButton *blockSamplesButton_3_5;
+    QLabel *colorLabel_3_5;
     QGroupBox *chanel7SettingsBox_3;
     QPushButton *changeTriggerButton_3_7;
     QSpinBox *positionSpinBox_3_7;
@@ -378,6 +404,7 @@ public:
     QPushButton *channelIsDrawingButton_3_7;
     QPushButton *thresholdIsDrawingButton_3_7;
     QPushButton *blockSamplesButton_3_7;
+    QLabel *colorLabel_3_7;
     QGroupBox *chanel3SettingsBox_3;
     QPushButton *changeTriggerButton_3_3;
     QSpinBox *positionSpinBox_3_3;
@@ -390,6 +417,7 @@ public:
     QPushButton *channelIsDrawingButton_3_3;
     QPushButton *thresholdIsDrawingButton_3_3;
     QPushButton *blockSamplesButton_3_3;
+    QLabel *colorLabel_3_3;
     QGroupBox *channelLabelBox_3;
     QLabel *thresholdLabel_3;
     QLabel *samplesLabel_3;
@@ -410,6 +438,7 @@ public:
     QPushButton *channelIsDrawingButton_4_0;
     QPushButton *thresholdIsDrawingButton_4_0;
     QPushButton *blockSamplesButton_4_0;
+    QLabel *colorLabel_4_0;
     QGroupBox *chanel1SettingsBox_4;
     QPushButton *changeTriggerButton_4_1;
     QSpinBox *positionSpinBox_4_1;
@@ -422,6 +451,7 @@ public:
     QPushButton *channelIsDrawingButton_4_1;
     QPushButton *thresholdIsDrawingButton_4_1;
     QPushButton *blockSamplesButton_4_1;
+    QLabel *colorLabel_4_1;
     QGroupBox *chanel2SettingsBox_4;
     QPushButton *changeTriggerButton_4_2;
     QSpinBox *positionSpinBox_4_2;
@@ -434,6 +464,7 @@ public:
     QPushButton *channelIsDrawingButton_4_2;
     QPushButton *thresholdIsDrawingButton_4_2;
     QPushButton *blockSamplesButton_4_2;
+    QLabel *colorLabel_4_2;
     QGroupBox *chanel4SettingsBox_4;
     QPushButton *changeTriggerButton_4_4;
     QSpinBox *positionSpinBox_4_4;
@@ -446,6 +477,7 @@ public:
     QPushButton *channelIsDrawingButton_4_4;
     QPushButton *thresholdIsDrawingButton_4_4;
     QPushButton *blockSamplesButton_4_4;
+    QLabel *colorLabel_4_4;
     QGroupBox *chanel6SettingsBox_4;
     QPushButton *changeTriggerButton_4_6;
     QSpinBox *positionSpinBox_4_6;
@@ -458,6 +490,7 @@ public:
     QPushButton *channelIsDrawingButton_4_6;
     QPushButton *thresholdIsDrawingButton_4_6;
     QPushButton *blockSamplesButton_4_6;
+    QLabel *colorLabel_4_6;
     QGroupBox *chanel5SettingsBox_4;
     QPushButton *changeTriggerButton_4_5;
     QSpinBox *positionSpinBox_4_5;
@@ -470,6 +503,7 @@ public:
     QPushButton *channelIsDrawingButton_4_5;
     QPushButton *thresholdIsDrawingButton_4_5;
     QPushButton *blockSamplesButton_4_5;
+    QLabel *colorLabel_4_5;
     QGroupBox *chanel7SettingsBox_4;
     QPushButton *changeTriggerButton_4_7;
     QSpinBox *positionSpinBox_4_7;
@@ -482,6 +516,7 @@ public:
     QPushButton *channelIsDrawingButton_4_7;
     QPushButton *thresholdIsDrawingButton_4_7;
     QPushButton *blockSamplesButton_4_7;
+    QLabel *colorLabel_4_7;
     QGroupBox *chanel3SettingsBox_4;
     QPushButton *changeTriggerButton_4_3;
     QSpinBox *positionSpinBox_4_3;
@@ -494,6 +529,7 @@ public:
     QPushButton *channelIsDrawingButton_4_3;
     QPushButton *thresholdIsDrawingButton_4_3;
     QPushButton *blockSamplesButton_4_3;
+    QLabel *colorLabel_4_3;
     QGroupBox *channelLabelBox_4;
     QLabel *thresholdLabel_4;
     QLabel *samplesLabel_4;
@@ -514,6 +550,7 @@ public:
     QPushButton *channelIsDrawingButton_5_0;
     QPushButton *thresholdIsDrawingButton_5_0;
     QPushButton *blockSamplesButton_5_0;
+    QLabel *colorLabel_5_0;
     QGroupBox *chanel1SettingsBox_5;
     QPushButton *changeTriggerButton_5_1;
     QSpinBox *positionSpinBox_5_1;
@@ -526,6 +563,7 @@ public:
     QPushButton *channelIsDrawingButton_5_1;
     QPushButton *thresholdIsDrawingButton_5_1;
     QPushButton *blockSamplesButton_5_1;
+    QLabel *colorLabel_5_1;
     QGroupBox *chanel2SettingsBox_5;
     QPushButton *changeTriggerButton_5_2;
     QSpinBox *positionSpinBox_5_2;
@@ -538,6 +576,7 @@ public:
     QPushButton *channelIsDrawingButton_5_2;
     QPushButton *thresholdIsDrawingButton_5_2;
     QPushButton *blockSamplesButton_5_2;
+    QLabel *colorLabel_5_2;
     QGroupBox *chanel4SettingsBox_5;
     QPushButton *changeTriggerButton_5_4;
     QSpinBox *positionSpinBox_5_4;
@@ -550,6 +589,7 @@ public:
     QPushButton *channelIsDrawingButton_5_4;
     QPushButton *thresholdIsDrawingButton_5_4;
     QPushButton *blockSamplesButton_5_4;
+    QLabel *colorLabel_5_4;
     QGroupBox *chanel6SettingsBox_5;
     QPushButton *changeTriggerButton_5_6;
     QSpinBox *positionSpinBox_5_6;
@@ -562,6 +602,7 @@ public:
     QPushButton *channelIsDrawingButton_5_6;
     QPushButton *thresholdIsDrawingButton_5_6;
     QPushButton *blockSamplesButton_5_6;
+    QLabel *colorLabel_5_6;
     QGroupBox *chanel5SettingsBox_5;
     QPushButton *changeTriggerButton_5_5;
     QSpinBox *positionSpinBox_5_5;
@@ -574,6 +615,7 @@ public:
     QPushButton *channelIsDrawingButton_5_5;
     QPushButton *thresholdIsDrawingButton_5_5;
     QPushButton *blockSamplesButton_5_5;
+    QLabel *colorLabel_5_5;
     QGroupBox *chanel7SettingsBox_5;
     QPushButton *changeTriggerButton_5_7;
     QSpinBox *positionSpinBox_5_7;
@@ -586,6 +628,7 @@ public:
     QPushButton *channelIsDrawingButton_5_7;
     QPushButton *thresholdIsDrawingButton_5_7;
     QPushButton *blockSamplesButton_5_7;
+    QLabel *colorLabel_5_7;
     QGroupBox *chanel3SettingsBox_5;
     QPushButton *changeTriggerButton_5_3;
     QSpinBox *positionSpinBox_5_3;
@@ -598,6 +641,7 @@ public:
     QPushButton *channelIsDrawingButton_5_3;
     QPushButton *thresholdIsDrawingButton_5_3;
     QPushButton *blockSamplesButton_5_3;
+    QLabel *colorLabel_5_3;
     QGroupBox *channelLabelBox_5;
     QLabel *thresholdLabel_5;
     QLabel *samplesLabel_5;
@@ -618,6 +662,7 @@ public:
     QPushButton *channelIsDrawingButton_6_0;
     QPushButton *thresholdIsDrawingButton_6_0;
     QPushButton *blockSamplesButton_6_0;
+    QLabel *colorLabel_6_0;
     QGroupBox *chanel1SettingsBox_6;
     QPushButton *changeTriggerButton_6_1;
     QSpinBox *positionSpinBox_6_1;
@@ -630,6 +675,7 @@ public:
     QPushButton *channelIsDrawingButton_6_1;
     QPushButton *thresholdIsDrawingButton_6_1;
     QPushButton *blockSamplesButton_6_1;
+    QLabel *colorLabel_6_1;
     QGroupBox *chanel2SettingsBox_6;
     QPushButton *changeTriggerButton_6_2;
     QSpinBox *positionSpinBox_6_2;
@@ -642,6 +688,7 @@ public:
     QPushButton *channelIsDrawingButton_6_2;
     QPushButton *thresholdIsDrawingButton_6_2;
     QPushButton *blockSamplesButton_6_2;
+    QLabel *colorLabel_6_2;
     QGroupBox *chanel4SettingsBox_6;
     QPushButton *changeTriggerButton_6_4;
     QSpinBox *positionSpinBox_6_4;
@@ -654,6 +701,7 @@ public:
     QPushButton *channelIsDrawingButton_6_4;
     QPushButton *thresholdIsDrawingButton_6_4;
     QPushButton *blockSamplesButton_6_4;
+    QLabel *colorLabel_6_4;
     QGroupBox *chanel6SettingsBox_6;
     QPushButton *changeTriggerButton_6_6;
     QSpinBox *positionSpinBox_6_6;
@@ -666,6 +714,7 @@ public:
     QPushButton *channelIsDrawingButton_6_6;
     QPushButton *thresholdIsDrawingButton_6_6;
     QPushButton *blockSamplesButton_6_6;
+    QLabel *colorLabel_6_6;
     QGroupBox *chanel5SettingsBox_6;
     QPushButton *changeTriggerButton_6_5;
     QSpinBox *positionSpinBox_6_5;
@@ -678,6 +727,7 @@ public:
     QPushButton *channelIsDrawingButton_6_5;
     QPushButton *thresholdIsDrawingButton_6_5;
     QPushButton *blockSamplesButton_6_5;
+    QLabel *colorLabel_6_5;
     QGroupBox *chanel7SettingsBox_6;
     QPushButton *changeTriggerButton_6_7;
     QSpinBox *positionSpinBox_6_7;
@@ -690,6 +740,7 @@ public:
     QPushButton *channelIsDrawingButton_6_7;
     QPushButton *thresholdIsDrawingButton_6_7;
     QPushButton *blockSamplesButton_6_7;
+    QLabel *colorLabel_6_8;
     QGroupBox *chanel3SettingsBox_6;
     QPushButton *changeTriggerButton_6_3;
     QSpinBox *positionSpinBox_6_3;
@@ -702,6 +753,7 @@ public:
     QPushButton *channelIsDrawingButton_6_3;
     QPushButton *thresholdIsDrawingButton_6_3;
     QPushButton *blockSamplesButton_6_3;
+    QLabel *colorLabel_6_3;
     QGroupBox *channelLabelBox_6;
     QLabel *thresholdLabel_6;
     QLabel *samplesLabel_6;
@@ -722,6 +774,7 @@ public:
     QPushButton *channelIsDrawingButton_7_0;
     QPushButton *thresholdIsDrawingButton_7_0;
     QPushButton *blockSamplesButton_7_0;
+    QLabel *colorLabel_7_0;
     QGroupBox *chanel1SettingsBox_7;
     QPushButton *changeTriggerButton_7_1;
     QSpinBox *positionSpinBox_7_1;
@@ -734,6 +787,7 @@ public:
     QPushButton *channelIsDrawingButton_7_1;
     QPushButton *thresholdIsDrawingButton_7_1;
     QPushButton *blockSamplesButton_7_1;
+    QLabel *colorLabel_7_1;
     QGroupBox *chanel2SettingsBox_7;
     QPushButton *changeTriggerButton_7_2;
     QSpinBox *positionSpinBox_7_2;
@@ -746,6 +800,7 @@ public:
     QPushButton *channelIsDrawingButton_7_2;
     QPushButton *thresholdIsDrawingButton_7_2;
     QPushButton *blockSamplesButton_7_2;
+    QLabel *colorLabel_7_2;
     QGroupBox *chanel4SettingsBox_7;
     QPushButton *changeTriggerButton_7_4;
     QSpinBox *positionSpinBox_7_4;
@@ -758,6 +813,7 @@ public:
     QPushButton *channelIsDrawingButton_7_4;
     QPushButton *thresholdIsDrawingButton_7_4;
     QPushButton *blockSamplesButton_7_4;
+    QLabel *colorLabel_7_4;
     QGroupBox *chanel6SettingsBox_7;
     QPushButton *changeTriggerButton_7_6;
     QSpinBox *positionSpinBox_7_6;
@@ -770,6 +826,7 @@ public:
     QPushButton *channelIsDrawingButton_7_6;
     QPushButton *thresholdIsDrawingButton_7_6;
     QPushButton *blockSamplesButton_7_6;
+    QLabel *colorLabel_7_6;
     QGroupBox *chanel5SettingsBox_7;
     QPushButton *changeTriggerButton_7_5;
     QSpinBox *positionSpinBox_7_5;
@@ -782,6 +839,7 @@ public:
     QPushButton *channelIsDrawingButton_7_5;
     QPushButton *thresholdIsDrawingButton_7_5;
     QPushButton *blockSamplesButton_7_5;
+    QLabel *colorLabel_7_5;
     QGroupBox *chanel7SettingsBox_7;
     QPushButton *changeTriggerButton_7_7;
     QSpinBox *positionSpinBox_7_7;
@@ -794,6 +852,7 @@ public:
     QPushButton *channelIsDrawingButton_7_7;
     QPushButton *thresholdIsDrawingButton_7_7;
     QPushButton *blockSamplesButton_7_7;
+    QLabel *colorLabel_7_7;
     QGroupBox *chanel3SettingsBox_7;
     QPushButton *changeTriggerButton_7_3;
     QSpinBox *positionSpinBox_7_3;
@@ -806,6 +865,7 @@ public:
     QPushButton *channelIsDrawingButton_7_3;
     QPushButton *thresholdIsDrawingButton_7_3;
     QPushButton *blockSamplesButton_7_3;
+    QLabel *colorLabel_7_3;
     QGroupBox *channelLabelBox_7;
     QLabel *thresholdLabel_7;
     QLabel *samplesLabel_7;
@@ -826,6 +886,7 @@ public:
     QPushButton *channelIsDrawingButton_8_0;
     QPushButton *thresholdIsDrawingButton_8_0;
     QPushButton *blockSamplesButton_8_0;
+    QLabel *colorLabel_8_0;
     QGroupBox *chanel1SettingsBox_8;
     QPushButton *changeTriggerButton_8_1;
     QSpinBox *positionSpinBox_8_1;
@@ -838,6 +899,7 @@ public:
     QPushButton *channelIsDrawingButton_8_1;
     QPushButton *thresholdIsDrawingButton_8_1;
     QPushButton *blockSamplesButton_8_1;
+    QLabel *colorLabel_8_1;
     QGroupBox *chanel2SettingsBox_8;
     QPushButton *changeTriggerButton_8_2;
     QSpinBox *positionSpinBox_8_2;
@@ -850,6 +912,7 @@ public:
     QPushButton *channelIsDrawingButton_8_2;
     QPushButton *thresholdIsDrawingButton_8_2;
     QPushButton *blockSamplesButton_8_2;
+    QLabel *colorLabel_8_2;
     QGroupBox *chanel4SettingsBox_8;
     QPushButton *changeTriggerButton_8_4;
     QSpinBox *positionSpinBox_8_4;
@@ -862,6 +925,7 @@ public:
     QPushButton *channelIsDrawingButton_8_4;
     QPushButton *thresholdIsDrawingButton_8_4;
     QPushButton *blockSamplesButton_8_4;
+    QLabel *colorLabel_8_4;
     QGroupBox *chanel6SettingsBox_8;
     QPushButton *changeTriggerButton_8_6;
     QSpinBox *positionSpinBox_8_6;
@@ -874,6 +938,7 @@ public:
     QPushButton *channelIsDrawingButton_8_6;
     QPushButton *thresholdIsDrawingButton_8_6;
     QPushButton *blockSamplesButton_8_6;
+    QLabel *colorLabel_8_6;
     QGroupBox *chanel5SettingsBox_8;
     QPushButton *changeTriggerButton_8_5;
     QSpinBox *positionSpinBox_8_5;
@@ -886,6 +951,7 @@ public:
     QPushButton *channelIsDrawingButton_8_5;
     QPushButton *thresholdIsDrawingButton_8_5;
     QPushButton *blockSamplesButton_8_5;
+    QLabel *colorLabel_8_5;
     QGroupBox *chanel7SettingsBox_8;
     QPushButton *changeTriggerButton_8_7;
     QSpinBox *positionSpinBox_8_7;
@@ -898,6 +964,7 @@ public:
     QPushButton *channelIsDrawingButton_8_7;
     QPushButton *thresholdIsDrawingButton_8_7;
     QPushButton *blockSamplesButton_8_7;
+    QLabel *colorLabel_8_7;
     QGroupBox *chanel3SettingsBox_8;
     QPushButton *changeTriggerButton_8_3;
     QSpinBox *positionSpinBox_8_3;
@@ -910,6 +977,7 @@ public:
     QPushButton *channelIsDrawingButton_8_3;
     QPushButton *thresholdIsDrawingButton_8_3;
     QPushButton *blockSamplesButton_8_3;
+    QLabel *colorLabel_8_3;
     QGroupBox *channelLabelBox_8;
     QLabel *thresholdLabel_8;
     QLabel *samplesLabel_8;
@@ -930,6 +998,7 @@ public:
     QPushButton *channelIsDrawingButton_9_2;
     QPushButton *thresholdIsDrawingButton_9_2;
     QPushButton *blockSamplesButton_9_2;
+    QLabel *colorLabel_9_2;
     QGroupBox *chanel7SettingsBox_9;
     QPushButton *changeTriggerButton_9_7;
     QSpinBox *positionSpinBox_9_7;
@@ -942,6 +1011,7 @@ public:
     QPushButton *channelIsDrawingButton_9_7;
     QPushButton *thresholdIsDrawingButton_9_7;
     QPushButton *blockSamplesButton_9_7;
+    QLabel *colorLabel_1_71;
     QGroupBox *chanel0SettingsBox_9;
     QPushButton *changeTriggerButton_9_0;
     QSpinBox *positionSpinBox_9_0;
@@ -954,6 +1024,7 @@ public:
     QPushButton *channelIsDrawingButton_9_0;
     QPushButton *thresholdIsDrawingButton_9_0;
     QPushButton *blockSamplesButton_9_0;
+    QLabel *colorLabel_9_0;
     QGroupBox *chanel1SettingsBox_9;
     QPushButton *changeTriggerButton_9_1;
     QSpinBox *positionSpinBox_9_1;
@@ -966,6 +1037,7 @@ public:
     QPushButton *channelIsDrawingButton_9_1;
     QPushButton *thresholdIsDrawingButton_9_1;
     QPushButton *blockSamplesButton_9_1;
+    QLabel *colorLabel_9_1;
     QGroupBox *chanel4SettingsBox_9;
     QPushButton *changeTriggerButton_9_4;
     QSpinBox *positionSpinBox_9_4;
@@ -978,6 +1050,7 @@ public:
     QPushButton *channelIsDrawingButton_9_4;
     QPushButton *thresholdIsDrawingButton_9_4;
     QPushButton *blockSamplesButton_9_4;
+    QLabel *colorLabel_9_4;
     QGroupBox *chanel3SettingsBox_9;
     QPushButton *changeTriggerButton_9_3;
     QSpinBox *positionSpinBox_9_3;
@@ -990,6 +1063,7 @@ public:
     QPushButton *channelIsDrawingButton_9_3;
     QPushButton *thresholdIsDrawingButton_9_3;
     QPushButton *blockSamplesButton_9_3;
+    QLabel *colorLabel_9_3;
     QGroupBox *chanel5SettingsBox_9;
     QPushButton *changeTriggerButton_9_5;
     QSpinBox *positionSpinBox_9_5;
@@ -1002,6 +1076,7 @@ public:
     QPushButton *channelIsDrawingButton_9_5;
     QPushButton *thresholdIsDrawingButton_9_5;
     QPushButton *blockSamplesButton_9_5;
+    QLabel *colorLabel_9_5;
     QGroupBox *chanel6SettingsBox_9;
     QPushButton *changeTriggerButton_9_6;
     QSpinBox *positionSpinBox_9_6;
@@ -1014,6 +1089,7 @@ public:
     QPushButton *channelIsDrawingButton_9_6;
     QPushButton *thresholdIsDrawingButton_9_6;
     QPushButton *blockSamplesButton_9_6;
+    QLabel *colorLabel_9_6;
     QGroupBox *channelLabelBox_9;
     QLabel *thresholdLabel_9;
     QLabel *samplesLabel_9;
@@ -1231,10 +1307,35 @@ public:
         gridLayout_5->setSpacing(6);
         gridLayout_5->setContentsMargins(11, 11, 11, 11);
         gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
+        pushButton_4 = new QPushButton(spectrumTab);
+        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+
+        gridLayout_5->addWidget(pushButton_4, 1, 3, 1, 1);
+
+        amplifySpectrumButton = new QPushButton(spectrumTab);
+        amplifySpectrumButton->setObjectName(QStringLiteral("amplifySpectrumButton"));
+        amplifySpectrumButton->setCheckable(true);
+
+        gridLayout_5->addWidget(amplifySpectrumButton, 1, 0, 1, 1);
+
+        pushButton_3 = new QPushButton(spectrumTab);
+        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+
+        gridLayout_5->addWidget(pushButton_3, 1, 2, 1, 1);
+
+        pushButton_2 = new QPushButton(spectrumTab);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+
+        gridLayout_5->addWidget(pushButton_2, 1, 1, 1, 1);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_5->addItem(horizontalSpacer_3, 1, 4, 1, 1);
+
         spectrumWidget = new QCustomPlot(spectrumTab);
         spectrumWidget->setObjectName(QStringLiteral("spectrumWidget"));
 
-        gridLayout_5->addWidget(spectrumWidget, 0, 0, 1, 1);
+        gridLayout_5->addWidget(spectrumWidget, 0, 0, 1, 5);
 
         tabWidget->addTab(spectrumTab, QString());
         dataTab = new QWidget();
@@ -1307,11 +1408,6 @@ public:
         QIcon icon11;
         icon11.addFile(QStringLiteral("../Desktop/CAEN-UI/Reset.png"), QSize(), QIcon::Normal, QIcon::Off);
         positionResetButton_0_0->setIcon(icon11);
-        inversionButton = new QPushButton(timeSettingBox);
-        inversionButton->setObjectName(QStringLiteral("inversionButton"));
-        inversionButton->setEnabled(false);
-        inversionButton->setGeometry(QRect(20, 170, 81, 25));
-        inversionButton->setCheckable(true);
 
         gridLayout_7->addWidget(timeSettingBox, 0, 1, 1, 1);
 
@@ -1523,6 +1619,11 @@ public:
         blockSamplesButton_1_0->setIcon(icon18);
         blockSamplesButton_1_0->setCheckable(true);
         blockSamplesButton_1_0->setChecked(true);
+        colorLabel_1_0 = new QLabel(chanel0SettingsBox_1);
+        colorLabel_1_0->setObjectName(QStringLiteral("colorLabel_1_0"));
+        colorLabel_1_0->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_1_0->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         channelLabelBox_1 = new QGroupBox(WDF1Widget);
         channelLabelBox_1->setObjectName(QStringLiteral("channelLabelBox_1"));
         channelLabelBox_1->setGeometry(QRect(0, 0, 105, 171));
@@ -1633,6 +1734,11 @@ public:
         blockSamplesButton_1_1->setIcon(icon18);
         blockSamplesButton_1_1->setCheckable(true);
         blockSamplesButton_1_1->setChecked(true);
+        colorLabel_1_1 = new QLabel(chanel1SettingsBox_1);
+        colorLabel_1_1->setObjectName(QStringLiteral("colorLabel_1_1"));
+        colorLabel_1_1->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_1_1->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel2SettingsBox_1 = new QGroupBox(WDF1Widget);
         chanel2SettingsBox_1->setObjectName(QStringLiteral("chanel2SettingsBox_1"));
         chanel2SettingsBox_1->setGeometry(QRect(300, 0, 90, 170));
@@ -1714,6 +1820,11 @@ public:
         blockSamplesButton_1_2->setIcon(icon18);
         blockSamplesButton_1_2->setCheckable(true);
         blockSamplesButton_1_2->setChecked(true);
+        colorLabel_1_2 = new QLabel(chanel2SettingsBox_1);
+        colorLabel_1_2->setObjectName(QStringLiteral("colorLabel_1_2"));
+        colorLabel_1_2->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_1_2->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel5SettingsBox_1 = new QGroupBox(WDF1Widget);
         chanel5SettingsBox_1->setObjectName(QStringLiteral("chanel5SettingsBox_1"));
         chanel5SettingsBox_1->setGeometry(QRect(585, 0, 90, 170));
@@ -1795,6 +1906,11 @@ public:
         blockSamplesButton_1_5->setIcon(icon18);
         blockSamplesButton_1_5->setCheckable(true);
         blockSamplesButton_1_5->setChecked(true);
+        colorLabel_1_5 = new QLabel(chanel5SettingsBox_1);
+        colorLabel_1_5->setObjectName(QStringLiteral("colorLabel_1_5"));
+        colorLabel_1_5->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_1_5->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel4SettingsBox_1 = new QGroupBox(WDF1Widget);
         chanel4SettingsBox_1->setObjectName(QStringLiteral("chanel4SettingsBox_1"));
         chanel4SettingsBox_1->setGeometry(QRect(490, 0, 90, 170));
@@ -1876,6 +1992,11 @@ public:
         blockSamplesButton_1_4->setIcon(icon18);
         blockSamplesButton_1_4->setCheckable(true);
         blockSamplesButton_1_4->setChecked(true);
+        colorLabel_1_4 = new QLabel(chanel4SettingsBox_1);
+        colorLabel_1_4->setObjectName(QStringLiteral("colorLabel_1_4"));
+        colorLabel_1_4->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_1_4->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel3SettingsBox_1 = new QGroupBox(WDF1Widget);
         chanel3SettingsBox_1->setObjectName(QStringLiteral("chanel3SettingsBox_1"));
         chanel3SettingsBox_1->setGeometry(QRect(395, 0, 90, 170));
@@ -1957,6 +2078,11 @@ public:
         blockSamplesButton_1_3->setIcon(icon18);
         blockSamplesButton_1_3->setCheckable(true);
         blockSamplesButton_1_3->setChecked(true);
+        colorLabel_1_3 = new QLabel(chanel3SettingsBox_1);
+        colorLabel_1_3->setObjectName(QStringLiteral("colorLabel_1_3"));
+        colorLabel_1_3->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_1_3->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel7SettingsBox_1 = new QGroupBox(WDF1Widget);
         chanel7SettingsBox_1->setObjectName(QStringLiteral("chanel7SettingsBox_1"));
         chanel7SettingsBox_1->setGeometry(QRect(775, 0, 90, 171));
@@ -2039,6 +2165,11 @@ public:
         blockSamplesButton_1_7->setIcon(icon18);
         blockSamplesButton_1_7->setCheckable(true);
         blockSamplesButton_1_7->setChecked(true);
+        colorLabel_1_7 = new QLabel(chanel7SettingsBox_1);
+        colorLabel_1_7->setObjectName(QStringLiteral("colorLabel_1_7"));
+        colorLabel_1_7->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_1_7->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel6SettingsBox_1 = new QGroupBox(WDF1Widget);
         chanel6SettingsBox_1->setObjectName(QStringLiteral("chanel6SettingsBox_1"));
         chanel6SettingsBox_1->setGeometry(QRect(680, 0, 90, 170));
@@ -2120,6 +2251,11 @@ public:
         blockSamplesButton_1_6->setIcon(icon18);
         blockSamplesButton_1_6->setCheckable(true);
         blockSamplesButton_1_6->setChecked(true);
+        colorLabel_1_6 = new QLabel(chanel6SettingsBox_1);
+        colorLabel_1_6->setObjectName(QStringLiteral("colorLabel_1_6"));
+        colorLabel_1_6->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_1_6->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         QIcon icon19;
         icon19.addFile(QStringLiteral("../Desktop/CAEN-UI/used.png"), QSize(), QIcon::Normal, QIcon::Off);
         icon19.addFile(QStringLiteral("../Desktop/CAEN-UI/unused.png"), QSize(), QIcon::Disabled, QIcon::Off);
@@ -2198,6 +2334,11 @@ public:
         blockSamplesButton_2_2->setIcon(icon18);
         blockSamplesButton_2_2->setCheckable(true);
         blockSamplesButton_2_2->setChecked(true);
+        colorLabel_2_2 = new QLabel(chanel2SettingsBox_2);
+        colorLabel_2_2->setObjectName(QStringLiteral("colorLabel_2_2"));
+        colorLabel_2_2->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_2_2->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel6SettingsBox_2 = new QGroupBox(WDF2Widget);
         chanel6SettingsBox_2->setObjectName(QStringLiteral("chanel6SettingsBox_2"));
         chanel6SettingsBox_2->setGeometry(QRect(680, 0, 90, 170));
@@ -2270,6 +2411,11 @@ public:
         blockSamplesButton_2_6->setIcon(icon18);
         blockSamplesButton_2_6->setCheckable(true);
         blockSamplesButton_2_6->setChecked(true);
+        colorLabel_2_6 = new QLabel(chanel6SettingsBox_2);
+        colorLabel_2_6->setObjectName(QStringLiteral("colorLabel_2_6"));
+        colorLabel_2_6->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_2_6->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel5SettingsBox_2 = new QGroupBox(WDF2Widget);
         chanel5SettingsBox_2->setObjectName(QStringLiteral("chanel5SettingsBox_2"));
         chanel5SettingsBox_2->setGeometry(QRect(585, 0, 90, 170));
@@ -2342,6 +2488,11 @@ public:
         blockSamplesButton_2_5->setIcon(icon18);
         blockSamplesButton_2_5->setCheckable(true);
         blockSamplesButton_2_5->setChecked(true);
+        colorLabel_2_5 = new QLabel(chanel5SettingsBox_2);
+        colorLabel_2_5->setObjectName(QStringLiteral("colorLabel_2_5"));
+        colorLabel_2_5->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_2_5->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel3SettingsBox_2 = new QGroupBox(WDF2Widget);
         chanel3SettingsBox_2->setObjectName(QStringLiteral("chanel3SettingsBox_2"));
         chanel3SettingsBox_2->setGeometry(QRect(395, 0, 90, 170));
@@ -2414,6 +2565,11 @@ public:
         blockSamplesButton_2_3->setIcon(icon18);
         blockSamplesButton_2_3->setCheckable(true);
         blockSamplesButton_2_3->setChecked(true);
+        colorLabel_2_3 = new QLabel(chanel3SettingsBox_2);
+        colorLabel_2_3->setObjectName(QStringLiteral("colorLabel_2_3"));
+        colorLabel_2_3->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_2_3->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel1SettingsBox_2 = new QGroupBox(WDF2Widget);
         chanel1SettingsBox_2->setObjectName(QStringLiteral("chanel1SettingsBox_2"));
         chanel1SettingsBox_2->setGeometry(QRect(205, 0, 90, 170));
@@ -2486,6 +2642,11 @@ public:
         blockSamplesButton_2_1->setIcon(icon18);
         blockSamplesButton_2_1->setCheckable(true);
         blockSamplesButton_2_1->setChecked(true);
+        colorLabel_2_1 = new QLabel(chanel1SettingsBox_2);
+        colorLabel_2_1->setObjectName(QStringLiteral("colorLabel_2_1"));
+        colorLabel_2_1->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_2_1->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel4SettingsBox_2 = new QGroupBox(WDF2Widget);
         chanel4SettingsBox_2->setObjectName(QStringLiteral("chanel4SettingsBox_2"));
         chanel4SettingsBox_2->setGeometry(QRect(490, 0, 90, 170));
@@ -2558,6 +2719,11 @@ public:
         blockSamplesButton_2_4->setIcon(icon18);
         blockSamplesButton_2_4->setCheckable(true);
         blockSamplesButton_2_4->setChecked(true);
+        colorLabel_2_4 = new QLabel(chanel4SettingsBox_2);
+        colorLabel_2_4->setObjectName(QStringLiteral("colorLabel_2_4"));
+        colorLabel_2_4->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_2_4->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel0SettingsBox_2 = new QGroupBox(WDF2Widget);
         chanel0SettingsBox_2->setObjectName(QStringLiteral("chanel0SettingsBox_2"));
         chanel0SettingsBox_2->setGeometry(QRect(110, 0, 90, 170));
@@ -2631,6 +2797,11 @@ public:
         blockSamplesButton_2_0->setIcon(icon18);
         blockSamplesButton_2_0->setCheckable(true);
         blockSamplesButton_2_0->setChecked(true);
+        colorLabel_1_8 = new QLabel(chanel0SettingsBox_2);
+        colorLabel_1_8->setObjectName(QStringLiteral("colorLabel_1_8"));
+        colorLabel_1_8->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_1_8->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel7SettingsBox_2 = new QGroupBox(WDF2Widget);
         chanel7SettingsBox_2->setObjectName(QStringLiteral("chanel7SettingsBox_2"));
         chanel7SettingsBox_2->setGeometry(QRect(775, 0, 90, 170));
@@ -2703,6 +2874,11 @@ public:
         blockSamplesButton_2_7->setIcon(icon18);
         blockSamplesButton_2_7->setCheckable(true);
         blockSamplesButton_2_7->setChecked(true);
+        colorLabel_6_7 = new QLabel(chanel7SettingsBox_2);
+        colorLabel_6_7->setObjectName(QStringLiteral("colorLabel_6_7"));
+        colorLabel_6_7->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_6_7->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         channelLabelBox_2 = new QGroupBox(WDF2Widget);
         channelLabelBox_2->setObjectName(QStringLiteral("channelLabelBox_2"));
         channelLabelBox_2->setGeometry(QRect(0, 0, 105, 170));
@@ -2805,6 +2981,11 @@ public:
         blockSamplesButton_3_0->setIcon(icon18);
         blockSamplesButton_3_0->setCheckable(true);
         blockSamplesButton_3_0->setChecked(true);
+        colorLabel_3_0 = new QLabel(chanel0SettingsBox_3);
+        colorLabel_3_0->setObjectName(QStringLiteral("colorLabel_3_0"));
+        colorLabel_3_0->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_3_0->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel1SettingsBox_3 = new QGroupBox(WDF3Widget);
         chanel1SettingsBox_3->setObjectName(QStringLiteral("chanel1SettingsBox_3"));
         chanel1SettingsBox_3->setGeometry(QRect(205, 0, 90, 170));
@@ -2876,6 +3057,11 @@ public:
         blockSamplesButton_3_1->setIcon(icon18);
         blockSamplesButton_3_1->setCheckable(true);
         blockSamplesButton_3_1->setChecked(true);
+        colorLabel_3_1 = new QLabel(chanel1SettingsBox_3);
+        colorLabel_3_1->setObjectName(QStringLiteral("colorLabel_3_1"));
+        colorLabel_3_1->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_3_1->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel2SettingsBox_3 = new QGroupBox(WDF3Widget);
         chanel2SettingsBox_3->setObjectName(QStringLiteral("chanel2SettingsBox_3"));
         chanel2SettingsBox_3->setGeometry(QRect(300, 0, 90, 170));
@@ -2947,6 +3133,11 @@ public:
         blockSamplesButton_3_2->setIcon(icon18);
         blockSamplesButton_3_2->setCheckable(true);
         blockSamplesButton_3_2->setChecked(true);
+        colorLabel_3_2 = new QLabel(chanel2SettingsBox_3);
+        colorLabel_3_2->setObjectName(QStringLiteral("colorLabel_3_2"));
+        colorLabel_3_2->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_3_2->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel4SettingsBox_3 = new QGroupBox(WDF3Widget);
         chanel4SettingsBox_3->setObjectName(QStringLiteral("chanel4SettingsBox_3"));
         chanel4SettingsBox_3->setGeometry(QRect(490, 0, 90, 170));
@@ -3018,6 +3209,11 @@ public:
         blockSamplesButton_3_4->setIcon(icon18);
         blockSamplesButton_3_4->setCheckable(true);
         blockSamplesButton_3_4->setChecked(true);
+        colorLabel_3_4 = new QLabel(chanel4SettingsBox_3);
+        colorLabel_3_4->setObjectName(QStringLiteral("colorLabel_3_4"));
+        colorLabel_3_4->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_3_4->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel6SettingsBox_3 = new QGroupBox(WDF3Widget);
         chanel6SettingsBox_3->setObjectName(QStringLiteral("chanel6SettingsBox_3"));
         chanel6SettingsBox_3->setGeometry(QRect(680, 0, 90, 170));
@@ -3089,6 +3285,11 @@ public:
         blockSamplesButton_3_6->setIcon(icon18);
         blockSamplesButton_3_6->setCheckable(true);
         blockSamplesButton_3_6->setChecked(true);
+        colorLabel_3_6 = new QLabel(chanel6SettingsBox_3);
+        colorLabel_3_6->setObjectName(QStringLiteral("colorLabel_3_6"));
+        colorLabel_3_6->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_3_6->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel5SettingsBox_3 = new QGroupBox(WDF3Widget);
         chanel5SettingsBox_3->setObjectName(QStringLiteral("chanel5SettingsBox_3"));
         chanel5SettingsBox_3->setGeometry(QRect(585, 0, 90, 170));
@@ -3160,6 +3361,11 @@ public:
         blockSamplesButton_3_5->setIcon(icon18);
         blockSamplesButton_3_5->setCheckable(true);
         blockSamplesButton_3_5->setChecked(true);
+        colorLabel_3_5 = new QLabel(chanel5SettingsBox_3);
+        colorLabel_3_5->setObjectName(QStringLiteral("colorLabel_3_5"));
+        colorLabel_3_5->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_3_5->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel7SettingsBox_3 = new QGroupBox(WDF3Widget);
         chanel7SettingsBox_3->setObjectName(QStringLiteral("chanel7SettingsBox_3"));
         chanel7SettingsBox_3->setGeometry(QRect(775, 0, 90, 170));
@@ -3231,6 +3437,11 @@ public:
         blockSamplesButton_3_7->setIcon(icon18);
         blockSamplesButton_3_7->setCheckable(true);
         blockSamplesButton_3_7->setChecked(true);
+        colorLabel_3_7 = new QLabel(chanel7SettingsBox_3);
+        colorLabel_3_7->setObjectName(QStringLiteral("colorLabel_3_7"));
+        colorLabel_3_7->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_3_7->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel3SettingsBox_3 = new QGroupBox(WDF3Widget);
         chanel3SettingsBox_3->setObjectName(QStringLiteral("chanel3SettingsBox_3"));
         chanel3SettingsBox_3->setGeometry(QRect(395, 0, 90, 170));
@@ -3302,6 +3513,11 @@ public:
         blockSamplesButton_3_3->setIcon(icon18);
         blockSamplesButton_3_3->setCheckable(true);
         blockSamplesButton_3_3->setChecked(true);
+        colorLabel_3_3 = new QLabel(chanel3SettingsBox_3);
+        colorLabel_3_3->setObjectName(QStringLiteral("colorLabel_3_3"));
+        colorLabel_3_3->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_3_3->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         channelLabelBox_3 = new QGroupBox(WDF3Widget);
         channelLabelBox_3->setObjectName(QStringLiteral("channelLabelBox_3"));
         channelLabelBox_3->setGeometry(QRect(0, 0, 105, 170));
@@ -3404,6 +3620,11 @@ public:
         blockSamplesButton_4_0->setIcon(icon18);
         blockSamplesButton_4_0->setCheckable(true);
         blockSamplesButton_4_0->setChecked(true);
+        colorLabel_4_0 = new QLabel(chanel0SettingsBox_4);
+        colorLabel_4_0->setObjectName(QStringLiteral("colorLabel_4_0"));
+        colorLabel_4_0->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_4_0->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel1SettingsBox_4 = new QGroupBox(WDF4Widget);
         chanel1SettingsBox_4->setObjectName(QStringLiteral("chanel1SettingsBox_4"));
         chanel1SettingsBox_4->setGeometry(QRect(205, 0, 90, 170));
@@ -3475,6 +3696,11 @@ public:
         blockSamplesButton_4_1->setIcon(icon18);
         blockSamplesButton_4_1->setCheckable(true);
         blockSamplesButton_4_1->setChecked(true);
+        colorLabel_4_1 = new QLabel(chanel1SettingsBox_4);
+        colorLabel_4_1->setObjectName(QStringLiteral("colorLabel_4_1"));
+        colorLabel_4_1->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_4_1->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel2SettingsBox_4 = new QGroupBox(WDF4Widget);
         chanel2SettingsBox_4->setObjectName(QStringLiteral("chanel2SettingsBox_4"));
         chanel2SettingsBox_4->setGeometry(QRect(300, 0, 90, 170));
@@ -3546,6 +3772,11 @@ public:
         blockSamplesButton_4_2->setIcon(icon18);
         blockSamplesButton_4_2->setCheckable(true);
         blockSamplesButton_4_2->setChecked(true);
+        colorLabel_4_2 = new QLabel(chanel2SettingsBox_4);
+        colorLabel_4_2->setObjectName(QStringLiteral("colorLabel_4_2"));
+        colorLabel_4_2->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_4_2->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel4SettingsBox_4 = new QGroupBox(WDF4Widget);
         chanel4SettingsBox_4->setObjectName(QStringLiteral("chanel4SettingsBox_4"));
         chanel4SettingsBox_4->setGeometry(QRect(490, 0, 90, 170));
@@ -3617,6 +3848,11 @@ public:
         blockSamplesButton_4_4->setIcon(icon18);
         blockSamplesButton_4_4->setCheckable(true);
         blockSamplesButton_4_4->setChecked(true);
+        colorLabel_4_4 = new QLabel(chanel4SettingsBox_4);
+        colorLabel_4_4->setObjectName(QStringLiteral("colorLabel_4_4"));
+        colorLabel_4_4->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_4_4->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel6SettingsBox_4 = new QGroupBox(WDF4Widget);
         chanel6SettingsBox_4->setObjectName(QStringLiteral("chanel6SettingsBox_4"));
         chanel6SettingsBox_4->setGeometry(QRect(680, 0, 90, 170));
@@ -3688,6 +3924,11 @@ public:
         blockSamplesButton_4_6->setIcon(icon18);
         blockSamplesButton_4_6->setCheckable(true);
         blockSamplesButton_4_6->setChecked(true);
+        colorLabel_4_6 = new QLabel(chanel6SettingsBox_4);
+        colorLabel_4_6->setObjectName(QStringLiteral("colorLabel_4_6"));
+        colorLabel_4_6->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_4_6->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel5SettingsBox_4 = new QGroupBox(WDF4Widget);
         chanel5SettingsBox_4->setObjectName(QStringLiteral("chanel5SettingsBox_4"));
         chanel5SettingsBox_4->setGeometry(QRect(585, 0, 90, 170));
@@ -3759,6 +4000,11 @@ public:
         blockSamplesButton_4_5->setIcon(icon18);
         blockSamplesButton_4_5->setCheckable(true);
         blockSamplesButton_4_5->setChecked(true);
+        colorLabel_4_5 = new QLabel(chanel5SettingsBox_4);
+        colorLabel_4_5->setObjectName(QStringLiteral("colorLabel_4_5"));
+        colorLabel_4_5->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_4_5->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel7SettingsBox_4 = new QGroupBox(WDF4Widget);
         chanel7SettingsBox_4->setObjectName(QStringLiteral("chanel7SettingsBox_4"));
         chanel7SettingsBox_4->setGeometry(QRect(775, 0, 90, 170));
@@ -3830,6 +4076,11 @@ public:
         blockSamplesButton_4_7->setIcon(icon18);
         blockSamplesButton_4_7->setCheckable(true);
         blockSamplesButton_4_7->setChecked(true);
+        colorLabel_4_7 = new QLabel(chanel7SettingsBox_4);
+        colorLabel_4_7->setObjectName(QStringLiteral("colorLabel_4_7"));
+        colorLabel_4_7->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_4_7->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel3SettingsBox_4 = new QGroupBox(WDF4Widget);
         chanel3SettingsBox_4->setObjectName(QStringLiteral("chanel3SettingsBox_4"));
         chanel3SettingsBox_4->setGeometry(QRect(395, 0, 90, 170));
@@ -3901,6 +4152,11 @@ public:
         blockSamplesButton_4_3->setIcon(icon18);
         blockSamplesButton_4_3->setCheckable(true);
         blockSamplesButton_4_3->setChecked(true);
+        colorLabel_4_3 = new QLabel(chanel3SettingsBox_4);
+        colorLabel_4_3->setObjectName(QStringLiteral("colorLabel_4_3"));
+        colorLabel_4_3->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_4_3->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         channelLabelBox_4 = new QGroupBox(WDF4Widget);
         channelLabelBox_4->setObjectName(QStringLiteral("channelLabelBox_4"));
         channelLabelBox_4->setGeometry(QRect(0, 0, 105, 170));
@@ -4002,6 +4258,11 @@ public:
         blockSamplesButton_5_0->setIcon(icon18);
         blockSamplesButton_5_0->setCheckable(true);
         blockSamplesButton_5_0->setChecked(true);
+        colorLabel_5_0 = new QLabel(chanel0SettingsBox_5);
+        colorLabel_5_0->setObjectName(QStringLiteral("colorLabel_5_0"));
+        colorLabel_5_0->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_5_0->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel1SettingsBox_5 = new QGroupBox(WDF5Widget);
         chanel1SettingsBox_5->setObjectName(QStringLiteral("chanel1SettingsBox_5"));
         chanel1SettingsBox_5->setGeometry(QRect(205, 0, 90, 170));
@@ -4072,6 +4333,11 @@ public:
         blockSamplesButton_5_1->setIcon(icon18);
         blockSamplesButton_5_1->setCheckable(true);
         blockSamplesButton_5_1->setChecked(true);
+        colorLabel_5_1 = new QLabel(chanel1SettingsBox_5);
+        colorLabel_5_1->setObjectName(QStringLiteral("colorLabel_5_1"));
+        colorLabel_5_1->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_5_1->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel2SettingsBox_5 = new QGroupBox(WDF5Widget);
         chanel2SettingsBox_5->setObjectName(QStringLiteral("chanel2SettingsBox_5"));
         chanel2SettingsBox_5->setGeometry(QRect(300, 0, 90, 170));
@@ -4142,6 +4408,11 @@ public:
         blockSamplesButton_5_2->setIcon(icon18);
         blockSamplesButton_5_2->setCheckable(true);
         blockSamplesButton_5_2->setChecked(true);
+        colorLabel_5_2 = new QLabel(chanel2SettingsBox_5);
+        colorLabel_5_2->setObjectName(QStringLiteral("colorLabel_5_2"));
+        colorLabel_5_2->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_5_2->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel4SettingsBox_5 = new QGroupBox(WDF5Widget);
         chanel4SettingsBox_5->setObjectName(QStringLiteral("chanel4SettingsBox_5"));
         chanel4SettingsBox_5->setGeometry(QRect(490, 0, 90, 170));
@@ -4212,6 +4483,11 @@ public:
         blockSamplesButton_5_4->setIcon(icon18);
         blockSamplesButton_5_4->setCheckable(true);
         blockSamplesButton_5_4->setChecked(true);
+        colorLabel_5_4 = new QLabel(chanel4SettingsBox_5);
+        colorLabel_5_4->setObjectName(QStringLiteral("colorLabel_5_4"));
+        colorLabel_5_4->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_5_4->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel6SettingsBox_5 = new QGroupBox(WDF5Widget);
         chanel6SettingsBox_5->setObjectName(QStringLiteral("chanel6SettingsBox_5"));
         chanel6SettingsBox_5->setGeometry(QRect(680, 0, 90, 170));
@@ -4282,6 +4558,11 @@ public:
         blockSamplesButton_5_6->setIcon(icon18);
         blockSamplesButton_5_6->setCheckable(true);
         blockSamplesButton_5_6->setChecked(true);
+        colorLabel_5_6 = new QLabel(chanel6SettingsBox_5);
+        colorLabel_5_6->setObjectName(QStringLiteral("colorLabel_5_6"));
+        colorLabel_5_6->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_5_6->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel5SettingsBox_5 = new QGroupBox(WDF5Widget);
         chanel5SettingsBox_5->setObjectName(QStringLiteral("chanel5SettingsBox_5"));
         chanel5SettingsBox_5->setGeometry(QRect(585, 0, 90, 170));
@@ -4352,6 +4633,11 @@ public:
         blockSamplesButton_5_5->setIcon(icon18);
         blockSamplesButton_5_5->setCheckable(true);
         blockSamplesButton_5_5->setChecked(true);
+        colorLabel_5_5 = new QLabel(chanel5SettingsBox_5);
+        colorLabel_5_5->setObjectName(QStringLiteral("colorLabel_5_5"));
+        colorLabel_5_5->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_5_5->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel7SettingsBox_5 = new QGroupBox(WDF5Widget);
         chanel7SettingsBox_5->setObjectName(QStringLiteral("chanel7SettingsBox_5"));
         chanel7SettingsBox_5->setGeometry(QRect(775, 0, 90, 170));
@@ -4422,6 +4708,11 @@ public:
         blockSamplesButton_5_7->setIcon(icon18);
         blockSamplesButton_5_7->setCheckable(true);
         blockSamplesButton_5_7->setChecked(true);
+        colorLabel_5_7 = new QLabel(chanel7SettingsBox_5);
+        colorLabel_5_7->setObjectName(QStringLiteral("colorLabel_5_7"));
+        colorLabel_5_7->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_5_7->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel3SettingsBox_5 = new QGroupBox(WDF5Widget);
         chanel3SettingsBox_5->setObjectName(QStringLiteral("chanel3SettingsBox_5"));
         chanel3SettingsBox_5->setGeometry(QRect(395, 0, 90, 170));
@@ -4492,6 +4783,11 @@ public:
         blockSamplesButton_5_3->setIcon(icon18);
         blockSamplesButton_5_3->setCheckable(true);
         blockSamplesButton_5_3->setChecked(true);
+        colorLabel_5_3 = new QLabel(chanel3SettingsBox_5);
+        colorLabel_5_3->setObjectName(QStringLiteral("colorLabel_5_3"));
+        colorLabel_5_3->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_5_3->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         channelLabelBox_5 = new QGroupBox(WDF5Widget);
         channelLabelBox_5->setObjectName(QStringLiteral("channelLabelBox_5"));
         channelLabelBox_5->setGeometry(QRect(0, 0, 105, 170));
@@ -4594,6 +4890,11 @@ public:
         blockSamplesButton_6_0->setIcon(icon18);
         blockSamplesButton_6_0->setCheckable(true);
         blockSamplesButton_6_0->setChecked(true);
+        colorLabel_6_0 = new QLabel(chanel0SettingsBox_6);
+        colorLabel_6_0->setObjectName(QStringLiteral("colorLabel_6_0"));
+        colorLabel_6_0->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_6_0->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel1SettingsBox_6 = new QGroupBox(WDF6Widget);
         chanel1SettingsBox_6->setObjectName(QStringLiteral("chanel1SettingsBox_6"));
         chanel1SettingsBox_6->setGeometry(QRect(205, 0, 90, 170));
@@ -4665,6 +4966,11 @@ public:
         blockSamplesButton_6_1->setIcon(icon18);
         blockSamplesButton_6_1->setCheckable(true);
         blockSamplesButton_6_1->setChecked(true);
+        colorLabel_6_1 = new QLabel(chanel1SettingsBox_6);
+        colorLabel_6_1->setObjectName(QStringLiteral("colorLabel_6_1"));
+        colorLabel_6_1->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_6_1->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel2SettingsBox_6 = new QGroupBox(WDF6Widget);
         chanel2SettingsBox_6->setObjectName(QStringLiteral("chanel2SettingsBox_6"));
         chanel2SettingsBox_6->setGeometry(QRect(300, 0, 90, 170));
@@ -4736,6 +5042,11 @@ public:
         blockSamplesButton_6_2->setIcon(icon18);
         blockSamplesButton_6_2->setCheckable(true);
         blockSamplesButton_6_2->setChecked(true);
+        colorLabel_6_2 = new QLabel(chanel2SettingsBox_6);
+        colorLabel_6_2->setObjectName(QStringLiteral("colorLabel_6_2"));
+        colorLabel_6_2->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_6_2->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel4SettingsBox_6 = new QGroupBox(WDF6Widget);
         chanel4SettingsBox_6->setObjectName(QStringLiteral("chanel4SettingsBox_6"));
         chanel4SettingsBox_6->setGeometry(QRect(490, 0, 90, 170));
@@ -4807,6 +5118,11 @@ public:
         blockSamplesButton_6_4->setIcon(icon18);
         blockSamplesButton_6_4->setCheckable(true);
         blockSamplesButton_6_4->setChecked(true);
+        colorLabel_6_4 = new QLabel(chanel4SettingsBox_6);
+        colorLabel_6_4->setObjectName(QStringLiteral("colorLabel_6_4"));
+        colorLabel_6_4->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_6_4->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel6SettingsBox_6 = new QGroupBox(WDF6Widget);
         chanel6SettingsBox_6->setObjectName(QStringLiteral("chanel6SettingsBox_6"));
         chanel6SettingsBox_6->setGeometry(QRect(680, 0, 90, 170));
@@ -4878,6 +5194,11 @@ public:
         blockSamplesButton_6_6->setIcon(icon18);
         blockSamplesButton_6_6->setCheckable(true);
         blockSamplesButton_6_6->setChecked(true);
+        colorLabel_6_6 = new QLabel(chanel6SettingsBox_6);
+        colorLabel_6_6->setObjectName(QStringLiteral("colorLabel_6_6"));
+        colorLabel_6_6->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_6_6->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel5SettingsBox_6 = new QGroupBox(WDF6Widget);
         chanel5SettingsBox_6->setObjectName(QStringLiteral("chanel5SettingsBox_6"));
         chanel5SettingsBox_6->setGeometry(QRect(585, 0, 90, 170));
@@ -4949,6 +5270,11 @@ public:
         blockSamplesButton_6_5->setIcon(icon18);
         blockSamplesButton_6_5->setCheckable(true);
         blockSamplesButton_6_5->setChecked(true);
+        colorLabel_6_5 = new QLabel(chanel5SettingsBox_6);
+        colorLabel_6_5->setObjectName(QStringLiteral("colorLabel_6_5"));
+        colorLabel_6_5->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_6_5->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel7SettingsBox_6 = new QGroupBox(WDF6Widget);
         chanel7SettingsBox_6->setObjectName(QStringLiteral("chanel7SettingsBox_6"));
         chanel7SettingsBox_6->setGeometry(QRect(775, 0, 90, 170));
@@ -5020,6 +5346,11 @@ public:
         blockSamplesButton_6_7->setIcon(icon18);
         blockSamplesButton_6_7->setCheckable(true);
         blockSamplesButton_6_7->setChecked(true);
+        colorLabel_6_8 = new QLabel(chanel7SettingsBox_6);
+        colorLabel_6_8->setObjectName(QStringLiteral("colorLabel_6_8"));
+        colorLabel_6_8->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_6_8->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel3SettingsBox_6 = new QGroupBox(WDF6Widget);
         chanel3SettingsBox_6->setObjectName(QStringLiteral("chanel3SettingsBox_6"));
         chanel3SettingsBox_6->setGeometry(QRect(395, 0, 90, 170));
@@ -5091,6 +5422,11 @@ public:
         blockSamplesButton_6_3->setIcon(icon18);
         blockSamplesButton_6_3->setCheckable(true);
         blockSamplesButton_6_3->setChecked(true);
+        colorLabel_6_3 = new QLabel(chanel3SettingsBox_6);
+        colorLabel_6_3->setObjectName(QStringLiteral("colorLabel_6_3"));
+        colorLabel_6_3->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_6_3->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         channelLabelBox_6 = new QGroupBox(WDF6Widget);
         channelLabelBox_6->setObjectName(QStringLiteral("channelLabelBox_6"));
         channelLabelBox_6->setGeometry(QRect(0, 0, 105, 170));
@@ -5193,6 +5529,11 @@ public:
         blockSamplesButton_7_0->setIcon(icon18);
         blockSamplesButton_7_0->setCheckable(true);
         blockSamplesButton_7_0->setChecked(true);
+        colorLabel_7_0 = new QLabel(chanel0SettingsBox_7);
+        colorLabel_7_0->setObjectName(QStringLiteral("colorLabel_7_0"));
+        colorLabel_7_0->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_7_0->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel1SettingsBox_7 = new QGroupBox(WDF7Widget);
         chanel1SettingsBox_7->setObjectName(QStringLiteral("chanel1SettingsBox_7"));
         chanel1SettingsBox_7->setGeometry(QRect(205, 0, 90, 170));
@@ -5264,6 +5605,11 @@ public:
         blockSamplesButton_7_1->setIcon(icon18);
         blockSamplesButton_7_1->setCheckable(true);
         blockSamplesButton_7_1->setChecked(true);
+        colorLabel_7_1 = new QLabel(chanel1SettingsBox_7);
+        colorLabel_7_1->setObjectName(QStringLiteral("colorLabel_7_1"));
+        colorLabel_7_1->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_7_1->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel2SettingsBox_7 = new QGroupBox(WDF7Widget);
         chanel2SettingsBox_7->setObjectName(QStringLiteral("chanel2SettingsBox_7"));
         chanel2SettingsBox_7->setGeometry(QRect(300, 0, 90, 170));
@@ -5335,6 +5681,11 @@ public:
         blockSamplesButton_7_2->setIcon(icon18);
         blockSamplesButton_7_2->setCheckable(true);
         blockSamplesButton_7_2->setChecked(true);
+        colorLabel_7_2 = new QLabel(chanel2SettingsBox_7);
+        colorLabel_7_2->setObjectName(QStringLiteral("colorLabel_7_2"));
+        colorLabel_7_2->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_7_2->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel4SettingsBox_7 = new QGroupBox(WDF7Widget);
         chanel4SettingsBox_7->setObjectName(QStringLiteral("chanel4SettingsBox_7"));
         chanel4SettingsBox_7->setGeometry(QRect(490, 0, 90, 170));
@@ -5406,6 +5757,11 @@ public:
         blockSamplesButton_7_4->setIcon(icon18);
         blockSamplesButton_7_4->setCheckable(true);
         blockSamplesButton_7_4->setChecked(true);
+        colorLabel_7_4 = new QLabel(chanel4SettingsBox_7);
+        colorLabel_7_4->setObjectName(QStringLiteral("colorLabel_7_4"));
+        colorLabel_7_4->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_7_4->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel6SettingsBox_7 = new QGroupBox(WDF7Widget);
         chanel6SettingsBox_7->setObjectName(QStringLiteral("chanel6SettingsBox_7"));
         chanel6SettingsBox_7->setGeometry(QRect(680, 0, 90, 170));
@@ -5477,6 +5833,11 @@ public:
         blockSamplesButton_7_6->setIcon(icon18);
         blockSamplesButton_7_6->setCheckable(true);
         blockSamplesButton_7_6->setChecked(true);
+        colorLabel_7_6 = new QLabel(chanel6SettingsBox_7);
+        colorLabel_7_6->setObjectName(QStringLiteral("colorLabel_7_6"));
+        colorLabel_7_6->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_7_6->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel5SettingsBox_7 = new QGroupBox(WDF7Widget);
         chanel5SettingsBox_7->setObjectName(QStringLiteral("chanel5SettingsBox_7"));
         chanel5SettingsBox_7->setGeometry(QRect(585, 0, 90, 170));
@@ -5548,6 +5909,11 @@ public:
         blockSamplesButton_7_5->setIcon(icon18);
         blockSamplesButton_7_5->setCheckable(true);
         blockSamplesButton_7_5->setChecked(true);
+        colorLabel_7_5 = new QLabel(chanel5SettingsBox_7);
+        colorLabel_7_5->setObjectName(QStringLiteral("colorLabel_7_5"));
+        colorLabel_7_5->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_7_5->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel7SettingsBox_7 = new QGroupBox(WDF7Widget);
         chanel7SettingsBox_7->setObjectName(QStringLiteral("chanel7SettingsBox_7"));
         chanel7SettingsBox_7->setGeometry(QRect(775, 0, 90, 170));
@@ -5619,6 +5985,11 @@ public:
         blockSamplesButton_7_7->setIcon(icon18);
         blockSamplesButton_7_7->setCheckable(true);
         blockSamplesButton_7_7->setChecked(true);
+        colorLabel_7_7 = new QLabel(chanel7SettingsBox_7);
+        colorLabel_7_7->setObjectName(QStringLiteral("colorLabel_7_7"));
+        colorLabel_7_7->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_7_7->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel3SettingsBox_7 = new QGroupBox(WDF7Widget);
         chanel3SettingsBox_7->setObjectName(QStringLiteral("chanel3SettingsBox_7"));
         chanel3SettingsBox_7->setGeometry(QRect(395, 0, 90, 170));
@@ -5690,6 +6061,11 @@ public:
         blockSamplesButton_7_3->setIcon(icon18);
         blockSamplesButton_7_3->setCheckable(true);
         blockSamplesButton_7_3->setChecked(true);
+        colorLabel_7_3 = new QLabel(chanel3SettingsBox_7);
+        colorLabel_7_3->setObjectName(QStringLiteral("colorLabel_7_3"));
+        colorLabel_7_3->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_7_3->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         channelLabelBox_7 = new QGroupBox(WDF7Widget);
         channelLabelBox_7->setObjectName(QStringLiteral("channelLabelBox_7"));
         channelLabelBox_7->setGeometry(QRect(0, 0, 105, 170));
@@ -5792,6 +6168,11 @@ public:
         blockSamplesButton_8_0->setIcon(icon18);
         blockSamplesButton_8_0->setCheckable(true);
         blockSamplesButton_8_0->setChecked(true);
+        colorLabel_8_0 = new QLabel(chanel0SettingsBox_8);
+        colorLabel_8_0->setObjectName(QStringLiteral("colorLabel_8_0"));
+        colorLabel_8_0->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_8_0->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel1SettingsBox_8 = new QGroupBox(WDF8Widget);
         chanel1SettingsBox_8->setObjectName(QStringLiteral("chanel1SettingsBox_8"));
         chanel1SettingsBox_8->setGeometry(QRect(205, 0, 90, 170));
@@ -5863,6 +6244,11 @@ public:
         blockSamplesButton_8_1->setIcon(icon18);
         blockSamplesButton_8_1->setCheckable(true);
         blockSamplesButton_8_1->setChecked(true);
+        colorLabel_8_1 = new QLabel(chanel1SettingsBox_8);
+        colorLabel_8_1->setObjectName(QStringLiteral("colorLabel_8_1"));
+        colorLabel_8_1->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_8_1->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel2SettingsBox_8 = new QGroupBox(WDF8Widget);
         chanel2SettingsBox_8->setObjectName(QStringLiteral("chanel2SettingsBox_8"));
         chanel2SettingsBox_8->setGeometry(QRect(300, 0, 90, 170));
@@ -5934,6 +6320,11 @@ public:
         blockSamplesButton_8_2->setIcon(icon18);
         blockSamplesButton_8_2->setCheckable(true);
         blockSamplesButton_8_2->setChecked(true);
+        colorLabel_8_2 = new QLabel(chanel2SettingsBox_8);
+        colorLabel_8_2->setObjectName(QStringLiteral("colorLabel_8_2"));
+        colorLabel_8_2->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_8_2->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel4SettingsBox_8 = new QGroupBox(WDF8Widget);
         chanel4SettingsBox_8->setObjectName(QStringLiteral("chanel4SettingsBox_8"));
         chanel4SettingsBox_8->setGeometry(QRect(490, 0, 90, 170));
@@ -6005,6 +6396,11 @@ public:
         blockSamplesButton_8_4->setIcon(icon18);
         blockSamplesButton_8_4->setCheckable(true);
         blockSamplesButton_8_4->setChecked(true);
+        colorLabel_8_4 = new QLabel(chanel4SettingsBox_8);
+        colorLabel_8_4->setObjectName(QStringLiteral("colorLabel_8_4"));
+        colorLabel_8_4->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_8_4->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel6SettingsBox_8 = new QGroupBox(WDF8Widget);
         chanel6SettingsBox_8->setObjectName(QStringLiteral("chanel6SettingsBox_8"));
         chanel6SettingsBox_8->setGeometry(QRect(680, 0, 90, 170));
@@ -6076,6 +6472,11 @@ public:
         blockSamplesButton_8_6->setIcon(icon18);
         blockSamplesButton_8_6->setCheckable(true);
         blockSamplesButton_8_6->setChecked(true);
+        colorLabel_8_6 = new QLabel(chanel6SettingsBox_8);
+        colorLabel_8_6->setObjectName(QStringLiteral("colorLabel_8_6"));
+        colorLabel_8_6->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_8_6->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel5SettingsBox_8 = new QGroupBox(WDF8Widget);
         chanel5SettingsBox_8->setObjectName(QStringLiteral("chanel5SettingsBox_8"));
         chanel5SettingsBox_8->setGeometry(QRect(585, 0, 90, 170));
@@ -6147,6 +6548,11 @@ public:
         blockSamplesButton_8_5->setIcon(icon18);
         blockSamplesButton_8_5->setCheckable(true);
         blockSamplesButton_8_5->setChecked(true);
+        colorLabel_8_5 = new QLabel(chanel5SettingsBox_8);
+        colorLabel_8_5->setObjectName(QStringLiteral("colorLabel_8_5"));
+        colorLabel_8_5->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_8_5->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel7SettingsBox_8 = new QGroupBox(WDF8Widget);
         chanel7SettingsBox_8->setObjectName(QStringLiteral("chanel7SettingsBox_8"));
         chanel7SettingsBox_8->setGeometry(QRect(775, 0, 90, 170));
@@ -6218,6 +6624,11 @@ public:
         blockSamplesButton_8_7->setIcon(icon18);
         blockSamplesButton_8_7->setCheckable(true);
         blockSamplesButton_8_7->setChecked(true);
+        colorLabel_8_7 = new QLabel(chanel7SettingsBox_8);
+        colorLabel_8_7->setObjectName(QStringLiteral("colorLabel_8_7"));
+        colorLabel_8_7->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_8_7->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel3SettingsBox_8 = new QGroupBox(WDF8Widget);
         chanel3SettingsBox_8->setObjectName(QStringLiteral("chanel3SettingsBox_8"));
         chanel3SettingsBox_8->setGeometry(QRect(395, 0, 90, 170));
@@ -6289,6 +6700,11 @@ public:
         blockSamplesButton_8_3->setIcon(icon18);
         blockSamplesButton_8_3->setCheckable(true);
         blockSamplesButton_8_3->setChecked(true);
+        colorLabel_8_3 = new QLabel(chanel3SettingsBox_8);
+        colorLabel_8_3->setObjectName(QStringLiteral("colorLabel_8_3"));
+        colorLabel_8_3->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_8_3->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         channelLabelBox_8 = new QGroupBox(WDF8Widget);
         channelLabelBox_8->setObjectName(QStringLiteral("channelLabelBox_8"));
         channelLabelBox_8->setGeometry(QRect(0, 0, 105, 170));
@@ -6391,6 +6807,11 @@ public:
         blockSamplesButton_9_2->setIcon(icon18);
         blockSamplesButton_9_2->setCheckable(true);
         blockSamplesButton_9_2->setChecked(true);
+        colorLabel_9_2 = new QLabel(chanel2SettingsBox_9);
+        colorLabel_9_2->setObjectName(QStringLiteral("colorLabel_9_2"));
+        colorLabel_9_2->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_9_2->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel7SettingsBox_9 = new QGroupBox(WDF9Widget);
         chanel7SettingsBox_9->setObjectName(QStringLiteral("chanel7SettingsBox_9"));
         chanel7SettingsBox_9->setGeometry(QRect(775, 0, 90, 170));
@@ -6462,6 +6883,11 @@ public:
         blockSamplesButton_9_7->setIcon(icon18);
         blockSamplesButton_9_7->setCheckable(true);
         blockSamplesButton_9_7->setChecked(true);
+        colorLabel_1_71 = new QLabel(chanel7SettingsBox_9);
+        colorLabel_1_71->setObjectName(QStringLiteral("colorLabel_1_71"));
+        colorLabel_1_71->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_1_71->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel0SettingsBox_9 = new QGroupBox(WDF9Widget);
         chanel0SettingsBox_9->setObjectName(QStringLiteral("chanel0SettingsBox_9"));
         chanel0SettingsBox_9->setGeometry(QRect(110, 0, 90, 170));
@@ -6533,6 +6959,11 @@ public:
         blockSamplesButton_9_0->setIcon(icon18);
         blockSamplesButton_9_0->setCheckable(true);
         blockSamplesButton_9_0->setChecked(true);
+        colorLabel_9_0 = new QLabel(chanel0SettingsBox_9);
+        colorLabel_9_0->setObjectName(QStringLiteral("colorLabel_9_0"));
+        colorLabel_9_0->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_9_0->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel1SettingsBox_9 = new QGroupBox(WDF9Widget);
         chanel1SettingsBox_9->setObjectName(QStringLiteral("chanel1SettingsBox_9"));
         chanel1SettingsBox_9->setEnabled(true);
@@ -6605,6 +7036,11 @@ public:
         blockSamplesButton_9_1->setIcon(icon18);
         blockSamplesButton_9_1->setCheckable(true);
         blockSamplesButton_9_1->setChecked(true);
+        colorLabel_9_1 = new QLabel(chanel1SettingsBox_9);
+        colorLabel_9_1->setObjectName(QStringLiteral("colorLabel_9_1"));
+        colorLabel_9_1->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_9_1->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel4SettingsBox_9 = new QGroupBox(WDF9Widget);
         chanel4SettingsBox_9->setObjectName(QStringLiteral("chanel4SettingsBox_9"));
         chanel4SettingsBox_9->setGeometry(QRect(490, 0, 90, 170));
@@ -6676,6 +7112,11 @@ public:
         blockSamplesButton_9_4->setIcon(icon18);
         blockSamplesButton_9_4->setCheckable(true);
         blockSamplesButton_9_4->setChecked(true);
+        colorLabel_9_4 = new QLabel(chanel4SettingsBox_9);
+        colorLabel_9_4->setObjectName(QStringLiteral("colorLabel_9_4"));
+        colorLabel_9_4->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_9_4->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel3SettingsBox_9 = new QGroupBox(WDF9Widget);
         chanel3SettingsBox_9->setObjectName(QStringLiteral("chanel3SettingsBox_9"));
         chanel3SettingsBox_9->setGeometry(QRect(395, 0, 90, 170));
@@ -6747,6 +7188,11 @@ public:
         blockSamplesButton_9_3->setIcon(icon18);
         blockSamplesButton_9_3->setCheckable(true);
         blockSamplesButton_9_3->setChecked(true);
+        colorLabel_9_3 = new QLabel(chanel3SettingsBox_9);
+        colorLabel_9_3->setObjectName(QStringLiteral("colorLabel_9_3"));
+        colorLabel_9_3->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_9_3->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel5SettingsBox_9 = new QGroupBox(WDF9Widget);
         chanel5SettingsBox_9->setObjectName(QStringLiteral("chanel5SettingsBox_9"));
         chanel5SettingsBox_9->setGeometry(QRect(585, 0, 90, 170));
@@ -6818,6 +7264,11 @@ public:
         blockSamplesButton_9_5->setIcon(icon18);
         blockSamplesButton_9_5->setCheckable(true);
         blockSamplesButton_9_5->setChecked(true);
+        colorLabel_9_5 = new QLabel(chanel5SettingsBox_9);
+        colorLabel_9_5->setObjectName(QStringLiteral("colorLabel_9_5"));
+        colorLabel_9_5->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_9_5->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         chanel6SettingsBox_9 = new QGroupBox(WDF9Widget);
         chanel6SettingsBox_9->setObjectName(QStringLiteral("chanel6SettingsBox_9"));
         chanel6SettingsBox_9->setGeometry(QRect(680, 0, 90, 170));
@@ -6889,6 +7340,11 @@ public:
         blockSamplesButton_9_6->setIcon(icon18);
         blockSamplesButton_9_6->setCheckable(true);
         blockSamplesButton_9_6->setChecked(true);
+        colorLabel_9_6 = new QLabel(chanel6SettingsBox_9);
+        colorLabel_9_6->setObjectName(QStringLiteral("colorLabel_9_6"));
+        colorLabel_9_6->setGeometry(QRect(65, 145, 20, 20));
+        colorLabel_9_6->setStyleSheet(QLatin1String("background-color: gray;\n"
+"border-radius: 5"));
         channelLabelBox_9 = new QGroupBox(WDF9Widget);
         channelLabelBox_9->setObjectName(QStringLiteral("channelLabelBox_9"));
         channelLabelBox_9->setGeometry(QRect(0, 0, 105, 170));
@@ -6945,15 +7401,24 @@ public:
         QObject::connect(connectButton, SIGNAL(clicked()), MainWindowClass, SLOT(connectSlot()));
         QObject::connect(settingsButton, SIGNAL(clicked()), MainWindowClass, SLOT(openSettingsSlot()));
         QObject::connect(startStopButton, SIGNAL(clicked()), MainWindowClass, SLOT(startStopSlot()));
-        QObject::connect(blockSamplesButton_1_0, SIGNAL(toggled(bool)), samplesSpinBox_1_0, SLOT(setDisabled(bool)));
+        QObject::connect(bufferComboBox, SIGNAL(currentIndexChanged(int)), MainWindowClass, SLOT(bufferChangedSlot(int)));
+        QObject::connect(postTriggerSpinBox, SIGNAL(valueChanged(int)), MainWindowClass, SLOT(setPostTriggerLengthSlot(int)));
+        QObject::connect(errorButton, SIGNAL(clicked()), MainWindowClass, SLOT(openErrorsSlot()));
+        QObject::connect(forceTriggerButton, SIGNAL(clicked()), MainWindowClass, SLOT(makeSoftwareTriggerSlot()));
+        QObject::connect(externalTriggerButton, SIGNAL(clicked()), MainWindowClass, SLOT(changeExternalTriggerSlot()));
+        QObject::connect(recordButton, SIGNAL(clicked()), MainWindowClass, SLOT(startStopWritingDataSlot()));
+        QObject::connect(polarityButton, SIGNAL(clicked()), MainWindowClass, SLOT(changePolaritySlot()));
+        QObject::connect(autoTriggerButton, SIGNAL(clicked()), MainWindowClass, SLOT(autoTriggerSlot()));
         QObject::connect(blockSamplesButton_1_1, SIGNAL(toggled(bool)), samplesSpinBox_1_1, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_1_2, SIGNAL(toggled(bool)), samplesSpinBox_1_2, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_1_3, SIGNAL(toggled(bool)), samplesSpinBox_1_3, SLOT(setDisabled(bool)));
+        QObject::connect(blockSamplesButton_1_0, SIGNAL(toggled(bool)), samplesSpinBox_1_0, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_1_4, SIGNAL(toggled(bool)), samplesSpinBox_1_4, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_1_5, SIGNAL(toggled(bool)), samplesSpinBox_1_5, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_1_6, SIGNAL(toggled(bool)), samplesSpinBox_1_6, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_1_7, SIGNAL(toggled(bool)), samplesSpinBox_1_7, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_2_0, SIGNAL(toggled(bool)), samplesSpinBox_2_0, SLOT(setDisabled(bool)));
+        QObject::connect(blockSamplesButton_4_1, SIGNAL(toggled(bool)), samplesSpinBox_4_1, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_2_1, SIGNAL(toggled(bool)), samplesSpinBox_2_1, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_2_2, SIGNAL(toggled(bool)), samplesSpinBox_2_2, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_2_3, SIGNAL(toggled(bool)), samplesSpinBox_2_3, SLOT(setDisabled(bool)));
@@ -6970,7 +7435,6 @@ public:
         QObject::connect(blockSamplesButton_3_6, SIGNAL(toggled(bool)), samplesSpinBox_3_6, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_3_7, SIGNAL(toggled(bool)), samplesSpinBox_3_7, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_4_0, SIGNAL(toggled(bool)), samplesSpinBox_4_0, SLOT(setDisabled(bool)));
-        QObject::connect(blockSamplesButton_4_1, SIGNAL(toggled(bool)), samplesSpinBox_4_1, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_4_2, SIGNAL(toggled(bool)), samplesSpinBox_4_2, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_4_3, SIGNAL(toggled(bool)), samplesSpinBox_4_3, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_4_4, SIGNAL(toggled(bool)), samplesSpinBox_4_4, SLOT(setDisabled(bool)));
@@ -7017,14 +7481,7 @@ public:
         QObject::connect(blockSamplesButton_9_5, SIGNAL(toggled(bool)), samplesSpinBox_9_5, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_9_6, SIGNAL(toggled(bool)), samplesSpinBox_9_6, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_9_7, SIGNAL(toggled(bool)), samplesSpinBox_9_7, SLOT(setDisabled(bool)));
-        QObject::connect(bufferComboBox, SIGNAL(currentIndexChanged(int)), MainWindowClass, SLOT(bufferChangedSlot(int)));
-        QObject::connect(postTriggerSpinBox, SIGNAL(valueChanged(int)), MainWindowClass, SLOT(setPostTriggerLengthSlot(int)));
-        QObject::connect(errorButton, SIGNAL(clicked()), MainWindowClass, SLOT(openErrorsSlot()));
-        QObject::connect(forceTriggerButton, SIGNAL(clicked()), MainWindowClass, SLOT(makeSoftwareTriggerSlot()));
-        QObject::connect(externalTriggerButton, SIGNAL(clicked()), MainWindowClass, SLOT(changeExternalTriggerSlot()));
-        QObject::connect(recordButton, SIGNAL(clicked()), MainWindowClass, SLOT(startStopWritingDataSlot()));
-        QObject::connect(polarityButton, SIGNAL(clicked()), MainWindowClass, SLOT(changePolaritySlot()));
-        QObject::connect(autoTriggerButton, SIGNAL(clicked()), MainWindowClass, SLOT(autoTriggerSlot()));
+        QObject::connect(amplifySpectrumButton, SIGNAL(clicked()), MainWindowClass, SLOT(amplifySpectrumSlot()));
 
         exitButton->setDefault(false);
         tabWidget->setCurrentIndex(0);
@@ -7082,6 +7539,10 @@ public:
         startStopButton->setText(QString());
         mainBox->setTitle(QString());
         tabWidget->setTabText(tabWidget->indexOf(signalTab), QApplication::translate("MainWindowClass", "\320\241\320\270\320\263\320\275\320\260\320\273", 0));
+        pushButton_4->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
+        amplifySpectrumButton->setText(QApplication::translate("MainWindowClass", "\320\220\320\274\320\277\320\273\320\270\321\202\321\203\320\264\320\275\321\213\320\271", 0));
+        pushButton_3->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
+        pushButton_2->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
         tabWidget->setTabText(tabWidget->indexOf(spectrumTab), QApplication::translate("MainWindowClass", "\320\241\320\277\320\265\320\272\321\202\321\200", 0));
         tabWidget->setTabText(tabWidget->indexOf(dataTab), QApplication::translate("MainWindowClass", "\320\236\320\261\321\200\320\260\320\261\320\276\321\202\320\272\320\260 \320\264\320\260\320\275\320\275\321\213\321\205", 0));
         settingsBlock->setTitle(QApplication::translate("MainWindowClass", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\270", 0));
@@ -7123,7 +7584,6 @@ public:
         positionResetButton_0_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
 #endif // QT_NO_TOOLTIP
         positionResetButton_0_0->setText(QString());
-        inversionButton->setText(QApplication::translate("MainWindowClass", "\320\230\320\275\320\262\320\265\321\200\321\201\320\270\321\217", 0));
         triggerSettingBox->setTitle(QApplication::translate("MainWindowClass", "\320\242\321\200\320\270\320\263\320\263\320\265\321\200", 0));
         postTriggerBox->setTitle(QApplication::translate("MainWindowClass", "\320\237\320\276\321\201\321\202-\320\242\321\200\320\270\320\263\320\263\320\265\321\200(%)", 0));
 #ifndef QT_NO_TOOLTIP
@@ -7188,6 +7648,7 @@ public:
         blockSamplesButton_1_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_0->setText(QString());
+        colorLabel_1_0->setText(QString());
         channelLabelBox_1->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
         thresholdLabel_1->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
 #ifndef QT_NO_TOOLTIP
@@ -7236,6 +7697,7 @@ public:
         blockSamplesButton_1_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_1->setText(QString());
+        colorLabel_1_1->setText(QString());
         chanel2SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_1_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7271,6 +7733,7 @@ public:
         blockSamplesButton_1_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_2->setText(QString());
+        colorLabel_1_2->setText(QString());
         chanel5SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_1_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7306,6 +7769,7 @@ public:
         blockSamplesButton_1_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_5->setText(QString());
+        colorLabel_1_5->setText(QString());
         chanel4SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_1_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7341,6 +7805,7 @@ public:
         blockSamplesButton_1_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_4->setText(QString());
+        colorLabel_1_4->setText(QString());
         chanel3SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_1_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7376,6 +7841,7 @@ public:
         blockSamplesButton_1_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_3->setText(QString());
+        colorLabel_1_3->setText(QString());
         chanel7SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_1_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7411,6 +7877,7 @@ public:
         blockSamplesButton_1_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_7->setText(QString());
+        colorLabel_1_7->setText(QString());
         chanel6SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_1_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7446,6 +7913,7 @@ public:
         blockSamplesButton_1_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_6->setText(QString());
+        colorLabel_1_6->setText(QString());
         WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF1Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 1", 0));
         chanel2SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
 #ifndef QT_NO_TOOLTIP
@@ -7482,6 +7950,7 @@ public:
         blockSamplesButton_2_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_2->setText(QString());
+        colorLabel_2_2->setText(QString());
         chanel6SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_2_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7517,6 +7986,7 @@ public:
         blockSamplesButton_2_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_6->setText(QString());
+        colorLabel_2_6->setText(QString());
         chanel5SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_2_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7552,6 +8022,7 @@ public:
         blockSamplesButton_2_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_5->setText(QString());
+        colorLabel_2_5->setText(QString());
         chanel3SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_2_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7587,6 +8058,7 @@ public:
         blockSamplesButton_2_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_3->setText(QString());
+        colorLabel_2_3->setText(QString());
         chanel1SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_2_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7622,6 +8094,7 @@ public:
         blockSamplesButton_2_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_1->setText(QString());
+        colorLabel_2_1->setText(QString());
         chanel4SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_2_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7657,6 +8130,7 @@ public:
         blockSamplesButton_2_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_4->setText(QString());
+        colorLabel_2_4->setText(QString());
         chanel0SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH0", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_2_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7692,6 +8166,7 @@ public:
         blockSamplesButton_2_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_0->setText(QString());
+        colorLabel_1_8->setText(QString());
         chanel7SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_2_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7727,6 +8202,7 @@ public:
         blockSamplesButton_2_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_7->setText(QString());
+        colorLabel_6_7->setText(QString());
         channelLabelBox_2->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
         thresholdLabel_2->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
         samplesLabel_2->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
@@ -7773,6 +8249,7 @@ public:
         blockSamplesButton_3_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_0->setText(QString());
+        colorLabel_3_0->setText(QString());
         chanel1SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_3_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7808,6 +8285,7 @@ public:
         blockSamplesButton_3_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_1->setText(QString());
+        colorLabel_3_1->setText(QString());
         chanel2SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_3_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7843,6 +8321,7 @@ public:
         blockSamplesButton_3_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_2->setText(QString());
+        colorLabel_3_2->setText(QString());
         chanel4SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_3_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7878,6 +8357,7 @@ public:
         blockSamplesButton_3_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_4->setText(QString());
+        colorLabel_3_4->setText(QString());
         chanel6SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_3_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7913,6 +8393,7 @@ public:
         blockSamplesButton_3_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_6->setText(QString());
+        colorLabel_3_6->setText(QString());
         chanel5SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_3_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7948,6 +8429,7 @@ public:
         blockSamplesButton_3_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_5->setText(QString());
+        colorLabel_3_5->setText(QString());
         chanel7SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_3_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -7983,6 +8465,7 @@ public:
         blockSamplesButton_3_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_7->setText(QString());
+        colorLabel_3_7->setText(QString());
         chanel3SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_3_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8018,6 +8501,7 @@ public:
         blockSamplesButton_3_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_3->setText(QString());
+        colorLabel_3_3->setText(QString());
         channelLabelBox_3->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
         thresholdLabel_3->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
         samplesLabel_3->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
@@ -8064,6 +8548,7 @@ public:
         blockSamplesButton_4_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_0->setText(QString());
+        colorLabel_4_0->setText(QString());
         chanel1SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_4_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8099,6 +8584,7 @@ public:
         blockSamplesButton_4_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_1->setText(QString());
+        colorLabel_4_1->setText(QString());
         chanel2SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_4_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8134,6 +8620,7 @@ public:
         blockSamplesButton_4_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_2->setText(QString());
+        colorLabel_4_2->setText(QString());
         chanel4SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_4_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8169,6 +8656,7 @@ public:
         blockSamplesButton_4_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_4->setText(QString());
+        colorLabel_4_4->setText(QString());
         chanel6SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_4_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8204,6 +8692,7 @@ public:
         blockSamplesButton_4_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_6->setText(QString());
+        colorLabel_4_6->setText(QString());
         chanel5SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_4_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8239,6 +8728,7 @@ public:
         blockSamplesButton_4_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_5->setText(QString());
+        colorLabel_4_5->setText(QString());
         chanel7SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_4_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8274,6 +8764,7 @@ public:
         blockSamplesButton_4_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_7->setText(QString());
+        colorLabel_4_7->setText(QString());
         chanel3SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_4_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8309,6 +8800,7 @@ public:
         blockSamplesButton_4_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_3->setText(QString());
+        colorLabel_4_3->setText(QString());
         channelLabelBox_4->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
         thresholdLabel_4->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
         samplesLabel_4->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
@@ -8355,6 +8847,7 @@ public:
         blockSamplesButton_5_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_0->setText(QString());
+        colorLabel_5_0->setText(QString());
         chanel1SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_5_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8390,6 +8883,7 @@ public:
         blockSamplesButton_5_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_1->setText(QString());
+        colorLabel_5_1->setText(QString());
         chanel2SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_5_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8425,6 +8919,7 @@ public:
         blockSamplesButton_5_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_2->setText(QString());
+        colorLabel_5_2->setText(QString());
         chanel4SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_5_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8460,6 +8955,7 @@ public:
         blockSamplesButton_5_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_4->setText(QString());
+        colorLabel_5_4->setText(QString());
         chanel6SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_5_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8495,6 +8991,7 @@ public:
         blockSamplesButton_5_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_6->setText(QString());
+        colorLabel_5_6->setText(QString());
         chanel5SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_5_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8530,6 +9027,7 @@ public:
         blockSamplesButton_5_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_5->setText(QString());
+        colorLabel_5_5->setText(QString());
         chanel7SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_5_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8565,6 +9063,7 @@ public:
         blockSamplesButton_5_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_7->setText(QString());
+        colorLabel_5_7->setText(QString());
         chanel3SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_5_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8600,6 +9099,7 @@ public:
         blockSamplesButton_5_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_3->setText(QString());
+        colorLabel_5_3->setText(QString());
         channelLabelBox_5->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
         thresholdLabel_5->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
         samplesLabel_5->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
@@ -8646,6 +9146,7 @@ public:
         blockSamplesButton_6_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_0->setText(QString());
+        colorLabel_6_0->setText(QString());
         chanel1SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_6_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8681,6 +9182,7 @@ public:
         blockSamplesButton_6_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_1->setText(QString());
+        colorLabel_6_1->setText(QString());
         chanel2SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_6_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8716,6 +9218,7 @@ public:
         blockSamplesButton_6_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_2->setText(QString());
+        colorLabel_6_2->setText(QString());
         chanel4SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_6_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8751,6 +9254,7 @@ public:
         blockSamplesButton_6_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_4->setText(QString());
+        colorLabel_6_4->setText(QString());
         chanel6SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_6_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8786,6 +9290,7 @@ public:
         blockSamplesButton_6_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_6->setText(QString());
+        colorLabel_6_6->setText(QString());
         chanel5SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_6_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8821,6 +9326,7 @@ public:
         blockSamplesButton_6_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_5->setText(QString());
+        colorLabel_6_5->setText(QString());
         chanel7SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_6_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8856,6 +9362,7 @@ public:
         blockSamplesButton_6_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_7->setText(QString());
+        colorLabel_6_8->setText(QString());
         chanel3SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_6_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8891,6 +9398,7 @@ public:
         blockSamplesButton_6_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_3->setText(QString());
+        colorLabel_6_3->setText(QString());
         channelLabelBox_6->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
         thresholdLabel_6->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
         samplesLabel_6->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
@@ -8937,6 +9445,7 @@ public:
         blockSamplesButton_7_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_0->setText(QString());
+        colorLabel_7_0->setText(QString());
         chanel1SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_7_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -8972,6 +9481,7 @@ public:
         blockSamplesButton_7_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_1->setText(QString());
+        colorLabel_7_1->setText(QString());
         chanel2SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_7_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9007,6 +9517,7 @@ public:
         blockSamplesButton_7_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_2->setText(QString());
+        colorLabel_7_2->setText(QString());
         chanel4SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_7_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9042,6 +9553,7 @@ public:
         blockSamplesButton_7_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_4->setText(QString());
+        colorLabel_7_4->setText(QString());
         chanel6SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_7_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9077,6 +9589,7 @@ public:
         blockSamplesButton_7_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_6->setText(QString());
+        colorLabel_7_6->setText(QString());
         chanel5SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_7_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9112,6 +9625,7 @@ public:
         blockSamplesButton_7_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_5->setText(QString());
+        colorLabel_7_5->setText(QString());
         chanel7SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_7_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9147,6 +9661,7 @@ public:
         blockSamplesButton_7_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_7->setText(QString());
+        colorLabel_7_7->setText(QString());
         chanel3SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_7_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9182,6 +9697,7 @@ public:
         blockSamplesButton_7_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_3->setText(QString());
+        colorLabel_7_3->setText(QString());
         channelLabelBox_7->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
         thresholdLabel_7->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
         samplesLabel_7->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
@@ -9228,6 +9744,7 @@ public:
         blockSamplesButton_8_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_0->setText(QString());
+        colorLabel_8_0->setText(QString());
         chanel1SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_8_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9263,6 +9780,7 @@ public:
         blockSamplesButton_8_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_1->setText(QString());
+        colorLabel_8_1->setText(QString());
         chanel2SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_8_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9298,6 +9816,7 @@ public:
         blockSamplesButton_8_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_2->setText(QString());
+        colorLabel_8_2->setText(QString());
         chanel4SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_8_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9333,6 +9852,7 @@ public:
         blockSamplesButton_8_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_4->setText(QString());
+        colorLabel_8_4->setText(QString());
         chanel6SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_8_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9368,6 +9888,7 @@ public:
         blockSamplesButton_8_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_6->setText(QString());
+        colorLabel_8_6->setText(QString());
         chanel5SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_8_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9403,6 +9924,7 @@ public:
         blockSamplesButton_8_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_5->setText(QString());
+        colorLabel_8_5->setText(QString());
         chanel7SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_8_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9438,6 +9960,7 @@ public:
         blockSamplesButton_8_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_7->setText(QString());
+        colorLabel_8_7->setText(QString());
         chanel3SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_8_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9473,6 +9996,7 @@ public:
         blockSamplesButton_8_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_3->setText(QString());
+        colorLabel_8_3->setText(QString());
         channelLabelBox_8->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
         thresholdLabel_8->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
         samplesLabel_8->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
@@ -9519,6 +10043,7 @@ public:
         blockSamplesButton_9_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_2->setText(QString());
+        colorLabel_9_2->setText(QString());
         chanel7SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_9_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9554,6 +10079,7 @@ public:
         blockSamplesButton_9_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_7->setText(QString());
+        colorLabel_1_71->setText(QString());
         chanel0SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH0", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_9_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9589,6 +10115,7 @@ public:
         blockSamplesButton_9_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_0->setText(QString());
+        colorLabel_9_0->setText(QString());
         chanel1SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_9_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9624,6 +10151,7 @@ public:
         blockSamplesButton_9_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_1->setText(QString());
+        colorLabel_9_1->setText(QString());
         chanel4SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_9_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9659,6 +10187,7 @@ public:
         blockSamplesButton_9_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_4->setText(QString());
+        colorLabel_9_4->setText(QString());
         chanel3SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_9_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9694,6 +10223,7 @@ public:
         blockSamplesButton_9_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_3->setText(QString());
+        colorLabel_9_3->setText(QString());
         chanel5SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_9_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9729,6 +10259,7 @@ public:
         blockSamplesButton_9_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_5->setText(QString());
+        colorLabel_9_5->setText(QString());
         chanel6SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
 #ifndef QT_NO_TOOLTIP
         changeTriggerButton_9_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
@@ -9764,6 +10295,7 @@ public:
         blockSamplesButton_9_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_6->setText(QString());
+        colorLabel_9_6->setText(QString());
         channelLabelBox_9->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
         thresholdLabel_9->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
         samplesLabel_9->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));

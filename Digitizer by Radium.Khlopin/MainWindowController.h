@@ -7,6 +7,8 @@
 #include "qcustomplot.h"
 #include <mutex>
 
+class DataAnalyzer;
+
 class MainWindow : public QMainWindow
 {
 	Q_OBJECT
@@ -24,13 +26,14 @@ private:
 
 	VMECommunication				vme;
 	bool							acquisitionWasStarted = false;
-	uint16_t						activeChannelsCount = 0;			//need to know graphs count
+	uint16_t						activeChannelsCount = 0;			//need to know graphs count (from all boards)
 	vector<vector<bool>>			samplesSpinboxIsDisabled;
 	vector<vector<string>>			channelsColors;
 	std::thread						acquisitionThread;
 
 	void							updateData();
 	void							drawSignal(CAEN_DGTZ_UINT8_EVENT_t* eventToDraw);
+	void							drawSpectrum(DataAnalyzer& vmeData);
 	void							readSettings();
 	void							pulseErrorButton();
 	void							setControlsEnabled(bool enabled) const;
@@ -52,6 +55,7 @@ private slots:
 	void							makeSoftwareTriggerSlot();
 	void							changeExternalTriggerSlot();
 	void							autoTriggerSlot();
+	void							amplifySpectrumSlot() const;
 	void							changePolaritySlot();
 public slots:
 	void							replotGraph() const;
