@@ -1,10 +1,9 @@
 ﻿#include "ErrorLogWindowController.h"
 #include <QTime>
 #include <ToRussianTextForQString.h>
+#include <QTableWidget>
 
-class MainWindow;
-
-ErrorLogWindowController::ErrorLogWindowController(QWidget *parent, std::vector<std::vector<CAEN_DGTZ_ErrorCode>>& boardErrors, std::vector<std::vector<QTime>>& timeOfBoardErrors) :
+ErrorLogWindowController::ErrorLogWindowController(QWidget *parent, std::vector<std::vector<CAEN_DGTZ_ErrorCode>>& boardErrors, std::vector<std::vector<QTime>>& timeOfBoardErrors, std::vector<std::vector<QString>>& stringErrors) :
 QDialog(parent) {
 	ui.setupUi(this);
 	for (auto boardNumber = 0; boardNumber < 9; boardNumber++)
@@ -16,7 +15,9 @@ QDialog(parent) {
 				auto errorCode = std::to_string(boardErrors[boardNumber][errorNumber]);
 				ui.mainWidget->setItem(0, 2, new QTableWidgetItem(QString(errorCode.c_str())));
 				ui.mainWidget->setItem(0, 3, new QTableWidgetItem(getErrorInfo(boardErrors[boardNumber][errorNumber])));
-			}
+				auto description = stringErrors[boardNumber][errorNumber];
+				ui.mainWidget->setItem(0, 4, new QTableWidgetItem(description));
+		}
 		ui.mainWidget->sortByColumn(0, Qt::DescendingOrder);
 		ui.mainWidget->setColumnWidth(2, 80);
 		ui.mainWidget->setColumnWidth(3, 200);

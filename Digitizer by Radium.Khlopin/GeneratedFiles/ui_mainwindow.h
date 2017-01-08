@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.0
+** Created by: Qt User Interface Compiler version 5.7.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -7495,2819 +7495,2819 @@ public:
 
     void retranslateUi(QMainWindow *MainWindowClass)
     {
-        MainWindowClass->setWindowTitle(QApplication::translate("MainWindowClass", "Digitizer by Khlopin Radium Institute", 0));
+        MainWindowClass->setWindowTitle(QApplication::translate("MainWindowClass", "Digitizer by Khlopin Radium Institute", Q_NULLPTR));
         controlButtons->setTitle(QString());
 #ifndef QT_NO_TOOLTIP
-        helpButton->setToolTip(QApplication::translate("MainWindowClass", "\320\237\320\276\320\274\320\276\321\211\321\214", 0));
+        helpButton->setToolTip(QApplication::translate("MainWindowClass", "\320\237\320\276\320\274\320\276\321\211\321\214", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         helpButton->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        connectButton->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273\321\216\321\207\320\270\321\202\321\214", 0));
+        connectButton->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273\321\216\321\207\320\270\321\202\321\214", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         connectButton->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        exitButton->setToolTip(QApplication::translate("MainWindowClass", "\320\227\321\213\320\272\321\200\321\213\321\202\321\214", 0));
+        exitButton->setToolTip(QApplication::translate("MainWindowClass", "\320\227\321\213\320\272\321\200\321\213\321\202\321\214", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         exitButton->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        openFileButton->setToolTip(QApplication::translate("MainWindowClass", "\320\236\321\202\320\272\321\200\321\213\321\202\321\214 \320\237\320\260\320\277\320\272\321\203", 0));
+        openFileButton->setToolTip(QApplication::translate("MainWindowClass", "\320\236\321\202\320\272\321\200\321\213\321\202\321\214 \320\237\320\260\320\277\320\272\321\203", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         openFileButton->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        errorButton->setToolTip(QApplication::translate("MainWindowClass", "\320\226\321\203\321\200\320\275\320\260\320\273 \320\276\321\210\320\270\320\261\320\276\320\272", 0));
+        errorButton->setToolTip(QApplication::translate("MainWindowClass", "\320\226\321\203\321\200\320\275\320\260\320\273 \320\276\321\210\320\270\320\261\320\276\320\272", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         errorButton->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        journalButton->setToolTip(QApplication::translate("MainWindowClass", "\320\226\321\203\321\200\320\275\320\260\320\273", 0));
+        journalButton->setToolTip(QApplication::translate("MainWindowClass", "\320\226\321\203\321\200\320\275\320\260\320\273", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         journalButton->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        recordButton->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\277\320\270\321\201\321\214", 0));
+        recordButton->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\277\320\270\321\201\321\214", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         recordButton->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        settingsButton->setToolTip(QApplication::translate("MainWindowClass", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\270", 0));
+        settingsButton->setToolTip(QApplication::translate("MainWindowClass", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         settingsButton->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        drawButton->setToolTip(QApplication::translate("MainWindowClass", "\320\237\321\200\320\276\321\201\320\274\320\276\321\202\321\200", 0));
+        drawButton->setToolTip(QApplication::translate("MainWindowClass", "\320\237\321\200\320\276\321\201\320\274\320\276\321\202\321\200", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         drawButton->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        startStopButton->setToolTip(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\200\321\202", 0));
+        startStopButton->setToolTip(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\200\321\202", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         startStopButton->setText(QString());
         mainBox->setTitle(QString());
-        tabWidget->setTabText(tabWidget->indexOf(signalTab), QApplication::translate("MainWindowClass", "\320\241\320\270\320\263\320\275\320\260\320\273", 0));
-        pushButton_4->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
-        amplifySpectrumButton->setText(QApplication::translate("MainWindowClass", "\320\220\320\274\320\277\320\273\320\270\321\202\321\203\320\264\320\275\321\213\320\271", 0));
-        pushButton_3->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
-        pushButton_2->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
-        tabWidget->setTabText(tabWidget->indexOf(spectrumTab), QApplication::translate("MainWindowClass", "\320\241\320\277\320\265\320\272\321\202\321\200", 0));
-        tabWidget->setTabText(tabWidget->indexOf(dataTab), QApplication::translate("MainWindowClass", "\320\236\320\261\321\200\320\260\320\261\320\276\321\202\320\272\320\260 \320\264\320\260\320\275\320\275\321\213\321\205", 0));
-        settingsBlock->setTitle(QApplication::translate("MainWindowClass", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\270", 0));
-        timeSettingBox->setTitle(QApplication::translate("MainWindowClass", "\320\237\320\276 \320\263\320\276\321\200\320\270\320\267\320\276\320\275\321\202\320\260\320\273\320\270", 0));
-        bufferBox->setTitle(QApplication::translate("MainWindowClass", "\320\240\320\260\320\267\320\274\320\265\321\200 \320\261\321\203\321\204\320\265\321\200\320\260", 0));
+        tabWidget->setTabText(tabWidget->indexOf(signalTab), QApplication::translate("MainWindowClass", "\320\241\320\270\320\263\320\275\320\260\320\273", Q_NULLPTR));
+        pushButton_4->setText(QApplication::translate("MainWindowClass", "PushButton", Q_NULLPTR));
+        amplifySpectrumButton->setText(QApplication::translate("MainWindowClass", "\320\220\320\274\320\277\320\273\320\270\321\202\321\203\320\264\320\275\321\213\320\271", Q_NULLPTR));
+        pushButton_3->setText(QApplication::translate("MainWindowClass", "PushButton", Q_NULLPTR));
+        pushButton_2->setText(QApplication::translate("MainWindowClass", "PushButton", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(spectrumTab), QApplication::translate("MainWindowClass", "\320\241\320\277\320\265\320\272\321\202\321\200", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(dataTab), QApplication::translate("MainWindowClass", "\320\236\320\261\321\200\320\260\320\261\320\276\321\202\320\272\320\260 \320\264\320\260\320\275\320\275\321\213\321\205", Q_NULLPTR));
+        settingsBlock->setTitle(QApplication::translate("MainWindowClass", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\270", Q_NULLPTR));
+        timeSettingBox->setTitle(QApplication::translate("MainWindowClass", "\320\237\320\276 \320\263\320\276\321\200\320\270\320\267\320\276\320\275\321\202\320\260\320\273\320\270", Q_NULLPTR));
+        bufferBox->setTitle(QApplication::translate("MainWindowClass", "\320\240\320\260\320\267\320\274\320\265\321\200 \320\261\321\203\321\204\320\265\321\200\320\260", Q_NULLPTR));
         bufferComboBox->clear();
         bufferComboBox->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "2 KB", 0)
-         << QApplication::translate("MainWindowClass", "4 KB", 0)
-         << QApplication::translate("MainWindowClass", "8 KB", 0)
-         << QApplication::translate("MainWindowClass", "16 KB", 0)
-         << QApplication::translate("MainWindowClass", "32 KB", 0)
-         << QApplication::translate("MainWindowClass", "64 KB", 0)
-         << QApplication::translate("MainWindowClass", "128 KB", 0)
-         << QApplication::translate("MainWindowClass", "256 KB", 0)
-         << QApplication::translate("MainWindowClass", "512 KB", 0)
-         << QApplication::translate("MainWindowClass", "1024 KB", 0)
-         << QApplication::translate("MainWindowClass", "2048 KB", 0)
+         << QApplication::translate("MainWindowClass", "2 KB", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "4 KB", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "8 KB", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "16 KB", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "32 KB", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "64 KB", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "128 KB", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "256 KB", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "512 KB", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "1024 KB", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2048 KB", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        scaleTimeBox->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\262\321\200\320\265\320\274\321\217 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", 0));
+        scaleTimeBox->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\262\321\200\320\265\320\274\321\217 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        scaleTimeBox->setTitle(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261", 0));
+        scaleTimeBox->setTitle(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261", Q_NULLPTR));
         scaleTimeComboBox->clear();
         scaleTimeComboBox->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1 \320\274\320\272\321\201/\320\264\320\265\320\273", 0)
-         << QApplication::translate("MainWindowClass", "2 \320\274\320\272\321\201/\320\264\320\265\320\273", 0)
-         << QApplication::translate("MainWindowClass", "4 \320\274\320\272\321\201/\320\264\320\265\320\273", 0)
-         << QApplication::translate("MainWindowClass", "10 \320\274\320\272\321\201/\320\264\320\265\320\273", 0)
-         << QApplication::translate("MainWindowClass", "20 \320\274\320\272\321\201/\320\264\320\265\320\273", 0)
-         << QApplication::translate("MainWindowClass", "40 \320\274\320\272\321\201/\320\264\320\265\320\273", 0)
+         << QApplication::translate("MainWindowClass", "1 \320\274\320\272\321\201/\320\264\320\265\320\273", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2 \320\274\320\272\321\201/\320\264\320\265\320\273", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "4 \320\274\320\272\321\201/\320\264\320\265\320\273", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10 \320\274\320\272\321\201/\320\264\320\265\320\273", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20 \320\274\320\272\321\201/\320\264\320\265\320\273", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "40 \320\274\320\272\321\201/\320\264\320\265\320\273", Q_NULLPTR)
         );
-        scaleTimeComboBox->setCurrentText(QApplication::translate("MainWindowClass", "1 \320\274\320\272\321\201/\320\264\320\265\320\273", 0));
+        scaleTimeComboBox->setCurrentText(QApplication::translate("MainWindowClass", "1 \320\274\320\272\321\201/\320\264\320\265\320\273", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        positionTimeBox->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\262\321\200\320\265\320\274\321\217 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", 0));
+        positionTimeBox->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\262\321\200\320\265\320\274\321\217 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        positionTimeBox->setTitle(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", 0));
+        positionTimeBox->setTitle(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_0_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_0_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_0_0->setText(QString());
-        triggerSettingBox->setTitle(QApplication::translate("MainWindowClass", "\320\242\321\200\320\270\320\263\320\263\320\265\321\200", 0));
-        postTriggerBox->setTitle(QApplication::translate("MainWindowClass", "\320\237\320\276\321\201\321\202-\320\242\321\200\320\270\320\263\320\263\320\265\321\200(%)", 0));
+        triggerSettingBox->setTitle(QApplication::translate("MainWindowClass", "\320\242\321\200\320\270\320\263\320\263\320\265\321\200", Q_NULLPTR));
+        postTriggerBox->setTitle(QApplication::translate("MainWindowClass", "\320\237\320\276\321\201\321\202-\320\242\321\200\320\270\320\263\320\263\320\265\321\200(%)", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        postTriggerIsDrawing->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        postTriggerIsDrawing->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         postTriggerIsDrawing->setText(QString());
-        polarityBox->setTitle(QApplication::translate("MainWindowClass", "\320\227\320\260\320\277\321\203\321\201\320\272 \320\277\320\276 \321\201\320\277\320\260\320\264\321\203", 0));
+        polarityBox->setTitle(QApplication::translate("MainWindowClass", "\320\227\320\260\320\277\321\203\321\201\320\272 \320\277\320\276 \321\201\320\277\320\260\320\264\321\203", Q_NULLPTR));
         polarityButton->setText(QString());
-        triggerOptionsBox->setTitle(QApplication::translate("MainWindowClass", "\320\240\320\265\320\266\320\270\320\274 \320\267\320\260\320\277\321\203\321\201\320\272\320\260", 0));
+        triggerOptionsBox->setTitle(QApplication::translate("MainWindowClass", "\320\240\320\265\320\266\320\270\320\274 \320\267\320\260\320\277\321\203\321\201\320\272\320\260", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        externalTriggerButton->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\275\320\265\321\210\320\275\320\270\320\271 \321\202\321\200\320\270\320\263\320\263\320\265\321\200", 0));
+        externalTriggerButton->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\275\320\265\321\210\320\275\320\270\320\271 \321\202\321\200\320\270\320\263\320\263\320\265\321\200", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         externalTriggerButton->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        autoTriggerButton->setToolTip(QApplication::translate("MainWindowClass", "\320\220\320\262\321\202\320\276\321\202\321\200\320\270\320\263\320\263\320\265\321\200 \320\272\320\260\320\266\320\264\321\203\321\216 \321\201\320\265\320\272\321\203\320\275\320\264\321\203", 0));
+        autoTriggerButton->setToolTip(QApplication::translate("MainWindowClass", "\320\220\320\262\321\202\320\276\321\202\321\200\320\270\320\263\320\263\320\265\321\200 \320\272\320\260\320\266\320\264\321\203\321\216 \321\201\320\265\320\272\321\203\320\275\320\264\321\203", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         autoTriggerButton->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        forceTriggerButton->setToolTip(QApplication::translate("MainWindowClass", "\320\237\321\200\320\270\320\275\321\203\320\264\320\270\321\202\320\265\320\273\321\214\320\275\321\213\320\271 \321\202\321\200\320\270\320\263\320\263\320\265\321\200", 0));
+        forceTriggerButton->setToolTip(QApplication::translate("MainWindowClass", "\320\237\321\200\320\270\320\275\321\203\320\264\320\270\321\202\320\265\320\273\321\214\320\275\321\213\320\271 \321\202\321\200\320\270\320\263\320\263\320\265\321\200", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         forceTriggerButton->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        singleTriggerButton->setToolTip(QApplication::translate("MainWindowClass", "\320\236\320\264\320\270\320\275\320\276\321\207\320\275\321\213\320\271 \320\267\320\260\320\277\321\203\321\201\320\272", 0));
+        singleTriggerButton->setToolTip(QApplication::translate("MainWindowClass", "\320\236\320\264\320\270\320\275\320\276\321\207\320\275\321\213\320\271 \320\267\320\260\320\277\321\203\321\201\320\272", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         singleTriggerButton->setText(QString());
-        channelsSettingBox->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273\321\213", 0));
+        channelsSettingBox->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273\321\213", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         WDFTabWidget->setToolTip(QString());
 #endif // QT_NO_TOOLTIP
-        chanel0SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH0", 0));
+        chanel0SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH0", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_1_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_1_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_1_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_1_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_1_0->clear();
         scaleSpinBox_1_0->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_1_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_1_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_1_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_1_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_1_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_1_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_1_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_1_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_1_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_1_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_1_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_1_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_1_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_1_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_0->setText(QString());
         colorLabel_1_0->setText(QString());
-        channelLabelBox_1->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
-        thresholdLabel_1->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
+        channelLabelBox_1->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", Q_NULLPTR));
+        thresholdLabel_1->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        samplesLabel_1->setToolTip(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\321\202\320\265\320\273\321\214\320\275\320\276 \320\267\320\260\320\277\321\203\321\201\320\272\320\276\320\265\320\274\320\276\320\263\320\276 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
+        samplesLabel_1->setToolTip(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\321\202\320\265\320\273\321\214\320\275\320\276 \320\267\320\260\320\277\321\203\321\201\320\272\320\276\320\265\320\274\320\276\320\263\320\276 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        samplesLabel_1->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
-        positionLabel_1->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", 0));
-        DACOffsetLabel_1->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", 0));
+        samplesLabel_1->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", Q_NULLPTR));
+        positionLabel_1->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", Q_NULLPTR));
+        DACOffsetLabel_1->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        scaleLabel_1->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", 0));
+        scaleLabel_1->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        scaleLabel_1->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", 0));
-        statusLabel_1->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", 0));
-        chanel1SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
+        scaleLabel_1->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", Q_NULLPTR));
+        statusLabel_1->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", Q_NULLPTR));
+        chanel1SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH1", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_1_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_1_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_1_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_1_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_1_1->clear();
         scaleSpinBox_1_1->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_1_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_1_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_1_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_1_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_1_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_1_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_1_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_1_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_1_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_1_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_1_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_1_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_1_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_1_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_1->setText(QString());
         colorLabel_1_1->setText(QString());
-        chanel2SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
+        chanel2SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH2", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_1_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_1_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_1_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_1_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_1_2->clear();
         scaleSpinBox_1_2->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_1_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_1_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_1_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_1_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_1_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_1_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_1_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_1_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_1_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_1_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_1_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_1_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_1_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_1_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_2->setText(QString());
         colorLabel_1_2->setText(QString());
-        chanel5SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
+        chanel5SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH5", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_1_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_1_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_1_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_1_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_1_5->clear();
         scaleSpinBox_1_5->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_1_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_1_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_1_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_1_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_1_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_1_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_1_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_1_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_1_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_1_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_1_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_1_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_1_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_1_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_5->setText(QString());
         colorLabel_1_5->setText(QString());
-        chanel4SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
+        chanel4SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH4", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_1_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_1_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_1_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_1_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_1_4->clear();
         scaleSpinBox_1_4->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_1_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_1_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_1_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_1_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_1_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_1_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_1_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_1_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_1_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_1_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_1_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_1_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_1_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_1_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_4->setText(QString());
         colorLabel_1_4->setText(QString());
-        chanel3SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
+        chanel3SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH3", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_1_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_1_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_1_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_1_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_1_3->clear();
         scaleSpinBox_1_3->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_1_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_1_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_1_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_1_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_1_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_1_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_1_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_1_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_1_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_1_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_1_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_1_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_1_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_1_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_3->setText(QString());
         colorLabel_1_3->setText(QString());
-        chanel7SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
+        chanel7SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH7", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_1_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_1_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_1_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_1_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_1_7->clear();
         scaleSpinBox_1_7->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_1_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_1_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_1_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_1_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_1_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_1_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_1_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_1_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_1_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_1_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_1_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_1_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_1_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_1_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_7->setText(QString());
         colorLabel_1_7->setText(QString());
-        chanel6SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
+        chanel6SettingsBox_1->setTitle(QApplication::translate("MainWindowClass", "CH6", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_1_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_1_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_1_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_1_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_1_6->clear();
         scaleSpinBox_1_6->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_1_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_1_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_1_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_1_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_1_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_1_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_1_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_1_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_1_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_1_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_1_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_1_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_1_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_1_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_1_6->setText(QString());
         colorLabel_1_6->setText(QString());
-        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF1Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 1", 0));
-        chanel2SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
+        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF1Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 1", Q_NULLPTR));
+        chanel2SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH2", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_2_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_2_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_2_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_2_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_2_2->clear();
         scaleSpinBox_2_2->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_2_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_2_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_2_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_2_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_2_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_2_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_2_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_2_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_2_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_2_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_2_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_2_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_2_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_2_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_2->setText(QString());
         colorLabel_2_2->setText(QString());
-        chanel6SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
+        chanel6SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH6", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_2_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_2_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_2_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_2_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_2_6->clear();
         scaleSpinBox_2_6->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_2_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_2_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_2_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_2_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_2_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_2_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_2_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_2_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_2_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_2_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_2_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_2_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_2_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_2_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_6->setText(QString());
         colorLabel_2_6->setText(QString());
-        chanel5SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
+        chanel5SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH5", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_2_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_2_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_2_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_2_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_2_5->clear();
         scaleSpinBox_2_5->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_2_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_2_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_2_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_2_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_2_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_2_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_2_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_2_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_2_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_2_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_2_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_2_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_2_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_2_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_5->setText(QString());
         colorLabel_2_5->setText(QString());
-        chanel3SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
+        chanel3SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH3", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_2_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_2_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_2_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_2_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_2_3->clear();
         scaleSpinBox_2_3->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_2_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_2_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_2_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_2_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_2_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_2_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_2_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_2_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_2_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_2_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_2_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_2_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_2_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_2_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_3->setText(QString());
         colorLabel_2_3->setText(QString());
-        chanel1SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
+        chanel1SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH1", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_2_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_2_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_2_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_2_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_2_1->clear();
         scaleSpinBox_2_1->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_2_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_2_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_2_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_2_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_2_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_2_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_2_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_2_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_2_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_2_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_2_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_2_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_2_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_2_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_1->setText(QString());
         colorLabel_2_1->setText(QString());
-        chanel4SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
+        chanel4SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH4", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_2_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_2_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_2_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_2_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_2_4->clear();
         scaleSpinBox_2_4->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_2_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_2_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_2_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_2_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_2_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_2_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_2_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_2_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_2_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_2_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_2_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_2_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_2_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_2_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_4->setText(QString());
         colorLabel_2_4->setText(QString());
-        chanel0SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH0", 0));
+        chanel0SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH0", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_2_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_2_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_2_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_2_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_2_0->clear();
         scaleSpinBox_2_0->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_2_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_2_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_2_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_2_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_2_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_2_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_2_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_2_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_2_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_2_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_2_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_2_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_2_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_2_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_0->setText(QString());
         colorLabel_1_8->setText(QString());
-        chanel7SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
+        chanel7SettingsBox_2->setTitle(QApplication::translate("MainWindowClass", "CH7", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_2_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_2_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_2_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_2_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_2_7->clear();
         scaleSpinBox_2_7->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_2_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_2_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_2_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_2_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_2_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_2_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_2_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_2_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_2_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_2_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_2_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_2_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_2_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_2_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_2_7->setText(QString());
         colorLabel_6_7->setText(QString());
-        channelLabelBox_2->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
-        thresholdLabel_2->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
-        samplesLabel_2->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
-        positionLabel_2->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", 0));
-        DACOffsetLabel_2->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", 0));
+        channelLabelBox_2->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", Q_NULLPTR));
+        thresholdLabel_2->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", Q_NULLPTR));
+        samplesLabel_2->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", Q_NULLPTR));
+        positionLabel_2->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", Q_NULLPTR));
+        DACOffsetLabel_2->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        scaleLabel_2->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", 0));
+        scaleLabel_2->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        scaleLabel_2->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", 0));
-        statusLabel_2->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", 0));
-        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF2Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 2", 0));
-        chanel0SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH0", 0));
+        scaleLabel_2->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", Q_NULLPTR));
+        statusLabel_2->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", Q_NULLPTR));
+        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF2Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 2", Q_NULLPTR));
+        chanel0SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH0", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_3_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_3_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_3_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_3_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_3_0->clear();
         scaleSpinBox_3_0->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_3_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_3_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_3_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_3_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_3_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_3_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_3_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_3_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_3_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_3_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_3_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_3_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_3_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_3_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_0->setText(QString());
         colorLabel_3_0->setText(QString());
-        chanel1SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
+        chanel1SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH1", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_3_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_3_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_3_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_3_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_3_1->clear();
         scaleSpinBox_3_1->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_3_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_3_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_3_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_3_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_3_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_3_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_3_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_3_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_3_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_3_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_3_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_3_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_3_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_3_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_1->setText(QString());
         colorLabel_3_1->setText(QString());
-        chanel2SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
+        chanel2SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH2", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_3_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_3_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_3_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_3_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_3_2->clear();
         scaleSpinBox_3_2->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_3_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_3_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_3_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_3_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_3_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_3_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_3_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_3_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_3_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_3_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_3_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_3_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_3_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_3_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_2->setText(QString());
         colorLabel_3_2->setText(QString());
-        chanel4SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
+        chanel4SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH4", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_3_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_3_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_3_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_3_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_3_4->clear();
         scaleSpinBox_3_4->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_3_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_3_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_3_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_3_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_3_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_3_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_3_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_3_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_3_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_3_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_3_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_3_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_3_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_3_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_4->setText(QString());
         colorLabel_3_4->setText(QString());
-        chanel6SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
+        chanel6SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH6", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_3_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_3_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_3_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_3_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_3_6->clear();
         scaleSpinBox_3_6->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_3_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_3_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_3_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_3_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_3_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_3_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_3_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_3_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_3_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_3_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_3_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_3_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_3_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_3_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_6->setText(QString());
         colorLabel_3_6->setText(QString());
-        chanel5SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
+        chanel5SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH5", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_3_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_3_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_3_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_3_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_3_5->clear();
         scaleSpinBox_3_5->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_3_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_3_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_3_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_3_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_3_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_3_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_3_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_3_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_3_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_3_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_3_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_3_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_3_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_3_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_5->setText(QString());
         colorLabel_3_5->setText(QString());
-        chanel7SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
+        chanel7SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH7", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_3_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_3_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_3_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_3_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_3_7->clear();
         scaleSpinBox_3_7->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_3_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_3_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_3_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_3_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_3_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_3_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_3_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_3_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_3_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_3_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_3_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_3_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_3_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_3_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_7->setText(QString());
         colorLabel_3_7->setText(QString());
-        chanel3SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
+        chanel3SettingsBox_3->setTitle(QApplication::translate("MainWindowClass", "CH3", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_3_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_3_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_3_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_3_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_3_3->clear();
         scaleSpinBox_3_3->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_3_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_3_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_3_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_3_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_3_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_3_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_3_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_3_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_3_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_3_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_3_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_3_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_3_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_3_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_3_3->setText(QString());
         colorLabel_3_3->setText(QString());
-        channelLabelBox_3->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
-        thresholdLabel_3->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
-        samplesLabel_3->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
-        positionLabel_3->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", 0));
-        DACOffsetLabel_3->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", 0));
+        channelLabelBox_3->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", Q_NULLPTR));
+        thresholdLabel_3->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", Q_NULLPTR));
+        samplesLabel_3->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", Q_NULLPTR));
+        positionLabel_3->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", Q_NULLPTR));
+        DACOffsetLabel_3->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        scaleLabel_3->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", 0));
+        scaleLabel_3->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        scaleLabel_3->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", 0));
-        statusLabel_3->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", 0));
-        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF3Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 3", 0));
-        chanel0SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH0", 0));
+        scaleLabel_3->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", Q_NULLPTR));
+        statusLabel_3->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", Q_NULLPTR));
+        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF3Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 3", Q_NULLPTR));
+        chanel0SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH0", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_4_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_4_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_4_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_4_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_4_0->clear();
         scaleSpinBox_4_0->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_4_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_4_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_4_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_4_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_4_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_4_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_4_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_4_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_4_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_4_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_4_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_4_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_4_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_4_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_0->setText(QString());
         colorLabel_4_0->setText(QString());
-        chanel1SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
+        chanel1SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH1", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_4_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_4_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_4_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_4_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_4_1->clear();
         scaleSpinBox_4_1->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_4_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_4_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_4_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_4_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_4_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_4_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_4_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_4_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_4_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_4_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_4_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_4_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_4_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_4_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_1->setText(QString());
         colorLabel_4_1->setText(QString());
-        chanel2SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
+        chanel2SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH2", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_4_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_4_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_4_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_4_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_4_2->clear();
         scaleSpinBox_4_2->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_4_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_4_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_4_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_4_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_4_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_4_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_4_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_4_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_4_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_4_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_4_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_4_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_4_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_4_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_2->setText(QString());
         colorLabel_4_2->setText(QString());
-        chanel4SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
+        chanel4SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH4", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_4_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_4_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_4_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_4_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_4_4->clear();
         scaleSpinBox_4_4->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_4_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_4_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_4_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_4_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_4_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_4_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_4_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_4_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_4_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_4_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_4_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_4_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_4_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_4_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_4->setText(QString());
         colorLabel_4_4->setText(QString());
-        chanel6SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
+        chanel6SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH6", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_4_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_4_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_4_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_4_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_4_6->clear();
         scaleSpinBox_4_6->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_4_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_4_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_4_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_4_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_4_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_4_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_4_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_4_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_4_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_4_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_4_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_4_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_4_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_4_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_6->setText(QString());
         colorLabel_4_6->setText(QString());
-        chanel5SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
+        chanel5SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH5", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_4_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_4_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_4_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_4_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_4_5->clear();
         scaleSpinBox_4_5->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_4_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_4_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_4_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_4_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_4_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_4_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_4_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_4_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_4_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_4_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_4_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_4_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_4_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_4_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_5->setText(QString());
         colorLabel_4_5->setText(QString());
-        chanel7SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
+        chanel7SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH7", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_4_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_4_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_4_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_4_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_4_7->clear();
         scaleSpinBox_4_7->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_4_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_4_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_4_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_4_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_4_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_4_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_4_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_4_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_4_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_4_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_4_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_4_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_4_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_4_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_7->setText(QString());
         colorLabel_4_7->setText(QString());
-        chanel3SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
+        chanel3SettingsBox_4->setTitle(QApplication::translate("MainWindowClass", "CH3", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_4_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_4_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_4_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_4_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_4_3->clear();
         scaleSpinBox_4_3->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_4_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_4_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_4_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_4_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_4_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_4_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_4_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_4_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_4_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_4_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_4_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_4_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_4_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_4_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_4_3->setText(QString());
         colorLabel_4_3->setText(QString());
-        channelLabelBox_4->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
-        thresholdLabel_4->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
-        samplesLabel_4->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
-        positionLabel_4->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", 0));
-        DACOffsetLabel_4->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", 0));
+        channelLabelBox_4->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", Q_NULLPTR));
+        thresholdLabel_4->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", Q_NULLPTR));
+        samplesLabel_4->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", Q_NULLPTR));
+        positionLabel_4->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", Q_NULLPTR));
+        DACOffsetLabel_4->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        scaleLabel_4->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", 0));
+        scaleLabel_4->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        scaleLabel_4->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", 0));
-        statusLabel_4->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", 0));
-        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF4Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 4", 0));
-        chanel0SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH0", 0));
+        scaleLabel_4->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", Q_NULLPTR));
+        statusLabel_4->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", Q_NULLPTR));
+        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF4Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 4", Q_NULLPTR));
+        chanel0SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH0", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_5_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_5_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_5_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_5_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_5_0->clear();
         scaleSpinBox_5_0->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_5_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_5_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_5_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_5_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_5_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_5_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_5_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_5_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_5_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_5_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_5_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_5_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_5_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_5_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_0->setText(QString());
         colorLabel_5_0->setText(QString());
-        chanel1SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
+        chanel1SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH1", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_5_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_5_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_5_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_5_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_5_1->clear();
         scaleSpinBox_5_1->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_5_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_5_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_5_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_5_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_5_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_5_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_5_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_5_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_5_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_5_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_5_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_5_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_5_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_5_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_1->setText(QString());
         colorLabel_5_1->setText(QString());
-        chanel2SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
+        chanel2SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH2", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_5_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_5_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_5_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_5_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_5_2->clear();
         scaleSpinBox_5_2->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_5_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_5_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_5_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_5_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_5_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_5_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_5_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_5_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_5_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_5_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_5_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_5_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_5_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_5_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_2->setText(QString());
         colorLabel_5_2->setText(QString());
-        chanel4SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
+        chanel4SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH4", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_5_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_5_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_5_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_5_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_5_4->clear();
         scaleSpinBox_5_4->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_5_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_5_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_5_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_5_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_5_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_5_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_5_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_5_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_5_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_5_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_5_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_5_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_5_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_5_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_4->setText(QString());
         colorLabel_5_4->setText(QString());
-        chanel6SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
+        chanel6SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH6", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_5_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_5_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_5_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_5_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_5_6->clear();
         scaleSpinBox_5_6->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_5_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_5_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_5_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_5_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_5_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_5_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_5_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_5_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_5_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_5_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_5_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_5_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_5_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_5_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_6->setText(QString());
         colorLabel_5_6->setText(QString());
-        chanel5SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
+        chanel5SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH5", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_5_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_5_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_5_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_5_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_5_5->clear();
         scaleSpinBox_5_5->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_5_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_5_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_5_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_5_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_5_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_5_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_5_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_5_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_5_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_5_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_5_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_5_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_5_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_5_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_5->setText(QString());
         colorLabel_5_5->setText(QString());
-        chanel7SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
+        chanel7SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH7", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_5_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_5_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_5_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_5_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_5_7->clear();
         scaleSpinBox_5_7->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_5_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_5_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_5_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_5_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_5_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_5_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_5_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_5_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_5_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_5_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_5_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_5_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_5_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_5_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_7->setText(QString());
         colorLabel_5_7->setText(QString());
-        chanel3SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
+        chanel3SettingsBox_5->setTitle(QApplication::translate("MainWindowClass", "CH3", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_5_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_5_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_5_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_5_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_5_3->clear();
         scaleSpinBox_5_3->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_5_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_5_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_5_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_5_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_5_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_5_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_5_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_5_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_5_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_5_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_5_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_5_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_5_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_5_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_5_3->setText(QString());
         colorLabel_5_3->setText(QString());
-        channelLabelBox_5->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
-        thresholdLabel_5->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
-        samplesLabel_5->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
-        positionLabel_5->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", 0));
-        DACOffsetLabel_5->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", 0));
+        channelLabelBox_5->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", Q_NULLPTR));
+        thresholdLabel_5->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", Q_NULLPTR));
+        samplesLabel_5->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", Q_NULLPTR));
+        positionLabel_5->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", Q_NULLPTR));
+        DACOffsetLabel_5->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        scaleLabel_5->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", 0));
+        scaleLabel_5->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        scaleLabel_5->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", 0));
-        statusLabel_5->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", 0));
-        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF5Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 5", 0));
-        chanel0SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH0", 0));
+        scaleLabel_5->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", Q_NULLPTR));
+        statusLabel_5->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", Q_NULLPTR));
+        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF5Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 5", Q_NULLPTR));
+        chanel0SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH0", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_6_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_6_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_6_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_6_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_6_0->clear();
         scaleSpinBox_6_0->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_6_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_6_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_6_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_6_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_6_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_6_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_6_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_6_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_6_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_6_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_6_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_6_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_6_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_6_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_0->setText(QString());
         colorLabel_6_0->setText(QString());
-        chanel1SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
+        chanel1SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH1", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_6_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_6_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_6_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_6_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_6_1->clear();
         scaleSpinBox_6_1->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_6_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_6_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_6_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_6_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_6_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_6_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_6_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_6_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_6_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_6_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_6_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_6_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_6_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_6_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_1->setText(QString());
         colorLabel_6_1->setText(QString());
-        chanel2SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
+        chanel2SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH2", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_6_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_6_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_6_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_6_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_6_2->clear();
         scaleSpinBox_6_2->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_6_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_6_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_6_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_6_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_6_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_6_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_6_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_6_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_6_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_6_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_6_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_6_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_6_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_6_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_2->setText(QString());
         colorLabel_6_2->setText(QString());
-        chanel4SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
+        chanel4SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH4", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_6_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_6_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_6_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_6_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_6_4->clear();
         scaleSpinBox_6_4->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_6_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_6_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_6_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_6_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_6_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_6_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_6_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_6_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_6_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_6_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_6_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_6_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_6_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_6_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_4->setText(QString());
         colorLabel_6_4->setText(QString());
-        chanel6SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
+        chanel6SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH6", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_6_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_6_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_6_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_6_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_6_6->clear();
         scaleSpinBox_6_6->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_6_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_6_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_6_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_6_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_6_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_6_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_6_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_6_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_6_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_6_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_6_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_6_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_6_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_6_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_6->setText(QString());
         colorLabel_6_6->setText(QString());
-        chanel5SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
+        chanel5SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH5", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_6_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_6_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_6_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_6_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_6_5->clear();
         scaleSpinBox_6_5->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_6_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_6_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_6_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_6_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_6_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_6_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_6_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_6_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_6_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_6_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_6_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_6_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_6_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_6_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_5->setText(QString());
         colorLabel_6_5->setText(QString());
-        chanel7SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
+        chanel7SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH7", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_6_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_6_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_6_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_6_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_6_7->clear();
         scaleSpinBox_6_7->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_6_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_6_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_6_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_6_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_6_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_6_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_6_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_6_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_6_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_6_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_6_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_6_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_6_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_6_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_7->setText(QString());
         colorLabel_6_8->setText(QString());
-        chanel3SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
+        chanel3SettingsBox_6->setTitle(QApplication::translate("MainWindowClass", "CH3", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_6_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_6_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_6_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_6_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_6_3->clear();
         scaleSpinBox_6_3->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_6_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_6_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_6_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_6_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_6_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_6_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_6_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_6_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_6_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_6_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_6_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_6_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_6_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_6_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_6_3->setText(QString());
         colorLabel_6_3->setText(QString());
-        channelLabelBox_6->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
-        thresholdLabel_6->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
-        samplesLabel_6->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
-        positionLabel_6->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", 0));
-        DACOffsetLabel_6->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", 0));
+        channelLabelBox_6->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", Q_NULLPTR));
+        thresholdLabel_6->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", Q_NULLPTR));
+        samplesLabel_6->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", Q_NULLPTR));
+        positionLabel_6->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", Q_NULLPTR));
+        DACOffsetLabel_6->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        scaleLabel_6->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", 0));
+        scaleLabel_6->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        scaleLabel_6->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", 0));
-        statusLabel_6->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", 0));
-        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF6Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 6", 0));
-        chanel0SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH0", 0));
+        scaleLabel_6->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", Q_NULLPTR));
+        statusLabel_6->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", Q_NULLPTR));
+        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF6Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 6", Q_NULLPTR));
+        chanel0SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH0", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_7_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_7_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_7_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_7_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_7_0->clear();
         scaleSpinBox_7_0->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_7_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_7_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_7_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_7_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_7_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_7_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_7_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_7_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_7_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_7_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_7_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_7_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_7_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_7_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_0->setText(QString());
         colorLabel_7_0->setText(QString());
-        chanel1SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
+        chanel1SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH1", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_7_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_7_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_7_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_7_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_7_1->clear();
         scaleSpinBox_7_1->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_7_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_7_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_7_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_7_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_7_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_7_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_7_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_7_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_7_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_7_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_7_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_7_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_7_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_7_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_1->setText(QString());
         colorLabel_7_1->setText(QString());
-        chanel2SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
+        chanel2SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH2", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_7_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_7_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_7_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_7_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_7_2->clear();
         scaleSpinBox_7_2->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_7_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_7_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_7_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_7_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_7_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_7_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_7_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_7_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_7_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_7_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_7_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_7_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_7_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_7_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_2->setText(QString());
         colorLabel_7_2->setText(QString());
-        chanel4SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
+        chanel4SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH4", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_7_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_7_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_7_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_7_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_7_4->clear();
         scaleSpinBox_7_4->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_7_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_7_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_7_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_7_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_7_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_7_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_7_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_7_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_7_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_7_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_7_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_7_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_7_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_7_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_4->setText(QString());
         colorLabel_7_4->setText(QString());
-        chanel6SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
+        chanel6SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH6", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_7_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_7_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_7_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_7_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_7_6->clear();
         scaleSpinBox_7_6->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_7_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_7_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_7_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_7_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_7_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_7_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_7_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_7_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_7_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_7_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_7_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_7_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_7_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_7_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_6->setText(QString());
         colorLabel_7_6->setText(QString());
-        chanel5SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
+        chanel5SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH5", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_7_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_7_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_7_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_7_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_7_5->clear();
         scaleSpinBox_7_5->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_7_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_7_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_7_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_7_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_7_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_7_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_7_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_7_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_7_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_7_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_7_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_7_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_7_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_7_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_5->setText(QString());
         colorLabel_7_5->setText(QString());
-        chanel7SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
+        chanel7SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH7", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_7_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_7_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_7_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_7_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_7_7->clear();
         scaleSpinBox_7_7->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_7_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_7_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_7_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_7_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_7_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_7_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_7_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_7_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_7_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_7_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_7_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_7_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_7_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_7_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_7->setText(QString());
         colorLabel_7_7->setText(QString());
-        chanel3SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
+        chanel3SettingsBox_7->setTitle(QApplication::translate("MainWindowClass", "CH3", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_7_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_7_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_7_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_7_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_7_3->clear();
         scaleSpinBox_7_3->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_7_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_7_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_7_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_7_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_7_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_7_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_7_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_7_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_7_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_7_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_7_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_7_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_7_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_7_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_7_3->setText(QString());
         colorLabel_7_3->setText(QString());
-        channelLabelBox_7->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
-        thresholdLabel_7->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
-        samplesLabel_7->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
-        positionLabel_7->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", 0));
-        DACOffsetLabel_7->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", 0));
+        channelLabelBox_7->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", Q_NULLPTR));
+        thresholdLabel_7->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", Q_NULLPTR));
+        samplesLabel_7->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", Q_NULLPTR));
+        positionLabel_7->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", Q_NULLPTR));
+        DACOffsetLabel_7->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        scaleLabel_7->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", 0));
+        scaleLabel_7->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        scaleLabel_7->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", 0));
-        statusLabel_7->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", 0));
-        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF7Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 7", 0));
-        chanel0SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH0", 0));
+        scaleLabel_7->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", Q_NULLPTR));
+        statusLabel_7->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", Q_NULLPTR));
+        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF7Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 7", Q_NULLPTR));
+        chanel0SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH0", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_8_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_8_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_8_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_8_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_8_0->clear();
         scaleSpinBox_8_0->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_8_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_8_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_8_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_8_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_8_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_8_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_8_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_8_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_8_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_8_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_8_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_8_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_8_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_8_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_0->setText(QString());
         colorLabel_8_0->setText(QString());
-        chanel1SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
+        chanel1SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH1", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_8_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_8_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_8_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_8_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_8_1->clear();
         scaleSpinBox_8_1->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_8_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_8_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_8_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_8_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_8_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_8_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_8_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_8_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_8_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_8_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_8_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_8_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_8_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_8_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_1->setText(QString());
         colorLabel_8_1->setText(QString());
-        chanel2SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
+        chanel2SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH2", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_8_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_8_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_8_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_8_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_8_2->clear();
         scaleSpinBox_8_2->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_8_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_8_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_8_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_8_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_8_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_8_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_8_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_8_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_8_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_8_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_8_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_8_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_8_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_8_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_2->setText(QString());
         colorLabel_8_2->setText(QString());
-        chanel4SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
+        chanel4SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH4", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_8_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_8_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_8_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_8_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_8_4->clear();
         scaleSpinBox_8_4->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_8_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_8_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_8_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_8_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_8_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_8_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_8_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_8_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_8_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_8_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_8_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_8_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_8_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_8_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_4->setText(QString());
         colorLabel_8_4->setText(QString());
-        chanel6SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
+        chanel6SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH6", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_8_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_8_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_8_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_8_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_8_6->clear();
         scaleSpinBox_8_6->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_8_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_8_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_8_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_8_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_8_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_8_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_8_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_8_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_8_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_8_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_8_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_8_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_8_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_8_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_6->setText(QString());
         colorLabel_8_6->setText(QString());
-        chanel5SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
+        chanel5SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH5", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_8_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_8_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_8_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_8_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_8_5->clear();
         scaleSpinBox_8_5->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_8_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_8_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_8_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_8_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_8_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_8_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_8_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_8_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_8_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_8_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_8_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_8_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_8_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_8_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_5->setText(QString());
         colorLabel_8_5->setText(QString());
-        chanel7SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
+        chanel7SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH7", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_8_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_8_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_8_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_8_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_8_7->clear();
         scaleSpinBox_8_7->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_8_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_8_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_8_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_8_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_8_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_8_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_8_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_8_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_8_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_8_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_8_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_8_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_8_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_8_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_7->setText(QString());
         colorLabel_8_7->setText(QString());
-        chanel3SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
+        chanel3SettingsBox_8->setTitle(QApplication::translate("MainWindowClass", "CH3", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_8_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_8_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_8_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_8_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_8_3->clear();
         scaleSpinBox_8_3->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_8_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_8_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_8_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_8_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_8_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_8_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_8_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_8_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_8_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_8_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_8_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_8_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_8_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_8_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_8_3->setText(QString());
         colorLabel_8_3->setText(QString());
-        channelLabelBox_8->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
-        thresholdLabel_8->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
-        samplesLabel_8->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
-        positionLabel_8->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", 0));
-        DACOffsetLabel_8->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", 0));
+        channelLabelBox_8->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", Q_NULLPTR));
+        thresholdLabel_8->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", Q_NULLPTR));
+        samplesLabel_8->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", Q_NULLPTR));
+        positionLabel_8->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", Q_NULLPTR));
+        DACOffsetLabel_8->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        scaleLabel_8->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", 0));
+        scaleLabel_8->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        scaleLabel_8->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", 0));
-        statusLabel_8->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", 0));
-        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF8Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 8", 0));
-        chanel2SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH2", 0));
+        scaleLabel_8->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", Q_NULLPTR));
+        statusLabel_8->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", Q_NULLPTR));
+        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF8Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 8", Q_NULLPTR));
+        chanel2SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH2", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_9_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_9_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_9_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_9_2->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_9_2->clear();
         scaleSpinBox_9_2->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_9_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_9_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_9_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_9_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_9_2->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_9_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_9_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_9_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_9_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_9_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_9_2->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_9_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_9_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_9_2->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_2->setText(QString());
         colorLabel_9_2->setText(QString());
-        chanel7SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH7", 0));
+        chanel7SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH7", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_9_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_9_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_9_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_9_7->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_9_7->clear();
         scaleSpinBox_9_7->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_9_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_9_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_9_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_9_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_9_7->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_9_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_9_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_9_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_9_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_9_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_9_7->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_9_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_9_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_9_7->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_7->setText(QString());
         colorLabel_1_71->setText(QString());
-        chanel0SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH0", 0));
+        chanel0SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH0", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_9_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_9_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_9_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_9_0->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_9_0->clear();
         scaleSpinBox_9_0->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_9_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_9_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_9_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_9_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_9_0->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_9_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_9_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_9_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_9_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_9_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_9_0->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_9_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_9_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_9_0->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_0->setText(QString());
         colorLabel_9_0->setText(QString());
-        chanel1SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH1", 0));
+        chanel1SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH1", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_9_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_9_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_9_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_9_1->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_9_1->clear();
         scaleSpinBox_9_1->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_9_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_9_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_9_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_9_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_9_1->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_9_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_9_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_9_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_9_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_9_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_9_1->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_9_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_9_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_9_1->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_1->setText(QString());
         colorLabel_9_1->setText(QString());
-        chanel4SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH4", 0));
+        chanel4SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH4", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_9_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_9_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_9_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_9_4->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_9_4->clear();
         scaleSpinBox_9_4->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_9_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_9_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_9_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_9_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_9_4->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_9_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_9_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_9_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_9_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_9_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_9_4->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_9_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_9_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_9_4->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_4->setText(QString());
         colorLabel_9_4->setText(QString());
-        chanel3SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH3", 0));
+        chanel3SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH3", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_9_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_9_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_9_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_9_3->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_9_3->clear();
         scaleSpinBox_9_3->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_9_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_9_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_9_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_9_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_9_3->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_9_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_9_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_9_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_9_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_9_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_9_3->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_9_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_9_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_9_3->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_3->setText(QString());
         colorLabel_9_3->setText(QString());
-        chanel5SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH5", 0));
+        chanel5SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH5", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_9_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_9_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_9_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_9_5->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_9_5->clear();
         scaleSpinBox_9_5->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_9_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_9_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_9_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_9_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_9_5->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_9_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_9_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_9_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_9_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_9_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_9_5->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_9_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_9_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_9_5->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_5->setText(QString());
         colorLabel_9_5->setText(QString());
-        chanel6SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH6", 0));
+        chanel6SettingsBox_9->setTitle(QApplication::translate("MainWindowClass", "CH6", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        changeTriggerButton_9_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", 0));
+        changeTriggerButton_9_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273\321\216\321\207\320\265\320\275", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        changeTriggerButton_9_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", 0));
+        changeTriggerButton_9_6->setText(QApplication::translate("MainWindowClass", "\320\222\321\213\320\272\320\273.", Q_NULLPTR));
         scaleSpinBox_9_6->clear();
         scaleSpinBox_9_6->insertItems(0, QStringList()
-         << QApplication::translate("MainWindowClass", "1", 0)
-         << QApplication::translate("MainWindowClass", "2", 0)
-         << QApplication::translate("MainWindowClass", "5", 0)
-         << QApplication::translate("MainWindowClass", "10", 0)
-         << QApplication::translate("MainWindowClass", "20", 0)
-         << QApplication::translate("MainWindowClass", "50", 0)
-         << QApplication::translate("MainWindowClass", "100", 0)
+         << QApplication::translate("MainWindowClass", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "2", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "5", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "10", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "20", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "50", Q_NULLPTR)
+         << QApplication::translate("MainWindowClass", "100", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        positionResetButton_9_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        positionResetButton_9_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         positionResetButton_9_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        DACOffsetResetButton_9_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", 0));
+        DACOffsetResetButton_9_6->setToolTip(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         DACOffsetResetButton_9_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        channelIsDrawingButton_9_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", 0));
+        channelIsDrawingButton_9_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         channelIsDrawingButton_9_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        thresholdIsDrawingButton_9_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", 0));
+        thresholdIsDrawingButton_9_6->setToolTip(QApplication::translate("MainWindowClass", "\320\222\320\272\320\273./\320\262\321\213\320\272\320\273. \320\276\321\202\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\320\265 \320\277\320\276\321\200\320\276\320\263\320\276\320\262\320\276\320\271 \320\273\320\270\320\275\320\270\320\270", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         thresholdIsDrawingButton_9_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        blockSamplesButton_9_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", 0));
+        blockSamplesButton_9_6->setToolTip(QApplication::translate("MainWindowClass", "\320\227\320\260\320\261\320\273\320\276\320\272./\321\200\320\260\320\267\320\261\320\273\320\276\320\272.", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         blockSamplesButton_9_6->setText(QString());
         colorLabel_9_6->setText(QString());
-        channelLabelBox_9->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", 0));
-        thresholdLabel_9->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", 0));
-        samplesLabel_9->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", 0));
-        positionLabel_9->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", 0));
-        DACOffsetLabel_9->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", 0));
+        channelLabelBox_9->setTitle(QApplication::translate("MainWindowClass", "\320\232\320\260\320\275\320\260\320\273", Q_NULLPTR));
+        thresholdLabel_9->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\321\200\320\276\320\263(\320\274\320\222)", Q_NULLPTR));
+        samplesLabel_9->setText(QApplication::translate("MainWindowClass", "\320\224\320\273\320\270\320\275\320\260 \320\270\320\274\320\277\321\203\320\273\321\214\321\201\320\260", Q_NULLPTR));
+        positionLabel_9->setText(QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217", Q_NULLPTR));
+        DACOffsetLabel_9->setText(QApplication::translate("MainWindowClass", "\320\241\320\274\320\265\321\211\320\265\320\275\320\270\320\265 DC(\320\274\320\222)", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        scaleLabel_9->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", 0));
+        scaleLabel_9->setToolTip(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261 (\320\274\320\270\320\273\320\270\320\262\320\276\320\273\321\214\321\202 \320\275\320\260 \320\264\320\265\320\273\320\265\320\275\320\270\320\265)", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        scaleLabel_9->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", 0));
-        statusLabel_9->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", 0));
-        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF9Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 9", 0));
-        groupBox->setTitle(QApplication::translate("MainWindowClass", "\320\230\320\275\321\204\320\276\321\200\320\274\320\260\321\206\320\270\321\217", 0));
+        scaleLabel_9->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", Q_NULLPTR));
+        statusLabel_9->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", Q_NULLPTR));
+        WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF9Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 9", Q_NULLPTR));
+        groupBox->setTitle(QApplication::translate("MainWindowClass", "\320\230\320\275\321\204\320\276\321\200\320\274\320\260\321\206\320\270\321\217", Q_NULLPTR));
     } // retranslateUi
 
 };

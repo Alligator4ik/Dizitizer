@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <QDebug>
 #include <fstream>
+#include "ToRussianTextForQString.h"
 
 DataAnalyzer::DataAnalyzer(VMECommunication& vmeCommunication):
 vmeComm(vmeCommunication){
@@ -14,7 +15,7 @@ vmeComm(vmeCommunication){
 			if ((error = CAEN_DGTZ_AllocateEvent(WDFIdentificators[boardNumber], reinterpret_cast<void**>(&currentEvent))) != CAEN_DGTZ_Success) {
 				vmeComm.addTimeOfBoardError(boardNumber);
 				vmeComm.addBoardError(boardNumber, error);
-				vmeComm.addStringError(boardNumber, QString("Создании ивентов"));
+				vmeComm.addStringError(boardNumber, toRussian("Создании ивентов"));
 			}
 }
 
@@ -26,7 +27,7 @@ DataAnalyzer::~DataAnalyzer() {
 			if ((error = CAEN_DGTZ_FreeEvent(WDFIdentificators[boardNumber], reinterpret_cast<void**>(&currentEvent))) != CAEN_DGTZ_Success) {
 				vmeComm.addTimeOfBoardError(boardNumber);
 				vmeComm.addBoardError(boardNumber, error);
-				vmeComm.addStringError(boardNumber, QString("Уничтожении ивентов"));
+				vmeComm.addStringError(boardNumber, toRussian("Уничтожении ивентов"));
 			}
 }
 
@@ -59,26 +60,26 @@ bool DataAnalyzer::readDataOnBoard(uint32_t boardID) {
 			return false;			//if thire is nothing to read
 		vmeComm.addTimeOfBoardError(boardID);
 		vmeComm.addBoardError(boardID, error);
-		vmeComm.addStringError(boardID, QString("Ожидании прерывания"));
+		vmeComm.addStringError(boardID, toRussian("Ожидании прерывания"));
 		return false;
 	}
 	if ((error = CAEN_DGTZ_MallocReadoutBuffer(boardID, &bufferToReadIn, &sizeOfBufferInBytes)) != CAEN_DGTZ_Success) {
 		vmeComm.addTimeOfBoardError(boardID);
 		vmeComm.addBoardError(boardID, error);
-		vmeComm.addStringError(boardID, QString("Аллоцировании памяти"));
+		vmeComm.addStringError(boardID, toRussian("Аллоцировании памяти"));
 		return false;
 	};
 	if ((error = CAEN_DGTZ_ReadData(boardID, CAEN_DGTZ_SLAVE_TERMINATED_READOUT_MBLT, bufferToReadIn, &sizeOfBufferInBytes)) != CAEN_DGTZ_Success) {
 		vmeComm.addTimeOfBoardError(boardID);
 		vmeComm.addBoardError(boardID, error);
-		vmeComm.addStringError(boardID, QString("Непосредственном чтении"));
+		vmeComm.addStringError(boardID, toRussian("Непосредственном чтении"));
 		return false;
 	}
 	uint32_t numberOfEventsStored;
 	if ((error = CAEN_DGTZ_GetNumEvents(boardID, bufferToReadIn, sizeOfBufferInBytes, &numberOfEventsStored)) != CAEN_DGTZ_Success) {
 		vmeComm.addTimeOfBoardError(boardID);
 		vmeComm.addBoardError(boardID, error);
-		vmeComm.addStringError(boardID, QString("Получении кол-ва ивентов"));
+		vmeComm.addStringError(boardID, toRussian("Получении кол-ва ивентов"));
 		return false;
 	}
 	if (numberOfEventsStored > 0) {
@@ -90,13 +91,13 @@ bool DataAnalyzer::readDataOnBoard(uint32_t boardID) {
 			if ((error = CAEN_DGTZ_GetEventInfo(boardID, bufferToReadIn, sizeOfBufferInBytes, eventNumber, &eventInfo, &eventPointer)) != CAEN_DGTZ_Success) {
 				vmeComm.addTimeOfBoardError(boardID);
 				vmeComm.addBoardError(boardID, error);
-				vmeComm.addStringError(boardID, QString("Получении информации о %1 ивенте").arg(eventNumber));
+				vmeComm.addStringError(boardID, toRussian("Получении информации о %1 ивенте").arg(eventNumber));
 				return false;
 			}
 			if ((error = CAEN_DGTZ_DecodeEvent(boardID, eventPointer, reinterpret_cast<void**>(&currentEvent))) != CAEN_DGTZ_Success) {
 				vmeComm.addTimeOfBoardError(boardID);
 				vmeComm.addBoardError(boardID, error);
-				vmeComm.addStringError(boardID, QString("Раскодировании %1 ивента").arg(eventNumber));
+				vmeComm.addStringError(boardID, toRussian("Раскодировании %1 ивента").arg(eventNumber));
 				return false;
 			}
 			currentEvents[boardID][eventNumber] = currentEvent;
@@ -105,7 +106,7 @@ bool DataAnalyzer::readDataOnBoard(uint32_t boardID) {
 	if ((error = CAEN_DGTZ_FreeReadoutBuffer(&bufferToReadIn)) != CAEN_DGTZ_Success) {
 		vmeComm.addTimeOfBoardError(boardID);
 		vmeComm.addBoardError(boardID, error);
-		vmeComm.addStringError(boardID, QString("Деаллоцировании памяти"));
+		vmeComm.addStringError(boardID, toRussian("Деаллоцировании памяти"));
 		return false;
 	}
 	return true;		//if information read successfully
@@ -139,6 +140,7 @@ uint8_t minElement(uint8_t* array, uint32_t size) {
 
 vector<uint8_t> DataAnalyzer::getApmlitudesForSpectre(uint8_t boardNumber, uint8_t channel) {
 	vector<uint8_t> amplitudes;
+	//todo: fast find zero level
 	for (auto event : currentEvents[boardNumber]) {
 		uint8_t amp;
 		if (vmeComm.polarity == CAEN_DGTZ_TriggerOnFallingEdge)

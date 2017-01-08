@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'errorlogwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.0
+** Created by: Qt User Interface Compiler version 5.7.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -71,17 +71,17 @@ public:
 
     void retranslateUi(QDialog *errorLogWindow)
     {
-        errorLogWindow->setWindowTitle(QApplication::translate("errorLogWindow", "\320\226\321\203\321\200\320\275\320\260\320\273 \320\276\321\210\320\270\320\261\320\276\320\272", 0));
+        errorLogWindow->setWindowTitle(QApplication::translate("errorLogWindow", "\320\226\321\203\321\200\320\275\320\260\320\273 \320\276\321\210\320\270\320\261\320\276\320\272", Q_NULLPTR));
         QTableWidgetItem *___qtablewidgetitem = mainWidget->horizontalHeaderItem(0);
-        ___qtablewidgetitem->setText(QApplication::translate("errorLogWindow", "\320\222\321\200\320\265\320\274\321\217", 0));
+        ___qtablewidgetitem->setText(QApplication::translate("errorLogWindow", "\320\222\321\200\320\265\320\274\321\217", Q_NULLPTR));
         QTableWidgetItem *___qtablewidgetitem1 = mainWidget->horizontalHeaderItem(1);
-        ___qtablewidgetitem1->setText(QApplication::translate("errorLogWindow", "\320\237\320\273\320\260\321\202\320\260", 0));
+        ___qtablewidgetitem1->setText(QApplication::translate("errorLogWindow", "\320\237\320\273\320\260\321\202\320\260", Q_NULLPTR));
         QTableWidgetItem *___qtablewidgetitem2 = mainWidget->horizontalHeaderItem(2);
-        ___qtablewidgetitem2->setText(QApplication::translate("errorLogWindow", "\320\232\320\276\320\264 \320\276\321\210\320\270\320\261\320\272\320\270", 0));
+        ___qtablewidgetitem2->setText(QApplication::translate("errorLogWindow", "\320\232\320\276\320\264 \320\276\321\210\320\270\320\261\320\272\320\270", Q_NULLPTR));
         QTableWidgetItem *___qtablewidgetitem3 = mainWidget->horizontalHeaderItem(3);
-        ___qtablewidgetitem3->setText(QApplication::translate("errorLogWindow", "\320\227\320\275\320\260\321\207\320\265\320\275\320\270\320\265", 0));
+        ___qtablewidgetitem3->setText(QApplication::translate("errorLogWindow", "\320\227\320\275\320\260\321\207\320\265\320\275\320\270\320\265", Q_NULLPTR));
         QTableWidgetItem *___qtablewidgetitem4 = mainWidget->horizontalHeaderItem(4);
-        ___qtablewidgetitem4->setText(QApplication::translate("errorLogWindow", "\320\236\320\277\320\270\321\201\320\260\320\275\320\270\320\265", 0));
+        ___qtablewidgetitem4->setText(QApplication::translate("errorLogWindow", "\320\236\320\277\320\270\321\201\320\260\320\275\320\270\320\265 (\320\276\321\210\320\270\320\261\320\272\320\260 \320\262\320\276\320\267\320\275\320\270\320\272\320\273\320\260 \320\277\321\200\320\270 ...)", Q_NULLPTR));
     } // retranslateUi
 
 };

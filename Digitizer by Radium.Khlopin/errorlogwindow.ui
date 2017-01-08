@@ -74,7 +74,7 @@
      </column>
      <column>
       <property name="text">
-       <string>Описание</string>
+       <string>Описание (ошибка возникла при ...)</string>
       </property>
       <property name="textAlignment">
        <set>AlignCenter</set>

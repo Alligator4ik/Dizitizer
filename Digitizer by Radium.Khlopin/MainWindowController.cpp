@@ -137,7 +137,7 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 }
 
 void MainWindow::drawSpectrum(DataAnalyzer& vmeData) {
-	//todo:fix bugs
+	//todo: check new drawings
 	auto graphNumber = 0;
 	for (auto numberOfBoard = 0; numberOfBoard < vme.numberOfWDF; numberOfBoard++)												//по всем доскам
 		if (vme.WDFIsEnabled[numberOfBoard])																					//если доска включена
@@ -145,11 +145,16 @@ void MainWindow::drawSpectrum(DataAnalyzer& vmeData) {
 				if (vme.channelActiveEnableMask[numberOfBoard] & 1 << channelNumber)											//если канал включен
 					if (ui.WDFTabWidget->findChild<QPushButton*>(QString("channelIsDrawingButton_" + QString::number(numberOfBoard + 1) + "_" + QString::number(channelNumber)))->isChecked()) {	//если нажата кнопка отображения
 						auto amplitudes = vmeData.getApmlitudesForSpectre(numberOfBoard, channelNumber);
-						auto ampl = amplitudes;
+						//каждый 4ый вольтаж изменяем, а боковые (+-1, +-2 и +-3) подравниваем
 						for (auto amplitude : amplitudes) {
 							auto graphDataContainer = ui.spectrumWidget->graph(graphNumber)->data().data();
-							auto it = graphDataContainer->at(amplitude);
-							it->value++;
+							graphDataContainer->at(amplitude	)->value += 1;
+							graphDataContainer->at(amplitude - 1)->value += 0.75;
+							graphDataContainer->at(amplitude + 1)->value += 0.75;
+							graphDataContainer->at(amplitude - 2)->value += 0.5;
+							graphDataContainer->at(amplitude + 2)->value += 0.5;
+							graphDataContainer->at(amplitude - 3)->value += 0.25;
+							graphDataContainer->at(amplitude + 3)->value += 0.25;
 						}
 						graphNumber++;
 					}
@@ -258,7 +263,7 @@ void MainWindow::openSettingsSlot() {
 }
 
 void MainWindow::openErrorsSlot() {
-	error_log_window_controller = new ErrorLogWindowController(this, vme.getboardErrors(), vme.getTimeOfBoardErrors());
+	error_log_window_controller = new ErrorLogWindowController(this, vme.getboardErrors(), vme.getTimeOfBoardErrors(), vme.getStringErrors());
 	error_log_window_controller->show();
 }
 

@@ -1,7 +1,7 @@
 #include "VMECommunication.h"
 #include "Resources/CAENDigitizer.h"
 #include <QTime>
-
+#include "ToRussianTextForQString.h"
 
 VMECommunication::VMECommunication() {
 	//default setting, if something goes wrong
@@ -39,7 +39,7 @@ bool VMECommunication::connect() {
 			if ((error = CAEN_DGTZ_OpenDigitizer(CAEN_DGTZ_OpticalLink, 0, boardNumber, 0, &WDFIdentificators[boardNumber])) != CAEN_DGTZ_Success) {
 				timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 				boardErrors[boardNumber].push_back(error);
-				stringErrors[boardNumber].push_back(QString("Попытке соединения с оцифровщиком"));
+				stringErrors[boardNumber].push_back(toRussian("Попытке соединения с оцифровщиком"));
 				WDFIsEnabled[boardNumber] = false;
 				continue;
 			}	
@@ -50,7 +50,7 @@ bool VMECommunication::connect() {
 			if ((error = CAEN_DGTZ_Reset(WDFIdentificators[boardNumber])) != CAEN_DGTZ_Success) {
 				timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 				boardErrors[boardNumber].push_back(error);
-				stringErrors[boardNumber].push_back(QString("Сбросе оцифровщика"));
+				stringErrors[boardNumber].push_back(toRussian("Сбросе оцифровщика"));
 				continue;
 			}
 			connectionToWDFIsActive = true;
@@ -77,7 +77,7 @@ CAEN_DGTZ_ErrorCode	VMECommunication::setup(uint16_t boardNumber) {
 										numberOfBlocksTransferredDuringCycle)) != CAEN_DGTZ_Success) {
 		timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 		boardErrors[boardNumber].push_back(error);
-		stringErrors[boardNumber].push_back(QString("Установке объема передачи BLT"));
+		stringErrors[boardNumber].push_back(toRussian("Установке объема передачи BLT"));
 		return error;
 	}
 	//write channels can generate self-board trigger mask
@@ -86,7 +86,7 @@ CAEN_DGTZ_ErrorCode	VMECommunication::setup(uint16_t boardNumber) {
 												channelTriggerEnableMask[boardNumber])) != CAEN_DGTZ_Success){
 		timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 		boardErrors[boardNumber].push_back(error);
-		stringErrors[boardNumber].push_back(QString("Установке триггерной маски"));
+		stringErrors[boardNumber].push_back(toRussian("Установке триггерной маски"));
 		return error;
 	}
 	//write channels' activated (are currently acuistited) mask
@@ -94,7 +94,7 @@ CAEN_DGTZ_ErrorCode	VMECommunication::setup(uint16_t boardNumber) {
 		channelActiveEnableMask[boardNumber])) != CAEN_DGTZ_Success){
 		timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 		boardErrors[boardNumber].push_back(error);
-		stringErrors[boardNumber].push_back(QString("Установке маски включенных каналов"));
+		stringErrors[boardNumber].push_back(toRussian("Установке маски включенных каналов"));
 		return error;
 	}
 	//write thresholds
@@ -102,7 +102,7 @@ CAEN_DGTZ_ErrorCode	VMECommunication::setup(uint16_t boardNumber) {
 		if ((error = CAEN_DGTZ_SetChannelTriggerThreshold(WDFIdentificators[boardNumber], channel, threshold[boardNumber][channel])) != CAEN_DGTZ_Success) {
 			timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 			boardErrors[boardNumber].push_back(error);
-			stringErrors[boardNumber].push_back(QString("Установке порогов"));
+			stringErrors[boardNumber].push_back(toRussian("Установке порогов"));
 			return error;
 		}
 	//write DC offset
@@ -110,7 +110,7 @@ CAEN_DGTZ_ErrorCode	VMECommunication::setup(uint16_t boardNumber) {
 		if ((error = CAEN_DGTZ_SetChannelDCOffset(WDFIdentificators[boardNumber], channel, DCOffset[boardNumber][channel])) != CAEN_DGTZ_Success) {
 			timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 			boardErrors[boardNumber].push_back(error);
-			stringErrors[boardNumber].push_back(QString("Установке добавочных напряжений"));
+			stringErrors[boardNumber].push_back(toRussian("Установке добавочных напряжений"));
 			return error;
 		}
 	//write polarity (rising or falling edge)
@@ -119,7 +119,7 @@ CAEN_DGTZ_ErrorCode	VMECommunication::setup(uint16_t boardNumber) {
 													channel, polarity)) != CAEN_DGTZ_Success) {
 			timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 			boardErrors[boardNumber].push_back(error);
-			stringErrors[boardNumber].push_back(QString("Установке полярности"));
+			stringErrors[boardNumber].push_back(toRussian("Установке полярности"));
 			return error;
 		}
 	if ((error = CAEN_DGTZ_SetInterruptConfig(WDFIdentificators[boardNumber], CAEN_DGTZ_ENABLE,
@@ -129,7 +129,7 @@ CAEN_DGTZ_ErrorCode	VMECommunication::setup(uint16_t boardNumber) {
 												CAEN_DGTZ_IRQ_MODE_ROAK)) != CAEN_DGTZ_Success) {
 		timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 		boardErrors[boardNumber].push_back(error);
-		stringErrors[boardNumber].push_back(QString("Настройке прерываний"));
+		stringErrors[boardNumber].push_back(toRussian("Настройке прерываний"));
 		return error;
 	}
 	//all is good
@@ -144,7 +144,7 @@ bool VMECommunication::startAcquisition() {
 				if ((error = CAEN_DGTZ_SWStartAcquisition(WDFIdentificators[boardNumber])) != CAEN_DGTZ_Success) {
 					timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 					boardErrors[boardNumber].push_back(error);
-					stringErrors[boardNumber].push_back(QString("Запуске прослушки"));
+					stringErrors[boardNumber].push_back(toRussian("Запуске прослушки"));
 					return false;
 				}
 	//if succeed
@@ -157,7 +157,7 @@ bool VMECommunication::stopAcquisition() {
 		if ((error = CAEN_DGTZ_SWStopAcquisition(WDFIdentificators[boardNumber])) != CAEN_DGTZ_Success) {
 			timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 			boardErrors[boardNumber].push_back(error);
-			stringErrors[boardNumber].push_back(QString("Остановке прослушки"));
+			stringErrors[boardNumber].push_back(toRussian("Остановке прослушки"));
 			return false;
 		}
 	return clearData();
@@ -170,7 +170,7 @@ bool VMECommunication::createSoftwareTrigger() {
 			if ((error = CAEN_DGTZ_SendSWtrigger(WDFIdentificators[boardNumber])) != CAEN_DGTZ_Success) {
 				timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 				boardErrors[boardNumber].push_back(error);
-				stringErrors[boardNumber].push_back(QString("Создании цифрового триггера"));
+				stringErrors[boardNumber].push_back(toRussian("Создании цифрового триггера"));
 				return false;
 			}
 	return true;
@@ -187,7 +187,7 @@ bool VMECommunication::changeExternalTrigger(bool externalTriggerIsActive) {
 			if (error != CAEN_DGTZ_Success) {
 				timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 				boardErrors[boardNumber].push_back(error);
-				stringErrors[boardNumber].push_back(QString("Изменении параметров внешнего триггерования"));
+				stringErrors[boardNumber].push_back(toRussian("Изменении параметров внешнего триггерования"));
 				return false;
 			}
 		}
@@ -214,7 +214,7 @@ bool VMECommunication::clearData() {
 		if ((error = CAEN_DGTZ_ClearData(WDFIdentificators[boardNumber])) != CAEN_DGTZ_Success) {
 			timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 			boardErrors[boardNumber].push_back(error);
-			stringErrors[boardNumber].push_back(QString("Вычищении данных"));
+			stringErrors[boardNumber].push_back(toRussian("Вычищении данных"));
 			return false;
 		}
 	return true;
@@ -254,7 +254,7 @@ bool VMECommunication::setRecordLength(int32_t newRecordLength, int32_t postTrig
 			if ((error = CAEN_DGTZ_SetRecordLength(WDFIdentificators[boardNumber], recordLength)) != CAEN_DGTZ_Success) {
 				timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 				boardErrors[boardNumber].push_back(error);
-				stringErrors[boardNumber].push_back(QString("Настройке буфера"));
+				stringErrors[boardNumber].push_back(toRussian("Настройке буфера"));
 				return false;
 			}
 			if (!this->setPostTriggerLength(postTriggerSize))
@@ -270,7 +270,7 @@ bool VMECommunication::setPostTriggerLength(int32_t postTriggerSize) {
 			if ((error = CAEN_DGTZ_SetPostTriggerSize(WDFIdentificators[boardNumber], postTriggerSize)) != CAEN_DGTZ_Success) {
 				timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 				boardErrors[boardNumber].push_back(error);
-				stringErrors[boardNumber].push_back(QString("Настройке пост-триггера"));
+				stringErrors[boardNumber].push_back(toRussian("Настройке пост-триггера"));
 				return false;
 			}
 	return true;
@@ -284,7 +284,7 @@ bool VMECommunication::setChannelThreshold(ushort board, ushort channel, int16_t
 	if ((error = CAEN_DGTZ_SetChannelTriggerThreshold(WDFIdentificators[board], channel, newThresholdInADCCounts)) != CAEN_DGTZ_Success) {
 		timeOfBoardErrors[board].push_back(QTime::currentTime());
 		boardErrors[board].push_back(error);
-		stringErrors[board].push_back(QString("Настройке порога"));
+		stringErrors[board].push_back(toRussian("Настройке порога"));
 		return false;
 	}
 	return true;
@@ -296,7 +296,7 @@ bool VMECommunication::setChannelSample(ushort board, ushort channel, ushort new
 	if ((error = CAEN_DGTZ_WriteRegister(WDFIdentificators[board], CAEN_DGTZ_CHANNEL_OV_UND_TRSH_BASE_ADDRESS, newSample)) != CAEN_DGTZ_Success) {
 		timeOfBoardErrors[board].push_back(QTime::currentTime());
 		boardErrors[board].push_back(error);
-		stringErrors[board].push_back(QString("Настройке крутизны изменения сигнала"));
+		stringErrors[board].push_back(toRussian("Настройке крутизны изменения сигнала"));
 		return false;
 	}
 	return true;
@@ -309,7 +309,7 @@ bool VMECommunication::setChannelOffset(ushort board, ushort channel, int16_t ne
 	if ((error = CAEN_DGTZ_SetChannelDCOffset(WDFIdentificators[board], channel, newOffset)) != CAEN_DGTZ_Success) {
 		timeOfBoardErrors[board].push_back(QTime::currentTime());
 		boardErrors[board].push_back(error);
-		stringErrors[board].push_back(QString("Настройке смещения по напряжению"));
+		stringErrors[board].push_back(toRussian("Настройке смещения по напряжению"));
 		return false;
 	}
 	CAEN_DGTZ_GetChannelDCOffset(WDFIdentificators[board], channel, &newOffset);
