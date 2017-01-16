@@ -5,8 +5,12 @@
 class DataAnalyzer
 {
 	VMECommunication&							vmeComm;
-	vector<vector<CAEN_DGTZ_UINT8_EVENT_t*>>	currentEvents;
+
 	CAEN_DGTZ_UINT8_EVENT_t*					currentEvent;
+	vector<vector<CAEN_DGTZ_UINT8_EVENT_t*>>	currentEvents;
+	vector<uint32_t>							sizeOfBufferInBytes; 
+	vector<char*>								bufferToReadIn;
+
 	vector<future<bool>>						boardThreads;
 public:
 	explicit DataAnalyzer(VMECommunication& vmeCommunication);
@@ -18,5 +22,5 @@ public:
 
 	CAEN_DGTZ_UINT8_EVENT_t*					getEventForDraw() const;
 	vector<CAEN_DGTZ_UINT8_EVENT_t*>&			getEvents(uint8_t boardNumber);
-	vector<uint8_t>								getApmlitudesForSpectre(uint8_t boardNumber, uint8_t channel);
+	vector<uint16_t>								getApmlitudesForSpectre(uint8_t boardNumber, uint8_t channel);
 };

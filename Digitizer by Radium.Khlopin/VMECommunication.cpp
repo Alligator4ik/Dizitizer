@@ -27,9 +27,15 @@ VMECommunication::VMECommunication() {
 }
 
 VMECommunication::~VMECommunication() {
+	CAEN_DGTZ_ErrorCode error;
 	if (connectionToWDFIsActive)
 		for (auto i = 0; i < numberOfWDF; i++)
-			CAEN_DGTZ_CloseDigitizer(WDFIdentificators[i]);
+			if ((error = CAEN_DGTZ_CloseDigitizer(WDFIdentificators[i])) != CAEN_DGTZ_Success) {
+				timeOfBoardErrors[i].push_back(QTime::currentTime());
+				boardErrors[i].push_back(error);
+				stringErrors[i].push_back(toRussian("Разрыве соединения с оцифровщиком"));
+				WDFIsEnabled[i] = false;
+			}
 }
 
 bool VMECommunication::connect() {
@@ -122,6 +128,7 @@ CAEN_DGTZ_ErrorCode	VMECommunication::setup(uint16_t boardNumber) {
 			stringErrors[boardNumber].push_back(toRussian("Установке полярности"));
 			return error;
 		}
+	//setting interrupt config
 	if ((error = CAEN_DGTZ_SetInterruptConfig(WDFIdentificators[boardNumber], CAEN_DGTZ_ENABLE,
 												1/*						we connected through CONET*/, 
 												0xAAAA/*				via optical link this parameter is useless*/,
@@ -160,7 +167,7 @@ bool VMECommunication::stopAcquisition() {
 			stringErrors[boardNumber].push_back(toRussian("Остановке прослушки"));
 			return false;
 		}
-	return clearData();
+	return true;
 }
 
 bool VMECommunication::createSoftwareTrigger() {

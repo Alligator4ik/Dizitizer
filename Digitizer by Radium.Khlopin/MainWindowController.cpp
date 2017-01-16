@@ -75,6 +75,7 @@ vector<vector<string>>& MainWindow::getChannelColors() {
 
 void MainWindow::updateData() {
 	DataAnalyzer vmeData(vme);
+	vme.startAcquisition();
 	auto lastAutoTriggerSecond = static_cast<int>(time(nullptr));
 	while (acquisitionWasStarted) {
 		auto currentAutoTriggerSecond = static_cast<int>(time(nullptr));
@@ -97,6 +98,8 @@ void MainWindow::updateData() {
 			}
 		}
 	}
+	//proceed to stop phase
+	//makeSoftwareTriggerSlot();
 	if (!vme.stopAcquisition())
 		this->pulseErrorButton();
 }
@@ -233,16 +236,13 @@ void MainWindow::connectSlot() {
 
 void MainWindow::startStopSlot() {
 	if (!acquisitionWasStarted) {
-		if (vme.startAcquisition()) {
 			acquisitionWasStarted = true;
 			setControlsEnabled(false);
 			for (auto i = 0; i < activeChannelsCount; i++)
 				ui.signalWidget->addGraph();
-			ui.signalWidget->yAxis->setRange(-550, 550);
+			ui.signalWidget->yAxis->setRange(-300, 100);
 			ui.signalWidget->xAxis->setRange(0, 2048*(static_cast<uint16_t>(pow(2, ui.bufferComboBox->currentIndex() + 1))));
 			acquisitionThread = std::thread(&MainWindow::updateData, this);
-		} else
-			this->pulseErrorButton();
 	}
 	else {
 		acquisitionWasStarted = false;
@@ -409,8 +409,8 @@ void MainWindow::amplifySpectrumSlot() const {
 			ui.spectrumWidget->addGraph();
 			ui.spectrumWidget->graph(i)->setData(keys, values, true);
 		}
-		ui.spectrumWidget->yAxis->setRange(-10, 500);					//max 500 одинаковых значений амплитуды
-		ui.spectrumWidget->xAxis->setRange(0, maxAmplitude);			//max 500 mV
+		ui.spectrumWidget->yAxis->setRange(-10, 1500);					//max 1500 одинаковых значений амплитуды
+		ui.spectrumWidget->xAxis->setRange(-100, maxAmplitude);			//max 500 mV
 		ui.spectrumWidget->replot();
 	} else {
 		ui.spectrumWidget->clearGraphs();
