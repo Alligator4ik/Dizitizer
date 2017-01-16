@@ -1,29 +1,61 @@
 #pragma once
 #include <vector>
 #include "Resources/CAENDigitizer.h"
+#include <QTime>
 using namespace std;
 
 class VMECommunication {
-	bool								connectionToWDFIsActive = false;								
-	vector<unsigned int>				WDFBaseAdress;
-	vector<int>							WDFIdentificator;
-	vector<unsigned int>				numberOfChannels;
-	vector<CAEN_DGTZ_BoardInfo_t>		WDFInfo;
-	vector<CAEN_DGTZ_ErrorCode>			boardErrors;
-	vector<string>						stringErrors;
+	bool									connectionToWDFIsActive = false;
+	vector<int32_t>							WDFIdentificators;
+	vector<uint32_t>						numberOfChannels;
+	vector<CAEN_DGTZ_BoardInfo_t>			WDFInfo;
+	vector<vector<CAEN_DGTZ_ErrorCode>>		boardErrors;
+	vector<vector<QTime>>					timeOfBoardErrors;
+	vector<vector<QString>>					stringErrors;
+	vector<vector<QTime>>					timeOfStringErrors;
+	uint32_t								numberOfBlocksTransferredDuringCycle = 0xf;
+	uint32_t								recordLength = 2048;
 
-	void setup(short boardNumber);
+	CAEN_DGTZ_ErrorCode	setup(uint16_t boardNumber);
 public:
-	vector<bool>						WDFIsEnabled;
-	unsigned short						numberOfWDF = 9;
+	bool									autoTriggerEnabled = false;
+	uint16_t								numberOfWDF = 9;
+	uint8_t									eventNumberToInterrupt = 1;
+	vector<bool>							WDFIsEnabled;
+	vector<int32_t>							channelTriggerEnableMask;
+	vector<int32_t>							channelActiveEnableMask;
+	vector<vector<ushort>>					threshold;
+	vector<vector<ushort>>					sample;
+	vector<vector<ushort>>					DCOffset;
+	CAEN_DGTZ_TriggerPolarity_t				polarity;
 
 	VMECommunication();
 	~VMECommunication();
 
-	void connect();
-	void disconnect();
-	void startAqustition();
-	bool isConnected();
+	bool									connect();
+	bool									disconnect();
+	bool									startAcquisition();
+	bool									stopAcquisition();
+	bool									createSoftwareTrigger();
+	bool									changeExternalTrigger(bool externalTriggerIsActive);
+	void									changePolarity();
+	bool									clearData();
 
-	CAEN_DGTZ_BoardInfo_t getWDFInfo(unsigned short numberOfBoard);
+	bool									isConnected() const;
+	vector<vector<QTime>>&					getTimeOfBoardErrors();
+	vector<vector<CAEN_DGTZ_ErrorCode>>&	getboardErrors();
+	vector<vector<QTime>>&					getTimeOfStringErrors();
+	vector<vector<QString>>&				getStringErrors();
+	vector<int32_t>&						getWDFIdentificators();
+
+	bool									setRecordLength(int32_t newRecordLength, int32_t postTriggerSize);
+	bool									setPostTriggerLength(int32_t postTriggerSize);
+	bool									setChannelThreshold(ushort board, ushort channel, int16_t newThreshold);
+	bool									setChannelSample(ushort board, ushort channel, ushort newSample);
+	bool									setChannelOffset(ushort board, ushort channel, int16_t newOffsetInmV);
+	void									addTimeOfBoardError(ushort board);
+	void									addBoardError(ushort board, CAEN_DGTZ_ErrorCode errorCode);
+	void									addStringError(uint16_t board, QString functionDescription);
+
+	CAEN_DGTZ_BoardInfo_t					getWDFInfo(ushort numberOfBoard);
 };

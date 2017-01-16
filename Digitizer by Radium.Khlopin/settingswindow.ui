@@ -9,12 +9,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>630</width>
-    <height>360</height>
+    <width>635</width>
+    <height>364</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -23,129 +23,2072 @@
    <string>Настройки</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTabWidget" name="tabWidget">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>10</y>
-      <width>581</width>
-      <height>291</height>
-     </rect>
-    </property>
-    <property name="tabPosition">
-     <enum>QTabWidget::West</enum>
-    </property>
-    <property name="tabShape">
-     <enum>QTabWidget::Rounded</enum>
-    </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
-    <property name="tabBarAutoHide">
-     <bool>false</bool>
-    </property>
-    <widget class="QWidget" name="activeWDFs">
-     <attribute name="title">
-      <string>Активные платы</string>
-     </attribute>
-     <widget class="QWidget" name="gridLayoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>0</y>
-        <width>291</width>
-        <height>141</height>
-       </rect>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QDialogButtonBox" name="buttonBox">
+      <property name="standardButtons">
+       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
       </property>
-      <layout class="QGridLayout" name="WDFLayout">
-       <item row="0" column="1">
-        <widget class="QCheckBox" name="WDF2">
-         <property name="text">
-          <string>WDF2</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QCheckBox" name="WDF1">
-         <property name="text">
-          <string>WDF1</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QCheckBox" name="WDF3">
-         <property name="text">
-          <string>WDF3</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QCheckBox" name="WDF4">
-         <property name="text">
-          <string>WDF4</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QCheckBox" name="WDF5">
-         <property name="text">
-          <string>WDF5</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QCheckBox" name="WDF6">
-         <property name="text">
-          <string>WDF6</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QCheckBox" name="WDF7">
-         <property name="text">
-          <string>WDF7</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QCheckBox" name="WDF8">
-         <property name="text">
-          <string>WDF8</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QCheckBox" name="WDF9">
-         <property name="text">
-          <string>WDF9</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </widget>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Tab 2</string>
-     </attribute>
-    </widget>
-   </widget>
-   <widget class="QDialogButtonBox" name="buttonBox">
-    <property name="geometry">
-     <rect>
-      <x>450</x>
-      <y>320</y>
-      <width>161</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="standardButtons">
-     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-    </property>
-   </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::West</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>15</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideLeft</enum>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="activeWDFs">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../Desktop/CAEN-UI/Setting/1.png</normaloff>../Desktop/CAEN-UI/Setting/1.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string/>
+       </attribute>
+       <widget class="QTableWidget" name="VMECommSetting">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>7</y>
+          <width>461</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="dragDropOverwriteMode">
+         <bool>false</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::NoSelection</enum>
+        </property>
+        <property name="textElideMode">
+         <enum>Qt::ElideNone</enum>
+        </property>
+        <property name="rowCount">
+         <number>9</number>
+        </property>
+        <property name="columnCount">
+         <number>4</number>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>83</number>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>23</number>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>9</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../Desktop/CAEN-UI/used.png</normaloff>../Desktop/CAEN-UI/used.png</iconset>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Тип связи</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Номер сзязи</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Номер узла</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </column>
+        <item row="0" column="0">
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item row="0" column="1">
+         <property name="text">
+          <string>Оптическая</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="0" column="2">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="0" column="3">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="1" column="0">
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item row="1" column="1">
+         <property name="text">
+          <string>Оптическая</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="1" column="2">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="1" column="3">
+         <property name="text">
+          <string>1</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="2" column="1">
+         <property name="text">
+          <string>Оптическая</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="2" column="2">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="2" column="3">
+         <property name="text">
+          <string>2</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="3" column="1">
+         <property name="text">
+          <string>Оптическая</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="3" column="2">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="3" column="3">
+         <property name="text">
+          <string>3</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="4" column="1">
+         <property name="text">
+          <string>Оптическая</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="4" column="2">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="4" column="3">
+         <property name="text">
+          <string>4</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="5" column="1">
+         <property name="text">
+          <string>Оптическая</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="5" column="2">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="5" column="3">
+         <property name="text">
+          <string>5</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="6" column="1">
+         <property name="text">
+          <string>Оптическая</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="6" column="2">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="6" column="3">
+         <property name="text">
+          <string>6</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="7" column="1">
+         <property name="text">
+          <string>Оптическая</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="7" column="2">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="7" column="3">
+         <property name="text">
+          <string>7</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="8" column="1">
+         <property name="text">
+          <string>Оптическая</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="8" column="2">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="8" column="3">
+         <property name="text">
+          <string>8</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+       </widget>
+       <widget class="QCheckBox" name="WDF1">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>40</y>
+          <width>15</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="WDF2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>70</y>
+          <width>15</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="WDF3">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>100</y>
+          <width>15</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="WDF4">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>130</y>
+          <width>15</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="WDF5">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>160</y>
+          <width>15</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="WDF6">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>190</y>
+          <width>15</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="WDF7">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>220</y>
+          <width>15</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="WDF8">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>250</y>
+          <width>15</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="WDF9">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>280</y>
+          <width>15</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="ChannelColorSetting">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../Desktop/CAEN-UI/Setting/2.png</normaloff>../Desktop/CAEN-UI/Setting/2.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string/>
+       </attribute>
+       <widget class="QTableWidget" name="ColorSetting">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>32</y>
+          <width>461</width>
+          <height>271</height>
+         </rect>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="tabKeyNavigation">
+         <bool>false</bool>
+        </property>
+        <property name="showDropIndicator" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::NoSelection</enum>
+        </property>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>80</number>
+        </attribute>
+        <attribute name="horizontalHeaderHighlightSections">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="verticalHeaderHighlightSections">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>Канал</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Цвет</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Ширина</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Линия порога</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Ширина порога</string>
+         </property>
+        </column>
+        <item row="0" column="0">
+         <property name="text">
+          <string>CH0</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="1" column="0">
+         <property name="text">
+          <string>CH1</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="2" column="0">
+         <property name="text">
+          <string>CH2</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="3" column="0">
+         <property name="text">
+          <string>CH3</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="4" column="0">
+         <property name="text">
+          <string>CH4</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="5" column="0">
+         <property name="text">
+          <string>CH5</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="6" column="0">
+         <property name="text">
+          <string>CH6</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+        <item row="7" column="0">
+         <property name="text">
+          <string>CH7</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="Color_CH_0">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>60</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid  #a0a0a0 ;
+background-color: rgb(0, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Color_CH_1">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>90</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid  #a0a0a0 ;
+background-color: rgb(255, 128, 0);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Color_CH_2">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>120</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid  #a0a0a0 ;
+background-color: rgb(255, 255, 128);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Color_CH_3">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>150</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid  #a0a0a0 ;
+background-color: rgb(128, 255, 128);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Color_CH_4">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>210</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid  #a0a0a0 ;
+background-color: rgb(255, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Color_CH_5">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>180</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid  #a0a0a0 ;
+background-color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Color_CH_6">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>240</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid  #a0a0a0 ;
+background-color:rgb(255, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Color_CH_7">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>270</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid  #a0a0a0 ;
+background-color: green;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="EditColor_CH_0">
+        <property name="geometry">
+         <rect>
+          <x>135</x>
+          <y>60</y>
+          <width>20</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Изменить</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../Desktop/CAEN-UI/Edit.png</normaloff>../Desktop/CAEN-UI/Edit.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="EditColor_CH_1">
+        <property name="geometry">
+         <rect>
+          <x>135</x>
+          <y>90</y>
+          <width>20</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Изменить</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../Desktop/CAEN-UI/Edit.png</normaloff>../Desktop/CAEN-UI/Edit.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="EditColor_CH_2">
+        <property name="geometry">
+         <rect>
+          <x>135</x>
+          <y>120</y>
+          <width>20</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Изменить</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../Desktop/CAEN-UI/Edit.png</normaloff>../Desktop/CAEN-UI/Edit.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="EditColor_CH_3">
+        <property name="geometry">
+         <rect>
+          <x>135</x>
+          <y>150</y>
+          <width>20</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Изменить</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../Desktop/CAEN-UI/Edit.png</normaloff>../Desktop/CAEN-UI/Edit.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="EditColor_CH_4">
+        <property name="geometry">
+         <rect>
+          <x>135</x>
+          <y>180</y>
+          <width>20</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Изменить</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../Desktop/CAEN-UI/Edit.png</normaloff>../Desktop/CAEN-UI/Edit.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="EditColor_CH_5">
+        <property name="geometry">
+         <rect>
+          <x>135</x>
+          <y>210</y>
+          <width>20</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Изменить</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../Desktop/CAEN-UI/Edit.png</normaloff>../Desktop/CAEN-UI/Edit.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="EditColor_CH_6">
+        <property name="geometry">
+         <rect>
+          <x>135</x>
+          <y>240</y>
+          <width>20</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Изменить</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../Desktop/CAEN-UI/Edit.png</normaloff>../Desktop/CAEN-UI/Edit.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="EditColor_CH_7">
+        <property name="geometry">
+         <rect>
+          <x>135</x>
+          <y>270</y>
+          <width>20</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Изменить</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../Desktop/CAEN-UI/Edit.png</normaloff>../Desktop/CAEN-UI/Edit.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthSignal_CH_3">
+        <property name="geometry">
+         <rect>
+          <x>178</x>
+          <y>150</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthSignal_CH_4">
+        <property name="geometry">
+         <rect>
+          <x>178</x>
+          <y>180</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthSignal_CH_5">
+        <property name="geometry">
+         <rect>
+          <x>178</x>
+          <y>210</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthSignal_CH_6">
+        <property name="geometry">
+         <rect>
+          <x>178</x>
+          <y>240</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthSignal_CH_7">
+        <property name="geometry">
+         <rect>
+          <x>178</x>
+          <y>270</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthSignal_CH_0">
+        <property name="geometry">
+         <rect>
+          <x>178</x>
+          <y>60</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthSignal_CH_2">
+        <property name="geometry">
+         <rect>
+          <x>178</x>
+          <y>120</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthSignal_CH_1">
+        <property name="geometry">
+         <rect>
+          <x>178</x>
+          <y>90</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthTrigger_CH_5">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>210</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthTrigger_CH_1">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>90</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthTrigger_CH_3">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>150</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthTrigger_CH_4">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>180</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthTrigger_CH_0">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>60</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthTrigger_CH_2">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>120</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthTrigger_CH_6">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>240</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="WidthTrigger_CH_7">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>270</y>
+          <width>40</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="TrigLine_CH_0">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>60</y>
+          <width>120</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Сплошная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Пунктирная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Штрихпунктирная</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QComboBox" name="TrigLine_CH_1">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>90</y>
+          <width>120</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Сплошная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Пунктирная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Штрихпунктирная</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QComboBox" name="TrigLine_CH_2">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>120</y>
+          <width>120</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Сплошная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Пунктирная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Штрихпунктирная</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QComboBox" name="TrigLine_CH_3">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>150</y>
+          <width>120</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Сплошная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Пунктирная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Штрихпунктирная</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QComboBox" name="TrigLine_CH_4">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>180</y>
+          <width>120</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Сплошная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Пунктирная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Штрихпунктирная</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QComboBox" name="TrigLine_CH_5">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>210</y>
+          <width>120</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Сплошная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Пунктирная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Штрихпунктирная</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QComboBox" name="TrigLine_CH_6">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>240</y>
+          <width>120</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Сплошная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Пунктирная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Штрихпунктирная</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QComboBox" name="TrigLine_CH_7">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>270</y>
+          <width>120</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Сплошная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Пунктирная</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Штрихпунктирная</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="currentWDFLabel">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>5</y>
+          <width>85</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Текущая плата:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="currentWDFInColorTab">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>5</y>
+          <width>30</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>9</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../Desktop/CAEN-UI/Setting/3.png</normaloff>../Desktop/CAEN-UI/Setting/3.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string/>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>461</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Чтение</string>
+        </property>
+        <widget class="QSpinBox" name="spinBox_2">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>20</y>
+           <width>40</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>80</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Число событий</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>160</y>
+          <width>461</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Запись</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QTableWidget" name="tableWidget">
+           <attribute name="horizontalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>50</number>
+           </attribute>
+           <attribute name="horizontalHeaderHighlightSections">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="verticalHeaderHighlightSections">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="verticalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <row>
+            <property name="text">
+             <string>Кроп</string>
+            </property>
+            <property name="textAlignment">
+             <set>AlignCenter</set>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Канал 0</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Канал 1</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Канал 2</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Канал 3</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Канал 4</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Канал 5</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Канал 6</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Канал 7</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>1024</string>
+            </property>
+            <property name="textAlignment">
+             <set>AlignCenter</set>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string>1024</string>
+            </property>
+            <property name="textAlignment">
+             <set>AlignCenter</set>
+            </property>
+           </item>
+           <item row="0" column="2">
+            <property name="text">
+             <string>1024</string>
+            </property>
+            <property name="textAlignment">
+             <set>AlignCenter</set>
+            </property>
+           </item>
+           <item row="0" column="3">
+            <property name="text">
+             <string>1024</string>
+            </property>
+            <property name="textAlignment">
+             <set>AlignCenter</set>
+            </property>
+           </item>
+           <item row="0" column="4">
+            <property name="text">
+             <string>1024</string>
+            </property>
+            <property name="textAlignment">
+             <set>AlignCenter</set>
+            </property>
+           </item>
+           <item row="0" column="5">
+            <property name="text">
+             <string>1024</string>
+            </property>
+            <property name="textAlignment">
+             <set>AlignCenter</set>
+            </property>
+           </item>
+           <item row="0" column="6">
+            <property name="text">
+             <string>1024</string>
+            </property>
+            <property name="textAlignment">
+             <set>AlignCenter</set>
+            </property>
+           </item>
+           <item row="0" column="7">
+            <property name="text">
+             <string>1024</string>
+            </property>
+            <property name="textAlignment">
+             <set>AlignCenter</set>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="currentWDFLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>5</y>
+          <width>85</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Текущая плата:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="currentWDFInColorTab_2">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>5</y>
+          <width>30</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>9</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="ViewerSetting">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../Desktop/CAEN-UI/Setting/4.png</normaloff>../Desktop/CAEN-UI/Setting/4.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string/>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>91</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Задний план </string>
+        </property>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>40</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 2px solid #a0a0a0;
+background-color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="postTriggerIsDrawing">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>20</y>
+           <width>20</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Изменить</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../Desktop/CAEN-UI/Edit.png</normaloff>../Desktop/CAEN-UI/Edit.png</iconset>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>70</y>
+          <width>271</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Сетка</string>
+        </property>
+        <widget class="QPushButton" name="postTriggerIsDrawing_10">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>20</y>
+           <width>20</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Изменить</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../Desktop/CAEN-UI/Edit.png</normaloff>../Desktop/CAEN-UI/Edit.png</iconset>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>40</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 2px solid #a0a0a0;
+background-color: rgb(192, 192, 192);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>20</y>
+           <width>40</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>Width</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>20</y>
+           <width>121</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string>Без сетки</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Сплошная</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Пунктирная</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Штрихпунктирная</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>70</width>
+          <height>50</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Тип входящего/исходящего сигнала</string>
+        </property>
+        <property name="title">
+         <string>I/O</string>
+        </property>
+        <widget class="QComboBox" name="comboBox_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>50</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string>NIM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TTL</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
@@ -160,12 +2103,12 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>576</x>
-     <y>330</y>
+     <x>528</x>
+     <y>354</y>
     </hint>
     <hint type="destinationlabel">
-     <x>622</x>
-     <y>332</y>
+     <x>519</x>
+     <y>219</y>
     </hint>
    </hints>
   </connection>
@@ -176,12 +2119,28 @@
    <slot>acceptedSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>485</x>
-     <y>333</y>
+     <x>512</x>
+     <y>354</y>
     </hint>
     <hint type="destinationlabel">
      <x>393</x>
-     <y>329</y>
+     <y>219</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>currentWDFInColorTab</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SettingsWindowController</receiver>
+   <slot>WDFChangedInChannelTabSlot(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>320</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>339</x>
+     <y>359</y>
     </hint>
    </hints>
   </connection>
@@ -189,5 +2148,6 @@
  <slots>
   <slot>connectSlot()</slot>
   <slot>acceptedSlot()</slot>
+  <slot>WDFChangedInChannelTabSlot(int)</slot>
  </slots>
 </ui>

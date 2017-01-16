@@ -16,5 +16,6 @@ private:
 
 private slots:
 	void acceptedSlot();
+	void WDFChangedInChannelTabSlot(int newWDFIndex) const;
+	void changeColorSlot() const;
 };
-

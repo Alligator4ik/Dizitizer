@@ -1,8 +1,8 @@
-#include "mainwindow.h"
-#include <QtWidgets/QApplication>
+#include <MainWindowController.h>
 
 int main(int argc, char *argv[])
 {
+	ios_base::sync_with_stdio(false);
 	QApplication a(argc, argv);
 	MainWindow w;
 	w.show();
