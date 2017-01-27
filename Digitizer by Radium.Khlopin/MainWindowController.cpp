@@ -44,7 +44,6 @@ MainWindow::MainWindow(QWidget *parent)
 
 	//set postTrigger disabled
 	ui.postTriggerBox->setEnabled(false);
-
 }
 
 MainWindow::~MainWindow() {
@@ -74,8 +73,8 @@ vector<vector<string>>& MainWindow::getChannelColors() {
 }
 
 void MainWindow::updateData() {
-	DataAnalyzer vmeData(vme);
 	vme.startAcquisition();
+	auto vmeData = new DataAnalyzer(vme);
 	auto lastAutoTriggerSecond = static_cast<int>(time(nullptr));
 	while (acquisitionWasStarted) {
 		auto currentAutoTriggerSecond = static_cast<int>(time(nullptr));
@@ -83,25 +82,26 @@ void MainWindow::updateData() {
 			lastAutoTriggerSecond = currentAutoTriggerSecond;
 			vme.createSoftwareTrigger();
 		}
-		if (vmeData.readData()) {					//if we have smth to show or analyze
+		if (vmeData->readData()) {					//if we have smth to show or analyze
 			if (ui.recordButton->isChecked())
-				vmeData.writeData();
+				vmeData->writeData();
 			if (ui.drawButton->isChecked()) {
-				drawSignal(vmeData.getEventForDraw());
+				drawSignal(vmeData->getEventForDraw());
 				if (acquisitionWasStarted)			//to avoid deadlock on big buffers
 					emit replot();
 			}
 			if (ui.amplifySpectrumButton->isChecked()) {
-				drawSpectrum(vmeData);
+				drawSpectrum(*vmeData);
 				if (acquisitionWasStarted)			//to avoid deadlock on big buffers
 					emit replot();
 			}
 		}
 	}
 	//proceed to stop phase
-	//makeSoftwareTriggerSlot();
+	makeSoftwareTriggerSlot();
 	if (!vme.stopAcquisition())
 		this->pulseErrorButton();
+	delete vmeData;
 }
 
 void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
@@ -140,7 +140,6 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 }
 
 void MainWindow::drawSpectrum(DataAnalyzer& vmeData) {
-	//todo: check new drawings
 	auto graphNumber = 0;
 	for (auto numberOfBoard = 0; numberOfBoard < vme.numberOfWDF; numberOfBoard++)												//по всем доскам
 		if (vme.WDFIsEnabled[numberOfBoard])																					//если доска включена

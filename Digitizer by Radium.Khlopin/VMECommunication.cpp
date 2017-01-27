@@ -187,10 +187,7 @@ bool VMECommunication::changeExternalTrigger(bool externalTriggerIsActive) {
 	CAEN_DGTZ_ErrorCode error;
 	for (auto boardNumber = 0; boardNumber < WDFIdentificators.size(); boardNumber++)
 		if (WDFIsEnabled[boardNumber]) {
-			if (externalTriggerIsActive)
-				error = CAEN_DGTZ_SetExtTriggerInputMode(WDFIdentificators[boardNumber], CAEN_DGTZ_TRGMODE_ACQ_AND_EXTOUT);
-			else
-				error = CAEN_DGTZ_SetExtTriggerInputMode(WDFIdentificators[boardNumber], CAEN_DGTZ_TRGMODE_DISABLED);
+			error = CAEN_DGTZ_SetExtTriggerInputMode(WDFIdentificators[boardNumber], externalTriggerIsActive ? CAEN_DGTZ_TRGMODE_ACQ_AND_EXTOUT : CAEN_DGTZ_TRGMODE_DISABLED);
 			if (error != CAEN_DGTZ_Success) {
 				timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 				boardErrors[boardNumber].push_back(error);
