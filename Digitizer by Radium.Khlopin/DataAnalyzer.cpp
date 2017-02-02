@@ -1,5 +1,4 @@
 #include "DataAnalyzer.h"
-#include <algorithm>
 #include <QDebug>
 #include <fstream>
 #include "ToRussianTextForQString.h"
@@ -45,7 +44,32 @@ DataAnalyzer::~DataAnalyzer() {
 		}
 }
 
-//return true if there is something to read on any board
+uint8_t DataAnalyzer::getZeroLevel(CAEN_DGTZ_UINT8_EVENT_t& event, uint8_t channelNumber) const {
+	uint8_t zeroLevel = 127;				//изначально, 127 - это ноль (в идеальном случае)
+	auto zeroLevelWasFound = false;
+	//обрабатываем по 500 значений
+	//если они все примерно одинаковые (не отличаются на единицу)
+	//тогда мы нашли ноль! найдем среднее и вернем его
+	for (auto i = 0; i < event.ChSize[channelNumber]; i++) {
+		if (zeroLevelWasFound)
+			break;
+		zeroLevel = *event.DataChannel[500 * i];
+		auto summaryForMiddle = 0;
+		for (auto currentValue = 500 * i; currentValue < 500 * (i+1); currentValue++) {
+			//если случилось так, что за 500 значений уровень изменился больше чем на 4 мВ
+			//то это точно не ноль! берем следующие 500 значений
+			if (*event.DataChannel[currentValue] - zeroLevel > 1)
+				break;
+			summaryForMiddle += *event.DataChannel[currentValue];
+			if (i == 499) {
+				zeroLevelWasFound = true;
+				zeroLevel = summaryForMiddle / 500;
+			}
+		}
+	}
+	return zeroLevel;
+}
+
 bool DataAnalyzer::readData() {
 	auto WDFIdentificators = vmeComm.getWDFIdentificators();
 	//start acquistition cycle on all enabled boards
@@ -64,7 +88,6 @@ bool DataAnalyzer::readData() {
 	return result;		//if there is anything to read
 }
 
-//return true if there is something to read on board with ID boardID
 bool DataAnalyzer::readDataOnBoard(uint32_t boardID) {
 	CAEN_DGTZ_ErrorCode error;
 	if ((error = CAEN_DGTZ_IRQWait(boardID, 500)) != CAEN_DGTZ_Success) {
@@ -128,7 +151,6 @@ void DataAnalyzer::writeData() {
 		}
 }
 
-//returns first event of first board
 CAEN_DGTZ_UINT8_EVENT_t* DataAnalyzer::getEventForDraw() const {
 	return currentEvents[0][0];
 }
@@ -145,16 +167,23 @@ uint8_t minElement(uint8_t* array, uint32_t size) {
 	return minElement;
 }
 
+uint8_t maxElement(uint8_t* array, uint32_t size) {
+	auto minElement = array[0];
+	for (auto i = 1; i < size; i++)
+		if (array[i] > minElement)
+			minElement = array[i];
+	return minElement;
+}
+
 vector<uint16_t> DataAnalyzer::getApmlitudesForSpectre(uint8_t boardNumber, uint8_t channel) {
 	vector<uint16_t> amplitudes;
-	//todo: fast find zero level
 	for (auto event : currentEvents[boardNumber]) {
 		uint8_t amp;
 		if (vmeComm.polarity == CAEN_DGTZ_TriggerOnFallingEdge)
 			amp = minElement(event->DataChannel[channel], event->ChSize[channel]);
-		//else
-			//amp = max_element(event->DataChannel[channel], event->DataChannel[channel] + static_cast<uint8_t>(event->ChSize[channel]));
-		amplitudes.push_back(abs((127-amp) * 3.92));		//from counts to mV
+		else
+			amp = maxElement(event->DataChannel[channel], event->ChSize[channel]);
+		amplitudes.push_back(abs((getZeroLevel(*event, channel)-amp) * 3.92));		//from counts to mV
 	}
 	return amplitudes;
 }
