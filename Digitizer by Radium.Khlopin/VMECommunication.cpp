@@ -248,6 +248,10 @@ vector<int32_t>& VMECommunication::getWDFIdentificators() {
 	return this->WDFIdentificators;
 }
 
+uint32_t VMECommunication::getRecordLength() {
+	return this->recordLength;
+}
+
 bool VMECommunication::setRecordLength(int32_t newRecordLength, int32_t postTriggerSize) {
 	auto multiplier = 1024;									//depends on base frenquency
 	unsigned int samples = newRecordLength*multiplier;		//from KB to samples

@@ -60,6 +60,12 @@ MainWindow::~MainWindow() {
 				settingsOut << channelsColors[WDF][channel] << " ";
 			settingsOut << endl;
 		}
+		//write visibility of thresholds
+		for (auto WDF = 0; WDF < vme.numberOfWDF; WDF++) {
+			for (auto channel = 0; channel < 8; channel++)
+				settingsOut << thresholdsIsVisible[WDF][channel] << " ";
+			settingsOut << endl;
+		}
 		//write other settings
 	}
 }
@@ -129,8 +135,17 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 						graphDataContainer->set(graphData, true);
 						//graph's visual setup
 						colorBrushMutex.lock();
-						ui.signalWidget->graph(graphNumber)->setPen(QPen(QColor(channelsColors[numberOfBoard][channelNumber].c_str())));
-						ui.signalWidget->graph(graphNumber++)->setName(QString("Channel %1").arg(channelNumber));
+							auto colorOfLines = QColor(channelsColors[numberOfBoard][channelNumber].c_str());
+							ui.signalWidget->graph(graphNumber)->setPen(QPen(colorOfLines));
+							ui.signalWidget->graph(graphNumber++)->setName(QString("Channel %1").arg(channelNumber));
+							if (thresholdsIsVisible[numberOfBoard][channelNumber]) {
+								//todo: проверить, нет ли здесь утечки. А то решарпер паникует
+								auto thresholdLine = new QCPItemLine(ui.signalWidget);
+								thresholdLine->start->setCoords(0, DataAnalyzer::convertFromVMECountsTomV(vme.threshold[numberOfBoard][channelNumber]));
+								thresholdLine->end->setCoords(vme.getRecordLength(), DataAnalyzer::convertFromVMECountsTomV(vme.threshold[numberOfBoard][channelNumber]));
+								QPen pencil(colorOfLines);
+								pencil.setStyle(Qt::DotLine);
+							}
 						colorBrushMutex.unlock();
 					}
 					else {
@@ -177,11 +192,25 @@ void MainWindow::readSettings() {
 			for (auto channel = 0; channel < 8; channel++)
 				if (settingsStream >> color)
 					channelsColors[WDF].push_back(color);
+		//read visibility of threshold lines
+		thresholdsIsVisible.resize(vme.numberOfWDF);
+		bool thresholdLineIsVisible;
+		for (auto WDF = 0; WDF < vme.numberOfWDF; WDF++)
+			for (auto channel = 0; channel < 8; channel++)
+				if (settingsStream >> thresholdLineIsVisible) {
+					thresholdsIsVisible[WDF].push_back(thresholdLineIsVisible);
+					if (thresholdLineIsVisible) {
+						auto buttonName = QString("thresholdIsDrawingButton_%1_%2").arg(WDF + 1).arg(channel);
+						auto button = ui.settingsBlock->findChild<QPushButton*>(buttonName);
+						button->setChecked(true);
+					}
+				}
 		//read other settings
 	}
 }
 
 void MainWindow::pulseErrorButton() {
+	//Not implemented
 }
 
 void MainWindow::setControlsEnabled(bool enabled) const {

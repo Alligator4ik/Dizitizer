@@ -64,4 +64,10 @@ public:
 	 * \return Возвращает амплитуды.
 	 */
 	vector<uint16_t>							getApmlitudesForSpectre(uint8_t boardNumber, uint8_t channel);
+	/**
+	 * \brief Конвертирует отсчеты оцифровщика из диапазона [0; 255] в диапазон [-1; 1] вольт.
+	 * \param counts Отсчет оцифровщика из диапазона [0; 255]. Значение будет округлено до ближайшего целого.
+	 * \return Возвращает значение в милливольтах.
+	 */
+	static int16_t								convertFromVMECountsTomV(uint8_t counts);
 };

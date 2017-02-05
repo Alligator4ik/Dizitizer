@@ -28,6 +28,7 @@ private:
 	bool							acquisitionWasStarted = false;
 	uint16_t						activeChannelsCount = 0;			//need to know graphs count (from all boards)
 	vector<vector<bool>>			samplesSpinboxIsDisabled;
+	vector<vector<bool>>			thresholdsIsVisible;
 	vector<vector<string>>			channelsColors;
 	std::thread						acquisitionThread;
 

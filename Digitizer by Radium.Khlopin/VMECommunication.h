@@ -141,6 +141,7 @@ public:
 	vector<vector<QTime>>&					getTimeOfStringErrors();
 	vector<vector<QString>>&				getStringErrors();
 	vector<int32_t>&						getWDFIdentificators();
+	uint32_t								getRecordLength();
 
 	bool									setRecordLength(int32_t newRecordLength, int32_t postTriggerSize);
 	bool									setPostTriggerLength(int32_t postTriggerSize);
