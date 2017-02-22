@@ -50,6 +50,7 @@ build/
 ipch/
 *.aps
 *.ncb
+*.VC.db
 *.opendb
 *.opensdf
 *.sdf
