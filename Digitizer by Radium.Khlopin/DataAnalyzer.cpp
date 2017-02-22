@@ -190,5 +190,5 @@ vector<uint16_t> DataAnalyzer::getApmlitudesForSpectre(uint8_t boardNumber, uint
 
 int16_t DataAnalyzer::convertFromVMECountsTomV(uint8_t counts) {
 	//todo: подумать над условием (когда будет доступ к устройству)
-	return (counts - 127) * 7.873;
+	return (counts - 127) * 3.94;
 }

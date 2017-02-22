@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'settingswindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.8.0
+** Created by: Qt User Interface Compiler version 5.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -738,91 +738,91 @@ public:
 
     void retranslateUi(QMainWindow *SettingsWindowController)
     {
-        SettingsWindowController->setWindowTitle(QApplication::translate("SettingsWindowController", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\270", Q_NULLPTR));
+        SettingsWindowController->setWindowTitle(QApplication::translate("SettingsWindowController", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\270", 0));
 #ifndef QT_NO_TOOLTIP
         tabWidget->setToolTip(QString());
 #endif // QT_NO_TOOLTIP
         QTableWidgetItem *___qtablewidgetitem = VMECommSetting->horizontalHeaderItem(1);
-        ___qtablewidgetitem->setText(QApplication::translate("SettingsWindowController", "\320\242\320\270\320\277 \321\201\320\262\321\217\320\267\320\270", Q_NULLPTR));
+        ___qtablewidgetitem->setText(QApplication::translate("SettingsWindowController", "\320\242\320\270\320\277 \321\201\320\262\321\217\320\267\320\270", 0));
         QTableWidgetItem *___qtablewidgetitem1 = VMECommSetting->horizontalHeaderItem(2);
-        ___qtablewidgetitem1->setText(QApplication::translate("SettingsWindowController", "\320\235\320\276\320\274\320\265\321\200 \321\201\320\267\321\217\320\267\320\270", Q_NULLPTR));
+        ___qtablewidgetitem1->setText(QApplication::translate("SettingsWindowController", "\320\235\320\276\320\274\320\265\321\200 \321\201\320\267\321\217\320\267\320\270", 0));
         QTableWidgetItem *___qtablewidgetitem2 = VMECommSetting->horizontalHeaderItem(3);
-        ___qtablewidgetitem2->setText(QApplication::translate("SettingsWindowController", "\320\235\320\276\320\274\320\265\321\200 \321\203\320\267\320\273\320\260", Q_NULLPTR));
+        ___qtablewidgetitem2->setText(QApplication::translate("SettingsWindowController", "\320\235\320\276\320\274\320\265\321\200 \321\203\320\267\320\273\320\260", 0));
         QTableWidgetItem *___qtablewidgetitem3 = VMECommSetting->verticalHeaderItem(0);
-        ___qtablewidgetitem3->setText(QApplication::translate("SettingsWindowController", "1", Q_NULLPTR));
+        ___qtablewidgetitem3->setText(QApplication::translate("SettingsWindowController", "1", 0));
         QTableWidgetItem *___qtablewidgetitem4 = VMECommSetting->verticalHeaderItem(1);
-        ___qtablewidgetitem4->setText(QApplication::translate("SettingsWindowController", "2", Q_NULLPTR));
+        ___qtablewidgetitem4->setText(QApplication::translate("SettingsWindowController", "2", 0));
         QTableWidgetItem *___qtablewidgetitem5 = VMECommSetting->verticalHeaderItem(2);
-        ___qtablewidgetitem5->setText(QApplication::translate("SettingsWindowController", "3", Q_NULLPTR));
+        ___qtablewidgetitem5->setText(QApplication::translate("SettingsWindowController", "3", 0));
         QTableWidgetItem *___qtablewidgetitem6 = VMECommSetting->verticalHeaderItem(3);
-        ___qtablewidgetitem6->setText(QApplication::translate("SettingsWindowController", "4", Q_NULLPTR));
+        ___qtablewidgetitem6->setText(QApplication::translate("SettingsWindowController", "4", 0));
         QTableWidgetItem *___qtablewidgetitem7 = VMECommSetting->verticalHeaderItem(4);
-        ___qtablewidgetitem7->setText(QApplication::translate("SettingsWindowController", "5", Q_NULLPTR));
+        ___qtablewidgetitem7->setText(QApplication::translate("SettingsWindowController", "5", 0));
         QTableWidgetItem *___qtablewidgetitem8 = VMECommSetting->verticalHeaderItem(5);
-        ___qtablewidgetitem8->setText(QApplication::translate("SettingsWindowController", "6", Q_NULLPTR));
+        ___qtablewidgetitem8->setText(QApplication::translate("SettingsWindowController", "6", 0));
         QTableWidgetItem *___qtablewidgetitem9 = VMECommSetting->verticalHeaderItem(6);
-        ___qtablewidgetitem9->setText(QApplication::translate("SettingsWindowController", "7", Q_NULLPTR));
+        ___qtablewidgetitem9->setText(QApplication::translate("SettingsWindowController", "7", 0));
         QTableWidgetItem *___qtablewidgetitem10 = VMECommSetting->verticalHeaderItem(7);
-        ___qtablewidgetitem10->setText(QApplication::translate("SettingsWindowController", "8", Q_NULLPTR));
+        ___qtablewidgetitem10->setText(QApplication::translate("SettingsWindowController", "8", 0));
         QTableWidgetItem *___qtablewidgetitem11 = VMECommSetting->verticalHeaderItem(8);
-        ___qtablewidgetitem11->setText(QApplication::translate("SettingsWindowController", "9", Q_NULLPTR));
+        ___qtablewidgetitem11->setText(QApplication::translate("SettingsWindowController", "9", 0));
 
         const bool __sortingEnabled = VMECommSetting->isSortingEnabled();
         VMECommSetting->setSortingEnabled(false);
         QTableWidgetItem *___qtablewidgetitem12 = VMECommSetting->item(0, 1);
-        ___qtablewidgetitem12->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", Q_NULLPTR));
+        ___qtablewidgetitem12->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem13 = VMECommSetting->item(0, 2);
-        ___qtablewidgetitem13->setText(QApplication::translate("SettingsWindowController", "0", Q_NULLPTR));
+        ___qtablewidgetitem13->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem14 = VMECommSetting->item(0, 3);
-        ___qtablewidgetitem14->setText(QApplication::translate("SettingsWindowController", "0", Q_NULLPTR));
+        ___qtablewidgetitem14->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem15 = VMECommSetting->item(1, 1);
-        ___qtablewidgetitem15->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", Q_NULLPTR));
+        ___qtablewidgetitem15->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem16 = VMECommSetting->item(1, 2);
-        ___qtablewidgetitem16->setText(QApplication::translate("SettingsWindowController", "0", Q_NULLPTR));
+        ___qtablewidgetitem16->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem17 = VMECommSetting->item(1, 3);
-        ___qtablewidgetitem17->setText(QApplication::translate("SettingsWindowController", "1", Q_NULLPTR));
+        ___qtablewidgetitem17->setText(QApplication::translate("SettingsWindowController", "1", 0));
         QTableWidgetItem *___qtablewidgetitem18 = VMECommSetting->item(2, 1);
-        ___qtablewidgetitem18->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", Q_NULLPTR));
+        ___qtablewidgetitem18->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem19 = VMECommSetting->item(2, 2);
-        ___qtablewidgetitem19->setText(QApplication::translate("SettingsWindowController", "0", Q_NULLPTR));
+        ___qtablewidgetitem19->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem20 = VMECommSetting->item(2, 3);
-        ___qtablewidgetitem20->setText(QApplication::translate("SettingsWindowController", "2", Q_NULLPTR));
+        ___qtablewidgetitem20->setText(QApplication::translate("SettingsWindowController", "2", 0));
         QTableWidgetItem *___qtablewidgetitem21 = VMECommSetting->item(3, 1);
-        ___qtablewidgetitem21->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", Q_NULLPTR));
+        ___qtablewidgetitem21->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem22 = VMECommSetting->item(3, 2);
-        ___qtablewidgetitem22->setText(QApplication::translate("SettingsWindowController", "0", Q_NULLPTR));
+        ___qtablewidgetitem22->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem23 = VMECommSetting->item(3, 3);
-        ___qtablewidgetitem23->setText(QApplication::translate("SettingsWindowController", "3", Q_NULLPTR));
+        ___qtablewidgetitem23->setText(QApplication::translate("SettingsWindowController", "3", 0));
         QTableWidgetItem *___qtablewidgetitem24 = VMECommSetting->item(4, 1);
-        ___qtablewidgetitem24->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", Q_NULLPTR));
+        ___qtablewidgetitem24->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem25 = VMECommSetting->item(4, 2);
-        ___qtablewidgetitem25->setText(QApplication::translate("SettingsWindowController", "0", Q_NULLPTR));
+        ___qtablewidgetitem25->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem26 = VMECommSetting->item(4, 3);
-        ___qtablewidgetitem26->setText(QApplication::translate("SettingsWindowController", "4", Q_NULLPTR));
+        ___qtablewidgetitem26->setText(QApplication::translate("SettingsWindowController", "4", 0));
         QTableWidgetItem *___qtablewidgetitem27 = VMECommSetting->item(5, 1);
-        ___qtablewidgetitem27->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", Q_NULLPTR));
+        ___qtablewidgetitem27->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem28 = VMECommSetting->item(5, 2);
-        ___qtablewidgetitem28->setText(QApplication::translate("SettingsWindowController", "0", Q_NULLPTR));
+        ___qtablewidgetitem28->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem29 = VMECommSetting->item(5, 3);
-        ___qtablewidgetitem29->setText(QApplication::translate("SettingsWindowController", "5", Q_NULLPTR));
+        ___qtablewidgetitem29->setText(QApplication::translate("SettingsWindowController", "5", 0));
         QTableWidgetItem *___qtablewidgetitem30 = VMECommSetting->item(6, 1);
-        ___qtablewidgetitem30->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", Q_NULLPTR));
+        ___qtablewidgetitem30->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem31 = VMECommSetting->item(6, 2);
-        ___qtablewidgetitem31->setText(QApplication::translate("SettingsWindowController", "0", Q_NULLPTR));
+        ___qtablewidgetitem31->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem32 = VMECommSetting->item(6, 3);
-        ___qtablewidgetitem32->setText(QApplication::translate("SettingsWindowController", "6", Q_NULLPTR));
+        ___qtablewidgetitem32->setText(QApplication::translate("SettingsWindowController", "6", 0));
         QTableWidgetItem *___qtablewidgetitem33 = VMECommSetting->item(7, 1);
-        ___qtablewidgetitem33->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", Q_NULLPTR));
+        ___qtablewidgetitem33->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem34 = VMECommSetting->item(7, 2);
-        ___qtablewidgetitem34->setText(QApplication::translate("SettingsWindowController", "0", Q_NULLPTR));
+        ___qtablewidgetitem34->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem35 = VMECommSetting->item(7, 3);
-        ___qtablewidgetitem35->setText(QApplication::translate("SettingsWindowController", "7", Q_NULLPTR));
+        ___qtablewidgetitem35->setText(QApplication::translate("SettingsWindowController", "7", 0));
         QTableWidgetItem *___qtablewidgetitem36 = VMECommSetting->item(8, 1);
-        ___qtablewidgetitem36->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", Q_NULLPTR));
+        ___qtablewidgetitem36->setText(QApplication::translate("SettingsWindowController", "\320\236\320\277\321\202\320\270\321\207\320\265\321\201\320\272\320\260\321\217", 0));
         QTableWidgetItem *___qtablewidgetitem37 = VMECommSetting->item(8, 2);
-        ___qtablewidgetitem37->setText(QApplication::translate("SettingsWindowController", "0", Q_NULLPTR));
+        ___qtablewidgetitem37->setText(QApplication::translate("SettingsWindowController", "0", 0));
         QTableWidgetItem *___qtablewidgetitem38 = VMECommSetting->item(8, 3);
-        ___qtablewidgetitem38->setText(QApplication::translate("SettingsWindowController", "8", Q_NULLPTR));
+        ___qtablewidgetitem38->setText(QApplication::translate("SettingsWindowController", "8", 0));
         VMECommSetting->setSortingEnabled(__sortingEnabled);
 
         WDF1->setText(QString());
@@ -836,50 +836,50 @@ public:
         WDF9->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(activeWDFs), QString());
         QTableWidgetItem *___qtablewidgetitem39 = ColorSetting->horizontalHeaderItem(0);
-        ___qtablewidgetitem39->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273", Q_NULLPTR));
+        ___qtablewidgetitem39->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273", 0));
         QTableWidgetItem *___qtablewidgetitem40 = ColorSetting->horizontalHeaderItem(1);
-        ___qtablewidgetitem40->setText(QApplication::translate("SettingsWindowController", "\320\246\320\262\320\265\321\202", Q_NULLPTR));
+        ___qtablewidgetitem40->setText(QApplication::translate("SettingsWindowController", "\320\246\320\262\320\265\321\202", 0));
         QTableWidgetItem *___qtablewidgetitem41 = ColorSetting->horizontalHeaderItem(2);
-        ___qtablewidgetitem41->setText(QApplication::translate("SettingsWindowController", "\320\250\320\270\321\200\320\270\320\275\320\260", Q_NULLPTR));
+        ___qtablewidgetitem41->setText(QApplication::translate("SettingsWindowController", "\320\250\320\270\321\200\320\270\320\275\320\260", 0));
         QTableWidgetItem *___qtablewidgetitem42 = ColorSetting->horizontalHeaderItem(3);
-        ___qtablewidgetitem42->setText(QApplication::translate("SettingsWindowController", "\320\233\320\270\320\275\320\270\321\217 \320\277\320\276\321\200\320\276\320\263\320\260", Q_NULLPTR));
+        ___qtablewidgetitem42->setText(QApplication::translate("SettingsWindowController", "\320\233\320\270\320\275\320\270\321\217 \320\277\320\276\321\200\320\276\320\263\320\260", 0));
         QTableWidgetItem *___qtablewidgetitem43 = ColorSetting->horizontalHeaderItem(4);
-        ___qtablewidgetitem43->setText(QApplication::translate("SettingsWindowController", "\320\250\320\270\321\200\320\270\320\275\320\260 \320\277\320\276\321\200\320\276\320\263\320\260", Q_NULLPTR));
+        ___qtablewidgetitem43->setText(QApplication::translate("SettingsWindowController", "\320\250\320\270\321\200\320\270\320\275\320\260 \320\277\320\276\321\200\320\276\320\263\320\260", 0));
         QTableWidgetItem *___qtablewidgetitem44 = ColorSetting->verticalHeaderItem(0);
-        ___qtablewidgetitem44->setText(QApplication::translate("SettingsWindowController", "1", Q_NULLPTR));
+        ___qtablewidgetitem44->setText(QApplication::translate("SettingsWindowController", "1", 0));
         QTableWidgetItem *___qtablewidgetitem45 = ColorSetting->verticalHeaderItem(1);
-        ___qtablewidgetitem45->setText(QApplication::translate("SettingsWindowController", "2", Q_NULLPTR));
+        ___qtablewidgetitem45->setText(QApplication::translate("SettingsWindowController", "2", 0));
         QTableWidgetItem *___qtablewidgetitem46 = ColorSetting->verticalHeaderItem(2);
-        ___qtablewidgetitem46->setText(QApplication::translate("SettingsWindowController", "3", Q_NULLPTR));
+        ___qtablewidgetitem46->setText(QApplication::translate("SettingsWindowController", "3", 0));
         QTableWidgetItem *___qtablewidgetitem47 = ColorSetting->verticalHeaderItem(3);
-        ___qtablewidgetitem47->setText(QApplication::translate("SettingsWindowController", "4", Q_NULLPTR));
+        ___qtablewidgetitem47->setText(QApplication::translate("SettingsWindowController", "4", 0));
         QTableWidgetItem *___qtablewidgetitem48 = ColorSetting->verticalHeaderItem(4);
-        ___qtablewidgetitem48->setText(QApplication::translate("SettingsWindowController", "5", Q_NULLPTR));
+        ___qtablewidgetitem48->setText(QApplication::translate("SettingsWindowController", "5", 0));
         QTableWidgetItem *___qtablewidgetitem49 = ColorSetting->verticalHeaderItem(5);
-        ___qtablewidgetitem49->setText(QApplication::translate("SettingsWindowController", "6", Q_NULLPTR));
+        ___qtablewidgetitem49->setText(QApplication::translate("SettingsWindowController", "6", 0));
         QTableWidgetItem *___qtablewidgetitem50 = ColorSetting->verticalHeaderItem(6);
-        ___qtablewidgetitem50->setText(QApplication::translate("SettingsWindowController", "7", Q_NULLPTR));
+        ___qtablewidgetitem50->setText(QApplication::translate("SettingsWindowController", "7", 0));
         QTableWidgetItem *___qtablewidgetitem51 = ColorSetting->verticalHeaderItem(7);
-        ___qtablewidgetitem51->setText(QApplication::translate("SettingsWindowController", "8", Q_NULLPTR));
+        ___qtablewidgetitem51->setText(QApplication::translate("SettingsWindowController", "8", 0));
 
         const bool __sortingEnabled1 = ColorSetting->isSortingEnabled();
         ColorSetting->setSortingEnabled(false);
         QTableWidgetItem *___qtablewidgetitem52 = ColorSetting->item(0, 0);
-        ___qtablewidgetitem52->setText(QApplication::translate("SettingsWindowController", "CH0", Q_NULLPTR));
+        ___qtablewidgetitem52->setText(QApplication::translate("SettingsWindowController", "CH0", 0));
         QTableWidgetItem *___qtablewidgetitem53 = ColorSetting->item(1, 0);
-        ___qtablewidgetitem53->setText(QApplication::translate("SettingsWindowController", "CH1", Q_NULLPTR));
+        ___qtablewidgetitem53->setText(QApplication::translate("SettingsWindowController", "CH1", 0));
         QTableWidgetItem *___qtablewidgetitem54 = ColorSetting->item(2, 0);
-        ___qtablewidgetitem54->setText(QApplication::translate("SettingsWindowController", "CH2", Q_NULLPTR));
+        ___qtablewidgetitem54->setText(QApplication::translate("SettingsWindowController", "CH2", 0));
         QTableWidgetItem *___qtablewidgetitem55 = ColorSetting->item(3, 0);
-        ___qtablewidgetitem55->setText(QApplication::translate("SettingsWindowController", "CH3", Q_NULLPTR));
+        ___qtablewidgetitem55->setText(QApplication::translate("SettingsWindowController", "CH3", 0));
         QTableWidgetItem *___qtablewidgetitem56 = ColorSetting->item(4, 0);
-        ___qtablewidgetitem56->setText(QApplication::translate("SettingsWindowController", "CH4", Q_NULLPTR));
+        ___qtablewidgetitem56->setText(QApplication::translate("SettingsWindowController", "CH4", 0));
         QTableWidgetItem *___qtablewidgetitem57 = ColorSetting->item(5, 0);
-        ___qtablewidgetitem57->setText(QApplication::translate("SettingsWindowController", "CH5", Q_NULLPTR));
+        ___qtablewidgetitem57->setText(QApplication::translate("SettingsWindowController", "CH5", 0));
         QTableWidgetItem *___qtablewidgetitem58 = ColorSetting->item(6, 0);
-        ___qtablewidgetitem58->setText(QApplication::translate("SettingsWindowController", "CH6", Q_NULLPTR));
+        ___qtablewidgetitem58->setText(QApplication::translate("SettingsWindowController", "CH6", 0));
         QTableWidgetItem *___qtablewidgetitem59 = ColorSetting->item(7, 0);
-        ___qtablewidgetitem59->setText(QApplication::translate("SettingsWindowController", "CH7", Q_NULLPTR));
+        ___qtablewidgetitem59->setText(QApplication::translate("SettingsWindowController", "CH7", 0));
         ColorSetting->setSortingEnabled(__sortingEnabled1);
 
         Color_CH_0->setText(QString());
@@ -891,185 +891,185 @@ public:
         Color_CH_6->setText(QString());
         Color_CH_7->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_0->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", Q_NULLPTR));
+        EditColor_CH_0->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_0->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_1->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", Q_NULLPTR));
+        EditColor_CH_1->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_1->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_2->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", Q_NULLPTR));
+        EditColor_CH_2->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_2->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_3->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", Q_NULLPTR));
+        EditColor_CH_3->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_3->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_4->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", Q_NULLPTR));
+        EditColor_CH_4->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_4->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_5->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", Q_NULLPTR));
+        EditColor_CH_5->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_5->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_6->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", Q_NULLPTR));
+        EditColor_CH_6->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_6->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        EditColor_CH_7->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", Q_NULLPTR));
+        EditColor_CH_7->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         EditColor_CH_7->setText(QString());
         TrigLine_CH_0->clear();
         TrigLine_CH_0->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         TrigLine_CH_1->clear();
         TrigLine_CH_1->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         TrigLine_CH_2->clear();
         TrigLine_CH_2->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         TrigLine_CH_3->clear();
         TrigLine_CH_3->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         TrigLine_CH_4->clear();
         TrigLine_CH_4->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         TrigLine_CH_5->clear();
         TrigLine_CH_5->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         TrigLine_CH_6->clear();
         TrigLine_CH_6->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
         TrigLine_CH_7->clear();
         TrigLine_CH_7->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
-        currentWDFLabel->setText(QApplication::translate("SettingsWindowController", "\320\242\320\265\320\272\321\203\321\211\320\260\321\217 \320\277\320\273\320\260\321\202\320\260:", Q_NULLPTR));
+        currentWDFLabel->setText(QApplication::translate("SettingsWindowController", "\320\242\320\265\320\272\321\203\321\211\320\260\321\217 \320\277\320\273\320\260\321\202\320\260:", 0));
         currentWDFInColorTab->clear();
         currentWDFInColorTab->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "1", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "2", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "3", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "4", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "5", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "6", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "7", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "8", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "9", Q_NULLPTR)
+         << QApplication::translate("SettingsWindowController", "1", 0)
+         << QApplication::translate("SettingsWindowController", "2", 0)
+         << QApplication::translate("SettingsWindowController", "3", 0)
+         << QApplication::translate("SettingsWindowController", "4", 0)
+         << QApplication::translate("SettingsWindowController", "5", 0)
+         << QApplication::translate("SettingsWindowController", "6", 0)
+         << QApplication::translate("SettingsWindowController", "7", 0)
+         << QApplication::translate("SettingsWindowController", "8", 0)
+         << QApplication::translate("SettingsWindowController", "9", 0)
         );
         tabWidget->setTabText(tabWidget->indexOf(ChannelColorSetting), QString());
-        groupBox_4->setTitle(QApplication::translate("SettingsWindowController", "\320\247\321\202\320\265\320\275\320\270\320\265", Q_NULLPTR));
-        label_2->setText(QApplication::translate("SettingsWindowController", "\320\247\320\270\321\201\320\273\320\276 \321\201\320\276\320\261\321\213\321\202\320\270\320\271", Q_NULLPTR));
-        groupBox_5->setTitle(QApplication::translate("SettingsWindowController", "\320\227\320\260\320\277\320\270\321\201\321\214", Q_NULLPTR));
+        groupBox_4->setTitle(QApplication::translate("SettingsWindowController", "\320\247\321\202\320\265\320\275\320\270\320\265", 0));
+        label_2->setText(QApplication::translate("SettingsWindowController", "\320\247\320\270\321\201\320\273\320\276 \321\201\320\276\320\261\321\213\321\202\320\270\320\271", 0));
+        groupBox_5->setTitle(QApplication::translate("SettingsWindowController", "\320\227\320\260\320\277\320\270\321\201\321\214", 0));
         QTableWidgetItem *___qtablewidgetitem60 = tableWidget->horizontalHeaderItem(0);
-        ___qtablewidgetitem60->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 0", Q_NULLPTR));
+        ___qtablewidgetitem60->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 0", 0));
         QTableWidgetItem *___qtablewidgetitem61 = tableWidget->horizontalHeaderItem(1);
-        ___qtablewidgetitem61->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 1", Q_NULLPTR));
+        ___qtablewidgetitem61->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 1", 0));
         QTableWidgetItem *___qtablewidgetitem62 = tableWidget->horizontalHeaderItem(2);
-        ___qtablewidgetitem62->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 2", Q_NULLPTR));
+        ___qtablewidgetitem62->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 2", 0));
         QTableWidgetItem *___qtablewidgetitem63 = tableWidget->horizontalHeaderItem(3);
-        ___qtablewidgetitem63->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 3", Q_NULLPTR));
+        ___qtablewidgetitem63->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 3", 0));
         QTableWidgetItem *___qtablewidgetitem64 = tableWidget->horizontalHeaderItem(4);
-        ___qtablewidgetitem64->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 4", Q_NULLPTR));
+        ___qtablewidgetitem64->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 4", 0));
         QTableWidgetItem *___qtablewidgetitem65 = tableWidget->horizontalHeaderItem(5);
-        ___qtablewidgetitem65->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 5", Q_NULLPTR));
+        ___qtablewidgetitem65->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 5", 0));
         QTableWidgetItem *___qtablewidgetitem66 = tableWidget->horizontalHeaderItem(6);
-        ___qtablewidgetitem66->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 6", Q_NULLPTR));
+        ___qtablewidgetitem66->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 6", 0));
         QTableWidgetItem *___qtablewidgetitem67 = tableWidget->horizontalHeaderItem(7);
-        ___qtablewidgetitem67->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 7", Q_NULLPTR));
+        ___qtablewidgetitem67->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 7", 0));
         QTableWidgetItem *___qtablewidgetitem68 = tableWidget->verticalHeaderItem(0);
-        ___qtablewidgetitem68->setText(QApplication::translate("SettingsWindowController", "\320\232\321\200\320\276\320\277", Q_NULLPTR));
+        ___qtablewidgetitem68->setText(QApplication::translate("SettingsWindowController", "\320\232\321\200\320\276\320\277", 0));
 
         const bool __sortingEnabled2 = tableWidget->isSortingEnabled();
         tableWidget->setSortingEnabled(false);
         QTableWidgetItem *___qtablewidgetitem69 = tableWidget->item(0, 0);
-        ___qtablewidgetitem69->setText(QApplication::translate("SettingsWindowController", "1024", Q_NULLPTR));
+        ___qtablewidgetitem69->setText(QApplication::translate("SettingsWindowController", "1024", 0));
         QTableWidgetItem *___qtablewidgetitem70 = tableWidget->item(0, 1);
-        ___qtablewidgetitem70->setText(QApplication::translate("SettingsWindowController", "1024", Q_NULLPTR));
+        ___qtablewidgetitem70->setText(QApplication::translate("SettingsWindowController", "1024", 0));
         QTableWidgetItem *___qtablewidgetitem71 = tableWidget->item(0, 2);
-        ___qtablewidgetitem71->setText(QApplication::translate("SettingsWindowController", "1024", Q_NULLPTR));
+        ___qtablewidgetitem71->setText(QApplication::translate("SettingsWindowController", "1024", 0));
         QTableWidgetItem *___qtablewidgetitem72 = tableWidget->item(0, 3);
-        ___qtablewidgetitem72->setText(QApplication::translate("SettingsWindowController", "1024", Q_NULLPTR));
+        ___qtablewidgetitem72->setText(QApplication::translate("SettingsWindowController", "1024", 0));
         QTableWidgetItem *___qtablewidgetitem73 = tableWidget->item(0, 4);
-        ___qtablewidgetitem73->setText(QApplication::translate("SettingsWindowController", "1024", Q_NULLPTR));
+        ___qtablewidgetitem73->setText(QApplication::translate("SettingsWindowController", "1024", 0));
         QTableWidgetItem *___qtablewidgetitem74 = tableWidget->item(0, 5);
-        ___qtablewidgetitem74->setText(QApplication::translate("SettingsWindowController", "1024", Q_NULLPTR));
+        ___qtablewidgetitem74->setText(QApplication::translate("SettingsWindowController", "1024", 0));
         QTableWidgetItem *___qtablewidgetitem75 = tableWidget->item(0, 6);
-        ___qtablewidgetitem75->setText(QApplication::translate("SettingsWindowController", "1024", Q_NULLPTR));
+        ___qtablewidgetitem75->setText(QApplication::translate("SettingsWindowController", "1024", 0));
         QTableWidgetItem *___qtablewidgetitem76 = tableWidget->item(0, 7);
-        ___qtablewidgetitem76->setText(QApplication::translate("SettingsWindowController", "1024", Q_NULLPTR));
+        ___qtablewidgetitem76->setText(QApplication::translate("SettingsWindowController", "1024", 0));
         tableWidget->setSortingEnabled(__sortingEnabled2);
 
-        currentWDFLabel_2->setText(QApplication::translate("SettingsWindowController", "\320\242\320\265\320\272\321\203\321\211\320\260\321\217 \320\277\320\273\320\260\321\202\320\260:", Q_NULLPTR));
+        currentWDFLabel_2->setText(QApplication::translate("SettingsWindowController", "\320\242\320\265\320\272\321\203\321\211\320\260\321\217 \320\277\320\273\320\260\321\202\320\260:", 0));
         currentWDFInColorTab_2->clear();
         currentWDFInColorTab_2->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "1", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "2", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "3", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "4", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "5", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "6", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "7", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "8", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "9", Q_NULLPTR)
+         << QApplication::translate("SettingsWindowController", "1", 0)
+         << QApplication::translate("SettingsWindowController", "2", 0)
+         << QApplication::translate("SettingsWindowController", "3", 0)
+         << QApplication::translate("SettingsWindowController", "4", 0)
+         << QApplication::translate("SettingsWindowController", "5", 0)
+         << QApplication::translate("SettingsWindowController", "6", 0)
+         << QApplication::translate("SettingsWindowController", "7", 0)
+         << QApplication::translate("SettingsWindowController", "8", 0)
+         << QApplication::translate("SettingsWindowController", "9", 0)
         );
         tabWidget->setTabText(tabWidget->indexOf(tab), QString());
-        groupBox->setTitle(QApplication::translate("SettingsWindowController", "\320\227\320\260\320\264\320\275\320\270\320\271 \320\277\320\273\320\260\320\275 ", Q_NULLPTR));
+        groupBox->setTitle(QApplication::translate("SettingsWindowController", "\320\227\320\260\320\264\320\275\320\270\320\271 \320\277\320\273\320\260\320\275 ", 0));
         label->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        postTriggerIsDrawing->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", Q_NULLPTR));
+        postTriggerIsDrawing->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         postTriggerIsDrawing->setText(QString());
-        groupBox_2->setTitle(QApplication::translate("SettingsWindowController", "\320\241\320\265\321\202\320\272\320\260", Q_NULLPTR));
+        groupBox_2->setTitle(QApplication::translate("SettingsWindowController", "\320\241\320\265\321\202\320\272\320\260", 0));
 #ifndef QT_NO_TOOLTIP
-        postTriggerIsDrawing_10->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", Q_NULLPTR));
+        postTriggerIsDrawing_10->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0));
 #endif // QT_NO_TOOLTIP
         postTriggerIsDrawing_10->setText(QString());
         label_10->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        spinBox->setToolTip(QApplication::translate("SettingsWindowController", "Width", Q_NULLPTR));
+        spinBox->setToolTip(QApplication::translate("SettingsWindowController", "Width", 0));
 #endif // QT_NO_TOOLTIP
         comboBox->clear();
         comboBox->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "\320\221\320\265\320\267 \321\201\320\265\321\202\320\272\320\270", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
+         << QApplication::translate("SettingsWindowController", "\320\221\320\265\320\267 \321\201\320\265\321\202\320\272\320\270", 0)
+         << QApplication::translate("SettingsWindowController", "\320\241\320\277\320\273\320\276\321\210\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\237\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
+         << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", 0)
         );
 #ifndef QT_NO_TOOLTIP
-        groupBox_3->setToolTip(QApplication::translate("SettingsWindowController", "\320\242\320\270\320\277 \320\262\321\205\320\276\320\264\321\217\321\211\320\265\320\263\320\276/\320\270\321\201\321\205\320\276\320\264\321\217\321\211\320\265\320\263\320\276 \321\201\320\270\320\263\320\275\320\260\320\273\320\260", Q_NULLPTR));
+        groupBox_3->setToolTip(QApplication::translate("SettingsWindowController", "\320\242\320\270\320\277 \320\262\321\205\320\276\320\264\321\217\321\211\320\265\320\263\320\276/\320\270\321\201\321\205\320\276\320\264\321\217\321\211\320\265\320\263\320\276 \321\201\320\270\320\263\320\275\320\260\320\273\320\260", 0));
 #endif // QT_NO_TOOLTIP
-        groupBox_3->setTitle(QApplication::translate("SettingsWindowController", "I/O", Q_NULLPTR));
+        groupBox_3->setTitle(QApplication::translate("SettingsWindowController", "I/O", 0));
         comboBox_3->clear();
         comboBox_3->insertItems(0, QStringList()
-         << QApplication::translate("SettingsWindowController", "NIM", Q_NULLPTR)
-         << QApplication::translate("SettingsWindowController", "TTL", Q_NULLPTR)
+         << QApplication::translate("SettingsWindowController", "NIM", 0)
+         << QApplication::translate("SettingsWindowController", "TTL", 0)
         );
         tabWidget->setTabText(tabWidget->indexOf(ViewerSetting), QString());
     } // retranslateUi

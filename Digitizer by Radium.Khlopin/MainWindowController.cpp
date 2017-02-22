@@ -39,8 +39,16 @@ MainWindow::MainWindow(QWidget *parent)
 	for each (auto button in DCResetButtons)
 		connect(button, SIGNAL(clicked()), this, SLOT(resetParameterSlot()));
 
+	//connect threshold lines drawing button
+	auto thresholdIsVisibleButtons = ui.settingsBlock->findChildren<QPushButton*>(QRegExp("thresholdIsDrawingButton"), Qt::FindChildrenRecursively);
+	for each (auto button in thresholdIsVisibleButtons)
+		connect(button, &QPushButton::clicked, this, &MainWindow::thresholdVisibilityChangedSlot);
+
 	//connect replot slot to replotting graph in main thread
 	connect(this, &MainWindow::replot, this, &MainWindow::replotGraph, Qt::BlockingQueuedConnection);
+
+	//connect threshold line drawing process to main thread 
+	connect(this, &MainWindow::drawThresholdLine, this, &MainWindow::drawThresholdLineSlot, Qt::BlockingQueuedConnection);
 
 	//set postTrigger disabled
 	ui.postTriggerBox->setEnabled(false);
@@ -138,14 +146,7 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 							auto colorOfLines = QColor(channelsColors[numberOfBoard][channelNumber].c_str());
 							ui.signalWidget->graph(graphNumber)->setPen(QPen(colorOfLines));
 							ui.signalWidget->graph(graphNumber++)->setName(QString("Channel %1").arg(channelNumber));
-							if (thresholdsIsVisible[numberOfBoard][channelNumber]) {
-								//todo: проверить, нет ли здесь утечки. А то решарпер паникует
-								auto thresholdLine = new QCPItemLine(ui.signalWidget);
-								thresholdLine->start->setCoords(0, DataAnalyzer::convertFromVMECountsTomV(vme.threshold[numberOfBoard][channelNumber]));
-								thresholdLine->end->setCoords(vme.getRecordLength(), DataAnalyzer::convertFromVMECountsTomV(vme.threshold[numberOfBoard][channelNumber]));
-								QPen pencil(colorOfLines);
-								pencil.setStyle(Qt::DotLine);
-							}
+							emit drawThresholdLine(channelNumber, numberOfBoard, DataAnalyzer::convertFromVMECountsTomV(vme.threshold[numberOfBoard][channelNumber]), vme.getRecordLength(), &colorOfLines);
 						colorBrushMutex.unlock();
 					}
 					else {
@@ -193,6 +194,9 @@ void MainWindow::readSettings() {
 				if (settingsStream >> color)
 					channelsColors[WDF].push_back(color);
 		//read visibility of threshold lines
+		thresholdLinesPointers.resize(vme.numberOfWDF);
+		for (auto boardNumber = 0; boardNumber < vme.numberOfWDF; boardNumber++)
+			thresholdLinesPointers[boardNumber].resize(8);
 		thresholdsIsVisible.resize(vme.numberOfWDF);
 		bool thresholdLineIsVisible;
 		for (auto WDF = 0; WDF < vme.numberOfWDF; WDF++)
@@ -447,6 +451,27 @@ void MainWindow::amplifySpectrumSlot() const {
 
 void MainWindow::changePolaritySlot() {
 	vme.changePolarity();
+}
+
+void MainWindow::thresholdVisibilityChangedSlot() {
+	auto button = static_cast<QPushButton*>(sender());
+	auto buttonNameList = button->objectName().split("_");
+	auto WDFNumber = buttonNameList[1].toInt() - 1;
+	auto channelNumber = buttonNameList[2].toInt();
+
+	thresholdsIsVisible[WDFNumber][channelNumber] = button->isChecked();
+
+}
+
+void MainWindow::drawThresholdLineSlot(uint8_t channelNumber, uint8_t boardNumber, int32_t threshold, uint64_t recordLength, QColor* colorOfLine) {
+	if (!thresholdLinesPointers[boardNumber][channelNumber])
+		thresholdLinesPointers[boardNumber][channelNumber] = new QCPItemLine(ui.signalWidget);
+	thresholdLinesPointers[boardNumber][channelNumber]->start->setCoords(0, threshold);
+	thresholdLinesPointers[boardNumber][channelNumber]->end->setCoords(2*recordLength, threshold);
+	QPen pencil(*colorOfLine);
+	pencil.setStyle(Qt::DotLine);
+	thresholdLinesPointers[boardNumber][channelNumber]->setPen(pencil);
+	thresholdLinesPointers[boardNumber][channelNumber]->setVisible(thresholdsIsVisible[boardNumber][channelNumber]);
 }
 
 void MainWindow::replotGraph() const {

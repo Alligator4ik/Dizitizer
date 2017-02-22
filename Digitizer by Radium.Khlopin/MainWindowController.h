@@ -27,6 +27,7 @@ private:
 	VMECommunication				vme;
 	bool							acquisitionWasStarted = false;
 	uint16_t						activeChannelsCount = 0;			//need to know graphs count (from all boards)
+	vector<vector<QCPItemLine*>>	thresholdLinesPointers;
 	vector<vector<bool>>			samplesSpinboxIsDisabled;
 	vector<vector<bool>>			thresholdsIsVisible;
 	vector<vector<string>>			channelsColors;
@@ -39,6 +40,7 @@ private:
 	void							pulseErrorButton();
 	void							setControlsEnabled(bool enabled) const;
 signals:
+	void							drawThresholdLine(uint8_t channelNumber, uint8_t boardNumber ,int32_t threshold, uint64_t recordLength, QColor* colorOfLine);
 	void							replot(void);
 private slots:
 	void							connectSlot();
@@ -58,6 +60,8 @@ private slots:
 	void							autoTriggerSlot();
 	void							amplifySpectrumSlot() const;
 	void							changePolaritySlot();
+	void							thresholdVisibilityChangedSlot();
 public slots:
+	void							drawThresholdLineSlot(uint8_t channelNumber, uint8_t boardNumber, int32_t threshold, uint64_t recordLength, QColor* colorOfLine);
 	void							replotGraph() const;
 };
