@@ -111,6 +111,9 @@ public:
     QComboBox *comboBox;
     QGroupBox *groupBox_3;
     QComboBox *comboBox_3;
+    QGroupBox *autoTriggerBox;
+    QSpinBox *triggerTimeSpinBox;
+    QLabel *triggerTimeLabel;
 
     void setupUi(QMainWindow *SettingsWindowController)
     {
@@ -717,6 +720,18 @@ public:
         comboBox_3 = new QComboBox(groupBox_3);
         comboBox_3->setObjectName(QStringLiteral("comboBox_3"));
         comboBox_3->setGeometry(QRect(10, 20, 50, 20));
+        autoTriggerBox = new QGroupBox(ViewerSetting);
+        autoTriggerBox->setObjectName(QStringLiteral("autoTriggerBox"));
+        autoTriggerBox->setGeometry(QRect(10, 140, 141, 50));
+        triggerTimeSpinBox = new QSpinBox(autoTriggerBox);
+        triggerTimeSpinBox->setObjectName(QStringLiteral("triggerTimeSpinBox"));
+        triggerTimeSpinBox->setGeometry(QRect(10, 20, 61, 20));
+        triggerTimeSpinBox->setMinimum(10);
+        triggerTimeSpinBox->setMaximum(1000);
+        triggerTimeSpinBox->setSingleStep(10);
+        triggerTimeLabel = new QLabel(autoTriggerBox);
+        triggerTimeLabel->setObjectName(QStringLiteral("triggerTimeLabel"));
+        triggerTimeLabel->setGeometry(QRect(80, 20, 47, 13));
         QIcon icon5;
         icon5.addFile(QStringLiteral("../Desktop/CAEN-UI/Setting/4.png"), QSize(), QIcon::Normal, QIcon::Off);
         tabWidget->addTab(ViewerSetting, icon5, QString());
@@ -730,7 +745,7 @@ public:
         QObject::connect(buttonBox, SIGNAL(accepted()), SettingsWindowController, SLOT(acceptedSlot()));
         QObject::connect(currentWDFInColorTab, SIGNAL(currentIndexChanged(int)), SettingsWindowController, SLOT(WDFChangedInChannelTabSlot(int)));
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(SettingsWindowController);
@@ -1071,6 +1086,14 @@ public:
          << QApplication::translate("SettingsWindowController", "NIM", 0)
          << QApplication::translate("SettingsWindowController", "TTL", 0)
         );
+#ifndef QT_NO_TOOLTIP
+        autoTriggerBox->setToolTip(QApplication::translate("SettingsWindowController", "\320\242\320\270\320\277 \320\262\321\205\320\276\320\264\321\217\321\211\320\265\320\263\320\276/\320\270\321\201\321\205\320\276\320\264\321\217\321\211\320\265\320\263\320\276 \321\201\320\270\320\263\320\275\320\260\320\273\320\260", 0));
+#endif // QT_NO_TOOLTIP
+        autoTriggerBox->setTitle(QApplication::translate("SettingsWindowController", "\320\230\320\275\321\202\320\265\321\200\320\262\320\260\320\273 \320\260\320\262\321\202\320\276\321\202\321\200\320\270\320\263\320\263\320\265\321\200\320\260", 0));
+#ifndef QT_NO_TOOLTIP
+        triggerTimeSpinBox->setToolTip(QApplication::translate("SettingsWindowController", "Width", 0));
+#endif // QT_NO_TOOLTIP
+        triggerTimeLabel->setText(QApplication::translate("SettingsWindowController", "\320\274\321\201\320\265\320\272", 0));
         tabWidget->setTabText(tabWidget->indexOf(ViewerSetting), QString());
     } // retranslateUi
 

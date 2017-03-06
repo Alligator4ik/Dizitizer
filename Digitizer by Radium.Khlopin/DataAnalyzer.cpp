@@ -53,17 +53,18 @@ uint8_t DataAnalyzer::getZeroLevel(CAEN_DGTZ_UINT8_EVENT_t& event, uint8_t chann
 	for (auto i = 0; i < event.ChSize[channelNumber]; i++) {
 		if (zeroLevelWasFound)
 			break;
-		zeroLevel = *event.DataChannel[500 * i];
+		zeroLevel = event.DataChannel[channelNumber][500 * i];
 		auto summaryForMiddle = 0;
 		for (auto currentValue = 500 * i; currentValue < 500 * (i+1); currentValue++) {
 			//если случилось так, что за 500 значений уровень изменился больше чем на 4 мВ
 			//то это точно не ноль! берем следующие 500 значений
-			if (*event.DataChannel[currentValue] - zeroLevel > 1)
+			if (event.DataChannel[channelNumber][currentValue] - zeroLevel > 1)
 				break;
-			summaryForMiddle += *event.DataChannel[currentValue];
-			if (i == 499) {
+			summaryForMiddle += event.DataChannel[channelNumber][currentValue];
+			if (currentValue % 500 == 499) {
 				zeroLevelWasFound = true;
 				zeroLevel = summaryForMiddle / 500;
+				break;
 			}
 		}
 	}

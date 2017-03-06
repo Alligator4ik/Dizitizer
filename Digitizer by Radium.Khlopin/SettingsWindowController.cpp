@@ -27,6 +27,10 @@ SettingsWindowController::SettingsWindowController(QWidget *parent)
 		auto color = string("background-color: ") + (dynamic_cast<MainWindow*>(parent))->getChannelColors()[0][colorWinNumber];
 		colors[colorWinNumber]->setStyleSheet(color.c_str());
 	}
+	auto triggerTimeInterval = dynamic_cast<MainWindow*>(this->parent())->getVME().autoTriggerTimeInMilliseconds;
+	ui.ViewerSetting->findChild<QSpinBox*>(QString("triggerTimeSpinBox"), Qt::FindChildrenRecursively)->setValue(triggerTimeInterval);
+	//get autotrigger time interval
+
 }
 
 SettingsWindowController::~SettingsWindowController()
@@ -48,6 +52,9 @@ void SettingsWindowController::acceptedSlot() {
 			dynamic_cast<MainWindow*>(this->parentWidget())->getChannelColors()[currentWDF][channel] = color.toLocal8Bit().constData();
 		}
 	dynamic_cast<MainWindow*>(this->parentWidget())->colorBrushMutex.unlock();
+	//apply autotrigger interval
+	auto triggerTimeIntervalSpinBox = ui.ViewerSetting->findChild<QSpinBox*>(QString("triggerTimeSpinBox"), Qt::FindChildrenRecursively);
+	dynamic_cast<MainWindow*>(this->parent())->getVME().autoTriggerTimeInMilliseconds = triggerTimeIntervalSpinBox->value();
 	//apply other settings
 	this->close();
 }

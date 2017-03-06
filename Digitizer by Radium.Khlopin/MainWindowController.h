@@ -6,6 +6,7 @@
 #include <thread>
 #include "qcustomplot.h"
 #include <mutex>
+#include <future>
 
 class DataAnalyzer;
 
@@ -31,7 +32,12 @@ private:
 	vector<vector<bool>>			samplesSpinboxIsDisabled;
 	vector<vector<bool>>			thresholdsIsVisible;
 	vector<vector<string>>			channelsColors;
-	std::thread						acquisitionThread;
+	future<void>					acquisitionThread;
+	mutex							acquisitionMutex;
+	/**
+	* \brief Таймер, запускающий софтверный триггер.
+	*/
+	QTimer*							autoTriggerTimer = nullptr;
 
 	void							updateData();
 	void							drawSignal(CAEN_DGTZ_UINT8_EVENT_t* eventToDraw);

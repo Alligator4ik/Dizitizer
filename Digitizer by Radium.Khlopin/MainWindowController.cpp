@@ -45,10 +45,10 @@ MainWindow::MainWindow(QWidget *parent)
 		connect(button, &QPushButton::clicked, this, &MainWindow::thresholdVisibilityChangedSlot);
 
 	//connect replot slot to replotting graph in main thread
-	connect(this, &MainWindow::replot, this, &MainWindow::replotGraph, Qt::BlockingQueuedConnection);
+	connect(this, &MainWindow::replot, this, &MainWindow::replotGraph, Qt::QueuedConnection);
 
 	//connect threshold line drawing process to main thread 
-	connect(this, &MainWindow::drawThresholdLine, this, &MainWindow::drawThresholdLineSlot, Qt::BlockingQueuedConnection);
+	connect(this, &MainWindow::drawThresholdLine, this, &MainWindow::drawThresholdLineSlot, Qt::QueuedConnection);
 
 	//set postTrigger disabled
 	ui.postTriggerBox->setEnabled(false);
@@ -74,6 +74,8 @@ MainWindow::~MainWindow() {
 				settingsOut << thresholdsIsVisible[WDF][channel] << " ";
 			settingsOut << endl;
 		}
+		//write autotrigger time interval
+		settingsOut << vme.autoTriggerTimeInMilliseconds << endl;
 		//write other settings
 	}
 }
@@ -89,25 +91,23 @@ vector<vector<string>>& MainWindow::getChannelColors() {
 void MainWindow::updateData() {
 	vme.startAcquisition();
 	auto vmeData = new DataAnalyzer(vme);
-	auto lastAutoTriggerSecond = static_cast<int>(time(nullptr));
 	while (acquisitionWasStarted) {
-		auto currentAutoTriggerSecond = static_cast<int>(time(nullptr));
-		if (vme.autoTriggerEnabled && lastAutoTriggerSecond != currentAutoTriggerSecond) {
-			lastAutoTriggerSecond = currentAutoTriggerSecond;
-			vme.createSoftwareTrigger();
-		}
 		if (vmeData->readData()) {					//if we have smth to show or analyze
 			if (ui.recordButton->isChecked())
 				vmeData->writeData();
 			if (ui.drawButton->isChecked()) {
 				drawSignal(vmeData->getEventForDraw());
-				if (acquisitionWasStarted)			//to avoid deadlock on big buffers
+				if (acquisitionMutex.try_lock()) {
 					emit replot();
+					acquisitionMutex.unlock();
+				}
 			}
 			if (ui.amplifySpectrumButton->isChecked()) {
 				drawSpectrum(*vmeData);
-				if (acquisitionWasStarted)			//to avoid deadlock on big buffers
+				if (acquisitionMutex.try_lock()) {
 					emit replot();
+					acquisitionMutex.unlock();
+				}
 			}
 		}
 	}
@@ -146,7 +146,11 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 							auto colorOfLines = QColor(channelsColors[numberOfBoard][channelNumber].c_str());
 							ui.signalWidget->graph(graphNumber)->setPen(QPen(colorOfLines));
 							ui.signalWidget->graph(graphNumber++)->setName(QString("Channel %1").arg(channelNumber));
-							emit drawThresholdLine(channelNumber, numberOfBoard, DataAnalyzer::convertFromVMECountsTomV(vme.threshold[numberOfBoard][channelNumber]), vme.getRecordLength(), &colorOfLines);
+							if (vme.channelTriggerEnableMask[numberOfBoard] & 1 << channelNumber)
+								if (acquisitionMutex.try_lock()) {
+									emit drawThresholdLine(channelNumber, numberOfBoard, DataAnalyzer::convertFromVMECountsTomV(vme.threshold[numberOfBoard][channelNumber]), vme.getRecordLength(), &colorOfLines);
+									acquisitionMutex.unlock();
+								}
 						colorBrushMutex.unlock();
 					}
 					else {
@@ -164,16 +168,22 @@ void MainWindow::drawSpectrum(DataAnalyzer& vmeData) {
 					if (ui.WDFTabWidget->findChild<QPushButton*>(QString("channelIsDrawingButton_" + QString::number(numberOfBoard + 1) + "_" + QString::number(channelNumber)))->isChecked()) {	//если нажата кнопка отображения
 						auto amplitudes = vmeData.getApmlitudesForSpectre(numberOfBoard, channelNumber);
 						//каждый 4ый вольтаж изменяем, а боковые (+-1, +-2 и +-3) подравниваем
-						for (auto amplitude : amplitudes) {
-							auto graphDataContainer = ui.spectrumWidget->graph(graphNumber)->data().data();
-							graphDataContainer->at(amplitude	)->value += 1;
-							graphDataContainer->at(amplitude - 1)->value += 0.75;
-							graphDataContainer->at(amplitude + 1)->value += 0.75;
-							graphDataContainer->at(amplitude - 2)->value += 0.5;
-							graphDataContainer->at(amplitude + 2)->value += 0.5;
-							graphDataContainer->at(amplitude - 3)->value += 0.25;
-							graphDataContainer->at(amplitude + 3)->value += 0.25;
-						}
+						for (auto amplitude : amplitudes)
+							if (amplitude > 8) {
+								auto graphDataContainer = ui.spectrumWidget->graph(graphNumber)->data().data();
+								graphDataContainer->at(amplitude	)->value += 1;
+								graphDataContainer->at(amplitude - 1)->value += 0.75;
+								graphDataContainer->at(amplitude + 1)->value += 0.75;
+								graphDataContainer->at(amplitude - 2)->value += 0.5;
+								graphDataContainer->at(amplitude + 2)->value += 0.5;
+								graphDataContainer->at(amplitude - 3)->value += 0.25;
+								graphDataContainer->at(amplitude + 3)->value += 0.25;
+								colorBrushMutex.lock();
+									auto colorOfLines = QColor(channelsColors[numberOfBoard][channelNumber].c_str());
+									ui.spectrumWidget->graph(graphNumber)->setPen(QPen(colorOfLines));
+									ui.spectrumWidget->graph(graphNumber)->setName(QString("Channel %1").arg(channelNumber));
+								colorBrushMutex.unlock();
+							}
 						graphNumber++;
 					}
 }
@@ -209,6 +219,10 @@ void MainWindow::readSettings() {
 						button->setChecked(true);
 					}
 				}
+		//read autotrigger time interval
+		uint16_t triggerTimeInterval;
+		if (settingsStream >> triggerTimeInterval)
+			vme.autoTriggerTimeInMilliseconds = triggerTimeInterval;
 		//read other settings
 	}
 }
@@ -274,11 +288,19 @@ void MainWindow::startStopSlot() {
 				ui.signalWidget->addGraph();
 			ui.signalWidget->yAxis->setRange(-300, 100);
 			ui.signalWidget->xAxis->setRange(0, 2048*(static_cast<uint16_t>(pow(2, ui.bufferComboBox->currentIndex() + 1))));
-			acquisitionThread = std::thread(&MainWindow::updateData, this);
+			acquisitionThread = async(launch::async, &MainWindow::updateData, this);
 	}
 	else {
 		acquisitionWasStarted = false;
-		acquisitionThread.join();
+		//отключаем автотриггер, если он был включен
+		if (ui.autoTriggerButton->isChecked()) {
+			ui.autoTriggerButton->setChecked(false);
+			autoTriggerSlot();
+		}
+		//заканчиваем считывание
+		acquisitionMutex.lock();
+			acquisitionThread.get();
+		acquisitionMutex.unlock();
 		ui.signalWidget->clearGraphs();
 		setControlsEnabled(true);
 	}
@@ -427,12 +449,21 @@ void MainWindow::changeExternalTriggerSlot() {
 }
 
 void MainWindow::autoTriggerSlot() {
+	if (!autoTriggerTimer) {
+		autoTriggerTimer = new QTimer(this);
+		connect(autoTriggerTimer, &QTimer::timeout, this, &MainWindow::makeSoftwareTriggerSlot);
+	}
+	if (!autoTriggerTimer->isActive()) {
+		autoTriggerTimer->start(vme.autoTriggerTimeInMilliseconds);
+	} else {
+		autoTriggerTimer->stop();
+	}
 	vme.autoTriggerEnabled = !vme.autoTriggerEnabled;
 }
 
 void MainWindow::amplifySpectrumSlot() const {
 	if (static_cast<QPushButton*>(sender())->isChecked()) {
-		auto maxAmplitude = 500;
+		auto maxAmplitude = 1000;
 		QVector<double_t> keys(maxAmplitude);
 		for (auto i = 0; i < maxAmplitude; i++)
 			keys[i] = i;
@@ -441,12 +472,13 @@ void MainWindow::amplifySpectrumSlot() const {
 			ui.spectrumWidget->addGraph();
 			ui.spectrumWidget->graph(i)->setData(keys, values, true);
 		}
-		ui.spectrumWidget->yAxis->setRange(-10, 1500);					//max 1500 одинаковых значений амплитуды
-		ui.spectrumWidget->xAxis->setRange(-100, maxAmplitude);			//max 500 mV
+		ui.spectrumWidget->yAxis->setRange(0, 1000);					//max 1000 одинаковых значений амплитуды
+		ui.spectrumWidget->xAxis->setRange(0, maxAmplitude);			//max 1000 mV
 		ui.spectrumWidget->replot();
 	} else {
 		ui.spectrumWidget->clearGraphs();
 	}
+	ui.settingsBlock->setEnabled(!ui.settingsBlock->isEnabled());
 }
 
 void MainWindow::changePolaritySlot() {

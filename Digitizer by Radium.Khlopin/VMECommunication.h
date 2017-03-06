@@ -42,7 +42,6 @@ class VMECommunication {
 	 * \brief Длина записи в точках.
 	 */
 	uint32_t								recordLength = 2048;
-
 	/**
 	 * \brief Выполняет предстартовую подготовку платы к прослушке и выставляет все ее служенбные регистры.
 	 * \param boardNumber Номер платы
@@ -54,6 +53,10 @@ public:
 	 * \brief Флаг периодической триггерации.
 	 */
 	bool									autoTriggerEnabled = false;
+	/**
+	* \brief Интервал срабатывания автотриггера в миллисекундах.
+	*/
+	uint32_t								autoTriggerTimeInMilliseconds = 10;
 	/**
 	 * \brief Максимальное количество плат, которое возможно установить в мост VME.
 	 */

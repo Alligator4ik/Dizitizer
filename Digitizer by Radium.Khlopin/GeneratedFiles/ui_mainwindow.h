@@ -53,17 +53,6 @@ public:
     QWidget *signalTab;
     QGridLayout *gridLayout_4;
     QCustomPlot *signalWidget;
-    QWidget *spectrumTab;
-    QGridLayout *gridLayout_5;
-    QPushButton *pushButton_4;
-    QPushButton *amplifySpectrumButton;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_2;
-    QSpacerItem *horizontalSpacer_3;
-    QCustomPlot *spectrumWidget;
-    QWidget *dataTab;
-    QGridLayout *gridLayout_6;
-    QCustomPlot *dataWidget;
     QGroupBox *settingsBlock;
     QGridLayout *gridLayout_7;
     QSpacerItem *horizontalSpacer_2;
@@ -1097,13 +1086,24 @@ public:
     QLabel *DACOffsetLabel_9;
     QLabel *scaleLabel_9;
     QLabel *statusLabel_9;
+    QWidget *spectrumTab;
+    QGridLayout *gridLayout_5;
+    QPushButton *pushButton_4;
+    QPushButton *amplifySpectrumButton;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_2;
+    QSpacerItem *horizontalSpacer_3;
+    QCustomPlot *spectrumWidget;
+    QWidget *dataTab;
+    QGridLayout *gridLayout_6;
+    QCustomPlot *dataWidget;
     QGroupBox *groupBox;
 
     void setupUi(QMainWindow *MainWindowClass)
     {
         if (MainWindowClass->objectName().isEmpty())
             MainWindowClass->setObjectName(QStringLiteral("MainWindowClass"));
-        MainWindowClass->resize(1249, 825);
+        MainWindowClass->resize(1274, 825);
         MainWindowClass->setMinimumSize(QSize(1249, 825));
         MainWindowClass->setMaximumSize(QSize(1920, 1080));
         MainWindowClass->setAcceptDrops(false);
@@ -1300,60 +1300,7 @@ public:
 
         gridLayout_4->addWidget(signalWidget, 0, 0, 1, 1);
 
-        tabWidget->addTab(signalTab, QString());
-        spectrumTab = new QWidget();
-        spectrumTab->setObjectName(QStringLiteral("spectrumTab"));
-        gridLayout_5 = new QGridLayout(spectrumTab);
-        gridLayout_5->setSpacing(6);
-        gridLayout_5->setContentsMargins(11, 11, 11, 11);
-        gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
-        pushButton_4 = new QPushButton(spectrumTab);
-        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-
-        gridLayout_5->addWidget(pushButton_4, 1, 3, 1, 1);
-
-        amplifySpectrumButton = new QPushButton(spectrumTab);
-        amplifySpectrumButton->setObjectName(QStringLiteral("amplifySpectrumButton"));
-        amplifySpectrumButton->setCheckable(true);
-
-        gridLayout_5->addWidget(amplifySpectrumButton, 1, 0, 1, 1);
-
-        pushButton_3 = new QPushButton(spectrumTab);
-        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-
-        gridLayout_5->addWidget(pushButton_3, 1, 2, 1, 1);
-
-        pushButton_2 = new QPushButton(spectrumTab);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-
-        gridLayout_5->addWidget(pushButton_2, 1, 1, 1, 1);
-
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_5->addItem(horizontalSpacer_3, 1, 4, 1, 1);
-
-        spectrumWidget = new QCustomPlot(spectrumTab);
-        spectrumWidget->setObjectName(QStringLiteral("spectrumWidget"));
-
-        gridLayout_5->addWidget(spectrumWidget, 0, 0, 1, 5);
-
-        tabWidget->addTab(spectrumTab, QString());
-        dataTab = new QWidget();
-        dataTab->setObjectName(QStringLiteral("dataTab"));
-        gridLayout_6 = new QGridLayout(dataTab);
-        gridLayout_6->setSpacing(6);
-        gridLayout_6->setContentsMargins(11, 11, 11, 11);
-        gridLayout_6->setObjectName(QStringLiteral("gridLayout_6"));
-        dataWidget = new QCustomPlot(dataTab);
-        dataWidget->setObjectName(QStringLiteral("dataWidget"));
-
-        gridLayout_6->addWidget(dataWidget, 0, 0, 1, 1);
-
-        tabWidget->addTab(dataTab, QString());
-
-        gridLayout_3->addWidget(tabWidget, 0, 0, 1, 1);
-
-        settingsBlock = new QGroupBox(mainBox);
+        settingsBlock = new QGroupBox(signalTab);
         settingsBlock->setObjectName(QStringLiteral("settingsBlock"));
         settingsBlock->setMinimumSize(QSize(1215, 0));
         settingsBlock->setMaximumSize(QSize(1920, 260));
@@ -7381,7 +7328,60 @@ public:
         gridLayout_7->addWidget(channelsSettingBox, 0, 3, 1, 1);
 
 
-        gridLayout_3->addWidget(settingsBlock, 2, 0, 1, 1);
+        gridLayout_4->addWidget(settingsBlock, 1, 0, 1, 1);
+
+        tabWidget->addTab(signalTab, QString());
+        spectrumTab = new QWidget();
+        spectrumTab->setObjectName(QStringLiteral("spectrumTab"));
+        gridLayout_5 = new QGridLayout(spectrumTab);
+        gridLayout_5->setSpacing(6);
+        gridLayout_5->setContentsMargins(11, 11, 11, 11);
+        gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
+        pushButton_4 = new QPushButton(spectrumTab);
+        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+
+        gridLayout_5->addWidget(pushButton_4, 1, 3, 1, 1);
+
+        amplifySpectrumButton = new QPushButton(spectrumTab);
+        amplifySpectrumButton->setObjectName(QStringLiteral("amplifySpectrumButton"));
+        amplifySpectrumButton->setCheckable(true);
+
+        gridLayout_5->addWidget(amplifySpectrumButton, 1, 0, 1, 1);
+
+        pushButton_3 = new QPushButton(spectrumTab);
+        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+
+        gridLayout_5->addWidget(pushButton_3, 1, 2, 1, 1);
+
+        pushButton_2 = new QPushButton(spectrumTab);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+
+        gridLayout_5->addWidget(pushButton_2, 1, 1, 1, 1);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_5->addItem(horizontalSpacer_3, 1, 4, 1, 1);
+
+        spectrumWidget = new QCustomPlot(spectrumTab);
+        spectrumWidget->setObjectName(QStringLiteral("spectrumWidget"));
+
+        gridLayout_5->addWidget(spectrumWidget, 0, 0, 1, 5);
+
+        tabWidget->addTab(spectrumTab, QString());
+        dataTab = new QWidget();
+        dataTab->setObjectName(QStringLiteral("dataTab"));
+        gridLayout_6 = new QGridLayout(dataTab);
+        gridLayout_6->setSpacing(6);
+        gridLayout_6->setContentsMargins(11, 11, 11, 11);
+        gridLayout_6->setObjectName(QStringLiteral("gridLayout_6"));
+        dataWidget = new QCustomPlot(dataTab);
+        dataWidget->setObjectName(QStringLiteral("dataWidget"));
+
+        gridLayout_6->addWidget(dataWidget, 0, 0, 1, 1);
+
+        tabWidget->addTab(dataTab, QString());
+
+        gridLayout_3->addWidget(tabWidget, 0, 0, 1, 1);
 
         groupBox = new QGroupBox(mainBox);
         groupBox->setObjectName(QStringLiteral("groupBox"));
@@ -7538,13 +7538,6 @@ public:
 #endif // QT_NO_TOOLTIP
         startStopButton->setText(QString());
         mainBox->setTitle(QString());
-        tabWidget->setTabText(tabWidget->indexOf(signalTab), QApplication::translate("MainWindowClass", "\320\241\320\270\320\263\320\275\320\260\320\273", 0));
-        pushButton_4->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
-        amplifySpectrumButton->setText(QApplication::translate("MainWindowClass", "\320\220\320\274\320\277\320\273\320\270\321\202\321\203\320\264\320\275\321\213\320\271", 0));
-        pushButton_3->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
-        pushButton_2->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
-        tabWidget->setTabText(tabWidget->indexOf(spectrumTab), QApplication::translate("MainWindowClass", "\320\241\320\277\320\265\320\272\321\202\321\200", 0));
-        tabWidget->setTabText(tabWidget->indexOf(dataTab), QApplication::translate("MainWindowClass", "\320\236\320\261\321\200\320\260\320\261\320\276\321\202\320\272\320\260 \320\264\320\260\320\275\320\275\321\213\321\205", 0));
         settingsBlock->setTitle(QApplication::translate("MainWindowClass", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\270", 0));
         timeSettingBox->setTitle(QApplication::translate("MainWindowClass", "\320\237\320\276 \320\263\320\276\321\200\320\270\320\267\320\276\320\275\321\202\320\260\320\273\320\270", 0));
         bufferBox->setTitle(QApplication::translate("MainWindowClass", "\320\240\320\260\320\267\320\274\320\265\321\200 \320\261\321\203\321\204\320\265\321\200\320\260", 0));
@@ -10307,6 +10300,13 @@ public:
         scaleLabel_9->setText(QApplication::translate("MainWindowClass", "\320\234\320\260\321\201\321\210\321\202\320\260\320\261(\320\274\320\222/\320\264\320\265\320\273)", 0));
         statusLabel_9->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", 0));
         WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF9Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 9", 0));
+        tabWidget->setTabText(tabWidget->indexOf(signalTab), QApplication::translate("MainWindowClass", "\320\241\320\270\320\263\320\275\320\260\320\273", 0));
+        pushButton_4->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
+        amplifySpectrumButton->setText(QApplication::translate("MainWindowClass", "\320\220\320\274\320\277\320\273\320\270\321\202\321\203\320\264\320\275\321\213\320\271", 0));
+        pushButton_3->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
+        pushButton_2->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
+        tabWidget->setTabText(tabWidget->indexOf(spectrumTab), QApplication::translate("MainWindowClass", "\320\241\320\277\320\265\320\272\321\202\321\200", 0));
+        tabWidget->setTabText(tabWidget->indexOf(dataTab), QApplication::translate("MainWindowClass", "\320\236\320\261\321\200\320\260\320\261\320\276\321\202\320\272\320\260 \320\264\320\260\320\275\320\275\321\213\321\205", 0));
         groupBox->setTitle(QApplication::translate("MainWindowClass", "\320\230\320\275\321\204\320\276\321\200\320\274\320\260\321\206\320\270\321\217", 0));
     } // retranslateUi
 
