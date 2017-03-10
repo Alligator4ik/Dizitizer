@@ -64,18 +64,24 @@ MainWindow::~MainWindow() {
 		settingsOut << endl;
 		//write graph colours
 		for (auto WDF = 0; WDF < vme.numberOfWDF; WDF++) {
-			for (auto channel = 0; channel < 8; channel++)
-				settingsOut << channelsColors[WDF][channel] << " ";
+			for (auto channelNumber = 0; channelNumber < 8; channelNumber++)
+				settingsOut << channelsColors[WDF][channelNumber] << " ";
 			settingsOut << endl;
 		}
 		//write visibility of thresholds
 		for (auto WDF = 0; WDF < vme.numberOfWDF; WDF++) {
-			for (auto channel = 0; channel < 8; channel++)
-				settingsOut << thresholdsIsVisible[WDF][channel] << " ";
+			for (auto channelNumber = 0; channelNumber < 8; channelNumber++)
+				settingsOut << thresholdsIsVisible[WDF][channelNumber] << " ";
 			settingsOut << endl;
 		}
 		//write autotrigger time interval
 		settingsOut << vme.autoTriggerTimeInMilliseconds << endl;
+		//write thresholds
+		for (auto boardNumber = 0; boardNumber < vme.numberOfWDF; boardNumber++) {
+			for (auto channelNumber = 0; channelNumber < 8; channelNumber++)
+				settingsOut << vme.getChannelThreshold(boardNumber, channelNumber) << " ";
+			settingsOut << endl;
+		}
 		//write other settings
 	}
 }
@@ -148,7 +154,7 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 							ui.signalWidget->graph(graphNumber++)->setName(QString("Channel %1").arg(channelNumber));
 							if (vme.channelTriggerEnableMask[numberOfBoard] & 1 << channelNumber)
 								if (acquisitionMutex.try_lock()) {
-									emit drawThresholdLine(channelNumber, numberOfBoard, DataAnalyzer::convertFromVMECountsTomV(vme.threshold[numberOfBoard][channelNumber]), vme.getRecordLength(), &colorOfLines);
+									emit drawThresholdLine(channelNumber, numberOfBoard, DataAnalyzer::convertFromVMECountsTomV(vme.getChannelThreshold(numberOfBoard, channelNumber)), vme.getRecordLength(), &colorOfLines);
 									acquisitionMutex.unlock();
 								}
 						colorBrushMutex.unlock();
@@ -192,29 +198,29 @@ void MainWindow::readSettings() {
 	ifstream settingsStream("settings.cfg");
 	if (settingsStream) {
 		//read active boards
-		bool WDFIsActive;
-		for (auto WDF = 0; WDF < vme.numberOfWDF; WDF++)
-			if (settingsStream >> WDFIsActive)
-				vme.WDFIsEnabled.push_back(WDFIsActive);
+		bool boardIsActive;
+		for (auto boardNumber = 0; boardNumber < vme.numberOfWDF; boardNumber++)
+			if (settingsStream >> boardIsActive)
+				vme.WDFIsEnabled.push_back(boardIsActive);
 		//read graph colors
 		channelsColors.resize(vme.numberOfWDF);
 		string color;
-		for (auto WDF = 0; WDF < vme.numberOfWDF; WDF++)
-			for (auto channel = 0; channel < 8; channel++)
+		for (auto boardNumber = 0; boardNumber < vme.numberOfWDF; boardNumber++)
+			for (auto channelNumber = 0; channelNumber < 8; channelNumber++)
 				if (settingsStream >> color)
-					channelsColors[WDF].push_back(color);
+					channelsColors[boardNumber].push_back(color);
 		//read visibility of threshold lines
 		thresholdLinesPointers.resize(vme.numberOfWDF);
 		for (auto boardNumber = 0; boardNumber < vme.numberOfWDF; boardNumber++)
 			thresholdLinesPointers[boardNumber].resize(8);
 		thresholdsIsVisible.resize(vme.numberOfWDF);
 		bool thresholdLineIsVisible;
-		for (auto WDF = 0; WDF < vme.numberOfWDF; WDF++)
-			for (auto channel = 0; channel < 8; channel++)
+		for (auto boardNumber = 0; boardNumber < vme.numberOfWDF; boardNumber++)
+			for (auto channelNumber = 0; channelNumber < 8; channelNumber++)
 				if (settingsStream >> thresholdLineIsVisible) {
-					thresholdsIsVisible[WDF].push_back(thresholdLineIsVisible);
+					thresholdsIsVisible[boardNumber].push_back(thresholdLineIsVisible);
 					if (thresholdLineIsVisible) {
-						auto buttonName = QString("thresholdIsDrawingButton_%1_%2").arg(WDF + 1).arg(channel);
+						auto buttonName = QString("thresholdIsDrawingButton_%1_%2").arg(boardNumber + 1).arg(channelNumber);
 						auto button = ui.settingsBlock->findChild<QPushButton*>(buttonName);
 						button->setChecked(true);
 					}
@@ -223,6 +229,16 @@ void MainWindow::readSettings() {
 		uint16_t triggerTimeInterval;
 		if (settingsStream >> triggerTimeInterval)
 			vme.autoTriggerTimeInMilliseconds = triggerTimeInterval;
+		//read thresholds
+		int16_t threshold;
+		for (auto boardNumber = 0; boardNumber < vme.numberOfWDF; boardNumber++)
+			for (auto channelNumber = 0; channelNumber < 8; channelNumber++)
+				if (settingsStream >> threshold) {
+					vme.setChannelThreshold(boardNumber, channelNumber, DataAnalyzer::convertFromVMECountsTomV(threshold));
+					auto thresholdSpinBoxName = QString("thresholdSpinBox_%1_%2").arg(boardNumber + 1).arg(channelNumber);
+					auto spinBox = ui.settingsBlock->findChild<QSpinBox*>(thresholdSpinBoxName);
+					spinBox->setValue(DataAnalyzer::convertFromVMECountsTomV(threshold));
+				}
 		//read other settings
 	}
 }

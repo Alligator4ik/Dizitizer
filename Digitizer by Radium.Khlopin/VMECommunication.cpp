@@ -15,13 +15,13 @@ VMECommunication::VMECommunication() {
 	stringErrors.resize(numberOfWDF);
 	timeOfStringErrors.resize(numberOfWDF);
 	threshold.resize(numberOfWDF);
-	for (auto i = 0; i < 8; i++)
+	for (auto i = 0; i < numberOfWDF; i++)
 		threshold[i] = vector<ushort>(8, 133);						//8 - number of channels, 133 - default threshold (20 mV)
 	sample.resize(numberOfWDF);
-	for (auto i = 0; i < 8; i++)
+	for (auto i = 0; i < numberOfWDF; i++)
 		sample[i] = vector<ushort>(8, 10);							//8 - number of channels, 10 - default sample
 	DCOffset.resize(numberOfWDF);
-	for (auto i = 0; i < 8; i++)
+	for (auto i = 0; i < numberOfWDF; i++)
 		DCOffset[i] = vector<ushort>(8, 0x7FFF);					//8 - number of channels, 0x7FFF - default offset
 	polarity = CAEN_DGTZ_TriggerOnFallingEdge;
 }
@@ -250,6 +250,10 @@ vector<int32_t>& VMECommunication::getWDFIdentificators() {
 
 uint32_t VMECommunication::getRecordLength() {
 	return this->recordLength;
+}
+
+int16_t VMECommunication::getChannelThreshold(uint8_t boardNumber, uint8_t channelNumber) const {
+	return this->threshold[boardNumber][channelNumber];
 }
 
 bool VMECommunication::setRecordLength(int32_t newRecordLength, int32_t postTriggerSize) {

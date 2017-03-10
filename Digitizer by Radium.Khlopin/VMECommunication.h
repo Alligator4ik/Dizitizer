@@ -43,6 +43,10 @@ class VMECommunication {
 	 */
 	uint32_t								recordLength = 2048;
 	/**
+	* \brief Пороговое значение импульса для каждого канала каждой платы. Принимает значения от 0 до 255, где 0 - -1В, а 255 - +1В.
+	*/
+	vector<vector<ushort>>					threshold;
+	/**
 	 * \brief Выполняет предстартовую подготовку платы к прослушке и выставляет все ее служенбные регистры.
 	 * \param boardNumber Номер платы
 	 * \return Вовзращает код ошибки, возникший в результате настройки данной платы, или 0, если настройка прошла успешно.
@@ -77,10 +81,6 @@ public:
 	 * \brief Двоичная маска, в которую записываются каналы, для которых необходимо вести запись.
 	 */
 	vector<int32_t>							channelActiveEnableMask;
-	/**
-	 * \brief Пороговое значение импульса для каждого канала каждой платы. Принимает значения от 0 до 255, где 0 - -1В, а 255 - +1В.
-	 */
-	vector<vector<ushort>>					threshold;
 	/**
 	 * \brief Длина имульса, необходимого для запуска триггера, для каждого канала каждой платы.
 	 */
@@ -145,6 +145,8 @@ public:
 	vector<vector<QString>>&				getStringErrors();
 	vector<int32_t>&						getWDFIdentificators();
 	uint32_t								getRecordLength();
+	int16_t									getChannelThreshold(uint8_t boardNumber, uint8_t channelNumber) const;
+	CAEN_DGTZ_BoardInfo_t					getWDFInfo(ushort numberOfBoard);
 
 	bool									setRecordLength(int32_t newRecordLength, int32_t postTriggerSize);
 	bool									setPostTriggerLength(int32_t postTriggerSize);
@@ -154,6 +156,4 @@ public:
 	void									addTimeOfBoardError(ushort board);
 	void									addBoardError(ushort board, CAEN_DGTZ_ErrorCode errorCode);
 	void									addStringError(uint16_t board, QString functionDescription);
-
-	CAEN_DGTZ_BoardInfo_t					getWDFInfo(ushort numberOfBoard);
 };
