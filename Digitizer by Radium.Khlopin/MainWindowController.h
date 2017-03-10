@@ -48,11 +48,11 @@ private:
 	void							setControlsEnabledOnStartStop(bool enabled) const;
 	void							setControlsEnabledOnConnectDisconnect(bool enabled) const;
 signals:
-	void							drawThresholdLine(uint8_t channelNumber, uint8_t boardNumber ,int32_t threshold, uint64_t recordLength, QColor* colorOfLine);
+	void							drawThresholdLine(int channelNumber, int boardNumber , int threshold, int recordLength, QColor* colorOfLine);
 	void							replot(void);
+	void							stopSingleTrigger(void);
 private slots:
 	void							connectSlot();
-	void							startStopSlot();
 	void							startStopWritingDataSlot();
 	void							openSettingsSlot();
 	void							openErrorsSlot();
@@ -71,6 +71,7 @@ private slots:
 	void							changePolaritySlot();
 	void							thresholdVisibilityChangedSlot();
 public slots:
-	void							drawThresholdLineSlot(uint8_t channelNumber, uint8_t boardNumber, int32_t threshold, uint64_t recordLength, QColor* colorOfLine);
+	void							drawThresholdLineSlot(int channelNumber, int boardNumber, int threshold, int recordLength, QColor* colorOfLine);
 	void							replotGraph() const;
+	void							startStopSlot();
 };

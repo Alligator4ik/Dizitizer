@@ -45,10 +45,12 @@ MainWindow::MainWindow(QWidget *parent)
 		connect(button, &QPushButton::clicked, this, &MainWindow::thresholdVisibilityChangedSlot);
 
 	//connect replot slot to replotting graph in main thread
-	connect(this, &MainWindow::replot, this, &MainWindow::replotGraph, Qt::QueuedConnection);
+	connect(this, &MainWindow::replot, this, &MainWindow::replotGraph, Qt::BlockingQueuedConnection);
 
 	//connect threshold line drawing process to main thread 
-	connect(this, &MainWindow::drawThresholdLine, this, &MainWindow::drawThresholdLineSlot, Qt::QueuedConnection);
+	connect(this, &MainWindow::drawThresholdLine, this, &MainWindow::drawThresholdLineSlot, Qt::BlockingQueuedConnection);
+
+	connect(this, &MainWindow::stopSingleTrigger, this, &MainWindow::startStopSlot);
 
 	//set postTrigger disabled
 	ui.postTriggerBox->setEnabled(false);
@@ -104,22 +106,26 @@ void MainWindow::updateData() {
 			if (ui.drawButton->isChecked()) {
 				drawSignal(vmeData->getEventForDraw());
 				if (acquisitionMutex.try_lock()) {
-					emit replot();
+					emit replot();	//todo: fix deadlock
 					acquisitionMutex.unlock();
 				}
 			}
 			if (ui.amplifySpectrumButton->isChecked()) {
 				drawAmplifySpectrum(*vmeData);
 				if (acquisitionMutex.try_lock()) {
-					emit replot();
+					emit replot();	//todo: fix deadlock
 					acquisitionMutex.unlock();
 				}
 			}
 			if (ui.rossiAlphaSpectrumButton->isChecked()) {
 				
 			}
-			if (vme.singleTriggerWasStarted)
-				acquisitionWasStarted = false;
+			//todo: make single trigger stoppable (call start-stop slot maybe)
+			if (vme.singleTriggerWasStarted) {
+				vme.singleTriggerWasStarted = false;
+				emit stopSingleTrigger();
+				break;
+			}
 		}
 	}
 	//proceed to stop phase
@@ -161,7 +167,7 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 								if (acquisitionMutex.try_lock()) {
 									emit drawThresholdLine(channelNumber, numberOfBoard, DataAnalyzer::convertFromVMECountsTomV(vme.getChannelThreshold(numberOfBoard, channelNumber)), vme.getRecordLength(), &colorOfLines);
 									acquisitionMutex.unlock();
-								}
+								} //todo: fix deadlock
 						colorBrushMutex.unlock();
 					}
 					else {
@@ -325,6 +331,9 @@ void MainWindow::startStopSlot() {
 			ui.autoTriggerButton->setChecked(false);
 			autoTriggerSlot();
 		}
+		//отключаем одиночный триггер, если он был включен
+		if (ui.singleTriggerButton->isChecked())
+			ui.singleTriggerButton->setChecked(false);
 		//заканчиваем считывание
 		acquisitionMutex.lock();
 			acquisitionThread.get();
@@ -528,7 +537,7 @@ void MainWindow::thresholdVisibilityChangedSlot() {
 
 }
 
-void MainWindow::drawThresholdLineSlot(uint8_t channelNumber, uint8_t boardNumber, int32_t threshold, uint64_t recordLength, QColor* colorOfLine) {
+void MainWindow::drawThresholdLineSlot(int channelNumber, int boardNumber, int threshold, int recordLength, QColor* colorOfLine) {
 	if (!thresholdLinesPointers[boardNumber][channelNumber])
 		thresholdLinesPointers[boardNumber][channelNumber] = new QCPItemLine(ui.signalWidget);
 	thresholdLinesPointers[boardNumber][channelNumber]->start->setCoords(0, threshold);
