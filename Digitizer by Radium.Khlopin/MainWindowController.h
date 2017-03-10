@@ -41,10 +41,12 @@ private:
 
 	void							updateData();
 	void							drawSignal(CAEN_DGTZ_UINT8_EVENT_t* eventToDraw);
-	void							drawSpectrum(DataAnalyzer& vmeData);
+	void							drawAmplifySpectrum(DataAnalyzer& vmeData);
+	void							drawRossiAlphaSpectrum();
 	void							readSettings();
 	void							pulseErrorButton();
-	void							setControlsEnabled(bool enabled) const;
+	void							setControlsEnabledOnStartStop(bool enabled) const;
+	void							setControlsEnabledOnConnectDisconnect(bool enabled) const;
 signals:
 	void							drawThresholdLine(uint8_t channelNumber, uint8_t boardNumber ,int32_t threshold, uint64_t recordLength, QColor* colorOfLine);
 	void							replot(void);
@@ -64,6 +66,7 @@ private slots:
 	void							makeSoftwareTriggerSlot();
 	void							changeExternalTriggerSlot();
 	void							autoTriggerSlot();
+	void							singleTriggerSlot();
 	void							amplifySpectrumSlot() const;
 	void							changePolaritySlot();
 	void							thresholdVisibilityChangedSlot();

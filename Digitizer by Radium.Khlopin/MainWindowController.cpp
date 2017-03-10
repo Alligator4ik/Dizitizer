@@ -109,12 +109,17 @@ void MainWindow::updateData() {
 				}
 			}
 			if (ui.amplifySpectrumButton->isChecked()) {
-				drawSpectrum(*vmeData);
+				drawAmplifySpectrum(*vmeData);
 				if (acquisitionMutex.try_lock()) {
 					emit replot();
 					acquisitionMutex.unlock();
 				}
 			}
+			if (ui.rossiAlphaSpectrumButton->isChecked()) {
+				
+			}
+			if (vme.singleTriggerWasStarted)
+				acquisitionWasStarted = false;
 		}
 	}
 	//proceed to stop phase
@@ -165,7 +170,7 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 	ui.signalWidget->legend->setVisible(true);
 }
 
-void MainWindow::drawSpectrum(DataAnalyzer& vmeData) {
+void MainWindow::drawAmplifySpectrum(DataAnalyzer& vmeData) {
 	auto graphNumber = 0;
 	for (auto numberOfBoard = 0; numberOfBoard < vme.numberOfWDF; numberOfBoard++)												//по всем доскам
 		if (vme.WDFIsEnabled[numberOfBoard])																					//если доска включена
@@ -192,6 +197,10 @@ void MainWindow::drawSpectrum(DataAnalyzer& vmeData) {
 							}
 						graphNumber++;
 					}
+}
+
+void MainWindow::drawRossiAlphaSpectrum() {
+	//Not implemented
 }
 
 void MainWindow::readSettings() {
@@ -247,27 +256,37 @@ void MainWindow::pulseErrorButton() {
 	//Not implemented
 }
 
-void MainWindow::setControlsEnabled(bool enabled) const {
+void MainWindow::setControlsEnabledOnStartStop(bool enabled) const {
+	ui.startStopButton->setChecked(!enabled);
 	ui.startStopButton->setToolTip(toRussian(enabled ? "Старт" : "Стоп"));
 	ui.connectButton->setEnabled(enabled);
 	ui.exitButton->setEnabled(enabled);
 	ui.bufferComboBox->setEnabled(enabled);
 	ui.polarityBox->setEnabled(enabled);
 	ui.postTriggerBox->setEnabled(!enabled);
-	ui.triggerOptionsBox->setEnabled(!enabled);
+	//triggerBox options
+	ui.forceTriggerButton->setEnabled(!enabled);
+	ui.autoTriggerButton->setEnabled(!enabled);
+	ui.externalTriggerButton->setEnabled(!enabled);
+	ui.singleTriggerButton->setEnabled(enabled);
+}
+
+void MainWindow::setControlsEnabledOnConnectDisconnect(bool enabled) const {
+	ui.connectButton->setToolTip(toRussian(enabled ? "Отключить" : "Включить"));
+	ui.startStopButton->setEnabled(enabled);
+	ui.drawButton->setEnabled(enabled);
+	ui.recordButton->setEnabled(enabled);
+	ui.triggerSettingBox->setEnabled(enabled);
+	ui.triggerOptionsBox->setEnabled(enabled);
+	ui.bufferComboBox->setEnabled(enabled);
+	ui.singleTriggerButton->setEnabled(enabled);
 }
 
 void MainWindow::connectSlot() {
 	if (!vme.isConnected()) {
 		vme.connect();
 		if (vme.isConnected()) {
-			//enable control buttons
-			ui.connectButton->setToolTip(toRussian("Отключить"));
-			ui.startStopButton->setEnabled(true);
-			ui.drawButton->setEnabled(true);
-			ui.recordButton->setEnabled(true);
-			ui.triggerSettingBox->setEnabled(true);
-			ui.bufferComboBox->setEnabled(true);
+			setControlsEnabledOnConnectDisconnect(true);
 			//enable WDF tabs
 			for (auto i = 0; i < vme.numberOfWDF; i++) {
 				if (vme.WDFIsEnabled[i]) {
@@ -281,32 +300,25 @@ void MainWindow::connectSlot() {
 			ui.connectButton->setChecked(false);							//if connection wasn't established
 	}
 	else {
-			//set control buttons disabled
-			ui.connectButton->setToolTip(toRussian("Включить"));
-			ui.startStopButton->setEnabled(false);
-			ui.drawButton->setEnabled(false);
-			ui.recordButton->setEnabled(false);
-			ui.triggerSettingBox->setEnabled(false);
-			ui.bufferComboBox->setEnabled(false);
-			//disable WDF tabs
-			for (auto tabNumber = 0; tabNumber < vme.numberOfWDF; tabNumber++)
-				ui.WDFTabWidget->setTabEnabled(tabNumber, false);
-			//disconnect from VME
-			vme.disconnect();
+		setControlsEnabledOnConnectDisconnect(false);
+		//disable WDF tabs
+		for (auto tabNumber = 0; tabNumber < vme.numberOfWDF; tabNumber++)
+			ui.WDFTabWidget->setTabEnabled(tabNumber, false);
+		//disconnect from VME
+		vme.disconnect();
 	}
 }
 
 void MainWindow::startStopSlot() {
 	if (!acquisitionWasStarted) {
-			acquisitionWasStarted = true;
-			setControlsEnabled(false);
-			for (auto i = 0; i < activeChannelsCount; i++)
-				ui.signalWidget->addGraph();
-			ui.signalWidget->yAxis->setRange(-300, 100);
-			ui.signalWidget->xAxis->setRange(0, 2048*(static_cast<uint16_t>(pow(2, ui.bufferComboBox->currentIndex() + 1))));
-			acquisitionThread = async(launch::async, &MainWindow::updateData, this);
-	}
-	else {
+		acquisitionWasStarted = true;
+		setControlsEnabledOnStartStop(false);
+		for (auto i = 0; i < activeChannelsCount; i++)
+			ui.signalWidget->addGraph();
+		ui.signalWidget->yAxis->setRange(-300, 100);
+		ui.signalWidget->xAxis->setRange(0, 2048*(static_cast<uint16_t>(pow(2, ui.bufferComboBox->currentIndex() + 1))));
+		acquisitionThread = async(launch::async, &MainWindow::updateData, this);
+	} else {
 		acquisitionWasStarted = false;
 		//отключаем автотриггер, если он был включен
 		if (ui.autoTriggerButton->isChecked()) {
@@ -318,7 +330,7 @@ void MainWindow::startStopSlot() {
 			acquisitionThread.get();
 		acquisitionMutex.unlock();
 		ui.signalWidget->clearGraphs();
-		setControlsEnabled(true);
+		setControlsEnabledOnStartStop(true);
 	}
 }
 
@@ -475,6 +487,11 @@ void MainWindow::autoTriggerSlot() {
 		autoTriggerTimer->stop();
 	}
 	vme.autoTriggerEnabled = !vme.autoTriggerEnabled;
+}
+
+void MainWindow::singleTriggerSlot() {
+	vme.singleTriggerWasStarted = true;
+	startStopSlot();
 }
 
 void MainWindow::amplifySpectrumSlot() const {

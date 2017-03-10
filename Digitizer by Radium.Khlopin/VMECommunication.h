@@ -62,6 +62,10 @@ public:
 	*/
 	uint32_t								autoTriggerTimeInMilliseconds = 10;
 	/**
+	* \brief ѕоказывает, был ли запущен процесс прослушки в качестве одиночного импульса.
+	*/
+	bool									singleTriggerWasStarted = false;
+	/**
 	 * \brief ћаксимальное количество плат, которое возможно установить в мост VME.
 	 */
 	uint16_t								numberOfWDF = 9;

@@ -1091,7 +1091,7 @@ public:
     QPushButton *pushButton_4;
     QPushButton *amplifySpectrumButton;
     QPushButton *pushButton_3;
-    QPushButton *pushButton_2;
+    QPushButton *rossiAlphaSpectrumButton;
     QSpacerItem *horizontalSpacer_3;
     QCustomPlot *spectrumWidget;
     QWidget *dataTab;
@@ -1103,7 +1103,7 @@ public:
     {
         if (MainWindowClass->objectName().isEmpty())
             MainWindowClass->setObjectName(QStringLiteral("MainWindowClass"));
-        MainWindowClass->resize(1274, 825);
+        MainWindowClass->resize(1274, 839);
         MainWindowClass->setMinimumSize(QSize(1249, 825));
         MainWindowClass->setMaximumSize(QSize(1920, 1080));
         MainWindowClass->setAcceptDrops(false);
@@ -1360,16 +1360,16 @@ public:
 
         triggerSettingBox = new QGroupBox(settingsBlock);
         triggerSettingBox->setObjectName(QStringLiteral("triggerSettingBox"));
-        triggerSettingBox->setEnabled(true);
+        triggerSettingBox->setEnabled(false);
         triggerSettingBox->setMinimumSize(QSize(120, 230));
         triggerSettingBox->setMaximumSize(QSize(120, 230));
         postTriggerBox = new QGroupBox(triggerSettingBox);
         postTriggerBox->setObjectName(QStringLiteral("postTriggerBox"));
-        postTriggerBox->setEnabled(true);
+        postTriggerBox->setEnabled(false);
         postTriggerBox->setGeometry(QRect(10, 15, 100, 50));
         postTriggerSpinBox = new QSpinBox(postTriggerBox);
         postTriggerSpinBox->setObjectName(QStringLiteral("postTriggerSpinBox"));
-        postTriggerSpinBox->setEnabled(true);
+        postTriggerSpinBox->setEnabled(false);
         postTriggerSpinBox->setGeometry(QRect(15, 20, 50, 20));
         postTriggerSpinBox->setAlignment(Qt::AlignCenter);
         postTriggerSpinBox->setReadOnly(false);
@@ -1408,6 +1408,7 @@ public:
         triggerOptionsBox->setGeometry(QRect(10, 130, 100, 90));
         externalTriggerButton = new QPushButton(triggerOptionsBox);
         externalTriggerButton->setObjectName(QStringLiteral("externalTriggerButton"));
+        externalTriggerButton->setEnabled(false);
         externalTriggerButton->setGeometry(QRect(13, 15, 35, 35));
         externalTriggerButton->setToolTipDuration(5);
         QIcon icon14;
@@ -1418,6 +1419,7 @@ public:
         externalTriggerButton->setFlat(false);
         autoTriggerButton = new QPushButton(triggerOptionsBox);
         autoTriggerButton->setObjectName(QStringLiteral("autoTriggerButton"));
+        autoTriggerButton->setEnabled(false);
         autoTriggerButton->setGeometry(QRect(57, 15, 35, 35));
         autoTriggerButton->setToolTipDuration(5);
         QIcon icon15;
@@ -1428,6 +1430,7 @@ public:
         autoTriggerButton->setFlat(false);
         forceTriggerButton = new QPushButton(triggerOptionsBox);
         forceTriggerButton->setObjectName(QStringLiteral("forceTriggerButton"));
+        forceTriggerButton->setEnabled(false);
         forceTriggerButton->setGeometry(QRect(57, 50, 35, 35));
         forceTriggerButton->setToolTipDuration(5);
         QIcon icon16;
@@ -1437,6 +1440,7 @@ public:
         forceTriggerButton->setFlat(false);
         singleTriggerButton = new QPushButton(triggerOptionsBox);
         singleTriggerButton->setObjectName(QStringLiteral("singleTriggerButton"));
+        singleTriggerButton->setEnabled(false);
         singleTriggerButton->setGeometry(QRect(13, 50, 35, 35));
         QIcon icon17;
         icon17.addFile(QStringLiteral("../Desktop/CAEN-UI/Single.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -7353,10 +7357,10 @@ public:
 
         gridLayout_5->addWidget(pushButton_3, 1, 2, 1, 1);
 
-        pushButton_2 = new QPushButton(spectrumTab);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        rossiAlphaSpectrumButton = new QPushButton(spectrumTab);
+        rossiAlphaSpectrumButton->setObjectName(QStringLiteral("rossiAlphaSpectrumButton"));
 
-        gridLayout_5->addWidget(pushButton_2, 1, 1, 1, 1);
+        gridLayout_5->addWidget(rossiAlphaSpectrumButton, 1, 1, 1, 1);
 
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -7482,6 +7486,7 @@ public:
         QObject::connect(blockSamplesButton_9_6, SIGNAL(toggled(bool)), samplesSpinBox_9_6, SLOT(setDisabled(bool)));
         QObject::connect(blockSamplesButton_9_7, SIGNAL(toggled(bool)), samplesSpinBox_9_7, SLOT(setDisabled(bool)));
         QObject::connect(amplifySpectrumButton, SIGNAL(clicked()), MainWindowClass, SLOT(amplifySpectrumSlot()));
+        QObject::connect(singleTriggerButton, SIGNAL(clicked()), MainWindowClass, SLOT(singleTriggerSlot()));
 
         exitButton->setDefault(false);
         tabWidget->setCurrentIndex(0);
@@ -10304,7 +10309,7 @@ public:
         pushButton_4->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
         amplifySpectrumButton->setText(QApplication::translate("MainWindowClass", "\320\220\320\274\320\277\320\273\320\270\321\202\321\203\320\264\320\275\321\213\320\271", 0));
         pushButton_3->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
-        pushButton_2->setText(QApplication::translate("MainWindowClass", "PushButton", 0));
+        rossiAlphaSpectrumButton->setText(QApplication::translate("MainWindowClass", "\320\240\320\276\321\201\321\201\320\270-\320\220\320\273\321\214\321\204\320\260", 0));
         tabWidget->setTabText(tabWidget->indexOf(spectrumTab), QApplication::translate("MainWindowClass", "\320\241\320\277\320\265\320\272\321\202\321\200", 0));
         tabWidget->setTabText(tabWidget->indexOf(dataTab), QApplication::translate("MainWindowClass", "\320\236\320\261\321\200\320\260\320\261\320\276\321\202\320\272\320\260 \320\264\320\260\320\275\320\275\321\213\321\205", 0));
         groupBox->setTitle(QApplication::translate("MainWindowClass", "\320\230\320\275\321\204\320\276\321\200\320\274\320\260\321\206\320\270\321\217", 0));

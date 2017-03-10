@@ -37,15 +37,14 @@ public:
 	 * \brief ћетод производит асинхронное чтение со всех активных плат.
 	 * \return ¬озвращает правду, если удалось прочитать хот€ бы один ивент.
 	 */
-	bool readData();							//return true if there is something to read on any board
+	bool										readData();
 	/**
 	 * \brief —читывает данные с конкретной платы и возвращает истину, если на выбранной плате есть данные дл€ обработки.
 	 * \param boardID Ќомер платы, с которой нужно произвести чтение.
 	 * \return ¬ернет истину, если с данной платы есть, что считывать.
 	 */
-	bool readDataOnBoard(uint32_t boardID);
-	void writeData();
-
+	bool										readDataOnBoard(uint32_t boardID);
+	void										writeData();
 	/**
 	 * \brief 
 	 * \return ¬езвращает событие дл€ отрисовки (самое первое с первой платы).
@@ -58,7 +57,7 @@ public:
 	 */
 	vector<CAEN_DGTZ_UINT8_EVENT_t*>&			getEvents(uint8_t boardNumber);
 	/**
-	 * \brief 
+	 * \brief »спользуетс€ дл€ получени€ максимальной амплитуды сигнала.
 	 * \param boardNumber Ќомер платы
 	 * \param channel Ќомер канала
 	 * \return ¬озвращает амплитуды.

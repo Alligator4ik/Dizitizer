@@ -293,12 +293,13 @@ bool VMECommunication::setChannelThreshold(ushort board, ushort channel, int16_t
 	auto newThresholdInADCCounts = static_cast<uint32_t>((newThresholdInmV + 500)*0.255);
 	threshold[board][channel] = newThresholdInADCCounts;
 	CAEN_DGTZ_ErrorCode error;
-	if ((error = CAEN_DGTZ_SetChannelTriggerThreshold(WDFIdentificators[board], channel, newThresholdInADCCounts)) != CAEN_DGTZ_Success) {
-		timeOfBoardErrors[board].push_back(QTime::currentTime());
-		boardErrors[board].push_back(error);
-		stringErrors[board].push_back(toRussian("Настройке порога"));
-		return false;
-	}
+	if (connectionToWDFIsActive)
+		if ((error = CAEN_DGTZ_SetChannelTriggerThreshold(WDFIdentificators[board], channel, newThresholdInADCCounts)) != CAEN_DGTZ_Success) {
+			timeOfBoardErrors[board].push_back(QTime::currentTime());
+			boardErrors[board].push_back(error);
+			stringErrors[board].push_back(toRussian("Настройке порога"));
+			return false;
+		}
 	return true;
 }
 

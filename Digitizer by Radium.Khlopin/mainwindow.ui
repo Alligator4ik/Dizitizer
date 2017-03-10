@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1274</width>
-    <height>825</height>
+    <height>839</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -811,7 +811,7 @@
               <item row="0" column="2">
                <widget class="QGroupBox" name="triggerSettingBox">
                 <property name="enabled">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="minimumSize">
                  <size>
@@ -830,7 +830,7 @@
                 </property>
                 <widget class="QGroupBox" name="postTriggerBox">
                  <property name="enabled">
-                  <bool>true</bool>
+                  <bool>false</bool>
                  </property>
                  <property name="geometry">
                   <rect>
@@ -845,7 +845,7 @@
                  </property>
                  <widget class="QSpinBox" name="postTriggerSpinBox">
                   <property name="enabled">
-                   <bool>true</bool>
+                   <bool>false</bool>
                   </property>
                   <property name="geometry">
                    <rect>
@@ -976,6 +976,9 @@
                   <string>Режим запуска</string>
                  </property>
                  <widget class="QPushButton" name="externalTriggerButton">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
                   <property name="geometry">
                    <rect>
                     <x>13</x>
@@ -1011,6 +1014,9 @@
                   </property>
                  </widget>
                  <widget class="QPushButton" name="autoTriggerButton">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
                   <property name="geometry">
                    <rect>
                     <x>57</x>
@@ -1046,6 +1052,9 @@
                   </property>
                  </widget>
                  <widget class="QPushButton" name="forceTriggerButton">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
                   <property name="geometry">
                    <rect>
                     <x>57</x>
@@ -1078,6 +1087,9 @@
                   </property>
                  </widget>
                  <widget class="QPushButton" name="singleTriggerButton">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
                   <property name="geometry">
                    <rect>
                     <x>13</x>
@@ -26250,9 +26262,9 @@ border-radius: 5</string>
             </widget>
            </item>
            <item row="1" column="1">
-            <widget class="QPushButton" name="pushButton_2">
+            <widget class="QPushButton" name="rossiAlphaSpectrumButton">
              <property name="text">
-              <string>PushButton</string>
+              <string>Росси-Альфа</string>
              </property>
             </widget>
            </item>
@@ -26398,8 +26410,8 @@ border-radius: 5</string>
    <slot>bufferChangedSlot(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>176</x>
-     <y>620</y>
+     <x>187</x>
+     <y>530</y>
     </hint>
     <hint type="destinationlabel">
      <x>154</x>
@@ -26414,8 +26426,8 @@ border-radius: 5</string>
    <slot>setPostTriggerLengthSlot(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>277</x>
-     <y>620</y>
+     <x>288</x>
+     <y>530</y>
     </hint>
     <hint type="destinationlabel">
      <x>278</x>
@@ -26430,8 +26442,8 @@ border-radius: 5</string>
    <slot>openErrorsSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1120</x>
-     <y>61</y>
+     <x>1188</x>
+     <y>78</y>
     </hint>
     <hint type="destinationlabel">
      <x>1143</x>
@@ -26446,8 +26458,8 @@ border-radius: 5</string>
    <slot>makeSoftwareTriggerSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>304</x>
-     <y>780</y>
+     <x>315</x>
+     <y>694</y>
     </hint>
     <hint type="destinationlabel">
      <x>454</x>
@@ -26462,8 +26474,8 @@ border-radius: 5</string>
    <slot>changeExternalTriggerSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>260</x>
-     <y>745</y>
+     <x>271</x>
+     <y>659</y>
     </hint>
     <hint type="destinationlabel">
      <x>124</x>
@@ -26494,8 +26506,8 @@ border-radius: 5</string>
    <slot>changePolaritySlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>254</x>
-     <y>671</y>
+     <x>293</x>
+     <y>601</y>
     </hint>
     <hint type="destinationlabel">
      <x>267</x>
@@ -26510,8 +26522,8 @@ border-radius: 5</string>
    <slot>autoTriggerSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>285</x>
-     <y>743</y>
+     <x>315</x>
+     <y>659</y>
     </hint>
     <hint type="destinationlabel">
      <x>222</x>
@@ -26526,12 +26538,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>630</x>
-     <y>725</y>
+     <x>641</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>605</x>
-     <y>725</y>
+     <x>616</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26542,12 +26554,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>725</x>
-     <y>725</y>
+     <x>736</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>700</x>
-     <y>725</y>
+     <x>711</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26558,12 +26570,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>820</x>
-     <y>725</y>
+     <x>831</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>795</x>
-     <y>725</y>
+     <x>806</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26574,12 +26586,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>535</x>
-     <y>725</y>
+     <x>546</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>510</x>
-     <y>725</y>
+     <x>521</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26590,12 +26602,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>915</x>
-     <y>725</y>
+     <x>926</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>890</x>
-     <y>725</y>
+     <x>901</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26606,12 +26618,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1010</x>
-     <y>725</y>
+     <x>1021</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>985</x>
-     <y>725</y>
+     <x>996</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26622,12 +26634,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1105</x>
-     <y>725</y>
+     <x>1116</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1080</x>
-     <y>725</y>
+     <x>1091</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26638,12 +26650,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1200</x>
-     <y>725</y>
+     <x>1211</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1175</x>
-     <y>725</y>
+     <x>1186</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26654,12 +26666,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>535</x>
-     <y>725</y>
+     <x>546</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>510</x>
-     <y>725</y>
+     <x>521</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26670,12 +26682,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>630</x>
-     <y>725</y>
+     <x>641</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>605</x>
-     <y>725</y>
+     <x>616</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26686,12 +26698,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>630</x>
-     <y>725</y>
+     <x>641</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>605</x>
-     <y>725</y>
+     <x>616</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26702,12 +26714,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>725</x>
-     <y>725</y>
+     <x>736</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>700</x>
-     <y>725</y>
+     <x>711</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26718,12 +26730,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>820</x>
-     <y>725</y>
+     <x>831</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>795</x>
-     <y>725</y>
+     <x>806</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26734,12 +26746,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>915</x>
-     <y>725</y>
+     <x>926</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>890</x>
-     <y>725</y>
+     <x>901</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26750,12 +26762,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1010</x>
-     <y>725</y>
+     <x>1021</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>985</x>
-     <y>725</y>
+     <x>996</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26766,12 +26778,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1105</x>
-     <y>725</y>
+     <x>1116</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1080</x>
-     <y>725</y>
+     <x>1091</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26782,12 +26794,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1200</x>
-     <y>725</y>
+     <x>1211</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1175</x>
-     <y>725</y>
+     <x>1186</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26798,12 +26810,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>535</x>
-     <y>725</y>
+     <x>546</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>510</x>
-     <y>725</y>
+     <x>521</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26814,12 +26826,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>630</x>
-     <y>725</y>
+     <x>641</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>605</x>
-     <y>725</y>
+     <x>616</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26830,12 +26842,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>725</x>
-     <y>725</y>
+     <x>736</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>700</x>
-     <y>725</y>
+     <x>711</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26846,12 +26858,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>820</x>
-     <y>725</y>
+     <x>831</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>795</x>
-     <y>725</y>
+     <x>806</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26862,12 +26874,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>915</x>
-     <y>725</y>
+     <x>926</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>890</x>
-     <y>725</y>
+     <x>901</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26878,12 +26890,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1010</x>
-     <y>725</y>
+     <x>1021</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>985</x>
-     <y>725</y>
+     <x>996</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26894,12 +26906,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1105</x>
-     <y>725</y>
+     <x>1116</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1080</x>
-     <y>725</y>
+     <x>1091</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26910,12 +26922,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1200</x>
-     <y>725</y>
+     <x>1211</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1175</x>
-     <y>725</y>
+     <x>1186</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26926,12 +26938,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>535</x>
-     <y>725</y>
+     <x>546</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>510</x>
-     <y>725</y>
+     <x>521</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26942,12 +26954,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>725</x>
-     <y>725</y>
+     <x>736</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>700</x>
-     <y>725</y>
+     <x>711</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26958,12 +26970,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>820</x>
-     <y>725</y>
+     <x>831</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>795</x>
-     <y>725</y>
+     <x>806</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26974,12 +26986,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>915</x>
-     <y>725</y>
+     <x>926</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>890</x>
-     <y>725</y>
+     <x>901</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -26990,12 +27002,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1010</x>
-     <y>725</y>
+     <x>1021</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>985</x>
-     <y>725</y>
+     <x>996</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27006,12 +27018,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1105</x>
-     <y>725</y>
+     <x>1116</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1080</x>
-     <y>725</y>
+     <x>1091</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27022,12 +27034,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1200</x>
-     <y>725</y>
+     <x>1211</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1175</x>
-     <y>725</y>
+     <x>1186</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27038,12 +27050,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>535</x>
-     <y>725</y>
+     <x>546</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>510</x>
-     <y>725</y>
+     <x>521</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27054,12 +27066,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>630</x>
-     <y>725</y>
+     <x>641</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>605</x>
-     <y>725</y>
+     <x>616</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27070,12 +27082,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>725</x>
-     <y>725</y>
+     <x>736</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>700</x>
-     <y>725</y>
+     <x>711</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27086,12 +27098,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>820</x>
-     <y>725</y>
+     <x>831</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>795</x>
-     <y>725</y>
+     <x>806</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27102,12 +27114,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>915</x>
-     <y>725</y>
+     <x>926</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>890</x>
-     <y>725</y>
+     <x>901</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27118,12 +27130,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1010</x>
-     <y>725</y>
+     <x>1021</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>985</x>
-     <y>725</y>
+     <x>996</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27134,12 +27146,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1105</x>
-     <y>725</y>
+     <x>1116</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1080</x>
-     <y>725</y>
+     <x>1091</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27150,12 +27162,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1200</x>
-     <y>725</y>
+     <x>1211</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1175</x>
-     <y>725</y>
+     <x>1186</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27166,12 +27178,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>535</x>
-     <y>725</y>
+     <x>546</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>510</x>
-     <y>725</y>
+     <x>521</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27182,12 +27194,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>630</x>
-     <y>725</y>
+     <x>641</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>605</x>
-     <y>725</y>
+     <x>616</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27198,12 +27210,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>725</x>
-     <y>725</y>
+     <x>736</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>700</x>
-     <y>725</y>
+     <x>711</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27214,12 +27226,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>820</x>
-     <y>725</y>
+     <x>831</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>795</x>
-     <y>725</y>
+     <x>806</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27230,12 +27242,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>915</x>
-     <y>725</y>
+     <x>926</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>890</x>
-     <y>725</y>
+     <x>901</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27246,12 +27258,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1010</x>
-     <y>725</y>
+     <x>1021</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>985</x>
-     <y>725</y>
+     <x>996</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27262,12 +27274,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1105</x>
-     <y>725</y>
+     <x>1116</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1080</x>
-     <y>725</y>
+     <x>1091</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27278,12 +27290,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1200</x>
-     <y>725</y>
+     <x>1211</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1175</x>
-     <y>725</y>
+     <x>1186</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27294,12 +27306,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>535</x>
-     <y>725</y>
+     <x>546</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>510</x>
-     <y>725</y>
+     <x>521</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27310,12 +27322,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>630</x>
-     <y>725</y>
+     <x>641</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>605</x>
-     <y>725</y>
+     <x>616</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27326,12 +27338,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>725</x>
-     <y>725</y>
+     <x>736</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>700</x>
-     <y>725</y>
+     <x>711</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27342,12 +27354,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>820</x>
-     <y>725</y>
+     <x>831</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>795</x>
-     <y>725</y>
+     <x>806</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27358,12 +27370,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>915</x>
-     <y>725</y>
+     <x>926</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>890</x>
-     <y>725</y>
+     <x>901</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27374,12 +27386,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1010</x>
-     <y>725</y>
+     <x>1021</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>985</x>
-     <y>725</y>
+     <x>996</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27390,12 +27402,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1105</x>
-     <y>725</y>
+     <x>1116</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1080</x>
-     <y>725</y>
+     <x>1091</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27406,12 +27418,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1200</x>
-     <y>725</y>
+     <x>1211</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1175</x>
-     <y>725</y>
+     <x>1186</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27422,12 +27434,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>535</x>
-     <y>725</y>
+     <x>546</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>510</x>
-     <y>725</y>
+     <x>521</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27438,12 +27450,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>630</x>
-     <y>725</y>
+     <x>641</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>605</x>
-     <y>725</y>
+     <x>616</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27454,12 +27466,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>725</x>
-     <y>725</y>
+     <x>736</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>700</x>
-     <y>725</y>
+     <x>711</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27470,12 +27482,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>820</x>
-     <y>725</y>
+     <x>831</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>795</x>
-     <y>725</y>
+     <x>806</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27486,12 +27498,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>915</x>
-     <y>725</y>
+     <x>926</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>890</x>
-     <y>725</y>
+     <x>901</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27502,12 +27514,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1010</x>
-     <y>725</y>
+     <x>1021</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>985</x>
-     <y>725</y>
+     <x>996</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27518,12 +27530,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1105</x>
-     <y>725</y>
+     <x>1116</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1080</x>
-     <y>725</y>
+     <x>1091</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27534,12 +27546,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1200</x>
-     <y>725</y>
+     <x>1211</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1175</x>
-     <y>725</y>
+     <x>1186</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27550,12 +27562,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>535</x>
-     <y>725</y>
+     <x>546</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>510</x>
-     <y>725</y>
+     <x>521</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27566,12 +27578,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>630</x>
-     <y>725</y>
+     <x>641</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>605</x>
-     <y>725</y>
+     <x>616</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27582,12 +27594,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>725</x>
-     <y>725</y>
+     <x>736</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>700</x>
-     <y>725</y>
+     <x>711</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27598,12 +27610,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>820</x>
-     <y>725</y>
+     <x>831</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>795</x>
-     <y>725</y>
+     <x>806</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27614,12 +27626,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>915</x>
-     <y>725</y>
+     <x>926</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>890</x>
-     <y>725</y>
+     <x>901</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27630,12 +27642,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1010</x>
-     <y>725</y>
+     <x>1021</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>985</x>
-     <y>725</y>
+     <x>996</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27646,12 +27658,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1105</x>
-     <y>725</y>
+     <x>1116</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1080</x>
-     <y>725</y>
+     <x>1091</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27662,12 +27674,12 @@ border-radius: 5</string>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1200</x>
-     <y>725</y>
+     <x>1211</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1175</x>
-     <y>725</y>
+     <x>1186</x>
+     <y>635</y>
     </hint>
    </hints>
   </connection>
@@ -27678,12 +27690,28 @@ border-radius: 5</string>
    <slot>amplifySpectrumSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>72</x>
-     <y>441</y>
+     <x>93</x>
+     <y>716</y>
     </hint>
     <hint type="destinationlabel">
      <x>6</x>
      <y>469</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>singleTriggerButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>singleTriggerSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>260</x>
+     <y>696</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>328</x>
+     <y>830</y>
     </hint>
    </hints>
   </connection>
@@ -27703,5 +27731,6 @@ border-radius: 5</string>
   <slot>changePolaritySlot()</slot>
   <slot>autoTriggerSlot()</slot>
   <slot>amplifySpectrumSlot()</slot>
+  <slot>singleTriggerSlot()</slot>
  </slots>
 </ui>
