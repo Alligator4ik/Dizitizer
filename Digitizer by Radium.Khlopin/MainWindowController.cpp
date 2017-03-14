@@ -53,6 +53,9 @@ MainWindow::MainWindow(QWidget *parent)
 	//connect stopping single trigger to main stop slot
 	connect(this, &MainWindow::stopSingleTrigger, this, &MainWindow::startStopSlot);
 
+	//connect clear graph's signal to it's slot
+	connect(this, &MainWindow::clearGraphs, this, &MainWindow::clearGraphsOnStopSlot, Qt::BlockingQueuedConnection);
+
 	//connect graphs' visible buttons
 	auto graphIsVisibleButtons = ui.WDFTabWidget->findChildren<QPushButton*>(QRegExp("channelIsDrawingButton"), Qt::FindChildrenRecursively);
 	for (auto button : graphIsVisibleButtons)
@@ -121,22 +124,15 @@ void MainWindow::updateData() {
 				vmeData->writeData();
 			if (ui.drawButton->isChecked()) {
 				drawSignal(vmeData->getEventForDraw());
-				if (acquisitionMutex.try_lock()) {
-					emit replot();	//todo: fix deadlock
-					acquisitionMutex.unlock();
-				}
+				emit replot();
 			}
 			if (ui.amplifySpectrumButton->isChecked()) {
 				drawAmplifySpectrum(*vmeData);
-				if (acquisitionMutex.try_lock()) {
-					emit replot();	//todo: fix deadlock
-					acquisitionMutex.unlock();
-				}
+				emit replot();
 			}
 			if (ui.rossiAlphaSpectrumButton->isChecked()) {
 				
 			}
-			//todo: make single trigger stoppable (call start-stop slot maybe)
 			if (vme.singleTriggerWasStarted) {
 				vme.singleTriggerWasStarted = false;
 				emit stopSingleTrigger();
@@ -148,6 +144,7 @@ void MainWindow::updateData() {
 	makeSoftwareTriggerSlot();
 	if (!vme.stopAcquisition())
 		this->pulseErrorButton();
+	emit clearGraphs();
 	delete vmeData;
 }
 
@@ -180,10 +177,7 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 							ui.signalWidget->graph(graphNumber)->setPen(QPen(colorOfLines));
 							ui.signalWidget->graph(graphNumber)->setName(QString("Channel %1").arg(channelNumber));
 							if (vme.channelTriggerEnableMask[numberOfBoard] & 1 << channelNumber)
-								if (acquisitionMutex.try_lock()) {
-									emit drawThresholdLine(channelNumber, numberOfBoard, DataAnalyzer::convertFromVMECountsTomV(vme.getChannelThreshold(numberOfBoard, channelNumber)), vme.getRecordLength(), colorOfLines);
-									acquisitionMutex.unlock();
-								} //todo: fix deadlock
+								emit drawThresholdLine(channelNumber, numberOfBoard, DataAnalyzer::convertFromVMECountsTomV(vme.getChannelThreshold(numberOfBoard, channelNumber)), vme.getRecordLength(), colorOfLines);
 						colorBrushMutex.unlock();
 					}
 					graphNumber++;
@@ -362,12 +356,6 @@ void MainWindow::startStopSlot() {
 		//отключаем одиночный триггер, если он был включен
 		if (ui.singleTriggerButton->isChecked())
 			ui.singleTriggerButton->setChecked(false);
-		//заканчиваем считывание
-		acquisitionMutex.lock();
-			acquisitionThread.get();
-		acquisitionMutex.unlock();
-		ui.signalWidget->clearGraphs();
-		setControlsEnabledOnStartStop(true);
 	}
 }
 
@@ -589,4 +577,9 @@ void MainWindow::drawThresholdLineSlot(int channelNumber, int boardNumber, int t
 void MainWindow::replotGraph() const {
 	ui.signalWidget->replot();
 	ui.spectrumWidget->replot();
+}
+
+void MainWindow::clearGraphsOnStopSlot() const {
+	ui.signalWidget->clearGraphs();
+	setControlsEnabledOnStartStop(true);
 }

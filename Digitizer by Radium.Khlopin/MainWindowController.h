@@ -35,7 +35,6 @@ private:
 	vector<vector<string>>			channelsColors;
 	vector<vector<Qt::PenStyle>>	stylesOfThresholdLines;
 	future<void>					acquisitionThread;
-	mutex							acquisitionMutex;
 	/**
 	* \brief Таймер, запускающий софтверный триггер.
 	*/
@@ -52,6 +51,7 @@ private:
 signals:
 	void							drawThresholdLine(int channelNumber, int boardNumber , int threshold, int recordLength, QColor& colorOfLine);
 	void							replot(void);
+	void							clearGraphs(void);
 	void							stopSingleTrigger(void);
 private slots:
 	void							connectSlot();
@@ -76,5 +76,6 @@ private slots:
 public slots:
 	void							drawThresholdLineSlot(int channelNumber, int boardNumber, int threshold, int recordLength, QColor& colorOfLine);
 	void							replotGraph() const;
+	void							clearGraphsOnStopSlot() const;
 	void							startStopSlot();
 };
