@@ -50,7 +50,13 @@ MainWindow::MainWindow(QWidget *parent)
 	//connect threshold line drawing process to main thread 
 	connect(this, &MainWindow::drawThresholdLine, this, &MainWindow::drawThresholdLineSlot, Qt::BlockingQueuedConnection);
 
+	//connect stopping single trigger to main stop slot
 	connect(this, &MainWindow::stopSingleTrigger, this, &MainWindow::startStopSlot);
+
+	//connect graphs' visible buttons
+	auto graphIsVisibleButtons = ui.WDFTabWidget->findChildren<QPushButton*>(QRegExp("channelIsDrawingButton"), Qt::FindChildrenRecursively);
+	for (auto button : graphIsVisibleButtons)
+		connect(button, &QPushButton::clicked, this, &MainWindow::graphVisibilityChangedSlot);
 
 	//set postTrigger disabled
 	ui.postTriggerBox->setEnabled(false);
@@ -144,7 +150,7 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 	for (auto numberOfBoard = 0; numberOfBoard < vme.numberOfWDF; numberOfBoard++)												//по всем доскам
 		if (vme.WDFIsEnabled[numberOfBoard])																					//если доска включена
 			for (auto channelNumber = 0; channelNumber < vme.getWDFInfo(numberOfBoard).Channels; channelNumber++)				//по всем каналам этой доски
-				if (eventToDraw->ChSize[channelNumber] != 0)																	//если на канале что-то есть
+				if (eventToDraw->ChSize[channelNumber] != 0) {																	//если на канале что-то есть
 					if (ui.WDFTabWidget->findChild<QPushButton*>(QString("channelIsDrawingButton_" + QString::number(numberOfBoard + 1) + "_" + QString::number(channelNumber)))->isChecked()) {	//если нажата кнопка отображения сигнала
 						//initializing the graph
 						auto graphDataContainer = ui.signalWidget->graph(graphNumber)->data().data();
@@ -162,17 +168,16 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 						colorBrushMutex.lock();
 							auto colorOfLines = QColor(channelsColors[numberOfBoard][channelNumber].c_str());
 							ui.signalWidget->graph(graphNumber)->setPen(QPen(colorOfLines));
-							ui.signalWidget->graph(graphNumber++)->setName(QString("Channel %1").arg(channelNumber));
+							ui.signalWidget->graph(graphNumber)->setName(QString("Channel %1").arg(channelNumber));
 							if (vme.channelTriggerEnableMask[numberOfBoard] & 1 << channelNumber)
 								if (acquisitionMutex.try_lock()) {
-									emit drawThresholdLine(channelNumber, numberOfBoard, DataAnalyzer::convertFromVMECountsTomV(vme.getChannelThreshold(numberOfBoard, channelNumber)), vme.getRecordLength(), &colorOfLines);
+									emit drawThresholdLine(channelNumber, numberOfBoard, DataAnalyzer::convertFromVMECountsTomV(vme.getChannelThreshold(numberOfBoard, channelNumber)), vme.getRecordLength(), colorOfLines);
 									acquisitionMutex.unlock();
 								} //todo: fix deadlock
 						colorBrushMutex.unlock();
 					}
-					else {
-						ui.signalWidget->graph(graphNumber++)->setVisible(false);
-					}
+					graphNumber++;
+				}
 	ui.signalWidget->legend->setVisible(true);
 }
 
@@ -528,21 +533,31 @@ void MainWindow::changePolaritySlot() {
 }
 
 void MainWindow::thresholdVisibilityChangedSlot() {
-	auto button = static_cast<QPushButton*>(sender());
-	auto buttonNameList = button->objectName().split("_");
-	auto WDFNumber = buttonNameList[1].toInt() - 1;
-	auto channelNumber = buttonNameList[2].toInt();
+	auto visibilityButton = static_cast<QPushButton*>(sender());
+	auto visibilityButtonNameList = visibilityButton->objectName().split("_");
+	auto WDFNumber = visibilityButtonNameList[1].toInt() - 1;
+	auto channelNumber = visibilityButtonNameList[2].toInt();
 
-	thresholdsIsVisible[WDFNumber][channelNumber] = button->isChecked();
-
+	thresholdsIsVisible[WDFNumber][channelNumber] = visibilityButton->isChecked();
 }
 
-void MainWindow::drawThresholdLineSlot(int channelNumber, int boardNumber, int threshold, int recordLength, QColor* colorOfLine) {
+void MainWindow::graphVisibilityChangedSlot() {
+	auto visibilityButton = static_cast<QPushButton*>(sender());
+	auto visibilityButtonNameList = visibilityButton->objectName().split("_");
+	auto WDFNumber = visibilityButtonNameList[1].toInt() - 1;
+	auto channelNumber = visibilityButtonNameList[2].toInt();
+	auto graphNumber = WDFNumber * 8 + channelNumber;
+
+	if (ui.signalWidget->graphCount() > graphNumber)
+		ui.signalWidget->graph(graphNumber)->setVisible(visibilityButton->isChecked());
+}
+
+void MainWindow::drawThresholdLineSlot(int channelNumber, int boardNumber, int threshold, int recordLength, QColor& colorOfLine) {
 	if (!thresholdLinesPointers[boardNumber][channelNumber])
 		thresholdLinesPointers[boardNumber][channelNumber] = new QCPItemLine(ui.signalWidget);
 	thresholdLinesPointers[boardNumber][channelNumber]->start->setCoords(0, threshold);
 	thresholdLinesPointers[boardNumber][channelNumber]->end->setCoords(2*recordLength, threshold);
-	QPen pencil(*colorOfLine);
+	QPen pencil(colorOfLine);
 	pencil.setStyle(Qt::DotLine);
 	thresholdLinesPointers[boardNumber][channelNumber]->setPen(pencil);
 	thresholdLinesPointers[boardNumber][channelNumber]->setVisible(thresholdsIsVisible[boardNumber][channelNumber]);
