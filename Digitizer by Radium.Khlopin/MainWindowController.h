@@ -19,6 +19,7 @@ public:
 	~MainWindow();
 	VMECommunication&				getVME();
 	vector<vector<string>>&			getChannelColors();
+	vector<vector<Qt::PenStyle>>&	getStylesOfThresholdLines();
 	mutex							colorBrushMutex;
 private:
 	Ui::MainWindowClass				ui;
@@ -32,6 +33,7 @@ private:
 	vector<vector<bool>>			samplesSpinboxIsDisabled;
 	vector<vector<bool>>			thresholdsIsVisible;
 	vector<vector<string>>			channelsColors;
+	vector<vector<Qt::PenStyle>>	stylesOfThresholdLines;
 	future<void>					acquisitionThread;
 	mutex							acquisitionMutex;
 	/**

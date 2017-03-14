@@ -90,6 +90,12 @@ MainWindow::~MainWindow() {
 				settingsOut << vme.getChannelThreshold(boardNumber, channelNumber) << " ";
 			settingsOut << endl;
 		}
+		//write threshold styles
+		for (auto boardNumber = 0; boardNumber < vme.numberOfWDF; boardNumber++) {
+			for (auto channelNumber = 0; channelNumber < 8; channelNumber++)
+				settingsOut << stylesOfThresholdLines[boardNumber][channelNumber] << " ";
+			settingsOut << endl;
+		}
 		//write other settings
 	}
 }
@@ -100,6 +106,10 @@ VMECommunication& MainWindow::getVME() {
 
 vector<vector<string>>& MainWindow::getChannelColors() {
 	return channelsColors;
+}
+
+vector<vector<Qt::PenStyle>>& MainWindow::getStylesOfThresholdLines() {
+	return stylesOfThresholdLines;
 }
 
 void MainWindow::updateData() {
@@ -215,6 +225,17 @@ void MainWindow::drawRossiAlphaSpectrum() {
 }
 
 void MainWindow::readSettings() {
+	//prepare for reading into
+	channelsColors.resize(vme.numberOfWDF);
+	thresholdLinesPointers.resize(vme.numberOfWDF);
+	for (auto boardNumber = 0; boardNumber < vme.numberOfWDF; boardNumber++)
+		thresholdLinesPointers[boardNumber].resize(8);
+	thresholdsIsVisible.resize(vme.numberOfWDF);
+	stylesOfThresholdLines.resize(vme.numberOfWDF);
+	for (auto boardNumber = 0; boardNumber < vme.numberOfWDF; boardNumber++)
+		stylesOfThresholdLines[boardNumber].resize(8);
+
+	//reading
 	ifstream settingsStream("settings.cfg");
 	if (settingsStream) {
 		//read active boards
@@ -223,17 +244,12 @@ void MainWindow::readSettings() {
 			if (settingsStream >> boardIsActive)
 				vme.WDFIsEnabled.push_back(boardIsActive);
 		//read graph colors
-		channelsColors.resize(vme.numberOfWDF);
 		string color;
 		for (auto boardNumber = 0; boardNumber < vme.numberOfWDF; boardNumber++)
 			for (auto channelNumber = 0; channelNumber < 8; channelNumber++)
 				if (settingsStream >> color)
 					channelsColors[boardNumber].push_back(color);
 		//read visibility of threshold lines
-		thresholdLinesPointers.resize(vme.numberOfWDF);
-		for (auto boardNumber = 0; boardNumber < vme.numberOfWDF; boardNumber++)
-			thresholdLinesPointers[boardNumber].resize(8);
-		thresholdsIsVisible.resize(vme.numberOfWDF);
 		bool thresholdLineIsVisible;
 		for (auto boardNumber = 0; boardNumber < vme.numberOfWDF; boardNumber++)
 			for (auto channelNumber = 0; channelNumber < 8; channelNumber++)
@@ -258,6 +274,13 @@ void MainWindow::readSettings() {
 					auto thresholdSpinBoxName = QString("thresholdSpinBox_%1_%2").arg(boardNumber + 1).arg(channelNumber);
 					auto spinBox = ui.settingsBlock->findChild<QSpinBox*>(thresholdSpinBoxName);
 					spinBox->setValue(DataAnalyzer::convertFromVMECountsTomV(threshold));
+				}
+		//read threshold styles
+		uint16_t thresholdStyle;
+		for (auto boardNumber = 0; boardNumber < vme.numberOfWDF; boardNumber++)
+			for (auto channelNumber = 0; channelNumber < 8; channelNumber++)
+				if (settingsStream >> thresholdStyle) {
+					stylesOfThresholdLines[boardNumber][channelNumber] = Qt::PenStyle(thresholdStyle);
 				}
 		//read other settings
 	}
@@ -558,7 +581,7 @@ void MainWindow::drawThresholdLineSlot(int channelNumber, int boardNumber, int t
 	thresholdLinesPointers[boardNumber][channelNumber]->start->setCoords(0, threshold);
 	thresholdLinesPointers[boardNumber][channelNumber]->end->setCoords(2*recordLength, threshold);
 	QPen pencil(colorOfLine);
-	pencil.setStyle(Qt::DotLine);
+	pencil.setStyle(stylesOfThresholdLines[boardNumber][channelNumber]);
 	thresholdLinesPointers[boardNumber][channelNumber]->setPen(pencil);
 	thresholdLinesPointers[boardNumber][channelNumber]->setVisible(thresholdsIsVisible[boardNumber][channelNumber]);
 }

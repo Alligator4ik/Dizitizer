@@ -3,7 +3,8 @@
 
 
 SettingsWindowController::SettingsWindowController(QWidget *parent)
-	: QMainWindow(parent) {
+	: QMainWindow(parent) ,
+	stylesOfThresholdLines(dynamic_cast<MainWindow*>(parent)->getStylesOfThresholdLines()) {
 	ui.setupUi(this);
 	ui.VMECommSetting->setColumnWidth(0, 24);
 	ui.ColorSetting->setColumnWidth(0, 55);
@@ -27,10 +28,21 @@ SettingsWindowController::SettingsWindowController(QWidget *parent)
 		auto color = string("background-color: ") + (dynamic_cast<MainWindow*>(parent))->getChannelColors()[0][colorWinNumber];
 		colors[colorWinNumber]->setStyleSheet(color.c_str());
 	}
-	auto triggerTimeInterval = dynamic_cast<MainWindow*>(this->parent())->getVME().autoTriggerTimeInMilliseconds;
-	ui.ViewerSetting->findChild<QSpinBox*>(QString("triggerTimeSpinBox"), Qt::FindChildrenRecursively)->setValue(triggerTimeInterval);
-	//get autotrigger time interval
 
+	//get autotrigger time interval
+	auto triggerTimeInterval = dynamic_cast<MainWindow*>(parent)->getVME().autoTriggerTimeInMilliseconds;
+	ui.ViewerSetting->findChild<QSpinBox*>(QString("triggerTimeSpinBox"), Qt::FindChildrenRecursively)->setValue(triggerTimeInterval);
+
+	//get styles of threshold lines
+	auto styles = ui.ChannelColorSetting->findChildren<QComboBox*>(QRegExp("TrigLine_CH"), Qt::FindChildrenRecursively);
+	for (auto channelNumber = 0; channelNumber < styles.size(); channelNumber++) {
+		switch (stylesOfThresholdLines[0][channelNumber]) {
+			case Qt::SolidLine:		{styles[channelNumber]->setCurrentIndex(0); break;}
+			case Qt::DotLine:		{styles[channelNumber]->setCurrentIndex(1); break;}
+			case Qt::DashDotLine:	{styles[channelNumber]->setCurrentIndex(2); break;}
+			default:				{styles[channelNumber]->setCurrentIndex(0); break;}
+		}
+	}
 }
 
 SettingsWindowController::~SettingsWindowController()
@@ -55,6 +67,16 @@ void SettingsWindowController::acceptedSlot() {
 	//apply autotrigger interval
 	auto triggerTimeIntervalSpinBox = ui.ViewerSetting->findChild<QSpinBox*>(QString("triggerTimeSpinBox"), Qt::FindChildrenRecursively);
 	dynamic_cast<MainWindow*>(this->parent())->getVME().autoTriggerTimeInMilliseconds = triggerTimeIntervalSpinBox->value();
+	//apply styles of threshold lines
+	auto styles = ui.ChannelColorSetting->findChildren<QComboBox*>(QRegExp("TrigLine_CH"), Qt::FindChildrenRecursively);
+	for (auto channelNumber = 0; channelNumber < styles.size(); channelNumber++) {
+		switch (styles[channelNumber]->currentIndex()) {
+			case 0: {stylesOfThresholdLines[currentWDF][channelNumber] = Qt::SolidLine; break; }
+			case 1: {stylesOfThresholdLines[currentWDF][channelNumber] = Qt::DotLine; break; }
+			case 2: {stylesOfThresholdLines[currentWDF][channelNumber] = Qt::DashDotLine; break; }
+			default: break;
+		}
+	}
 	//apply other settings
 	this->close();
 }
@@ -65,6 +87,16 @@ void SettingsWindowController::WDFChangedInChannelTabSlot(int newWDFIndex) const
 	for (auto colorWinNumber = 0; colorWinNumber < colors.size(); colorWinNumber++) {
 		auto color = string("background-color: ") + dynamic_cast<MainWindow*>(this->parentWidget())->getChannelColors()[newWDFIndex][colorWinNumber];
 		colors[colorWinNumber]->setStyleSheet(color.c_str());
+	}
+	//get styles of threshold lines
+	auto styles = ui.ChannelColorSetting->findChildren<QComboBox*>(QRegExp("TrigLine_CH"), Qt::FindChildrenRecursively);
+	for (auto channelNumber = 0; channelNumber < styles.size(); channelNumber++) {
+		switch (stylesOfThresholdLines[newWDFIndex][channelNumber]) {
+			case Qt::SolidLine: {styles[channelNumber]->setCurrentIndex(0); break; }
+			case Qt::DotLine: {styles[channelNumber]->setCurrentIndex(1); break; }
+			case Qt::DashDotLine: {styles[channelNumber]->setCurrentIndex(2); break; }
+			default: {styles[channelNumber]->setCurrentIndex(0); break; }
+		}
 	}
 }
 

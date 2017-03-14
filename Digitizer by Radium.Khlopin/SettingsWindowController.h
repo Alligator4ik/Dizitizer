@@ -12,7 +12,8 @@ public:
 	~SettingsWindowController();
 
 private:
-	Ui::SettingsWindowController		ui;
+	Ui::SettingsWindowController				ui;
+	std::vector<std::vector<Qt::PenStyle>>&		stylesOfThresholdLines;
 
 private slots:
 	void acceptedSlot();
