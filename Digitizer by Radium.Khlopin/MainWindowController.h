@@ -21,6 +21,7 @@ public:
 	vector<vector<string>>&			getChannelColors();
 	vector<vector<Qt::PenStyle>>&	getStylesOfThresholdLines();
 	mutex							colorBrushMutex;
+	mutex							thresholdLineStyleMutex;
 private:
 	Ui::MainWindowClass				ui;
 	SettingsWindowController*		settings_window_controller;
@@ -28,7 +29,18 @@ private:
 
 	VMECommunication				vme;
 	bool							acquisitionWasStarted = false;
-	uint16_t						activeChannelsCount = 0;			//need to know graphs count (from all boards)
+	/**
+	 * \brief Флаг, показывающий, что необходимо обновить оси графика, так как сменился буфер.
+	 */
+	bool							recordLengthHasBeenChanged = true;
+	/**
+	 * \brief Количество включенных каналов со всех плат-оцифровщиков.
+	 */
+	uint16_t						activeChannelsCount = 0;
+	/**
+	 * \brief Поле, содержащее указатель на линию, разделяющую предтриггерное пространство и посттриггерное
+	 */
+	QCPItemLine*					postTriggerLine = nullptr;
 	vector<vector<QCPItemLine*>>	thresholdLinesPointers;
 	vector<vector<bool>>			samplesSpinboxIsDisabled;
 	vector<vector<bool>>			thresholdsIsVisible;
@@ -48,18 +60,19 @@ private:
 	void							pulseErrorButton();
 	void							setControlsEnabledOnStartStop(bool enabled) const;
 	void							setControlsEnabledOnConnectDisconnect(bool enabled) const;
+	void							clearGraphs() const;
 signals:
 	void							drawThresholdLine(int channelNumber, int boardNumber , int threshold, int recordLength, QColor& colorOfLine);
-	void							replot(void);
-	void							clearGraphs(void);
-	void							stopSingleTrigger(void);
+	void							drawPostTriggerLine();
+	void							replot();
+	void							stopSingleTrigger();
 private slots:
 	void							connectSlot();
 	void							startStopWritingDataSlot();
 	void							openSettingsSlot();
 	void							openErrorsSlot();
 	void							changeTriggerSettingsSlot();
-	void							changeThresholdSlot(int newThreshold);
+	void							changeThresholdSlot(double newThreshold);
 	void							changeSampleSlot(int newSample);
 	void							changeDCOffsetSlot(int newOffset);
 	void							resetParameterSlot() const;
@@ -72,10 +85,10 @@ private slots:
 	void							amplifySpectrumSlot() const;
 	void							changePolaritySlot();
 	void							thresholdVisibilityChangedSlot();
-	void							graphVisibilityChangedSlot();
+	void							graphVisibilityChangedSlot() const;
 public slots:
 	void							drawThresholdLineSlot(int channelNumber, int boardNumber, int threshold, int recordLength, QColor& colorOfLine);
+	void							drawPostTriggerLineSlot();
 	void							replotGraph() const;
-	void							clearGraphsOnStopSlot() const;
 	void							startStopSlot();
 };

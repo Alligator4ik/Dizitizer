@@ -37,11 +37,15 @@ class VMECommunication {
 	/**
 	 * \brief Максимальное количество ивентов, которое может быть передано за цикл чтения.
 	 */
-	uint32_t								numberOfBlocksTransferredDuringCycle = 0xf;
+	uint32_t								numberOfBlocksTransferredDuringCycle = 0x1;
 	/**
 	 * \brief Длина записи в точках.
 	 */
 	uint32_t								recordLength = 2048;
+	/**
+	* \brief Пост-триггер в процентах.
+	*/
+	uint16_t								postTrigger = 80;
 	/**
 	* \brief Пороговое значение импульса для каждого канала каждой платы. Принимает значения от 0 до 255, где 0 - -1В, а 255 - +1В.
 	*/
@@ -149,12 +153,18 @@ public:
 	vector<vector<QString>>&				getStringErrors();
 	vector<int32_t>&						getWDFIdentificators();
 	uint32_t								getRecordLength();
+	/**
+	 * \brief Позволяет получить текущее значение порога для конкретного канала конкретной платы.
+	 * \param boardNumber Номер платы
+	 * \param channelNumber Номер канала
+	 * \return Значение порога [0; 255] = [-1В;+1В]
+	 */
 	int16_t									getChannelThreshold(uint8_t boardNumber, uint8_t channelNumber) const;
 	CAEN_DGTZ_BoardInfo_t					getWDFInfo(ushort numberOfBoard);
 
 	bool									setRecordLength(int32_t newRecordLength, int32_t postTriggerSize);
 	bool									setPostTriggerLength(int32_t postTriggerSize);
-	bool									setChannelThreshold(ushort board, ushort channel, int16_t newThreshold);
+	bool									setChannelThreshold(ushort board, ushort channel, double_t newThreshold);
 	bool									setChannelSample(ushort board, ushort channel, ushort newSample);
 	bool									setChannelOffset(ushort board, ushort channel, int16_t newOffsetInmV);
 	void									addTimeOfBoardError(ushort board);

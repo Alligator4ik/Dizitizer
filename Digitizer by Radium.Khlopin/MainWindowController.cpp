@@ -20,9 +20,9 @@ MainWindow::MainWindow(QWidget *parent)
 		connect(button, SIGNAL(clicked()), this, SLOT(changeTriggerSettingsSlot()));
 
 	//connect threshold spinboxes
-	auto thresholdSpinBoxes = ui.WDFTabWidget->findChildren<QSpinBox*>(QRegExp("thresholdSpinBox"), Qt::FindChildrenRecursively);
+	auto thresholdSpinBoxes = ui.WDFTabWidget->findChildren<QDoubleSpinBox*>(QRegExp("thresholdDoubleSpinBox"), Qt::FindChildrenRecursively);
 	for each (auto spinBox in thresholdSpinBoxes)
-		connect(spinBox, SIGNAL(valueChanged(int)), this, SLOT(changeThresholdSlot(int)));
+		connect(spinBox, SIGNAL(valueChanged(double)), this, SLOT(changeThresholdSlot(double)));
 
 	//connect samples spinboxes
 	auto samplesSpinBoxes = ui.WDFTabWidget->findChildren<QSpinBox*>(QRegExp("samplesSpinBox"), Qt::FindChildrenRecursively);
@@ -53,13 +53,13 @@ MainWindow::MainWindow(QWidget *parent)
 	//connect stopping single trigger to main stop slot
 	connect(this, &MainWindow::stopSingleTrigger, this, &MainWindow::startStopSlot);
 
-	//connect clear graph's signal to it's slot
-	connect(this, &MainWindow::clearGraphs, this, &MainWindow::clearGraphsOnStopSlot, Qt::BlockingQueuedConnection);
-
 	//connect graphs' visible buttons
 	auto graphIsVisibleButtons = ui.WDFTabWidget->findChildren<QPushButton*>(QRegExp("channelIsDrawingButton"), Qt::FindChildrenRecursively);
 	for (auto button : graphIsVisibleButtons)
 		connect(button, &QPushButton::clicked, this, &MainWindow::graphVisibilityChangedSlot);
+
+	//connect posttrigger line to its' drawing slot
+	connect(this, &MainWindow::drawPostTriggerLine, this, &MainWindow::drawPostTriggerLineSlot); 
 
 	//set postTrigger disabled
 	ui.postTriggerBox->setEnabled(false);
@@ -116,23 +116,23 @@ vector<vector<Qt::PenStyle>>& MainWindow::getStylesOfThresholdLines() {
 }
 
 void MainWindow::updateData() {
-	vme.startAcquisition();
-	auto vmeData = new DataAnalyzer(vme);
+	DataAnalyzer vmeData(vme);
 	while (acquisitionWasStarted) {
-		if (vmeData->readData()) {					//if we have smth to show or analyze
+		if (vmeData.readData()) {					//if we have smth to show or analyze
 			if (ui.recordButton->isChecked())
-				vmeData->writeData();
+				vmeData.writeData();
 			if (ui.drawButton->isChecked()) {
-				drawSignal(vmeData->getEventForDraw());
+				drawSignal(vmeData.getEventForDraw());
 				emit replot();
 			}
 			if (ui.amplifySpectrumButton->isChecked()) {
-				drawAmplifySpectrum(*vmeData);
+				drawAmplifySpectrum(vmeData);
 				emit replot();
 			}
 			if (ui.rossiAlphaSpectrumButton->isChecked()) {
 				
 			}
+			vmeData.getImpulses();
 			if (vme.singleTriggerWasStarted) {
 				vme.singleTriggerWasStarted = false;
 				emit stopSingleTrigger();
@@ -144,8 +144,6 @@ void MainWindow::updateData() {
 	makeSoftwareTriggerSlot();
 	if (!vme.stopAcquisition())
 		this->pulseErrorButton();
-	emit clearGraphs();
-	delete vmeData;
 }
 
 void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
@@ -157,7 +155,7 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 	for (auto numberOfBoard = 0; numberOfBoard < vme.numberOfWDF; numberOfBoard++)												//по всем доскам
 		if (vme.WDFIsEnabled[numberOfBoard])																					//если доска включена
 			for (auto channelNumber = 0; channelNumber < vme.getWDFInfo(numberOfBoard).Channels; channelNumber++)				//по всем каналам этой доски
-				if (eventToDraw->ChSize[channelNumber] != 0) {																	//если на канале что-то есть
+				if (eventToDraw->ChSize[channelNumber] != 0) {																	//если на канале что-то есть (другими словами - он включен)
 					if (ui.WDFTabWidget->findChild<QPushButton*>(QString("channelIsDrawingButton_" + QString::number(numberOfBoard + 1) + "_" + QString::number(channelNumber)))->isChecked()) {	//если нажата кнопка отображения сигнала
 						//initializing the graph
 						auto graphDataContainer = ui.signalWidget->graph(graphNumber)->data().data();
@@ -166,9 +164,7 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 						auto sample = 0;
 						while (it != itEnd) {
 							it->key = 2 * sample;
-							it->value = eventToDraw->DataChannel[channelNumber][sample] * 3.92 - 500;		//from [0;255] to [-500;500]
-							++it;
-							++sample;
+							it++->value = eventToDraw->DataChannel[channelNumber][sample++] * 3.92 - 500;						//from [0;255] to [-500;500]
 						}
 						graphDataContainer->set(graphData, true);
 						//graph's visual setup
@@ -182,6 +178,8 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 					}
 					graphNumber++;
 				}
+	if (ui.postTriggerIsDrawing->isChecked())
+		emit drawPostTriggerLine();
 	ui.signalWidget->legend->setVisible(true);
 }
 
@@ -265,8 +263,8 @@ void MainWindow::readSettings() {
 			for (auto channelNumber = 0; channelNumber < 8; channelNumber++)
 				if (settingsStream >> threshold) {
 					vme.setChannelThreshold(boardNumber, channelNumber, DataAnalyzer::convertFromVMECountsTomV(threshold));
-					auto thresholdSpinBoxName = QString("thresholdSpinBox_%1_%2").arg(boardNumber + 1).arg(channelNumber);
-					auto spinBox = ui.settingsBlock->findChild<QSpinBox*>(thresholdSpinBoxName);
+					auto thresholdSpinBoxName = QString("thresholdDoubleSpinBox_%1_%2").arg(boardNumber + 1).arg(channelNumber);
+					auto spinBox = ui.settingsBlock->findChild<QDoubleSpinBox*>(thresholdSpinBoxName);
 					spinBox->setValue(DataAnalyzer::convertFromVMECountsTomV(threshold));
 				}
 		//read threshold styles
@@ -291,12 +289,14 @@ void MainWindow::setControlsEnabledOnStartStop(bool enabled) const {
 	ui.exitButton->setEnabled(enabled);
 	ui.bufferComboBox->setEnabled(enabled);
 	ui.polarityBox->setEnabled(enabled);
-	ui.postTriggerBox->setEnabled(!enabled);
 	//triggerBox options
 	ui.forceTriggerButton->setEnabled(!enabled);
 	ui.autoTriggerButton->setEnabled(!enabled);
 	ui.externalTriggerButton->setEnabled(!enabled);
 	ui.singleTriggerButton->setEnabled(enabled);
+	//interactions of viewer
+	ui.signalWidget->setInteraction(QCP::iRangeZoom, enabled);
+	ui.signalWidget->setInteraction(QCP::iRangeDrag, enabled);
 }
 
 void MainWindow::setControlsEnabledOnConnectDisconnect(bool enabled) const {
@@ -308,6 +308,11 @@ void MainWindow::setControlsEnabledOnConnectDisconnect(bool enabled) const {
 	ui.triggerOptionsBox->setEnabled(enabled);
 	ui.bufferComboBox->setEnabled(enabled);
 	ui.singleTriggerButton->setEnabled(enabled);
+	ui.postTriggerBox->setEnabled(enabled);
+}
+
+void MainWindow::clearGraphs() const {
+	ui.signalWidget->clearGraphs();
 }
 
 void MainWindow::connectSlot() {
@@ -332,7 +337,6 @@ void MainWindow::connectSlot() {
 		//disable WDF tabs
 		for (auto tabNumber = 0; tabNumber < vme.numberOfWDF; tabNumber++)
 			ui.WDFTabWidget->setTabEnabled(tabNumber, false);
-		//disconnect from VME
 		vme.disconnect();
 	}
 }
@@ -341,10 +345,18 @@ void MainWindow::startStopSlot() {
 	if (!acquisitionWasStarted) {
 		acquisitionWasStarted = true;
 		setControlsEnabledOnStartStop(false);
+		//очистим то, что осталось с прошлого раза
+		clearGraphs();
+		//и запихнем чистые и свежие графики
 		for (auto i = 0; i < activeChannelsCount; i++)
 			ui.signalWidget->addGraph();
-		ui.signalWidget->yAxis->setRange(-300, 100);
-		ui.signalWidget->xAxis->setRange(0, 2048*(static_cast<uint16_t>(pow(2, ui.bufferComboBox->currentIndex() + 1))));
+		//если махнули буфер, подравняем границы
+		if (recordLengthHasBeenChanged) {
+			ui.signalWidget->yAxis->setRange(-300, 100);
+			ui.signalWidget->xAxis->setRange(0, 2048 * static_cast<uint16_t>(pow(2, ui.bufferComboBox->currentIndex() + 1)));
+			recordLengthHasBeenChanged = false;
+		}
+		vme.startAcquisition();
 		acquisitionThread = async(launch::async, &MainWindow::updateData, this);
 	} else {
 		acquisitionWasStarted = false;
@@ -356,6 +368,7 @@ void MainWindow::startStopSlot() {
 		//отключаем одиночный триггер, если он был включен
 		if (ui.singleTriggerButton->isChecked())
 			ui.singleTriggerButton->setChecked(false);
+		setControlsEnabledOnStartStop(true);
 	}
 }
 
@@ -389,10 +402,10 @@ void MainWindow::changeTriggerSettingsSlot() {
 
 	auto channelBoxName = "chanel" + std::to_string(channelNumber) + "SettingsBox_" + std::to_string(WDFNumber+1);
 	auto channelButtonsBox = ui.WDFTabWidget->findChildren<QObject*>(QString(channelBoxName.c_str()), Qt::FindChildrenRecursively);
-	auto channelButtons = channelButtonsBox[0]->findChildren<QWidget*>(QRegExp("^(?!.*changeTriggerButton|samplesSpinBox|blockSamplesButton|thresholdSpinBox|thresholdIsDrawingButton).*$"), Qt::FindDirectChildrenOnly);
+	auto channelButtons = channelButtonsBox[0]->findChildren<QWidget*>(QRegExp("^(?!.*changeTriggerButton|samplesSpinBox|blockSamplesButton|thresholdDoubleSpinBox|thresholdIsDrawingButton).*$"), Qt::FindDirectChildrenOnly);
 	auto samplesSpinBox = channelButtonsBox[0]->findChildren<QSpinBox*>(QRegExp("samplesSpinBox"), Qt::FindDirectChildrenOnly);
 	auto blockSamplesButton = channelButtonsBox[0]->findChildren<QPushButton*>(QRegExp("blockSamplesButton"), Qt::FindDirectChildrenOnly);
-	auto thresholdSpinBox = channelButtonsBox[0]->findChildren<QSpinBox*>(QRegExp("thresholdSpinBox"), Qt::FindDirectChildrenOnly);
+	auto thresholdSpinBox = channelButtonsBox[0]->findChildren<QDoubleSpinBox*>(QRegExp("thresholdDoubleSpinBox"), Qt::FindDirectChildrenOnly);
 	auto thresholdIsDrawingButton = channelButtonsBox[0]->findChildren<QPushButton*>(QRegExp("thresholdIsDrawingButton"), Qt::FindDirectChildrenOnly);
 		
 	switch (color) {
@@ -441,7 +454,7 @@ void MainWindow::changeTriggerSettingsSlot() {
 	}
 }
 
-void MainWindow::changeThresholdSlot(int newThreshold) {
+void MainWindow::changeThresholdSlot(double newThreshold) {
 	auto spinBox = static_cast<QSpinBox*>(sender());
 	auto spinBoxNameList = spinBox->objectName().split("_");
 	auto WDFNumber = spinBoxNameList[1].toInt() - 1;
@@ -480,6 +493,7 @@ void MainWindow::resetParameterSlot() const {
 }
 
 void MainWindow::bufferChangedSlot(int newBufferSizeIndex) {
+	recordLengthHasBeenChanged = true;
 	auto newRecordLength = static_cast<uint16_t>(pow(2, newBufferSizeIndex+1));	//from index to KB
 	if (!vme.setRecordLength(newRecordLength, ui.postTriggerSpinBox->value()))
 		this->pulseErrorButton();
@@ -521,7 +535,7 @@ void MainWindow::singleTriggerSlot() {
 
 void MainWindow::amplifySpectrumSlot() const {
 	if (static_cast<QPushButton*>(sender())->isChecked()) {
-		auto maxAmplitude = 1000;
+		auto maxAmplitude = 300;
 		QVector<double_t> keys(maxAmplitude);
 		for (auto i = 0; i < maxAmplitude; i++)
 			keys[i] = i;
@@ -530,8 +544,8 @@ void MainWindow::amplifySpectrumSlot() const {
 			ui.spectrumWidget->addGraph();
 			ui.spectrumWidget->graph(i)->setData(keys, values, true);
 		}
-		ui.spectrumWidget->yAxis->setRange(0, 1000);					//max 1000 одинаковых значений амплитуды
-		ui.spectrumWidget->xAxis->setRange(0, maxAmplitude);			//max 1000 mV
+		ui.spectrumWidget->yAxis->setRange(0, 3000);					//max 3000 одинаковых значений амплитуды
+		ui.spectrumWidget->xAxis->setRange(0, maxAmplitude);			//max 300 mV
 		ui.spectrumWidget->replot();
 	} else {
 		ui.spectrumWidget->clearGraphs();
@@ -552,7 +566,7 @@ void MainWindow::thresholdVisibilityChangedSlot() {
 	thresholdsIsVisible[WDFNumber][channelNumber] = visibilityButton->isChecked();
 }
 
-void MainWindow::graphVisibilityChangedSlot() {
+void MainWindow::graphVisibilityChangedSlot() const {
 	auto visibilityButton = static_cast<QPushButton*>(sender());
 	auto visibilityButtonNameList = visibilityButton->objectName().split("_");
 	auto WDFNumber = visibilityButtonNameList[1].toInt() - 1;
@@ -569,17 +583,22 @@ void MainWindow::drawThresholdLineSlot(int channelNumber, int boardNumber, int t
 	thresholdLinesPointers[boardNumber][channelNumber]->start->setCoords(0, threshold);
 	thresholdLinesPointers[boardNumber][channelNumber]->end->setCoords(2*recordLength, threshold);
 	QPen pencil(colorOfLine);
-	pencil.setStyle(stylesOfThresholdLines[boardNumber][channelNumber]);
+	thresholdLineStyleMutex.lock();
+		pencil.setStyle(stylesOfThresholdLines[boardNumber][channelNumber]);
+	thresholdLineStyleMutex.unlock();
 	thresholdLinesPointers[boardNumber][channelNumber]->setPen(pencil);
 	thresholdLinesPointers[boardNumber][channelNumber]->setVisible(thresholdsIsVisible[boardNumber][channelNumber]);
+}
+
+void MainWindow::drawPostTriggerLineSlot() {
+	if (!postTriggerLine)
+		postTriggerLine = new QCPItemLine(ui.signalWidget);
+	double triggerSample = 2 * (100 - ui.postTriggerSpinBox->value()) * vme.getRecordLength() / 100;	//домножая на 2, переходим к наносекундам (один отсчет = 2нс)	
+	postTriggerLine->start->setCoords(triggerSample, 1000);
+	postTriggerLine->end->setCoords(triggerSample, -1000);
 }
 
 void MainWindow::replotGraph() const {
 	ui.signalWidget->replot();
 	ui.spectrumWidget->replot();
-}
-
-void MainWindow::clearGraphsOnStopSlot() const {
-	ui.signalWidget->clearGraphs();
-	setControlsEnabledOnStartStop(true);
 }

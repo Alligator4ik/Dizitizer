@@ -175,7 +175,7 @@
           </size>
          </property>
          <property name="toolTip">
-          <string>Зыкрыть</string>
+          <string>Закрыть</string>
          </property>
          <property name="text">
           <string/>
@@ -811,7 +811,7 @@
               <item row="0" column="2">
                <widget class="QGroupBox" name="triggerSettingBox">
                 <property name="enabled">
-                 <bool>false</bool>
+                 <bool>true</bool>
                 </property>
                 <property name="minimumSize">
                  <size>
@@ -830,7 +830,7 @@
                 </property>
                 <widget class="QGroupBox" name="postTriggerBox">
                  <property name="enabled">
-                  <bool>false</bool>
+                  <bool>true</bool>
                  </property>
                  <property name="geometry">
                   <rect>
@@ -845,7 +845,7 @@
                  </property>
                  <widget class="QSpinBox" name="postTriggerSpinBox">
                   <property name="enabled">
-                   <bool>false</bool>
+                   <bool>true</bool>
                   </property>
                   <property name="geometry">
                    <rect>
@@ -870,7 +870,7 @@
                  </widget>
                  <widget class="QPushButton" name="postTriggerIsDrawing">
                   <property name="enabled">
-                   <bool>false</bool>
+                   <bool>true</bool>
                   </property>
                   <property name="geometry">
                    <rect>
@@ -918,6 +918,9 @@
                   <string>Запуск по спаду</string>
                  </property>
                  <widget class="QPushButton" name="polarityButton">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
                   <property name="geometry">
                    <rect>
                     <x>30</x>
@@ -1351,7 +1354,7 @@
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_1_0">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_1_0">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -1369,14 +1372,20 @@
                         <height>20</height>
                        </size>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_1_0">
@@ -1396,6 +1405,12 @@
                         <width>50</width>
                         <height>20</height>
                        </size>
+                      </property>
+                      <property name="maximum">
+                       <number>50000</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>100</number>
                       </property>
                       <property name="value">
                        <number>10</number>
@@ -1856,7 +1871,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_1_1">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_1_1">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -1874,14 +1889,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </size>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_1_1">
@@ -1901,6 +1922,12 @@ border-radius: 5</string>
                         <width>50</width>
                         <height>20</height>
                        </size>
+                      </property>
+                      <property name="maximum">
+                       <number>50000</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>100</number>
                       </property>
                       <property name="value">
                        <number>10</number>
@@ -2240,7 +2267,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_1_2">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_1_2">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -2258,14 +2285,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </size>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_1_2">
@@ -2285,6 +2318,12 @@ border-radius: 5</string>
                         <width>50</width>
                         <height>20</height>
                        </size>
+                      </property>
+                      <property name="maximum">
+                       <number>50000</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>100</number>
                       </property>
                       <property name="value">
                        <number>10</number>
@@ -2624,7 +2663,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_1_5">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_1_5">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -2642,14 +2681,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </size>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_1_5">
@@ -2669,6 +2714,12 @@ border-radius: 5</string>
                         <width>50</width>
                         <height>20</height>
                        </size>
+                      </property>
+                      <property name="maximum">
+                       <number>50000</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>100</number>
                       </property>
                       <property name="value">
                        <number>10</number>
@@ -3008,7 +3059,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_1_4">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_1_4">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -3026,14 +3077,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </size>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_1_4">
@@ -3053,6 +3110,12 @@ border-radius: 5</string>
                         <width>50</width>
                         <height>20</height>
                        </size>
+                      </property>
+                      <property name="maximum">
+                       <number>50000</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>100</number>
                       </property>
                       <property name="value">
                        <number>10</number>
@@ -3392,7 +3455,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_1_3">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_1_3">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -3410,14 +3473,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </size>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_1_3">
@@ -3437,6 +3506,12 @@ border-radius: 5</string>
                         <width>50</width>
                         <height>20</height>
                        </size>
+                      </property>
+                      <property name="maximum">
+                       <number>50000</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>100</number>
                       </property>
                       <property name="value">
                        <number>10</number>
@@ -3779,7 +3854,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_1_7">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_1_7">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -3797,14 +3872,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </size>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_1_7">
@@ -3824,6 +3905,12 @@ border-radius: 5</string>
                         <width>50</width>
                         <height>20</height>
                        </size>
+                      </property>
+                      <property name="maximum">
+                       <number>50000</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>100</number>
                       </property>
                       <property name="value">
                        <number>10</number>
@@ -4163,7 +4250,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_1_6">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_1_6">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -4181,14 +4268,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </size>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_1_6">
@@ -4208,6 +4301,12 @@ border-radius: 5</string>
                         <width>50</width>
                         <height>20</height>
                        </size>
+                      </property>
+                      <property name="maximum">
+                       <number>50000</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>100</number>
                       </property>
                       <property name="value">
                        <number>10</number>
@@ -4554,7 +4653,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_2_2">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_2_2">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -4566,14 +4665,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_2_2">
@@ -4881,7 +4986,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_2_6">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_2_6">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -4893,14 +4998,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_2_6">
@@ -5208,7 +5319,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_2_5">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_2_5">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -5220,14 +5331,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_2_5">
@@ -5535,7 +5652,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_2_3">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_2_3">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -5547,14 +5664,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_2_3">
@@ -5862,7 +5985,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_2_1">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_2_1">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -5874,14 +5997,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_2_1">
@@ -6189,7 +6318,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_2_4">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_2_4">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -6201,14 +6330,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_2_4">
@@ -6519,7 +6654,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_2_0">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_2_0">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -6531,14 +6666,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_2_0">
@@ -6846,7 +6987,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_2_7">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_2_7">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -6858,14 +6999,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_2_7">
@@ -7295,7 +7442,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_3_0">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_3_0">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -7307,14 +7454,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_3_0">
@@ -7619,7 +7772,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_3_1">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_3_1">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -7631,14 +7784,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_3_1">
@@ -7943,7 +8102,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_3_2">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_3_2">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -7955,14 +8114,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_3_2">
@@ -8267,7 +8432,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_3_4">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_3_4">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -8279,14 +8444,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_3_4">
@@ -8591,7 +8762,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_3_6">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_3_6">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -8603,14 +8774,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_3_6">
@@ -8915,7 +9092,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_3_5">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_3_5">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -8927,14 +9104,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_3_5">
@@ -9239,7 +9422,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_3_7">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_3_7">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -9251,14 +9434,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_3_7">
@@ -9563,7 +9752,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_3_3">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_3_3">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -9575,14 +9764,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_3_3">
@@ -10012,7 +10207,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_4_0">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_4_0">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -10024,14 +10219,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_4_0">
@@ -10336,7 +10537,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_4_1">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_4_1">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -10348,14 +10549,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_4_1">
@@ -10660,7 +10867,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_4_2">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_4_2">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -10672,14 +10879,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_4_2">
@@ -10984,7 +11197,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_4_4">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_4_4">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -10996,14 +11209,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_4_4">
@@ -11308,7 +11527,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_4_6">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_4_6">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -11320,14 +11539,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_4_6">
@@ -11632,7 +11857,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_4_5">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_4_5">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -11644,14 +11869,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_4_5">
@@ -11956,7 +12187,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_4_7">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_4_7">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -11968,14 +12199,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_4_7">
@@ -12280,7 +12517,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_4_3">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_4_3">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -12292,14 +12529,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_4_3">
@@ -12729,7 +12972,7 @@ border-radius: 5</string>
                        <number>0</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_5_0">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_5_0">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -12741,11 +12984,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
+                      <property name="minimum">
+                       <double>-500.000000000000000</double>
+                      </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_5_0">
@@ -13050,7 +13302,7 @@ border-radius: 5</string>
                        <number>0</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_5_1">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_5_1">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -13062,11 +13314,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
+                      <property name="minimum">
+                       <double>-500.000000000000000</double>
+                      </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_5_1">
@@ -13371,7 +13632,7 @@ border-radius: 5</string>
                        <number>0</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_5_2">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_5_2">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -13383,11 +13644,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
+                      <property name="minimum">
+                       <double>-500.000000000000000</double>
+                      </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_5_2">
@@ -13692,7 +13962,7 @@ border-radius: 5</string>
                        <number>0</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_5_4">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_5_4">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -13704,11 +13974,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
+                      <property name="minimum">
+                       <double>-500.000000000000000</double>
+                      </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_5_4">
@@ -14013,7 +14292,7 @@ border-radius: 5</string>
                        <number>0</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_5_6">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_5_6">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -14025,11 +14304,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
+                      <property name="minimum">
+                       <double>-500.000000000000000</double>
+                      </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_5_6">
@@ -14334,7 +14622,7 @@ border-radius: 5</string>
                        <number>0</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_5_5">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_5_5">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -14346,11 +14634,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
+                      <property name="minimum">
+                       <double>-500.000000000000000</double>
+                      </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_5_5">
@@ -14655,7 +14952,7 @@ border-radius: 5</string>
                        <number>0</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_5_7">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_5_7">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -14667,11 +14964,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
+                      <property name="minimum">
+                       <double>-500.000000000000000</double>
+                      </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_5_7">
@@ -14976,7 +15282,7 @@ border-radius: 5</string>
                        <number>0</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_5_3">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_5_3">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -14988,11 +15294,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
+                      <property name="minimum">
+                       <double>-500.000000000000000</double>
+                      </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_5_3">
@@ -15422,7 +15737,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_6_0">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_6_0">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -15434,14 +15749,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_6_0">
@@ -15746,7 +16067,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_6_1">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_6_1">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -15758,14 +16079,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_6_1">
@@ -16070,7 +16397,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_6_2">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_6_2">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -16082,14 +16409,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_6_2">
@@ -16394,7 +16727,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_6_4">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_6_4">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -16406,14 +16739,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_6_4">
@@ -16718,7 +17057,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_6_6">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_6_6">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -16730,14 +17069,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_6_6">
@@ -17042,7 +17387,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_6_5">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_6_5">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -17054,14 +17399,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_6_5">
@@ -17366,7 +17717,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_6_7">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_6_7">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -17378,14 +17729,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_6_7">
@@ -17690,7 +18047,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_6_3">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_6_3">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -17702,14 +18059,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_6_3">
@@ -18139,7 +18502,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_7_0">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_7_0">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -18151,14 +18514,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_7_0">
@@ -18463,7 +18832,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_7_1">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_7_1">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -18475,14 +18844,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_7_1">
@@ -18787,7 +19162,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_7_2">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_7_2">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -18799,14 +19174,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_7_2">
@@ -19111,7 +19492,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_7_4">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_7_4">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -19123,14 +19504,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_7_4">
@@ -19435,7 +19822,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_7_6">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_7_6">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -19447,14 +19834,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_7_6">
@@ -19759,7 +20152,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_7_5">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_7_5">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -19771,14 +20164,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_7_5">
@@ -20083,7 +20482,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_7_7">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_7_7">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -20095,14 +20494,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_7_7">
@@ -20407,7 +20812,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_7_3">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_7_3">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -20419,14 +20824,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_7_3">
@@ -20856,7 +21267,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_8_0">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_8_0">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -20868,14 +21279,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_8_0">
@@ -21180,7 +21597,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_8_1">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_8_1">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -21192,14 +21609,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_8_1">
@@ -21504,7 +21927,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_8_2">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_8_2">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -21516,14 +21939,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_8_2">
@@ -21828,7 +22257,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_8_4">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_8_4">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -21840,14 +22269,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_8_4">
@@ -22152,7 +22587,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_8_6">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_8_6">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -22164,14 +22599,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_8_6">
@@ -22476,7 +22917,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_8_5">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_8_5">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -22488,14 +22929,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_8_5">
@@ -22800,7 +23247,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_8_7">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_8_7">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -22812,14 +23259,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_8_7">
@@ -23124,7 +23577,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_8_3">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_8_3">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -23136,14 +23589,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_8_3">
@@ -23573,7 +24032,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_9_2">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_9_2">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -23585,14 +24044,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_9_2">
@@ -23897,7 +24362,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_9_7">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_9_7">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -23909,14 +24374,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_9_7">
@@ -24221,7 +24692,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_9_0">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_9_0">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -24233,14 +24704,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_9_0">
@@ -24548,7 +25025,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_9_1">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_9_1">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -24560,14 +25037,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_9_1">
@@ -24872,7 +25355,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_9_4">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_9_4">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -24884,14 +25367,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_9_4">
@@ -25196,7 +25685,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_9_3">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_9_3">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -25208,14 +25697,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_9_3">
@@ -25520,7 +26015,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_9_5">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_9_5">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -25532,14 +26027,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_9_5">
@@ -25844,7 +26345,7 @@ border-radius: 5</string>
                        <number>500</number>
                       </property>
                      </widget>
-                     <widget class="QSpinBox" name="thresholdSpinBox_9_6">
+                     <widget class="QDoubleSpinBox" name="thresholdDoubleSpinBox_9_6">
                       <property name="enabled">
                        <bool>false</bool>
                       </property>
@@ -25856,14 +26357,20 @@ border-radius: 5</string>
                         <height>20</height>
                        </rect>
                       </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
                       <property name="minimum">
-                       <number>-500</number>
+                       <double>-500.000000000000000</double>
                       </property>
                       <property name="maximum">
-                       <number>500</number>
+                       <double>500.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>3.920000000000000</double>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <double>-500.000000000000000</double>
                       </property>
                      </widget>
                      <widget class="QSpinBox" name="samplesSpinBox_9_6">
@@ -26294,30 +26801,102 @@ border-radius: 5</string>
            <item row="0" column="0">
             <widget class="QCustomPlot" name="dataWidget" native="true"/>
            </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="groupBox">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>70</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="title">
+              <string/>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <widget class="QSlider" name="horizontalSlider">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>50</y>
+                <width>151</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="pushButton">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>20</y>
+                <width>75</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Назад</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="pushButton_2">
+              <property name="geometry">
+               <rect>
+                <x>90</x>
+                <y>20</y>
+                <width>75</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Вперед</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>70</y>
+                <width>131</width>
+                <height>21</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Номер сигнала:</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="pushButton_5">
+              <property name="geometry">
+               <rect>
+                <x>170</x>
+                <y>20</y>
+                <width>71</width>
+                <height>71</height>
+               </rect>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Следующий
+ файл</string>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </widget>
+           </item>
           </layout>
          </widget>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QGroupBox" name="groupBox">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>300</height>
-          </size>
-         </property>
-         <property name="title">
-          <string>Информация</string>
-         </property>
-         <property name="checkable">
-          <bool>false</bool>
-         </property>
         </widget>
        </item>
       </layout>
@@ -26411,27 +26990,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>187</x>
-     <y>530</y>
+     <y>624</y>
     </hint>
     <hint type="destinationlabel">
      <x>154</x>
      <y>821</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>postTriggerSpinBox</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>MainWindowClass</receiver>
-   <slot>setPostTriggerLengthSlot(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>288</x>
-     <y>530</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>278</x>
-     <y>822</y>
     </hint>
    </hints>
   </connection>
@@ -26459,7 +27022,7 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>315</x>
-     <y>694</y>
+     <y>784</y>
     </hint>
     <hint type="destinationlabel">
      <x>454</x>
@@ -26475,7 +27038,7 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>271</x>
-     <y>659</y>
+     <y>749</y>
     </hint>
     <hint type="destinationlabel">
      <x>124</x>
@@ -26507,7 +27070,7 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>293</x>
-     <y>601</y>
+     <y>691</y>
     </hint>
     <hint type="destinationlabel">
      <x>267</x>
@@ -26523,7 +27086,7 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>315</x>
-     <y>659</y>
+     <y>749</y>
     </hint>
     <hint type="destinationlabel">
      <x>222</x>
@@ -26539,11 +27102,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>641</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>616</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26555,11 +27118,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>736</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>711</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26571,11 +27134,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>831</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>806</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26587,11 +27150,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>546</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>521</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26603,11 +27166,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>926</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>901</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26619,11 +27182,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1021</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>996</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26635,11 +27198,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1116</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1091</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26651,11 +27214,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1211</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1186</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26667,11 +27230,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>546</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>521</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26683,11 +27246,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>641</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>616</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26699,11 +27262,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>641</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>616</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26715,11 +27278,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>736</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>711</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26731,11 +27294,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>831</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>806</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26747,11 +27310,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>926</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>901</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26763,11 +27326,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1021</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>996</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26779,11 +27342,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1116</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1091</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26795,11 +27358,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1211</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1186</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26811,11 +27374,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>546</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>521</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26827,11 +27390,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>641</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>616</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26843,11 +27406,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>736</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>711</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26859,11 +27422,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>831</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>806</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26875,11 +27438,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>926</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>901</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26891,11 +27454,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1021</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>996</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26907,11 +27470,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1116</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1091</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26923,11 +27486,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1211</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1186</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26939,11 +27502,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>546</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>521</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26955,11 +27518,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>736</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>711</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26971,11 +27534,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>831</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>806</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -26987,11 +27550,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>926</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>901</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27003,11 +27566,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1021</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>996</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27019,11 +27582,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1116</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1091</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27035,11 +27598,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1211</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1186</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27051,11 +27614,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>546</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>521</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27067,11 +27630,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>641</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>616</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27083,11 +27646,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>736</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>711</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27099,11 +27662,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>831</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>806</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27115,11 +27678,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>926</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>901</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27131,11 +27694,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1021</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>996</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27147,11 +27710,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1116</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1091</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27163,11 +27726,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1211</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1186</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27179,11 +27742,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>546</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>521</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27195,11 +27758,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>641</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>616</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27211,11 +27774,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>736</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>711</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27227,11 +27790,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>831</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>806</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27243,11 +27806,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>926</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>901</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27259,11 +27822,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1021</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>996</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27275,11 +27838,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1116</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1091</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27291,11 +27854,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1211</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1186</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27307,11 +27870,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>546</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>521</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27323,11 +27886,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>641</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>616</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27339,11 +27902,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>736</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>711</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27355,11 +27918,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>831</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>806</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27371,11 +27934,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>926</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>901</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27387,11 +27950,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1021</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>996</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27403,11 +27966,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1116</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1091</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27419,11 +27982,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1211</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1186</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27435,11 +27998,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>546</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>521</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27451,11 +28014,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>641</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>616</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27467,11 +28030,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>736</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>711</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27483,11 +28046,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>831</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>806</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27499,11 +28062,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>926</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>901</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27515,11 +28078,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1021</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>996</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27531,11 +28094,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1116</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1091</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27547,11 +28110,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1211</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1186</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27563,11 +28126,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>546</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>521</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27579,11 +28142,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>641</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>616</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27595,11 +28158,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>736</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>711</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27611,11 +28174,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>831</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>806</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27627,11 +28190,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>926</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>901</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27643,11 +28206,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1021</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>996</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27659,11 +28222,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1116</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1091</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27675,11 +28238,11 @@ border-radius: 5</string>
    <hints>
     <hint type="sourcelabel">
      <x>1211</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>1186</x>
-     <y>635</y>
+     <y>729</y>
     </hint>
    </hints>
   </connection>
@@ -27690,8 +28253,8 @@ border-radius: 5</string>
    <slot>amplifySpectrumSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>93</x>
-     <y>716</y>
+     <x>107</x>
+     <y>806</y>
     </hint>
     <hint type="destinationlabel">
      <x>6</x>
@@ -27706,12 +28269,28 @@ border-radius: 5</string>
    <slot>singleTriggerSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>260</x>
-     <y>696</y>
+     <x>271</x>
+     <y>784</y>
     </hint>
     <hint type="destinationlabel">
      <x>328</x>
      <y>830</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>postTriggerSpinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>setPostTriggerLengthSlot(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>288</x>
+     <y>624</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>278</x>
+     <y>822</y>
     </hint>
    </hints>
   </connection>

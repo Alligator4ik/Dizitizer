@@ -2,6 +2,11 @@
 #include "VMECommunication.h"
 #include <future>
 
+struct Point {
+	uint32_t x;
+	uint16_t y;
+};
+
 class DataAnalyzer
 {
 	VMECommunication&							vmeComm;
@@ -43,7 +48,7 @@ public:
 	 * \param boardID Ќомер платы, с которой нужно произвести чтение.
 	 * \return ¬ернет истину, если с данной платы есть, что считывать.
 	 */
-	bool										readDataOnBoard(uint32_t boardID);
+	bool										readDataOnBoard(uint32_t boardID, uint16_t boardNumber);
 	void										writeData();
 	/**
 	 * \brief 
@@ -69,4 +74,9 @@ public:
 	 * \return ¬озвращает значение в милливольтах.
 	 */
 	static int16_t								convertFromVMECountsTomV(uint8_t counts);
+	/**
+	* \brief ћетод выполн€ет поиск в собитии и находит все импульсы, которые преодолели свой порог.
+	* \return ¬ектор, содержащий позиции начала каждого импульса в отсчетах (не во временных единицах!).
+	*/
+	vector<Point>								getImpulses();
 };

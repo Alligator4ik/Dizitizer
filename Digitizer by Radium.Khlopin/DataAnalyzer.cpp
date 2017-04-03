@@ -76,7 +76,7 @@ bool DataAnalyzer::readData() {
 	//start acquistition cycle on all enabled boards
 	for (auto boardNumber = 0; boardNumber < WDFIdentificators.size(); boardNumber++) {
 		if (vmeComm.WDFIsEnabled[boardNumber]) {
-			boardThreads[boardNumber] = async(launch::async, &DataAnalyzer::readDataOnBoard, this, WDFIdentificators[boardNumber]);
+			boardThreads[boardNumber] = async(launch::async, &DataAnalyzer::readDataOnBoard, this, WDFIdentificators[boardNumber], boardNumber);
 		}
 	}
 	auto result = false;
@@ -89,33 +89,33 @@ bool DataAnalyzer::readData() {
 	return result;		//if there is anything to read
 }
 
-bool DataAnalyzer::readDataOnBoard(uint32_t boardID) {
+bool DataAnalyzer::readDataOnBoard(uint32_t boardID, uint16_t boardNumber) {
 	CAEN_DGTZ_ErrorCode error;
 	if ((error = CAEN_DGTZ_IRQWait(boardID, 500)) != CAEN_DGTZ_Success) {
 		if (error == CAEN_DGTZ_Timeout)
 			return false;			//if thire is nothing to read
-		vmeComm.addTimeOfBoardError(boardID);
-		vmeComm.addBoardError(boardID, error);
-		vmeComm.addStringError(boardID, toRussian("Ожидании прерывания"));
+		vmeComm.addTimeOfBoardError(boardNumber);
+		vmeComm.addBoardError(boardNumber, error);
+		vmeComm.addStringError(boardNumber, toRussian("Ожидании прерывания"));
 		return false;
 	}
 	if ((error = CAEN_DGTZ_RearmInterrupt(boardID)) != CAEN_DGTZ_Success) {
-		vmeComm.addTimeOfBoardError(boardID);
-		vmeComm.addBoardError(boardID, error);
-		vmeComm.addStringError(boardID, toRussian("Обновлении прерывания"));
+		vmeComm.addTimeOfBoardError(boardNumber);
+		vmeComm.addBoardError(boardNumber, error);
+		vmeComm.addStringError(boardNumber, toRussian("Обновлении прерывания"));
 		return false;
 	}
-	if ((error = CAEN_DGTZ_ReadData(boardID, CAEN_DGTZ_SLAVE_TERMINATED_READOUT_MBLT, bufferToReadIn[boardID], &sizeOfBufferInBytes[boardID])) != CAEN_DGTZ_Success) {
-		vmeComm.addTimeOfBoardError(boardID);
-		vmeComm.addBoardError(boardID, error);
-		vmeComm.addStringError(boardID, toRussian("Непосредственном чтении"));
+	if ((error = CAEN_DGTZ_ReadData(boardID, CAEN_DGTZ_SLAVE_TERMINATED_READOUT_MBLT, bufferToReadIn[boardNumber], &sizeOfBufferInBytes[boardNumber])) != CAEN_DGTZ_Success) {
+		vmeComm.addTimeOfBoardError(boardNumber);
+		vmeComm.addBoardError(boardNumber, error);
+		vmeComm.addStringError(boardNumber, toRussian("Непосредственном чтении"));
 		return false;
 	}
 	uint32_t numberOfEventsStored;
-	if ((error = CAEN_DGTZ_GetNumEvents(boardID, bufferToReadIn[boardID], sizeOfBufferInBytes[boardID], &numberOfEventsStored)) != CAEN_DGTZ_Success) {
-		vmeComm.addTimeOfBoardError(boardID);
-		vmeComm.addBoardError(boardID, error);
-		vmeComm.addStringError(boardID, toRussian("Получении кол-ва ивентов"));
+	if ((error = CAEN_DGTZ_GetNumEvents(boardID, bufferToReadIn[boardNumber], sizeOfBufferInBytes[boardNumber], &numberOfEventsStored)) != CAEN_DGTZ_Success) {
+		vmeComm.addTimeOfBoardError(boardNumber);
+		vmeComm.addBoardError(boardNumber, error);
+		vmeComm.addStringError(boardNumber, toRussian("Получении кол-ва ивентов"));
 		return false;
 	}
 	//every event from buffer will be storred in currentEvents
@@ -123,37 +123,35 @@ bool DataAnalyzer::readDataOnBoard(uint32_t boardID) {
 		CAEN_DGTZ_EventInfo_t eventInfo;
 		char* eventPointer = nullptr;
 		qInfo() << "Get " << numberOfEventsStored << " event(s)!";
-		currentEvents[boardID].resize(numberOfEventsStored);
+		currentEvents[boardNumber].resize(numberOfEventsStored);
 		for (auto eventNumber = 0; eventNumber < numberOfEventsStored; eventNumber++) {
-			if ((error = CAEN_DGTZ_GetEventInfo(boardID, bufferToReadIn[boardID], sizeOfBufferInBytes[boardID], eventNumber, &eventInfo, &eventPointer)) != CAEN_DGTZ_Success) {
-				vmeComm.addTimeOfBoardError(boardID);
-				vmeComm.addBoardError(boardID, error);
-				vmeComm.addStringError(boardID, toRussian("Получении информации о %1 ивенте").arg(eventNumber));
+			if ((error = CAEN_DGTZ_GetEventInfo(boardID, bufferToReadIn[boardNumber], sizeOfBufferInBytes[boardNumber], eventNumber, &eventInfo, &eventPointer)) != CAEN_DGTZ_Success) {
+				vmeComm.addTimeOfBoardError(boardNumber);
+				vmeComm.addBoardError(boardNumber, error);
+				vmeComm.addStringError(boardNumber, toRussian("Получении информации о %1 ивенте").arg(eventNumber));
 				return false;
 			}
 			if ((error = CAEN_DGTZ_DecodeEvent(boardID, eventPointer, reinterpret_cast<void**>(&currentEvent))) != CAEN_DGTZ_Success) {
-				vmeComm.addTimeOfBoardError(boardID);
-				vmeComm.addBoardError(boardID, error);
-				vmeComm.addStringError(boardID, toRussian("Раскодировании %1 ивента").arg(eventNumber));
+				vmeComm.addTimeOfBoardError(boardNumber);
+				vmeComm.addBoardError(boardNumber, error);
+				vmeComm.addStringError(boardNumber, toRussian("Раскодировании %1 ивента").arg(eventNumber));
 				return false;
 			}
-			currentEvents[boardID][eventNumber] = currentEvent;
+ 			currentEvents[boardNumber][eventNumber] = currentEvent;
 		}
 	}
 	return true;		//if information read successfully
 }
 
 void DataAnalyzer::writeData() {
-	ofstream dataStream("lalala.txt");
-	for (auto channel = 0; channel < MAX_UINT8_CHANNEL_SIZE; channel++)
-		for (auto sample = 0; sample < currentEvent->ChSize[channel]; sample++) {
-			int16_t sampl = currentEvent->DataChannel[channel][sample];
-			dataStream << sampl << '\n';
-		}
+	//not implemented yet
 }
 
 CAEN_DGTZ_UINT8_EVENT_t* DataAnalyzer::getEventForDraw() const {
-	return currentEvents[0][0];
+	for (auto boardNumber = 0; boardNumber < vmeComm.getWDFIdentificators().size(); boardNumber++)
+		if (vmeComm.WDFIsEnabled[boardNumber])
+			return currentEvents[boardNumber][0];
+	return nullptr;
 }
 
 vector<CAEN_DGTZ_UINT8_EVENT_t*>& DataAnalyzer::getEvents(uint8_t boardNumber) {
@@ -191,4 +189,138 @@ vector<uint16_t> DataAnalyzer::getApmlitudesForSpectre(uint8_t boardNumber, uint
 
 int16_t DataAnalyzer::convertFromVMECountsTomV(uint8_t counts) {
 	return (counts - 127) * 3.94;
+}
+
+vector<Point> DataAnalyzer::getImpulses() {
+	vector<Point> impulses;
+	for (auto boardNumber = 0; boardNumber < vmeComm.numberOfWDF; boardNumber++)
+		if (vmeComm.WDFIsEnabled[boardNumber]) {
+			for (auto channelNumber = 0; channelNumber < 8; channelNumber++) {
+				if (vmeComm.channelActiveEnableMask[boardNumber] & 1 << channelNumber) {
+					for (auto event : currentEvents[boardNumber]) {
+						if (event->ChSize[channelNumber] != 0) {
+							auto zeroLevel = getZeroLevel(*event, channelNumber);	//нулевой уровень для данного канала
+							auto zeroLevelForDoublePeaks = NULL;					//значение уровня для двойных импульсов; 0 - если последний импульс не двойной
+							auto thresholdLevel = vmeComm.getChannelThreshold(boardNumber, channelNumber);
+							const auto maxDeltaX = 1000;							//окрестность, в которой будем искать максимальное значение по амплитуде
+							auto deltaX = 0;										//положение в окрестности
+							Point peakPoint = { 0, event->DataChannel[channelNumber][0] };
+							//поиск по всем отсчетам в событии
+							for (auto valueNumber = 1; valueNumber < event->ChSize[channelNumber]; valueNumber++) {
+								//поиск пиковой точки
+								Point currentPoint;
+								currentPoint.x = valueNumber;
+								currentPoint.y = event->DataChannel[channelNumber][currentPoint.x];
+								if (currentPoint.y < peakPoint.y) {
+									peakPoint = currentPoint;
+									deltaX = 0;
+									continue;
+								}
+								//если мы все еще в окрестности, то проверяем дальше
+								if (deltaX <= maxDeltaX) {
+									deltaX++;
+									continue;
+								}
+								//здесь мы уже получили пик
+								//проверим, преодолел ли он порог
+								//если нет, продолжим поиск так, будто бы и не было этого пика
+								if (!zeroLevelForDoublePeaks) {
+									if (peakPoint.y > thresholdLevel) {
+										valueNumber += deltaX;
+										deltaX = 0;
+										continue;
+									}
+								} else {
+									auto currentAmplitude = peakPoint.y - zeroLevelForDoublePeaks;
+									auto thresholdLevelForDoublePeak = thresholdLevel - zeroLevel;
+									if (currentAmplitude < thresholdLevelForDoublePeak) {
+										valueNumber += deltaX;
+										deltaX = 0;
+										zeroLevelForDoublePeaks = NULL;
+										continue;
+									}
+									//todo: протестить
+								}
+								//поиск пиковой точки закончен!
+								qInfo("peak was found, x:%i, channel number:%i", peakPoint.x, channelNumber);
+
+								//здесь мы точно знаем, что пик преодолел порог
+								//пора искать начало этого импульса!
+								//началом считаем приближение к нулю
+								//или отсутствие больших (меньших по амплитуде) значений в некотором интервале
+								auto startPoint = peakPoint;
+								currentPoint = peakPoint;
+								deltaX = 0;
+								while (true) {
+									currentPoint.x--;
+									currentPoint.y = event->DataChannel[channelNumber][currentPoint.x];
+									//проверим, не рядом ли мы с нулем
+									if (currentPoint.y > zeroLevel - 2) {
+										startPoint = currentPoint;
+										break;
+									}
+									//проверяем, достигли ли мы минимума
+									if (currentPoint.y > startPoint.y) {
+										startPoint = currentPoint;
+										deltaX = 0;
+										continue;
+									}
+									//если да, то продолжим поиск в окрестности слева
+									if (deltaX <= maxDeltaX) {
+										deltaX++;
+										continue;
+									}
+									//если прошли всю окрестность и меньше не нашли
+									//то ура, мы нашли начало импульса!
+									break;
+								}
+								qInfo("start was found, x:%i, channel number:%i", startPoint.x, channelNumber);
+								impulses.push_back(peakPoint);
+								//ищем спад до нуля или до возрастания
+								//перепрыгнем пик и окрестность (в них уж точно нет)
+								currentPoint = peakPoint;
+								currentPoint.x += maxDeltaX;
+								currentPoint.y = event->DataChannel[channelNumber][currentPoint.x];
+								//ищем конец сигнала
+								//todo: улучшить поиск хвоста, т.к. он слишком длинный
+								auto endPoint = currentPoint;
+								while (true) {
+									currentPoint.x++;
+									currentPoint.y = event->DataChannel[channelNumber][currentPoint.x];
+									//едем до нуля или до возвышения на +2 пункта от минимального уровня
+									if (currentPoint.y > zeroLevel - 2) {
+										//в таком случае, импульс одинарный
+										zeroLevelForDoublePeaks = NULL;
+										endPoint = currentPoint;
+										break;
+									}
+									//если нашли меньшую амплитуду, то обновим параметры окрестности
+									if (currentPoint.y >= endPoint.y) {
+										endPoint = currentPoint;
+										deltaX = 0;
+										continue;
+									}
+									if (deltaX <= maxDeltaX) {
+										deltaX++;
+										continue;
+									}
+									zeroLevelForDoublePeaks = endPoint.y;
+									break;
+								}
+								qInfo("end was found, x:%i, channel number:%i", endPoint.x, channelNumber);
+								qInfo("zero level is now %i\n", zeroLevelForDoublePeaks ? zeroLevelForDoublePeaks : zeroLevel);
+								//по идее, на этом цикл можно закончить
+								// ReSharper disable once CppAssignedValueIsNeverUsed
+								valueNumber = endPoint.x;
+								//сбросим peakPoint на ноль
+								//todo: здесь надо глянуть, к чему лучше приравнять пикПойнт, так как, возможно, мы останемся выше порога (если хвост будет реально пологий)
+								peakPoint = endPoint;
+								//todo: а теперь все это надо протестить очень(!) много раз
+							}
+						}
+					}
+				}
+			}
+		}
+	return impulses;
 }

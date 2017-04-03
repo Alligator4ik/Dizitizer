@@ -77,6 +77,20 @@ bool VMECommunication::disconnect() {
 
 CAEN_DGTZ_ErrorCode	VMECommunication::setup(uint16_t boardNumber) {
 	CAEN_DGTZ_ErrorCode error;
+	//write buffer size
+	if ((error = CAEN_DGTZ_SetRecordLength(WDFIdentificators[boardNumber], recordLength)) != CAEN_DGTZ_Success) {
+		timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
+		boardErrors[boardNumber].push_back(error);
+		stringErrors[boardNumber].push_back(toRussian("Настройке буфера"));
+		return error;
+	}
+	//write post trigger size
+	if ((error = CAEN_DGTZ_SetPostTriggerSize(WDFIdentificators[boardNumber], postTrigger)) != CAEN_DGTZ_Success) {
+		timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
+		boardErrors[boardNumber].push_back(error);
+		stringErrors[boardNumber].push_back(toRussian("Настройке пост-триггера"));
+		return error;
+	}
 	//write number of blocks transferred during cycle
 	if ((error = CAEN_DGTZ_WriteRegister(WDFIdentificators[boardNumber],
 										CAEN_DGTZ_BLT_EVENT_NUM_ADD,
@@ -165,6 +179,13 @@ bool VMECommunication::stopAcquisition() {
 			timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
 			boardErrors[boardNumber].push_back(error);
 			stringErrors[boardNumber].push_back(toRussian("Остановке прослушки"));
+			return false;
+		}
+	for (auto boardNumber = 0; boardNumber < WDFIdentificators.size(); boardNumber++)
+		if ((error = CAEN_DGTZ_Reset(WDFIdentificators[boardNumber])) != CAEN_DGTZ_Success) {
+			timeOfBoardErrors[boardNumber].push_back(QTime::currentTime());
+			boardErrors[boardNumber].push_back(error);
+			stringErrors[boardNumber].push_back(toRussian("Сбросе оцифровщика"));
 			return false;
 		}
 	return true;
@@ -276,6 +297,7 @@ bool VMECommunication::setRecordLength(int32_t newRecordLength, int32_t postTrig
 }
 
 bool VMECommunication::setPostTriggerLength(int32_t postTriggerSize) {
+	postTrigger = postTriggerSize;
 	CAEN_DGTZ_ErrorCode error;
 	for (auto boardNumber = 0; boardNumber < numberOfWDF; boardNumber++)
 		if (WDFIsEnabled[boardNumber])
@@ -288,9 +310,9 @@ bool VMECommunication::setPostTriggerLength(int32_t postTriggerSize) {
 	return true;
 }
 
-bool VMECommunication::setChannelThreshold(ushort board, ushort channel, int16_t newThresholdInmV) {
+bool VMECommunication::setChannelThreshold(ushort board, ushort channel, double_t newThresholdInmV) {
 	//changing mV to ADC counts
-	auto newThresholdInADCCounts = static_cast<uint32_t>((newThresholdInmV + 500)*0.255);
+	auto newThresholdInADCCounts = static_cast<uint32_t>((newThresholdInmV + 500)/3.92);
 	threshold[board][channel] = newThresholdInADCCounts;
 	CAEN_DGTZ_ErrorCode error;
 	if (connectionToWDFIsActive)

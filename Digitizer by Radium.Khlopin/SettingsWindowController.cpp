@@ -4,7 +4,8 @@
 
 SettingsWindowController::SettingsWindowController(QWidget *parent)
 	: QMainWindow(parent) ,
-	stylesOfThresholdLines(dynamic_cast<MainWindow*>(parent)->getStylesOfThresholdLines()) {
+	stylesOfThresholdLines(dynamic_cast<MainWindow*>(parent)->getStylesOfThresholdLines()),
+	thresholdlineStyleMutex(dynamic_cast<MainWindow*>(parent)->thresholdLineStyleMutex) {
 	ui.setupUi(this);
 	ui.VMECommSetting->setColumnWidth(0, 24);
 	ui.ColorSetting->setColumnWidth(0, 55);
@@ -70,12 +71,14 @@ void SettingsWindowController::acceptedSlot() {
 	//apply styles of threshold lines
 	auto styles = ui.ChannelColorSetting->findChildren<QComboBox*>(QRegExp("TrigLine_CH"), Qt::FindChildrenRecursively);
 	for (auto channelNumber = 0; channelNumber < styles.size(); channelNumber++) {
+		thresholdlineStyleMutex.lock();
 		switch (styles[channelNumber]->currentIndex()) {
 			case 0: {stylesOfThresholdLines[currentWDF][channelNumber] = Qt::SolidLine; break; }
 			case 1: {stylesOfThresholdLines[currentWDF][channelNumber] = Qt::DotLine; break; }
 			case 2: {stylesOfThresholdLines[currentWDF][channelNumber] = Qt::DashDotLine; break; }
 			default: break;
 		}
+		thresholdlineStyleMutex.unlock();
 	}
 	//apply other settings
 	this->close();
