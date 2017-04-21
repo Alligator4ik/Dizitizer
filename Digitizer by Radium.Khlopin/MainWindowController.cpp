@@ -61,6 +61,10 @@ MainWindow::MainWindow(QWidget *parent)
 	//connect posttrigger line to its' drawing slot
 	connect(this, &MainWindow::drawPostTriggerLine, this, &MainWindow::drawPostTriggerLineSlot); 
 
+	//connect zooming
+	connect(ui.signalWidget, &QCustomPlot::mouseWheel, this, &MainWindow::mouseZoomSlot);
+	connect(ui.spectrumWidget, &QCustomPlot::mouseWheel, this, &MainWindow::mouseZoomSlot);
+
 	//set postTrigger disabled
 	ui.postTriggerBox->setEnabled(false);
 }
@@ -99,12 +103,22 @@ MainWindow::~MainWindow() {
 				settingsOut << stylesOfThresholdLines[boardNumber][channelNumber] << " ";
 			settingsOut << endl;
 		}
+		//write record length
+		settingsOut << ui.bufferComboBox->currentIndex() << " " << vme.getRecordLength() << endl;
+		//write BLT number
+		settingsOut << vme.getBLTNumber() << endl;
+		//write windwoe time (for analyze)
+		settingsOut << this->timeWindow;
 		//write other settings
 	}
 }
 
 VMECommunication& MainWindow::getVME() {
 	return vme;
+}
+
+DataAnalyzer& MainWindow::getAnalyzer() {
+	return *vmeData;
 }
 
 vector<vector<string>>& MainWindow::getChannelColors() {
@@ -116,23 +130,25 @@ vector<vector<Qt::PenStyle>>& MainWindow::getStylesOfThresholdLines() {
 }
 
 void MainWindow::updateData() {
-	DataAnalyzer vmeData(vme);
+	vmeData = new DataAnalyzer(vme);
+	vmeData->setTimeWindow(chrono::milliseconds(timeWindow*1000));
 	while (acquisitionWasStarted) {
-		if (vmeData.readData()) {					//if we have smth to show or analyze
+		if (vmeData->readData()) {					//if we have smth to show or analyze
 			if (ui.recordButton->isChecked())
-				vmeData.writeData();
+				vmeData->writeData();
 			if (ui.drawButton->isChecked()) {
-				drawSignal(vmeData.getEventForDraw());
+				drawSignal(*vmeData);
 				emit replot();
 			}
 			if (ui.amplifySpectrumButton->isChecked()) {
-				drawAmplifySpectrum(vmeData);
+				drawAmplifySpectrum(*vmeData);
 				emit replot();
 			}
 			if (ui.rossiAlphaSpectrumButton->isChecked()) {
-				
+				drawRossiAlphaSpectrum(*vmeData);
+				emit replot();
 			}
-			vmeData.getImpulses();
+			vmeData->getTimeStepsBetweenPeaks();
 			if (vme.singleTriggerWasStarted) {
 				vme.singleTriggerWasStarted = false;
 				emit stopSingleTrigger();
@@ -146,15 +162,16 @@ void MainWindow::updateData() {
 		this->pulseErrorButton();
 }
 
-void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
+void MainWindow::drawSignal(DataAnalyzer& vmeData) {
 	//starting initialize
 	auto graphNumber = 0;
+	auto eventToDraw = vmeData.getEventForDraw();
 	auto eventSize = *max_element(eventToDraw->ChSize, eventToDraw->ChSize + 8);
 	QVector<QCPGraphData> graphData(eventSize);
 	//current initialization
 	for (auto numberOfBoard = 0; numberOfBoard < vme.numberOfWDF; numberOfBoard++)												//по всем доскам
-		if (vme.WDFIsEnabled[numberOfBoard])																					//если доска включена
-			for (auto channelNumber = 0; channelNumber < vme.getWDFInfo(numberOfBoard).Channels; channelNumber++)				//по всем каналам этой доски
+		if (vmeData.getHandler().WDFIsEnabled(numberOfBoard))																	//если доска включена
+			for (auto channelNumber = 0; channelNumber < 8; channelNumber++)													//по всем каналам этой доски
 				if (eventToDraw->ChSize[channelNumber] != 0) {																	//если на канале что-то есть (другими словами - он включен)
 					if (ui.WDFTabWidget->findChild<QPushButton*>(QString("channelIsDrawingButton_" + QString::number(numberOfBoard + 1) + "_" + QString::number(channelNumber)))->isChecked()) {	//если нажата кнопка отображения сигнала
 						//initializing the graph
@@ -178,8 +195,7 @@ void MainWindow::drawSignal(CAEN_DGTZ_UINT8_EVENT_t * eventToDraw) {
 					}
 					graphNumber++;
 				}
-	if (ui.postTriggerIsDrawing->isChecked())
-		emit drawPostTriggerLine();
+	emit drawPostTriggerLine();
 	ui.signalWidget->legend->setVisible(true);
 }
 
@@ -212,8 +228,11 @@ void MainWindow::drawAmplifySpectrum(DataAnalyzer& vmeData) {
 					}
 }
 
-void MainWindow::drawRossiAlphaSpectrum() {
-	//Not implemented
+void MainWindow::drawRossiAlphaSpectrum(DataAnalyzer& vmeData) {
+	auto times = vmeData.getTimeStepsBetweenPeaks();
+	auto graphDataContainer = ui.spectrumWidget->graph(0)->data().data();
+	for (auto time : times)
+		graphDataContainer->at(time.count())->value++;
 }
 
 void MainWindow::readSettings() {
@@ -274,6 +293,20 @@ void MainWindow::readSettings() {
 				if (settingsStream >> thresholdStyle) {
 					stylesOfThresholdLines[boardNumber][channelNumber] = Qt::PenStyle(thresholdStyle);
 				}
+		//read record length
+		uint32_t index, samples;
+		if (settingsStream >> index)
+			ui.bufferComboBox->setCurrentIndex(index);
+		if (settingsStream >> samples)
+			vme.setBufferInSamples(samples);
+		//read BLT number
+		uint16_t BLTNumber;
+		if (settingsStream >> BLTNumber)
+			vme.setBLTNumber(BLTNumber);
+		//read time window
+		uint32_t timeWindow;
+		if (settingsStream >> timeWindow)
+			this->timeWindow = timeWindow;
 		//read other settings
 	}
 }
@@ -297,6 +330,9 @@ void MainWindow::setControlsEnabledOnStartStop(bool enabled) const {
 	//interactions of viewer
 	ui.signalWidget->setInteraction(QCP::iRangeZoom, enabled);
 	ui.signalWidget->setInteraction(QCP::iRangeDrag, enabled);
+	//interactions of amplify viewer
+	ui.spectrumWidget->setInteraction(QCP::iRangeZoom, enabled);
+	ui.spectrumWidget->setInteraction(QCP::iRangeDrag, enabled);
 }
 
 void MainWindow::setControlsEnabledOnConnectDisconnect(bool enabled) const {
@@ -495,8 +531,9 @@ void MainWindow::resetParameterSlot() const {
 void MainWindow::bufferChangedSlot(int newBufferSizeIndex) {
 	recordLengthHasBeenChanged = true;
 	auto newRecordLength = static_cast<uint16_t>(pow(2, newBufferSizeIndex+1));	//from index to KB
-	if (!vme.setRecordLength(newRecordLength, ui.postTriggerSpinBox->value()))
-		this->pulseErrorButton();
+	if (ui.connectButton->isChecked())
+		if (!vme.setRecordLength(newRecordLength, ui.postTriggerSpinBox->value()))
+			this->pulseErrorButton();
 }
 
 void MainWindow::setPostTriggerLengthSlot(int newPostTriggerInPercent) {
@@ -534,6 +571,10 @@ void MainWindow::singleTriggerSlot() {
 }
 
 void MainWindow::amplifySpectrumSlot() const {
+	if (ui.rossiAlphaSpectrumButton->isChecked()) {
+		ui.rossiAlphaSpectrumButton->setChecked(false);
+		ui.spectrumWidget->clearGraphs();
+	}
 	if (static_cast<QPushButton*>(sender())->isChecked()) {
 		auto maxAmplitude = 300;
 		QVector<double_t> keys(maxAmplitude);
@@ -548,6 +589,29 @@ void MainWindow::amplifySpectrumSlot() const {
 		ui.spectrumWidget->xAxis->setRange(0, maxAmplitude);			//max 300 mV
 		ui.spectrumWidget->replot();
 	} else {
+		ui.spectrumWidget->clearGraphs();
+	}
+	ui.settingsBlock->setEnabled(!ui.settingsBlock->isEnabled());
+}
+
+void MainWindow::rossiAlphaSpectrumSlot() const {
+	if (ui.amplifySpectrumButton->isChecked()) {
+		ui.amplifySpectrumButton->setChecked(false);
+		ui.spectrumWidget->clearGraphs();
+	}
+	if (static_cast<QPushButton*>(sender())->isChecked()) {
+		auto maxTimeBetweenImpulses = this->timeWindow*1000;
+		QVector<double_t> keys(maxTimeBetweenImpulses);
+		for (auto i = 0; i < maxTimeBetweenImpulses; i++)
+			keys[i] = i;
+		QVector<double_t> values(maxTimeBetweenImpulses, 0);
+		ui.spectrumWidget->addGraph();
+		ui.spectrumWidget->graph(0)->setData(keys, values, true);
+		ui.spectrumWidget->yAxis->setRange(0, 200);						//max 200 одинаковых значений временных интервалов
+		ui.spectrumWidget->xAxis->setRange(0, maxTimeBetweenImpulses);
+		ui.spectrumWidget->replot();
+	}
+	else {
 		ui.spectrumWidget->clearGraphs();
 	}
 	ui.settingsBlock->setEnabled(!ui.settingsBlock->isEnabled());
@@ -577,6 +641,23 @@ void MainWindow::graphVisibilityChangedSlot() const {
 		ui.signalWidget->graph(graphNumber)->setVisible(visibilityButton->isChecked());
 }
 
+void MainWindow::mouseZoomSlot(QWheelEvent* wheelEvent) const {
+	auto delta = 25;
+	//зазоры по осям - 25 пикселей
+	if (wheelEvent->pos().x() < delta) {
+		//зум по вертикали
+		ui.signalWidget->axisRect()->setRangeZoomAxes(ui.signalWidget->xAxis, ui.signalWidget->yAxis);
+		ui.signalWidget->axisRect()->setRangeZoom(ui.signalWidget->yAxis->orientation());
+	} else if (wheelEvent->pos().y() > ui.signalWidget->height() - delta) {
+		//зум по горизонтали
+		ui.signalWidget->axisRect()->setRangeZoomAxes(ui.signalWidget->xAxis, ui.signalWidget->yAxis);
+		ui.signalWidget->axisRect()->setRangeZoom(ui.signalWidget->xAxis->orientation());
+	} else {
+		//синхронный зум по обеим осям
+		ui.signalWidget->axisRect()->setRangeZoom(Qt::Horizontal | Qt::Vertical);
+	}
+}
+
 void MainWindow::drawThresholdLineSlot(int channelNumber, int boardNumber, int threshold, int recordLength, QColor& colorOfLine) {
 	if (!thresholdLinesPointers[boardNumber][channelNumber])
 		thresholdLinesPointers[boardNumber][channelNumber] = new QCPItemLine(ui.signalWidget);
@@ -596,6 +677,7 @@ void MainWindow::drawPostTriggerLineSlot() {
 	double triggerSample = 2 * (100 - ui.postTriggerSpinBox->value()) * vme.getRecordLength() / 100;	//домножая на 2, переходим к наносекундам (один отсчет = 2нс)	
 	postTriggerLine->start->setCoords(triggerSample, 1000);
 	postTriggerLine->end->setCoords(triggerSample, -1000);
+	postTriggerLine->setVisible(ui.postTriggerIsDrawing->isChecked());
 }
 
 void MainWindow::replotGraph() const {

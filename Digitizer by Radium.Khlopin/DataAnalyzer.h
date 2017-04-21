@@ -1,6 +1,7 @@
 #pragma once
 #include "VMECommunication.h"
 #include <future>
+#include "EventHandler.h"
 
 struct Point {
 	uint32_t x;
@@ -12,7 +13,8 @@ class DataAnalyzer
 	VMECommunication&							vmeComm;
 
 	CAEN_DGTZ_UINT8_EVENT_t*					currentEvent;
-	vector<vector<CAEN_DGTZ_UINT8_EVENT_t*>>	currentEvents;
+	chrono::microseconds						timeWindow;
+	vector<EventHandler>*						eventHandler;
 	/**
 	 * \brief Вектор. Содержит только размеры буфера, в который выполняется чтение (на ПК), в байтах.
 	 */
@@ -21,19 +23,23 @@ class DataAnalyzer
 	 * \brief Вектор, в который выполняется запись сырых данных, пришедших со всех плат.
 	 */
 	vector<char*>								bufferToReadIn;
-
 	/**
 	 * \brief Вектор, содержащий значения, возвращенные асинхронным вызовом медода readDataOnBoard().
 	 */
 	vector<future<bool>>						boardThreads;
-
 	/**
 	* \brief
 	* \param event ивент, который необходимо исследовать.
 	* \param channelNumber канал в ивенте, для которого нужно найти нулевой уровень.
 	* \return Возвращает нулевой уровень (или 127, если нулевого уровня не удалось найти).
 	*/
-	uint8_t										getZeroLevel(CAEN_DGTZ_UINT8_EVENT_t &event, uint8_t channelNumber) const;
+	static uint8_t								getZeroLevel(CAEN_DGTZ_UINT8_EVENT_t &event, uint8_t channelNumber);
+	/**
+	* \brief Метод выполняет поиск в собитии и находит все импульсы, которые преодолели свой порог.
+	* \param eventHandler Держатель события, в котором необходимо найти импульсы.
+	* \return Вектор, содержащий позиции начала каждого импульса в отсчетах (не во временных единицах!).
+	*/
+	vector<uint32_t>							getImpulsesInEventHandler(EventHandler& eventHandler) const;
 public:
 	explicit DataAnalyzer(VMECommunication& vmeCommunication);
 	~DataAnalyzer();
@@ -50,24 +56,20 @@ public:
 	 */
 	bool										readDataOnBoard(uint32_t boardID, uint16_t boardNumber);
 	void										writeData();
+	chrono::microseconds						getTimeWindow() const;
+	EventHandler&								getHandler() const;
 	/**
 	 * \brief 
 	 * \return Везвращает событие для отрисовки (самое первое с первой платы).
 	 */
 	CAEN_DGTZ_UINT8_EVENT_t*					getEventForDraw() const;
 	/**
-	 * \brief 
-	 * \param boardNumber Номер платы, для которой нужно прочитать все ивенты.
-	 * \return Вовращает vector&, содержащий указатели на ивенты .
-	 */
-	vector<CAEN_DGTZ_UINT8_EVENT_t*>&			getEvents(uint8_t boardNumber);
-	/**
 	 * \brief Используется для получения максимальной амплитуды сигнала.
 	 * \param boardNumber Номер платы
 	 * \param channel Номер канала
 	 * \return Возвращает амплитуды.
 	 */
-	vector<uint16_t>							getApmlitudesForSpectre(uint8_t boardNumber, uint8_t channel);
+	vector<uint16_t>							getApmlitudesForSpectre(uint8_t boardNumber, uint8_t channel) const;
 	/**
 	 * \brief Конвертирует отсчеты оцифровщика из диапазона [0; 255] в диапазон [-1; 1] вольт.
 	 * \param counts Отсчет оцифровщика из диапазона [0; 255]. Значение будет округлено до ближайшего целого.
@@ -75,8 +77,15 @@ public:
 	 */
 	static int16_t								convertFromVMECountsTomV(uint8_t counts);
 	/**
-	* \brief Метод выполняет поиск в собитии и находит все импульсы, которые преодолели свой порог.
-	* \return Вектор, содержащий позиции начала каждого импульса в отсчетах (не во временных единицах!).
-	*/
-	vector<Point>								getImpulses();
+	 * \brief Рассчитывает временные отрезки между началами пиков по всем каналам.
+	 * \param window Временное окно для поиска следующих пиков.
+	 * \return Временные отрезки между соседними пиками в микросекундах.
+	 */
+	vector<chrono::microseconds>				getTimeStepsBetweenPeaks();
+
+	/**
+	 * \brief Устанавливает новое временное окно для поиска соседних пиков.
+	 * \param newTimeWindow Новое временное окно, в котором будет вестить поиск соседних импульсов.
+	 */
+	void										setTimeWindow(chrono::milliseconds newTimeWindow);
 };

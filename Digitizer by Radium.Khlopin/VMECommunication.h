@@ -37,7 +37,7 @@ class VMECommunication {
 	/**
 	 * \brief Максимальное количество ивентов, которое может быть передано за цикл чтения.
 	 */
-	uint32_t								numberOfBlocksTransferredDuringCycle = 0x1;
+	uint16_t								numberOfBlocksTransferredDuringCycle = 0x1;
 	/**
 	 * \brief Длина записи в точках.
 	 */
@@ -49,7 +49,7 @@ class VMECommunication {
 	/**
 	* \brief Пороговое значение импульса для каждого канала каждой платы. Принимает значения от 0 до 255, где 0 - -1В, а 255 - +1В.
 	*/
-	vector<vector<ushort>>					threshold;
+	vector<vector<int16_t>>					threshold;
 	/**
 	 * \brief Выполняет предстартовую подготовку платы к прослушке и выставляет все ее служенбные регистры.
 	 * \param boardNumber Номер платы
@@ -153,6 +153,13 @@ public:
 	vector<vector<QString>>&				getStringErrors();
 	vector<int32_t>&						getWDFIdentificators();
 	uint32_t								getRecordLength();
+	vector<vector<int16_t>>&				getAllThresholds();
+	/**
+	* \brief Позволяет получить текущее значение порогов для всей платы.
+	* \param boardNumber Номер платы
+	* \return Массив со значениями порогов [0; 255] = [-1В;+1В]
+	*/
+	vector<int16_t>&						getBoardThresholds(uint16_t boardNumber);
 	/**
 	 * \brief Позволяет получить текущее значение порога для конкретного канала конкретной платы.
 	 * \param boardNumber Номер платы
@@ -160,6 +167,7 @@ public:
 	 * \return Значение порога [0; 255] = [-1В;+1В]
 	 */
 	int16_t									getChannelThreshold(uint8_t boardNumber, uint8_t channelNumber) const;
+	uint16_t								getBLTNumber() const;
 	CAEN_DGTZ_BoardInfo_t					getWDFInfo(ushort numberOfBoard);
 
 	bool									setRecordLength(int32_t newRecordLength, int32_t postTriggerSize);
@@ -167,6 +175,17 @@ public:
 	bool									setChannelThreshold(ushort board, ushort channel, double_t newThreshold);
 	bool									setChannelSample(ushort board, ushort channel, ushort newSample);
 	bool									setChannelOffset(ushort board, ushort channel, int16_t newOffsetInmV);
+	/**
+	 * \brief Устанавливает значение буффера для его записи в память оцифровщика. 
+	 * Ничего не делает, если соединение с оцифровщиком уже установлено - используйте setRecordLength(int32_t, int32_t).
+	 * \param samples Длина записи в отсчетах.
+	 */
+	void									setBufferInSamples(uint32_t samples);
+	/**
+	 * \brief Устанавливает новое число BLT.
+	 * \param newBLTNumber Маскимальное количество событий, которое оцифровщик можит передать за один такт чтения.
+	 */
+	void									setBLTNumber(uint16_t newBLTNumber);
 	void									addTimeOfBoardError(ushort board);
 	void									addBoardError(ushort board, CAEN_DGTZ_ErrorCode errorCode);
 	void									addStringError(uint16_t board, QString functionDescription);

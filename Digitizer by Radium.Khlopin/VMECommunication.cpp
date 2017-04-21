@@ -16,7 +16,7 @@ VMECommunication::VMECommunication() {
 	timeOfStringErrors.resize(numberOfWDF);
 	threshold.resize(numberOfWDF);
 	for (auto i = 0; i < numberOfWDF; i++)
-		threshold[i] = vector<ushort>(8, 133);						//8 - number of channels, 133 - default threshold (20 mV)
+		threshold[i] = vector<int16_t>(8, 133);						//8 - number of channels, 133 - default threshold (20 mV)
 	sample.resize(numberOfWDF);
 	for (auto i = 0; i < numberOfWDF; i++)
 		sample[i] = vector<ushort>(8, 10);							//8 - number of channels, 10 - default sample
@@ -273,8 +273,20 @@ uint32_t VMECommunication::getRecordLength() {
 	return this->recordLength;
 }
 
+vector<vector<int16_t>>& VMECommunication::getAllThresholds() {
+	return this->threshold;
+}
+
+vector<int16_t>& VMECommunication::getBoardThresholds(uint16_t boardNumber) {
+	return this->threshold[boardNumber];
+}
+
 int16_t VMECommunication::getChannelThreshold(uint8_t boardNumber, uint8_t channelNumber) const {
 	return this->threshold[boardNumber][channelNumber];
+}
+
+uint16_t VMECommunication::getBLTNumber() const {
+	return this->numberOfBlocksTransferredDuringCycle;
 }
 
 bool VMECommunication::setRecordLength(int32_t newRecordLength, int32_t postTriggerSize) {
@@ -349,6 +361,15 @@ bool VMECommunication::setChannelOffset(ushort board, ushort channel, int16_t ne
 	}
 	CAEN_DGTZ_GetChannelDCOffset(WDFIdentificators[board], channel, &newOffset);
 	return true;
+}
+
+void VMECommunication::setBufferInSamples(uint32_t samples) {
+	if (!connectionToWDFIsActive)
+		this->recordLength = samples;
+}
+
+void VMECommunication::setBLTNumber(uint16_t newBLTNumber) {
+	numberOfBlocksTransferredDuringCycle = newBLTNumber;
 }
 
 void VMECommunication::addTimeOfBoardError(ushort board) {

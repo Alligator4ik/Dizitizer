@@ -98,6 +98,9 @@
     <ClCompile Include="GeneratedFiles\Release\moc_MainWindowController.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="EventHandler.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="mainwindow.ui">
@@ -145,6 +148,9 @@
       <Filter>Header Files\Model</Filter>
     </ClInclude>
     <ClInclude Include="DataAnalyzer.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="EventHandler.h">
       <Filter>Header Files\Model</Filter>
     </ClInclude>
   </ItemGroup>

@@ -58,7 +58,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <property name="iconSize">
        <size>
@@ -1623,31 +1623,43 @@ background-color: green;</string>
         <property name="title">
          <string>Чтение</string>
         </property>
-        <widget class="QSpinBox" name="spinBox_2">
+        <widget class="QSpinBox" name="numberOfBLT">
          <property name="geometry">
           <rect>
-           <x>100</x>
+           <x>180</x>
            <y>20</y>
            <width>40</width>
            <height>20</height>
           </rect>
          </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>16</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
         </widget>
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="numberOfBLTLabel">
          <property name="geometry">
           <rect>
-           <x>20</x>
+           <x>10</x>
            <y>20</y>
-           <width>80</width>
+           <width>161</width>
            <height>20</height>
           </rect>
          </property>
          <property name="text">
-          <string>Число событий</string>
+          <string>Число событий за такт чтения</string>
          </property>
         </widget>
        </widget>
        <widget class="QGroupBox" name="groupBox_5">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -1799,7 +1811,7 @@ background-color: green;</string>
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="currentWDFLabel_2">
+       <widget class="QLabel" name="currentWDFInReadWriteTabLabel">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -1812,7 +1824,10 @@ background-color: green;</string>
          <string>Текущая плата:</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="currentWDFInColorTab_2">
+       <widget class="QComboBox" name="currentWDFInReadWriteTab">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>100</x>
@@ -1876,7 +1891,10 @@ background-color: green;</string>
        <attribute name="title">
         <string/>
        </attribute>
-       <widget class="QGroupBox" name="groupBox">
+       <widget class="QGroupBox" name="backgroundBox">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -1941,7 +1959,10 @@ background-color: rgb(0, 0, 0);</string>
          </property>
         </widget>
        </widget>
-       <widget class="QGroupBox" name="groupBox_2">
+       <widget class="QGroupBox" name="gridBox">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>110</x>
@@ -2049,7 +2070,10 @@ background-color: rgb(192, 192, 192);</string>
          </item>
         </widget>
        </widget>
-       <widget class="QGroupBox" name="groupBox_3">
+       <widget class="QGroupBox" name="IOBox">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -2123,6 +2147,60 @@ background-color: rgb(192, 192, 192);</string>
          </property>
         </widget>
         <widget class="QLabel" name="triggerTimeLabel">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>20</y>
+           <width>47</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>мсек</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="timeWindowBox">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>140</y>
+          <width>141</width>
+          <height>50</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Тип входящего/исходящего сигнала</string>
+        </property>
+        <property name="title">
+         <string>Временное окно</string>
+        </property>
+        <widget class="QSpinBox" name="timeWindowSpinBox">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>61</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>Width</string>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>4</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="timeWindowLabel">
          <property name="geometry">
           <rect>
            <x>80</x>

@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1274</width>
-    <height>839</height>
+    <width>1275</width>
+    <height>840</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1249</width>
-    <height>825</height>
+    <width>1275</width>
+    <height>840</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1920</width>
+    <width>3840</width>
     <height>1080</height>
    </size>
   </property>
@@ -62,7 +62,7 @@
    </property>
    <property name="maximumSize">
     <size>
-     <width>1920</width>
+     <width>3840</width>
      <height>1080</height>
     </size>
    </property>
@@ -71,7 +71,7 @@
      <widget class="QGroupBox" name="controlButtons">
       <property name="maximumSize">
        <size>
-        <width>1920</width>
+        <width>3840</width>
         <height>90</height>
        </size>
       </property>
@@ -496,7 +496,7 @@
      <widget class="QGroupBox" name="mainBox">
       <property name="maximumSize">
        <size>
-        <width>1920</width>
+        <width>3840</width>
         <height>1080</height>
        </size>
       </property>
@@ -534,7 +534,7 @@
              </property>
              <property name="maximumSize">
               <size>
-               <width>1920</width>
+               <width>3840</width>
                <height>260</height>
               </size>
              </property>
@@ -26773,6 +26773,9 @@ border-radius: 5</string>
              <property name="text">
               <string>Росси-Альфа</string>
              </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
             </widget>
            </item>
            <item row="1" column="4">
@@ -28294,6 +28297,22 @@ border-radius: 5</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>rossiAlphaSpectrumButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>rossiAlphaSpectrumSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>796</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>428</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>connectSlot()</slot>
@@ -28311,5 +28330,6 @@ border-radius: 5</string>
   <slot>autoTriggerSlot()</slot>
   <slot>amplifySpectrumSlot()</slot>
   <slot>singleTriggerSlot()</slot>
+  <slot>rossiAlphaSpectrumSlot()</slot>
  </slots>
 </ui>

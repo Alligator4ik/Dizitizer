@@ -1,5 +1,6 @@
 #include "SettingsWindowController.h"
 #include "MainWindowController.h"
+#include "DataAnalyzer.h"
 
 
 SettingsWindowController::SettingsWindowController(QWidget *parent)
@@ -44,6 +45,13 @@ SettingsWindowController::SettingsWindowController(QWidget *parent)
 			default:				{styles[channelNumber]->setCurrentIndex(0); break;}
 		}
 	}
+	//get BLT number
+	auto BLTNumber = dynamic_cast<MainWindow*>(this->parent())->getVME().getBLTNumber();
+	ui.numberOfBLT->setValue(BLTNumber);
+	//get time of window to analyze
+	auto timeWindow = dynamic_cast<MainWindow*>(this->parent())->timeWindow;
+	ui.timeWindowSpinBox->setValue(timeWindow);
+	//get somthing else
 }
 
 SettingsWindowController::~SettingsWindowController()
@@ -80,6 +88,10 @@ void SettingsWindowController::acceptedSlot() {
 		}
 		thresholdlineStyleMutex.unlock();
 	}
+	//apply new BLTNumber
+	dynamic_cast<MainWindow*>(this->parent())->getVME().setBLTNumber(ui.numberOfBLT->value());
+	//apply wime window
+	dynamic_cast<MainWindow*>(this->parent())->timeWindow = ui.timeWindowSpinBox->value();
 	//apply other settings
 	this->close();
 }

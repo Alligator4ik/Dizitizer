@@ -1110,9 +1110,9 @@ public:
     {
         if (MainWindowClass->objectName().isEmpty())
             MainWindowClass->setObjectName(QStringLiteral("MainWindowClass"));
-        MainWindowClass->resize(1274, 839);
-        MainWindowClass->setMinimumSize(QSize(1249, 825));
-        MainWindowClass->setMaximumSize(QSize(1920, 1080));
+        MainWindowClass->resize(1275, 840);
+        MainWindowClass->setMinimumSize(QSize(1275, 840));
+        MainWindowClass->setMaximumSize(QSize(3840, 1080));
         MainWindowClass->setAcceptDrops(false);
         QIcon icon;
         icon.addFile(QStringLiteral("../Desktop/CAEN-UI/Icon.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -1126,14 +1126,14 @@ public:
         centralWidget = new QWidget(MainWindowClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         centralWidget->setMinimumSize(QSize(1240, 825));
-        centralWidget->setMaximumSize(QSize(1920, 1080));
+        centralWidget->setMaximumSize(QSize(3840, 1080));
         verticalLayout = new QVBoxLayout(centralWidget);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         controlButtons = new QGroupBox(centralWidget);
         controlButtons->setObjectName(QStringLiteral("controlButtons"));
-        controlButtons->setMaximumSize(QSize(1920, 90));
+        controlButtons->setMaximumSize(QSize(3840, 90));
         gridLayout_2 = new QGridLayout(controlButtons);
         gridLayout_2->setSpacing(6);
         gridLayout_2->setContentsMargins(11, 11, 11, 11);
@@ -1287,7 +1287,7 @@ public:
 
         mainBox = new QGroupBox(centralWidget);
         mainBox->setObjectName(QStringLiteral("mainBox"));
-        mainBox->setMaximumSize(QSize(1920, 1080));
+        mainBox->setMaximumSize(QSize(3840, 1080));
         gridLayout_3 = new QGridLayout(mainBox);
         gridLayout_3->setSpacing(6);
         gridLayout_3->setContentsMargins(11, 11, 11, 11);
@@ -1310,7 +1310,7 @@ public:
         settingsBlock = new QGroupBox(signalTab);
         settingsBlock->setObjectName(QStringLiteral("settingsBlock"));
         settingsBlock->setMinimumSize(QSize(1215, 0));
-        settingsBlock->setMaximumSize(QSize(1920, 260));
+        settingsBlock->setMaximumSize(QSize(3840, 260));
         settingsBlock->setFlat(false);
         settingsBlock->setCheckable(true);
         settingsBlock->setChecked(true);
@@ -7535,6 +7535,7 @@ public:
 
         rossiAlphaSpectrumButton = new QPushButton(spectrumTab);
         rossiAlphaSpectrumButton->setObjectName(QStringLiteral("rossiAlphaSpectrumButton"));
+        rossiAlphaSpectrumButton->setCheckable(true);
 
         gridLayout_5->addWidget(rossiAlphaSpectrumButton, 1, 1, 1, 1);
 
@@ -7681,6 +7682,7 @@ public:
         QObject::connect(amplifySpectrumButton, SIGNAL(clicked()), MainWindowClass, SLOT(amplifySpectrumSlot()));
         QObject::connect(singleTriggerButton, SIGNAL(clicked()), MainWindowClass, SLOT(singleTriggerSlot()));
         QObject::connect(postTriggerSpinBox, SIGNAL(valueChanged(int)), MainWindowClass, SLOT(setPostTriggerLengthSlot(int)));
+        QObject::connect(rossiAlphaSpectrumButton, SIGNAL(clicked()), MainWindowClass, SLOT(rossiAlphaSpectrumSlot()));
 
         exitButton->setDefault(false);
         tabWidget->setCurrentIndex(0);

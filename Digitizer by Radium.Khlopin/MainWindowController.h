@@ -18,16 +18,22 @@ public:
 	explicit MainWindow(QWidget *parent = nullptr);
 	~MainWindow();
 	VMECommunication&				getVME();
+	DataAnalyzer&					getAnalyzer();
 	vector<vector<string>>&			getChannelColors();
 	vector<vector<Qt::PenStyle>>&	getStylesOfThresholdLines();
 	mutex							colorBrushMutex;
 	mutex							thresholdLineStyleMutex;
+	/**
+	 * \brief Временное окно в микросекундах.
+	 */
+	uint32_t						timeWindow = 1000;
 private:
 	Ui::MainWindowClass				ui;
 	SettingsWindowController*		settings_window_controller;
 	ErrorLogWindowController*		error_log_window_controller;
 
 	VMECommunication				vme;
+	DataAnalyzer*					vmeData;
 	bool							acquisitionWasStarted = false;
 	/**
 	 * \brief Флаг, показывающий, что необходимо обновить оси графика, так как сменился буфер.
@@ -53,9 +59,9 @@ private:
 	QTimer*							autoTriggerTimer = nullptr;
 
 	void							updateData();
-	void							drawSignal(CAEN_DGTZ_UINT8_EVENT_t* eventToDraw);
+	void							drawSignal(DataAnalyzer& vmeData);
 	void							drawAmplifySpectrum(DataAnalyzer& vmeData);
-	void							drawRossiAlphaSpectrum();
+	void							drawRossiAlphaSpectrum(DataAnalyzer& vmeData);
 	void							readSettings();
 	void							pulseErrorButton();
 	void							setControlsEnabledOnStartStop(bool enabled) const;
@@ -83,10 +89,12 @@ private slots:
 	void							autoTriggerSlot();
 	void							singleTriggerSlot();
 	void							amplifySpectrumSlot() const;
+	void							rossiAlphaSpectrumSlot() const;
 	void							changePolaritySlot();
 	void							thresholdVisibilityChangedSlot();
 	void							graphVisibilityChangedSlot() const;
 public slots:
+	void							mouseZoomSlot(QWheelEvent* wheelEvent) const;
 	void							drawThresholdLineSlot(int channelNumber, int boardNumber, int threshold, int recordLength, QColor& colorOfLine);
 	void							drawPostTriggerLineSlot();
 	void							replotGraph() const;

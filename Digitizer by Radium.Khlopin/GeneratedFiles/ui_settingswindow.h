@@ -93,27 +93,30 @@ public:
     QComboBox *currentWDFInColorTab;
     QWidget *tab;
     QGroupBox *groupBox_4;
-    QSpinBox *spinBox_2;
-    QLabel *label_2;
+    QSpinBox *numberOfBLT;
+    QLabel *numberOfBLTLabel;
     QGroupBox *groupBox_5;
     QGridLayout *gridLayout_2;
     QTableWidget *tableWidget;
-    QLabel *currentWDFLabel_2;
-    QComboBox *currentWDFInColorTab_2;
+    QLabel *currentWDFInReadWriteTabLabel;
+    QComboBox *currentWDFInReadWriteTab;
     QWidget *ViewerSetting;
-    QGroupBox *groupBox;
+    QGroupBox *backgroundBox;
     QLabel *label;
     QPushButton *postTriggerIsDrawing;
-    QGroupBox *groupBox_2;
+    QGroupBox *gridBox;
     QPushButton *postTriggerIsDrawing_10;
     QLabel *label_10;
     QSpinBox *spinBox;
     QComboBox *comboBox;
-    QGroupBox *groupBox_3;
+    QGroupBox *IOBox;
     QComboBox *comboBox_3;
     QGroupBox *autoTriggerBox;
     QSpinBox *triggerTimeSpinBox;
     QLabel *triggerTimeLabel;
+    QGroupBox *timeWindowBox;
+    QSpinBox *timeWindowSpinBox;
+    QLabel *timeWindowLabel;
 
     void setupUi(QMainWindow *SettingsWindowController)
     {
@@ -593,14 +596,18 @@ public:
         groupBox_4 = new QGroupBox(tab);
         groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
         groupBox_4->setGeometry(QRect(10, 30, 461, 121));
-        spinBox_2 = new QSpinBox(groupBox_4);
-        spinBox_2->setObjectName(QStringLiteral("spinBox_2"));
-        spinBox_2->setGeometry(QRect(100, 20, 40, 20));
-        label_2 = new QLabel(groupBox_4);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(20, 20, 80, 20));
+        numberOfBLT = new QSpinBox(groupBox_4);
+        numberOfBLT->setObjectName(QStringLiteral("numberOfBLT"));
+        numberOfBLT->setGeometry(QRect(180, 20, 40, 20));
+        numberOfBLT->setMinimum(1);
+        numberOfBLT->setMaximum(16);
+        numberOfBLT->setValue(1);
+        numberOfBLTLabel = new QLabel(groupBox_4);
+        numberOfBLTLabel->setObjectName(QStringLiteral("numberOfBLTLabel"));
+        numberOfBLTLabel->setGeometry(QRect(10, 20, 161, 20));
         groupBox_5 = new QGroupBox(tab);
         groupBox_5->setObjectName(QStringLiteral("groupBox_5"));
+        groupBox_5->setEnabled(false);
         groupBox_5->setGeometry(QRect(10, 160, 461, 91));
         gridLayout_2 = new QGridLayout(groupBox_5);
         gridLayout_2->setSpacing(6);
@@ -665,59 +672,63 @@ public:
 
         gridLayout_2->addWidget(tableWidget, 0, 0, 1, 1);
 
-        currentWDFLabel_2 = new QLabel(tab);
-        currentWDFLabel_2->setObjectName(QStringLiteral("currentWDFLabel_2"));
-        currentWDFLabel_2->setGeometry(QRect(15, 5, 85, 20));
-        currentWDFInColorTab_2 = new QComboBox(tab);
-        currentWDFInColorTab_2->setObjectName(QStringLiteral("currentWDFInColorTab_2"));
-        currentWDFInColorTab_2->setGeometry(QRect(100, 5, 30, 20));
+        currentWDFInReadWriteTabLabel = new QLabel(tab);
+        currentWDFInReadWriteTabLabel->setObjectName(QStringLiteral("currentWDFInReadWriteTabLabel"));
+        currentWDFInReadWriteTabLabel->setGeometry(QRect(15, 5, 85, 20));
+        currentWDFInReadWriteTab = new QComboBox(tab);
+        currentWDFInReadWriteTab->setObjectName(QStringLiteral("currentWDFInReadWriteTab"));
+        currentWDFInReadWriteTab->setEnabled(false);
+        currentWDFInReadWriteTab->setGeometry(QRect(100, 5, 30, 20));
         QIcon icon4;
         icon4.addFile(QStringLiteral("../Desktop/CAEN-UI/Setting/3.png"), QSize(), QIcon::Normal, QIcon::Off);
         tabWidget->addTab(tab, icon4, QString());
         ViewerSetting = new QWidget();
         ViewerSetting->setObjectName(QStringLiteral("ViewerSetting"));
-        groupBox = new QGroupBox(ViewerSetting);
-        groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(10, 70, 91, 51));
-        label = new QLabel(groupBox);
+        backgroundBox = new QGroupBox(ViewerSetting);
+        backgroundBox->setObjectName(QStringLiteral("backgroundBox"));
+        backgroundBox->setEnabled(false);
+        backgroundBox->setGeometry(QRect(10, 70, 91, 51));
+        label = new QLabel(backgroundBox);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(10, 20, 40, 20));
         label->setAutoFillBackground(false);
         label->setStyleSheet(QLatin1String("border: 2px solid #a0a0a0;\n"
 "background-color: rgb(0, 0, 0);"));
-        postTriggerIsDrawing = new QPushButton(groupBox);
+        postTriggerIsDrawing = new QPushButton(backgroundBox);
         postTriggerIsDrawing->setObjectName(QStringLiteral("postTriggerIsDrawing"));
         postTriggerIsDrawing->setGeometry(QRect(60, 20, 20, 20));
         postTriggerIsDrawing->setMaximumSize(QSize(20, 20));
         postTriggerIsDrawing->setIcon(icon2);
         postTriggerIsDrawing->setCheckable(false);
         postTriggerIsDrawing->setChecked(false);
-        groupBox_2 = new QGroupBox(ViewerSetting);
-        groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        groupBox_2->setGeometry(QRect(110, 70, 271, 51));
-        postTriggerIsDrawing_10 = new QPushButton(groupBox_2);
+        gridBox = new QGroupBox(ViewerSetting);
+        gridBox->setObjectName(QStringLiteral("gridBox"));
+        gridBox->setEnabled(false);
+        gridBox->setGeometry(QRect(110, 70, 271, 51));
+        postTriggerIsDrawing_10 = new QPushButton(gridBox);
         postTriggerIsDrawing_10->setObjectName(QStringLiteral("postTriggerIsDrawing_10"));
         postTriggerIsDrawing_10->setGeometry(QRect(60, 20, 20, 20));
         postTriggerIsDrawing_10->setMaximumSize(QSize(20, 20));
         postTriggerIsDrawing_10->setIcon(icon2);
         postTriggerIsDrawing_10->setCheckable(false);
         postTriggerIsDrawing_10->setChecked(false);
-        label_10 = new QLabel(groupBox_2);
+        label_10 = new QLabel(gridBox);
         label_10->setObjectName(QStringLiteral("label_10"));
         label_10->setGeometry(QRect(10, 20, 40, 20));
         label_10->setAutoFillBackground(false);
         label_10->setStyleSheet(QLatin1String("border: 2px solid #a0a0a0;\n"
 "background-color: rgb(192, 192, 192);"));
-        spinBox = new QSpinBox(groupBox_2);
+        spinBox = new QSpinBox(gridBox);
         spinBox->setObjectName(QStringLiteral("spinBox"));
         spinBox->setGeometry(QRect(90, 20, 40, 20));
-        comboBox = new QComboBox(groupBox_2);
+        comboBox = new QComboBox(gridBox);
         comboBox->setObjectName(QStringLiteral("comboBox"));
         comboBox->setGeometry(QRect(140, 20, 121, 20));
-        groupBox_3 = new QGroupBox(ViewerSetting);
-        groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
-        groupBox_3->setGeometry(QRect(10, 10, 70, 50));
-        comboBox_3 = new QComboBox(groupBox_3);
+        IOBox = new QGroupBox(ViewerSetting);
+        IOBox->setObjectName(QStringLiteral("IOBox"));
+        IOBox->setEnabled(false);
+        IOBox->setGeometry(QRect(10, 10, 70, 50));
+        comboBox_3 = new QComboBox(IOBox);
         comboBox_3->setObjectName(QStringLiteral("comboBox_3"));
         comboBox_3->setGeometry(QRect(10, 20, 50, 20));
         autoTriggerBox = new QGroupBox(ViewerSetting);
@@ -732,6 +743,19 @@ public:
         triggerTimeLabel = new QLabel(autoTriggerBox);
         triggerTimeLabel->setObjectName(QStringLiteral("triggerTimeLabel"));
         triggerTimeLabel->setGeometry(QRect(80, 20, 47, 13));
+        timeWindowBox = new QGroupBox(ViewerSetting);
+        timeWindowBox->setObjectName(QStringLiteral("timeWindowBox"));
+        timeWindowBox->setGeometry(QRect(180, 140, 141, 50));
+        timeWindowSpinBox = new QSpinBox(timeWindowBox);
+        timeWindowSpinBox->setObjectName(QStringLiteral("timeWindowSpinBox"));
+        timeWindowSpinBox->setGeometry(QRect(10, 20, 61, 20));
+        timeWindowSpinBox->setMinimum(1);
+        timeWindowSpinBox->setMaximum(4);
+        timeWindowSpinBox->setSingleStep(1);
+        timeWindowSpinBox->setValue(1);
+        timeWindowLabel = new QLabel(timeWindowBox);
+        timeWindowLabel->setObjectName(QStringLiteral("timeWindowLabel"));
+        timeWindowLabel->setGeometry(QRect(80, 20, 47, 13));
         QIcon icon5;
         icon5.addFile(QStringLiteral("../Desktop/CAEN-UI/Setting/4.png"), QSize(), QIcon::Normal, QIcon::Off);
         tabWidget->addTab(ViewerSetting, icon5, QString());
@@ -745,7 +769,7 @@ public:
         QObject::connect(buttonBox, SIGNAL(accepted()), SettingsWindowController, SLOT(acceptedSlot()));
         QObject::connect(currentWDFInColorTab, SIGNAL(currentIndexChanged(int)), SettingsWindowController, SLOT(WDFChangedInChannelTabSlot(int)));
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(SettingsWindowController);
@@ -1000,7 +1024,7 @@ public:
         );
         tabWidget->setTabText(tabWidget->indexOf(ChannelColorSetting), QString());
         groupBox_4->setTitle(QApplication::translate("SettingsWindowController", "\320\247\321\202\320\265\320\275\320\270\320\265", Q_NULLPTR));
-        label_2->setText(QApplication::translate("SettingsWindowController", "\320\247\320\270\321\201\320\273\320\276 \321\201\320\276\320\261\321\213\321\202\320\270\320\271", Q_NULLPTR));
+        numberOfBLTLabel->setText(QApplication::translate("SettingsWindowController", "\320\247\320\270\321\201\320\273\320\276 \321\201\320\276\320\261\321\213\321\202\320\270\320\271 \320\267\320\260 \321\202\320\260\320\272\321\202 \321\207\321\202\320\265\320\275\320\270\321\217", Q_NULLPTR));
         groupBox_5->setTitle(QApplication::translate("SettingsWindowController", "\320\227\320\260\320\277\320\270\321\201\321\214", Q_NULLPTR));
         QTableWidgetItem *___qtablewidgetitem60 = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem60->setText(QApplication::translate("SettingsWindowController", "\320\232\320\260\320\275\320\260\320\273 0", Q_NULLPTR));
@@ -1041,9 +1065,9 @@ public:
         ___qtablewidgetitem76->setText(QApplication::translate("SettingsWindowController", "1024", Q_NULLPTR));
         tableWidget->setSortingEnabled(__sortingEnabled2);
 
-        currentWDFLabel_2->setText(QApplication::translate("SettingsWindowController", "\320\242\320\265\320\272\321\203\321\211\320\260\321\217 \320\277\320\273\320\260\321\202\320\260:", Q_NULLPTR));
-        currentWDFInColorTab_2->clear();
-        currentWDFInColorTab_2->insertItems(0, QStringList()
+        currentWDFInReadWriteTabLabel->setText(QApplication::translate("SettingsWindowController", "\320\242\320\265\320\272\321\203\321\211\320\260\321\217 \320\277\320\273\320\260\321\202\320\260:", Q_NULLPTR));
+        currentWDFInReadWriteTab->clear();
+        currentWDFInReadWriteTab->insertItems(0, QStringList()
          << QApplication::translate("SettingsWindowController", "1", Q_NULLPTR)
          << QApplication::translate("SettingsWindowController", "2", Q_NULLPTR)
          << QApplication::translate("SettingsWindowController", "3", Q_NULLPTR)
@@ -1055,13 +1079,13 @@ public:
          << QApplication::translate("SettingsWindowController", "9", Q_NULLPTR)
         );
         tabWidget->setTabText(tabWidget->indexOf(tab), QString());
-        groupBox->setTitle(QApplication::translate("SettingsWindowController", "\320\227\320\260\320\264\320\275\320\270\320\271 \320\277\320\273\320\260\320\275 ", Q_NULLPTR));
+        backgroundBox->setTitle(QApplication::translate("SettingsWindowController", "\320\227\320\260\320\264\320\275\320\270\320\271 \320\277\320\273\320\260\320\275 ", Q_NULLPTR));
         label->setText(QString());
 #ifndef QT_NO_TOOLTIP
         postTriggerIsDrawing->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         postTriggerIsDrawing->setText(QString());
-        groupBox_2->setTitle(QApplication::translate("SettingsWindowController", "\320\241\320\265\321\202\320\272\320\260", Q_NULLPTR));
+        gridBox->setTitle(QApplication::translate("SettingsWindowController", "\320\241\320\265\321\202\320\272\320\260", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         postTriggerIsDrawing_10->setToolTip(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
@@ -1078,9 +1102,9 @@ public:
          << QApplication::translate("SettingsWindowController", "\320\250\321\202\321\200\320\270\321\205\320\277\321\203\320\275\320\272\321\202\320\270\321\200\320\275\320\260\321\217", Q_NULLPTR)
         );
 #ifndef QT_NO_TOOLTIP
-        groupBox_3->setToolTip(QApplication::translate("SettingsWindowController", "\320\242\320\270\320\277 \320\262\321\205\320\276\320\264\321\217\321\211\320\265\320\263\320\276/\320\270\321\201\321\205\320\276\320\264\321\217\321\211\320\265\320\263\320\276 \321\201\320\270\320\263\320\275\320\260\320\273\320\260", Q_NULLPTR));
+        IOBox->setToolTip(QApplication::translate("SettingsWindowController", "\320\242\320\270\320\277 \320\262\321\205\320\276\320\264\321\217\321\211\320\265\320\263\320\276/\320\270\321\201\321\205\320\276\320\264\321\217\321\211\320\265\320\263\320\276 \321\201\320\270\320\263\320\275\320\260\320\273\320\260", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
-        groupBox_3->setTitle(QApplication::translate("SettingsWindowController", "I/O", Q_NULLPTR));
+        IOBox->setTitle(QApplication::translate("SettingsWindowController", "I/O", Q_NULLPTR));
         comboBox_3->clear();
         comboBox_3->insertItems(0, QStringList()
          << QApplication::translate("SettingsWindowController", "NIM", Q_NULLPTR)
@@ -1094,6 +1118,14 @@ public:
         triggerTimeSpinBox->setToolTip(QApplication::translate("SettingsWindowController", "Width", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         triggerTimeLabel->setText(QApplication::translate("SettingsWindowController", "\320\274\321\201\320\265\320\272", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        timeWindowBox->setToolTip(QApplication::translate("SettingsWindowController", "\320\242\320\270\320\277 \320\262\321\205\320\276\320\264\321\217\321\211\320\265\320\263\320\276/\320\270\321\201\321\205\320\276\320\264\321\217\321\211\320\265\320\263\320\276 \321\201\320\270\320\263\320\275\320\260\320\273\320\260", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        timeWindowBox->setTitle(QApplication::translate("SettingsWindowController", "\320\222\321\200\320\265\320\274\320\265\320\275\320\275\320\276\320\265 \320\276\320\272\320\275\320\276", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        timeWindowSpinBox->setToolTip(QApplication::translate("SettingsWindowController", "Width", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        timeWindowLabel->setText(QApplication::translate("SettingsWindowController", "\320\274\321\201\320\265\320\272", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(ViewerSetting), QString());
     } // retranslateUi
 
