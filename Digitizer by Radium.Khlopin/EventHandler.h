@@ -1,11 +1,13 @@
 #pragma once
-#include <CAENDigitizerType.h>
+#include <Resources/CAENDigitizerType.h>
 #include <vector>
 
 class EventHandler
 {
 	std::vector<std::vector<CAEN_DGTZ_UINT8_EVENT_t>>	events;
 
+	std::string								pathName;
+	uint32_t								fileNumber = 0;
 	std::vector<int32_t>					channelTriggerEnableMask;
 	std::vector<int32_t>					channelActiveEnableMask;
 	std::vector<std::vector<int16_t>>		thresholds;
@@ -13,11 +15,10 @@ class EventHandler
 	uint32_t								recordLength = 2048;
 public:
 	EventHandler();
-	explicit EventHandler(std::vector<int32_t> mask, std::vector<std::vector<int16_t>> thresholds);
-	explicit EventHandler(std::vector<std::vector<CAEN_DGTZ_UINT8_EVENT_t>> event, std::vector<int32_t> mask, std::vector<std::vector<int16_t>> thresholds, std::vector<bool> enabledWDFs);
+	explicit EventHandler(std::vector<int32_t> activeMask, std::vector<int32_t> triggerMask, std::vector<std::vector<int16_t>> thresholds);
+	explicit EventHandler(std::vector<std::vector<CAEN_DGTZ_UINT8_EVENT_t>> event, std::vector<int32_t> activeMask, std::vector<int32_t> triggerMask, std::vector<std::vector<int16_t>> thresholds, std::vector<bool> enabledWDFs);
 	~EventHandler();
 
-	bool									writingIsEnabled = false;
 	uint16_t								eventsStored = 0;
 	uint16_t								eventsAddedAtLastIteration = 0;
 	//getters
@@ -77,4 +78,5 @@ public:
 	 * \brief Очищает внутреннее хранилище хэндлера.
 	 */
 	void									deleteEvents();
+	void									writeToFile();
 };

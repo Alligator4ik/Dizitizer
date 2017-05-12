@@ -315,6 +315,10 @@ void MainWindow::pulseErrorButton() {
 	//Not implemented
 }
 
+void MainWindow::setCrop(vector<vector<uint16_t>> newCrop) {
+	cropFactorToWrite = newCrop;
+}
+
 void MainWindow::setControlsEnabledOnStartStop(bool enabled) const {
 	ui.startStopButton->setChecked(!enabled);
 	ui.startStopButton->setToolTip(toRussian(enabled ? "Старт" : "Стоп"));
@@ -345,6 +349,10 @@ void MainWindow::setControlsEnabledOnConnectDisconnect(bool enabled) const {
 	ui.bufferComboBox->setEnabled(enabled);
 	ui.singleTriggerButton->setEnabled(enabled);
 	ui.postTriggerBox->setEnabled(enabled);
+}
+
+vector<vector<uint16_t>>& MainWindow::getCrop() {
+	return cropFactorToWrite;
 }
 
 void MainWindow::clearGraphs() const {

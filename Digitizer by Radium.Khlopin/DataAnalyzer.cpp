@@ -24,7 +24,7 @@ vmeComm(vmeCommunication){
 			}
 		}
 	eventHandler = new vector<EventHandler>;
-	eventHandler->push_back(EventHandler(vmeComm.channelActiveEnableMask, vmeComm.getAllThresholds()));
+	eventHandler->push_back(EventHandler(vmeComm.channelActiveEnableMask, vmeComm.channelTriggerEnableMask, vmeComm.getAllThresholds()));
 }
 
 DataAnalyzer::~DataAnalyzer() {
@@ -231,7 +231,7 @@ bool DataAnalyzer::readDataOnBoard(uint32_t boardID, uint16_t boardNumber) {
 	CAEN_DGTZ_ErrorCode error;
 	eventHandler->back().eventsAddedAtLastIteration = 0;
 	if (eventHandler->back().getAllThresholds() != vmeComm.getAllThresholds())
-		eventHandler->push_back(EventHandler(vmeComm.channelActiveEnableMask, vmeComm.getAllThresholds()));
+		eventHandler->push_back(EventHandler(vmeComm.channelActiveEnableMask, vmeComm.channelTriggerEnableMask, vmeComm.getAllThresholds()));
 	if ((error = CAEN_DGTZ_IRQWait(boardID, 500)) != CAEN_DGTZ_Success) {
 		if (error == CAEN_DGTZ_Timeout)
 			return false;			//if there is nothing to read
@@ -285,7 +285,9 @@ bool DataAnalyzer::readDataOnBoard(uint32_t boardID, uint16_t boardNumber) {
 }
 
 void DataAnalyzer::writeData() {
-	eventHandler->back().deleteEvents();
+	if (eventHandler->back().eventsStored > 20) {
+		eventHandler->back().writeToFile();
+	}
 }
 
 EventHandler& DataAnalyzer::getHandler() const {

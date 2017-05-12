@@ -16,6 +16,7 @@ private:
 	Ui::SettingsWindowController				ui;
 	std::vector<std::vector<Qt::PenStyle>>&		stylesOfThresholdLines;
 	std::mutex&									thresholdlineStyleMutex;
+	std::vector<std::vector<uint16_t>>&			cropVector;
 
 private slots:
 	void acceptedSlot();

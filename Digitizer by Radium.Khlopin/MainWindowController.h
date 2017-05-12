@@ -21,6 +21,14 @@ public:
 	DataAnalyzer&					getAnalyzer();
 	vector<vector<string>>&			getChannelColors();
 	vector<vector<Qt::PenStyle>>&	getStylesOfThresholdLines();
+	vector<vector<uint16_t>>&		getCrop();
+
+	/**
+	* \brief Метод заменяет текущий кроп на новый. Кроп изменится только при перезапуске прослушки.
+	* \param newCrop Новый кроп-фактор.
+	*/
+	void							setCrop(vector<vector<uint16_t>> newCrop);
+
 	mutex							colorBrushMutex;
 	mutex							thresholdLineStyleMutex;
 	/**
@@ -44,6 +52,10 @@ private:
 	 */
 	uint16_t						activeChannelsCount = 0;
 	/**
+	* \brief Множитель, который учитывается при записи данных (помогает существенно сократить объем данных).
+	*/
+	vector<vector<uint16_t>>		cropFactorToWrite;
+	/**
 	 * \brief Поле, содержащее указатель на линию, разделяющую предтриггерное пространство и посттриггерное
 	 */
 	QCPItemLine*					postTriggerLine = nullptr;
@@ -58,14 +70,43 @@ private:
 	*/
 	QTimer*							autoTriggerTimer = nullptr;
 
+	/**
+	 * \brief Основной бэкраунд-метод прослушки.
+	 */
 	void							updateData();
+	/**
+	 * \brief Отрисовывает сигнал.
+	 * \param vmeData Ссылка на обработчик данных, использующийся в данный момент.
+	 */
 	void							drawSignal(DataAnalyzer& vmeData);
+	/**
+	* \brief Отрисовывает амплитудный спектр.
+	* \param vmeData Ссылка на обработчик данных, использующийся в данный момент.
+	*/
 	void							drawAmplifySpectrum(DataAnalyzer& vmeData);
+	/**
+	* \brief Отрисовывает распределение Росси-Альфа.
+	* \param vmeData Ссылка на обработчик данных, использующийся в данный момент.
+	*/
 	void							drawRossiAlphaSpectrum(DataAnalyzer& vmeData);
+	/**
+	 * \brief Метод считывает настройки программы из файла настроек и задает параметры программы этими данными.
+	 */
 	void							readSettings();
 	void							pulseErrorButton();
+	/**
+	 * \brief Метод конфигурирует интерфейс при старте/остановке прослушки.
+	 * \param enabled Принимается равным true, если необходимо сконфигурировать интерфейс при остановке прослушки.
+	 */
 	void							setControlsEnabledOnStartStop(bool enabled) const;
+	/**
+	* \brief Метод конфигурирует интерфейс при подключении или отключении от оцифровщика.
+	* \param enabled Принимается равным true, если необходимо сконфигурировать интерфейс при подключении.
+	*/
 	void							setControlsEnabledOnConnectDisconnect(bool enabled) const;
+	/**
+	 * \brief Метод очищает графики. Прямой вызов этого метода запрещен, используйте механизм сигналов-слотов!
+	 */
 	void							clearGraphs() const;
 signals:
 	void							drawThresholdLine(int channelNumber, int boardNumber , int threshold, int recordLength, QColor& colorOfLine);

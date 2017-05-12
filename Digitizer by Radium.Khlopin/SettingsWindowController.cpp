@@ -6,7 +6,8 @@
 SettingsWindowController::SettingsWindowController(QWidget *parent)
 	: QMainWindow(parent) ,
 	stylesOfThresholdLines(dynamic_cast<MainWindow*>(parent)->getStylesOfThresholdLines()),
-	thresholdlineStyleMutex(dynamic_cast<MainWindow*>(parent)->thresholdLineStyleMutex) {
+	thresholdlineStyleMutex(dynamic_cast<MainWindow*>(parent)->thresholdLineStyleMutex),
+	cropVector(dynamic_cast<MainWindow*>(parent)->getCrop()) {
 	ui.setupUi(this);
 	ui.VMECommSetting->setColumnWidth(0, 24);
 	ui.ColorSetting->setColumnWidth(0, 55);
@@ -92,6 +93,8 @@ void SettingsWindowController::acceptedSlot() {
 	dynamic_cast<MainWindow*>(this->parent())->getVME().setBLTNumber(ui.numberOfBLT->value());
 	//apply wime window
 	dynamic_cast<MainWindow*>(this->parent())->timeWindow = ui.timeWindowSpinBox->value();
+	//apply crop factor to write with
+	dynamic_cast<MainWindow*>(this->parent())->setCrop(cropVector);
 	//apply other settings
 	this->close();
 }
