@@ -97,8 +97,8 @@ public:
     QLabel *numberOfBLTLabel;
     QGroupBox *WriteBox;
     QTableWidget *cropWidget;
-    QLabel *nuberOfEventsToWriteLabel;
-    QSpinBox *nuberOfEventsToWriteInOneFile;
+    QLabel *numberOfEventsToWriteLabel;
+    QSpinBox *numberOfEventsToWriteInOneFile;
     QLabel *currentWDFInReadWriteTabLabel;
     QComboBox *currentWDFInReadWriteTab;
     QWidget *ViewerSetting;
@@ -670,15 +670,15 @@ public:
         cropWidget->horizontalHeader()->setStretchLastSection(true);
         cropWidget->verticalHeader()->setHighlightSections(true);
         cropWidget->verticalHeader()->setStretchLastSection(true);
-        nuberOfEventsToWriteLabel = new QLabel(WriteBox);
-        nuberOfEventsToWriteLabel->setObjectName(QStringLiteral("nuberOfEventsToWriteLabel"));
-        nuberOfEventsToWriteLabel->setGeometry(QRect(10, 90, 251, 16));
-        nuberOfEventsToWriteInOneFile = new QSpinBox(WriteBox);
-        nuberOfEventsToWriteInOneFile->setObjectName(QStringLiteral("nuberOfEventsToWriteInOneFile"));
-        nuberOfEventsToWriteInOneFile->setGeometry(QRect(270, 90, 40, 20));
-        nuberOfEventsToWriteInOneFile->setMinimum(1);
-        nuberOfEventsToWriteInOneFile->setMaximum(1000);
-        nuberOfEventsToWriteInOneFile->setValue(20);
+        numberOfEventsToWriteLabel = new QLabel(WriteBox);
+        numberOfEventsToWriteLabel->setObjectName(QStringLiteral("numberOfEventsToWriteLabel"));
+        numberOfEventsToWriteLabel->setGeometry(QRect(10, 90, 251, 16));
+        numberOfEventsToWriteInOneFile = new QSpinBox(WriteBox);
+        numberOfEventsToWriteInOneFile->setObjectName(QStringLiteral("numberOfEventsToWriteInOneFile"));
+        numberOfEventsToWriteInOneFile->setGeometry(QRect(270, 90, 40, 20));
+        numberOfEventsToWriteInOneFile->setMinimum(1);
+        numberOfEventsToWriteInOneFile->setMaximum(1000);
+        numberOfEventsToWriteInOneFile->setValue(20);
         currentWDFInReadWriteTabLabel = new QLabel(ReadWriteTab);
         currentWDFInReadWriteTabLabel->setObjectName(QStringLiteral("currentWDFInReadWriteTabLabel"));
         currentWDFInReadWriteTabLabel->setGeometry(QRect(15, 5, 85, 20));
@@ -1072,8 +1072,8 @@ public:
         ___qtablewidgetitem76->setText(QApplication::translate("SettingsWindowController", "1024", Q_NULLPTR));
         cropWidget->setSortingEnabled(__sortingEnabled2);
 
-        nuberOfEventsToWriteLabel->setText(QApplication::translate("SettingsWindowController", "\320\232\320\276\320\273\320\270\321\207\320\265\321\201\321\202\320\262\320\276 \321\201\320\276\320\261\321\213\321\202\320\270\320\271, \320\267\320\260\320\277\320\270\321\201\321\213\320\262\320\260\320\265\320\274\320\276\320\265 \320\262 \320\276\320\264\320\270\320\275 \321\204\320\260\320\271\320\273", Q_NULLPTR));
-        nuberOfEventsToWriteInOneFile->setPrefix(QString());
+        numberOfEventsToWriteLabel->setText(QApplication::translate("SettingsWindowController", "\320\232\320\276\320\273\320\270\321\207\320\265\321\201\321\202\320\262\320\276 \321\201\320\276\320\261\321\213\321\202\320\270\320\271, \320\267\320\260\320\277\320\270\321\201\321\213\320\262\320\260\320\265\320\274\320\276\320\265 \320\262 \320\276\320\264\320\270\320\275 \321\204\320\260\320\271\320\273", Q_NULLPTR));
+        numberOfEventsToWriteInOneFile->setPrefix(QString());
         currentWDFInReadWriteTabLabel->setText(QApplication::translate("SettingsWindowController", "\320\242\320\265\320\272\321\203\321\211\320\260\321\217 \320\277\320\273\320\260\321\202\320\260:", Q_NULLPTR));
         currentWDFInReadWriteTab->clear();
         currentWDFInReadWriteTab->insertItems(0, QStringList()

@@ -1826,7 +1826,7 @@ background-color: green;</string>
           </property>
          </item>
         </widget>
-        <widget class="QLabel" name="nuberOfEventsToWriteLabel">
+        <widget class="QLabel" name="numberOfEventsToWriteLabel">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -1839,7 +1839,7 @@ background-color: green;</string>
           <string>Количество событий, записываемое в один файл</string>
          </property>
         </widget>
-        <widget class="QSpinBox" name="nuberOfEventsToWriteInOneFile">
+        <widget class="QSpinBox" name="numberOfEventsToWriteInOneFile">
          <property name="geometry">
           <rect>
            <x>270</x>

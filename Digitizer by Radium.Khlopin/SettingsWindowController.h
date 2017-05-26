@@ -9,7 +9,7 @@ class SettingsWindowController : public QMainWindow
 	Q_OBJECT
 
 public:
-	SettingsWindowController(QWidget *parent = 0);
+	explicit SettingsWindowController(QWidget *parent = nullptr);
 	~SettingsWindowController();
 
 private:

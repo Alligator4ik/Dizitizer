@@ -52,6 +52,9 @@ SettingsWindowController::SettingsWindowController(QWidget *parent)
 	//get time of window to analyze
 	auto timeWindow = dynamic_cast<MainWindow*>(this->parent())->timeWindow;
 	ui.timeWindowSpinBox->setValue(timeWindow);
+	//get number of events writing to one file
+	auto fileSize = dynamic_cast<MainWindow*>(this->parent())->getFileSize();
+	ui.numberOfEventsToWriteInOneFile->setValue(fileSize);
 	//get somthing else
 }
 
@@ -91,10 +94,12 @@ void SettingsWindowController::acceptedSlot() {
 	}
 	//apply new BLTNumber
 	dynamic_cast<MainWindow*>(this->parent())->getVME().setBLTNumber(ui.numberOfBLT->value());
-	//apply wime window
+	//apply time window
 	dynamic_cast<MainWindow*>(this->parent())->timeWindow = ui.timeWindowSpinBox->value();
 	//apply crop factor to write with
 	dynamic_cast<MainWindow*>(this->parent())->setCrop(cropVector);
+	//apply number of events writing to one file
+	dynamic_cast<MainWindow*>(this->parent())->setFileSize(ui.numberOfEventsToWriteInOneFile->value());
 	//apply other settings
 	this->close();
 }

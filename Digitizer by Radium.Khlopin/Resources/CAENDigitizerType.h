@@ -941,7 +941,8 @@ typedef struct
 {
     uint32_t            ChSize[MAX_UINT8_CHANNEL_SIZE]; // the number of samples stored in DataChannel array  
     uint8_t                *DataChannel[MAX_UINT8_CHANNEL_SIZE];  // the array of ChSize samples
-} CAEN_DGTZ_UINT8_EVENT_t;
+} 
+CAEN_DGTZ_UINT8_EVENT_t;
 
 typedef struct 
 {

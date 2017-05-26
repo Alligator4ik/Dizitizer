@@ -64,6 +64,11 @@ MainWindow::MainWindow(QWidget *parent)
 	//connect zooming
 	connect(ui.signalWidget, &QCustomPlot::mouseWheel, this, &MainWindow::mouseZoomSlot);
 	connect(ui.spectrumWidget, &QCustomPlot::mouseWheel, this, &MainWindow::mouseZoomSlot);
+	connect(ui.dataWidget, &QCustomPlot::mouseWheel, this, &MainWindow::mouseZoomSlot);
+	
+	//enable viewer interactions
+	ui.dataWidget->setInteraction(QCP::iRangeZoom);
+	ui.dataWidget->setInteraction(QCP::iRangeDrag);
 
 	//set postTrigger disabled
 	ui.postTriggerBox->setEnabled(false);
@@ -134,8 +139,6 @@ void MainWindow::updateData() {
 	vmeData->setTimeWindow(chrono::milliseconds(timeWindow*1000));
 	while (acquisitionWasStarted) {
 		if (vmeData->readData()) {					//if we have smth to show or analyze
-			if (ui.recordButton->isChecked())
-				vmeData->writeData();
 			if (ui.drawButton->isChecked()) {
 				drawSignal(*vmeData);
 				emit replot();
@@ -148,13 +151,45 @@ void MainWindow::updateData() {
 				drawRossiAlphaSpectrum(*vmeData);
 				emit replot();
 			}
-			vmeData->getTimeStepsBetweenPeaks();
+			//todo: test commented and uncommented. if everything works ok, delete these lines
+			//vmeData->getTimeStepsBetweenPeaks();
+			if (ui.recordButton->isChecked())
+				vmeData->writeData(numberOfEventsWritingToOneFile);
+			else
+				vmeData->getHandler().deleteEvents();
 			if (vme.singleTriggerWasStarted) {
 				vme.singleTriggerWasStarted = false;
 				emit stopSingleTrigger();
 				break;
 			}
 		}
+	}
+	//запишем спектр в файл, если нужно
+	if (ui.saveSpectrumButton->isChecked() && (ui.amplifySpectrumButton->isChecked() || ui.rossiAlphaSpectrumButton->isChecked())) {
+		auto writingFunc = [&]() {
+			FILE* outData;
+			auto t = time(nullptr);   // get time now
+			auto now = localtime(&t);
+			auto nameOfFile = /*"D:/DigitizerWriteData/" + ".\\" + pathName + */".\\" + to_string(now->tm_year + 1900) + '-' + to_string(now->tm_mon + 1) + '-' + to_string(now->tm_mday) + '-' + to_string(now->tm_hour) + '-' + to_string(now->tm_min) + ".spctrmdrkdata";
+			fopen_s(&outData, nameOfFile.c_str(), "w");
+			if (ui.rossiAlphaSpectrumButton->isChecked()) {
+				//запишем количество стартовых импульсов
+				fprintf_s(outData, "Количество стартовых импульсов: %i\n", vmeData->getHandler().getNumberOfStartImpulses());
+			}
+			//далее запишем сам график спектра
+			auto graphCount = ui.spectrumWidget->graphCount();
+			for (auto graphNumber = 0; graphNumber < graphCount; graphNumber++) {
+				auto graphDataContainer = ui.spectrumWidget->graph(graphNumber)->data().data(); 
+				fprintf_s(outData, "new channel\n");
+				for each (auto data in *graphDataContainer) {
+					fprintf_s(outData, "%d - %d\n", static_cast<uint32_t>(data.key), static_cast<uint32_t>(data.value));
+				}
+				fprintf_s(outData, "\n");
+			}
+			fclose(outData);
+		};
+		std::thread writingThread(writingFunc);
+		writingThread.detach();
 	}
 	//proceed to stop phase
 	makeSoftwareTriggerSlot();
@@ -175,6 +210,8 @@ void MainWindow::drawSignal(DataAnalyzer& vmeData) {
 				if (eventToDraw->ChSize[channelNumber] != 0) {																	//если на канале что-то есть (другими словами - он включен)
 					if (ui.WDFTabWidget->findChild<QPushButton*>(QString("channelIsDrawingButton_" + QString::number(numberOfBoard + 1) + "_" + QString::number(channelNumber)))->isChecked()) {	//если нажата кнопка отображения сигнала
 						//initializing the graph
+						if (ui.signalWidget->graph(graphNumber) == nullptr)
+							ui.signalWidget->addGraph();
 						auto graphDataContainer = ui.signalWidget->graph(graphNumber)->data().data();
 						auto it = graphData.begin();
 						const auto itEnd = graphData.end();
@@ -319,6 +356,10 @@ void MainWindow::setCrop(vector<vector<uint16_t>> newCrop) {
 	cropFactorToWrite = newCrop;
 }
 
+void MainWindow::setFileSize(uint32_t numberOfEvents) {
+	numberOfEventsWritingToOneFile = numberOfEvents;
+}
+
 void MainWindow::setControlsEnabledOnStartStop(bool enabled) const {
 	ui.startStopButton->setChecked(!enabled);
 	ui.startStopButton->setToolTip(toRussian(enabled ? "Старт" : "Стоп"));
@@ -353,6 +394,10 @@ void MainWindow::setControlsEnabledOnConnectDisconnect(bool enabled) const {
 
 vector<vector<uint16_t>>& MainWindow::getCrop() {
 	return cropFactorToWrite;
+}
+
+uint32_t MainWindow::getFileSize() const {
+	return numberOfEventsWritingToOneFile;
 }
 
 void MainWindow::clearGraphs() const {
@@ -429,6 +474,55 @@ void MainWindow::openSettingsSlot() {
 void MainWindow::openErrorsSlot() {
 	error_log_window_controller = new ErrorLogWindowController(this, vme.getboardErrors(), vme.getTimeOfBoardErrors(), vme.getStringErrors());
 	error_log_window_controller->show();
+}
+
+void MainWindow::openFileSlot() {
+	//todo
+	auto fileNames = QFileDialog::getOpenFileNames(this, toRussian("Выберите файлы с данными"), ".\\", toRussian("Файлы данных (*.drkdata)"));
+	if (fileNames.count()) {
+		//переход на вкладку работы с данными
+		ui.tabWidget->setCurrentIndex(2);
+		for (auto fileName : fileNames) {
+			savedHandlers.push_back(EventHandler::createHandlerWithFile(fileName.toStdString().c_str()));
+		}
+		ui.fileManagerSlider->setMaximum(savedHandlers.front().eventsStored - 1);
+		ui.previousSignalButton->setEnabled(false);
+		ui.fileManagerNumber->setText(QString("1"));
+		drawWrittenSignal(savedHandlers.front(), 0);
+	}
+}
+
+void MainWindow::drawWrittenSignal(EventHandler& handler, uint32_t numberOfEvent) {
+	//starting initialize
+	auto graphNumber = 0;
+	auto eventToDraw = handler.getEvent(0, numberOfEvent);
+	auto eventSize = *max_element(eventToDraw.ChSize, eventToDraw.ChSize + 8);
+	QVector<QCPGraphData> graphData(eventSize);
+	//current initialization
+	for (auto numberOfBoard = 0; numberOfBoard < vme.numberOfWDF; numberOfBoard++)												//по всем доскам
+		if (handler.WDFIsEnabled(numberOfBoard))																				//если доска включена
+			for (auto channelNumber = 0; channelNumber < 8; channelNumber++)													//по всем каналам этой доски
+				if (eventToDraw.ChSize[channelNumber] != 0) {																	//если на канале что-то есть (другими словами - он включен)
+					//initializing the graph
+					if (ui.dataWidget->graphCount() == graphNumber)
+						ui.dataWidget->addGraph();
+					auto graphDataContainer = ui.dataWidget->graph(graphNumber)->data().data();
+					auto it = graphData.begin();
+					const auto itEnd = graphData.end();
+					auto sample = 0;
+					while (it != itEnd) {
+						it->key = 2 * sample;
+						it++->value = eventToDraw.DataChannel[channelNumber][sample++] * 3.92 - 500;						//from [0;255] to [-500;500]
+					}
+					graphDataContainer->set(graphData, true);
+					//graph's visual setup
+					auto colorOfLines = QColor(channelsColors[numberOfBoard][channelNumber].c_str());
+					ui.dataWidget->graph(graphNumber)->setPen(QPen(colorOfLines));
+					ui.dataWidget->graph(graphNumber)->setName(QString("Channel %1").arg(channelNumber));
+					graphNumber++;
+				}
+	ui.dataWidget->legend->setVisible(true);
+	replotGraph();
 }
 
 void MainWindow::changeTriggerSettingsSlot() {
@@ -649,6 +743,29 @@ void MainWindow::graphVisibilityChangedSlot() const {
 		ui.signalWidget->graph(graphNumber)->setVisible(visibilityButton->isChecked());
 }
 
+void MainWindow::nextSignalSlot() {
+	ui.fileManagerSlider->setValue(ui.fileManagerSlider->value() + 1);
+	if (ui.fileManagerSlider->value() == ui.fileManagerSlider->maximum())
+		ui.nextSignalButton->setEnabled(false);
+	ui.previousSignalButton->setEnabled(true);
+	ui.fileManagerNumber->setText(QString("%1").arg(ui.fileManagerSlider->value() + 1));
+	drawWrittenSignal(savedHandlers.front(), ui.fileManagerSlider->value());
+}
+
+void MainWindow::previousSignalSlot() {
+	ui.fileManagerSlider->setValue(ui.fileManagerSlider->value() - 1);
+	if (ui.fileManagerSlider->value() == 0)
+		ui.previousSignalButton->setEnabled(false);
+	ui.nextSignalButton->setEnabled(true);
+	ui.fileManagerNumber->setText(QString("%1").arg(ui.fileManagerSlider->value() + 1));
+	drawWrittenSignal(savedHandlers.front(), ui.fileManagerSlider->value());
+}
+
+void MainWindow::resetSpectrumGraphSlot() const {
+	ui.spectrumWidget->clearGraphs();
+	ui.spectrumWidget->replot();
+}
+
 void MainWindow::mouseZoomSlot(QWheelEvent* wheelEvent) const {
 	auto delta = 25;
 	//зазоры по осям - 25 пикселей
@@ -691,4 +808,5 @@ void MainWindow::drawPostTriggerLineSlot() {
 void MainWindow::replotGraph() const {
 	ui.signalWidget->replot();
 	ui.spectrumWidget->replot();
+	ui.dataWidget->replot();
 }

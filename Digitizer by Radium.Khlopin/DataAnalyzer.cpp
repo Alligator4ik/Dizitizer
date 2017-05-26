@@ -284,8 +284,8 @@ bool DataAnalyzer::readDataOnBoard(uint32_t boardID, uint16_t boardNumber) {
 	return true;		//if information read successfully
 }
 
-void DataAnalyzer::writeData() {
-	if (eventHandler->back().eventsStored > 20) {
+void DataAnalyzer::writeData(uint32_t numberOfEventsInOneFile) const {
+	if (eventHandler->back().eventsStored >= numberOfEventsInOneFile) {
 		eventHandler->back().writeToFile();
 	}
 }
@@ -352,12 +352,17 @@ vector<chrono::microseconds> DataAnalyzer::getTimeStepsBetweenPeaks() {
 			if (timeCoordinate < eventHandler->back().getRecordLength() - timeWindow.count() / 2)
 				startImpulses++;
 	}
+	eventHandler->back().addSomeStartImpulses(startImpulses);
 	//qInfo("number of start impulses: %i", startImpulses);
 	return timeSteps;
 }
 
 void DataAnalyzer::setTimeWindow(chrono::milliseconds newTimeWindow) {
 	this->timeWindow = newTimeWindow;
+}
+
+void DataAnalyzer::addHandler(EventHandler handler) {
+	eventHandler->push_back(handler);
 }
 
 chrono::microseconds DataAnalyzer::getTimeWindow() const {

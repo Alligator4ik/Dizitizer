@@ -236,7 +236,7 @@
           </size>
          </property>
          <property name="checkable">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -26745,9 +26745,12 @@ border-radius: 5</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_5">
            <item row="1" column="3">
-            <widget class="QPushButton" name="pushButton_4">
+            <widget class="QPushButton" name="saveSpectrumButton">
              <property name="text">
-              <string>PushButton</string>
+              <string>Сохранить спектр</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -26763,8 +26766,11 @@ border-radius: 5</string>
            </item>
            <item row="1" column="2">
             <widget class="QPushButton" name="pushButton_3">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
-              <string>PushButton</string>
+              <string>Сброс графиков</string>
              </property>
             </widget>
            </item>
@@ -26805,7 +26811,7 @@ border-radius: 5</string>
             <widget class="QCustomPlot" name="dataWidget" native="true"/>
            </item>
            <item row="1" column="0">
-            <widget class="QGroupBox" name="groupBox">
+            <widget class="QGroupBox" name="fileManagerBox">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -26824,7 +26830,10 @@ border-radius: 5</string>
              <property name="checkable">
               <bool>false</bool>
              </property>
-             <widget class="QSlider" name="horizontalSlider">
+             <widget class="QSlider" name="fileManagerSlider">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="geometry">
                <rect>
                 <x>10</x>
@@ -26837,7 +26846,7 @@ border-radius: 5</string>
                <enum>Qt::Horizontal</enum>
               </property>
              </widget>
-             <widget class="QPushButton" name="pushButton">
+             <widget class="QPushButton" name="previousSignalButton">
               <property name="geometry">
                <rect>
                 <x>10</x>
@@ -26850,7 +26859,7 @@ border-radius: 5</string>
                <string>Назад</string>
               </property>
              </widget>
-             <widget class="QPushButton" name="pushButton_2">
+             <widget class="QPushButton" name="nextSignalButton">
               <property name="geometry">
                <rect>
                 <x>90</x>
@@ -26863,12 +26872,12 @@ border-radius: 5</string>
                <string>Вперед</string>
               </property>
              </widget>
-             <widget class="QLabel" name="label">
+             <widget class="QLabel" name="fileManagerLabel">
               <property name="geometry">
                <rect>
                 <x>20</x>
                 <y>70</y>
-                <width>131</width>
+                <width>81</width>
                 <height>21</height>
                </rect>
               </property>
@@ -26876,7 +26885,10 @@ border-radius: 5</string>
                <string>Номер сигнала:</string>
               </property>
              </widget>
-             <widget class="QPushButton" name="pushButton_5">
+             <widget class="QPushButton" name="nextFileButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="geometry">
                <rect>
                 <x>170</x>
@@ -26894,6 +26906,19 @@ border-radius: 5</string>
               </property>
               <property name="autoDefault">
                <bool>false</bool>
+              </property>
+             </widget>
+             <widget class="QLabel" name="fileManagerNumber">
+              <property name="geometry">
+               <rect>
+                <x>110</x>
+                <y>70</y>
+                <width>47</width>
+                <height>21</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
               </property>
              </widget>
             </widget>
@@ -28256,8 +28281,8 @@ border-radius: 5</string>
    <slot>amplifySpectrumSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>44</x>
-     <y>147</y>
+     <x>65</x>
+     <y>807</y>
     </hint>
     <hint type="destinationlabel">
      <x>6</x>
@@ -28304,8 +28329,8 @@ border-radius: 5</string>
    <slot>rossiAlphaSpectrumSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>64</x>
-     <y>147</y>
+     <x>148</x>
+     <y>807</y>
     </hint>
     <hint type="destinationlabel">
      <x>3</x>
@@ -28329,6 +28354,54 @@ border-radius: 5</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>previousSignalButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>previousSignalSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>75</x>
+     <y>750</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>103</x>
+     <y>832</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>nextSignalButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>nextSignalSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>146</x>
+     <y>743</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>774</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>resetSpectrumGraphSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>788</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>387</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>connectSlot()</slot>
@@ -28348,5 +28421,8 @@ border-radius: 5</string>
   <slot>singleTriggerSlot()</slot>
   <slot>rossiAlphaSpectrumSlot()</slot>
   <slot>openFileSlot()</slot>
+  <slot>previousSignalSlot()</slot>
+  <slot>nextSignalSlot()</slot>
+  <slot>resetSpectrumGraphSlot()</slot>
  </slots>
 </ui>

@@ -1090,7 +1090,7 @@ public:
     QLabel *statusLabel_9;
     QWidget *spectrumTab;
     QGridLayout *gridLayout_5;
-    QPushButton *pushButton_4;
+    QPushButton *saveSpectrumButton;
     QPushButton *amplifySpectrumButton;
     QPushButton *pushButton_3;
     QPushButton *rossiAlphaSpectrumButton;
@@ -1099,12 +1099,13 @@ public:
     QWidget *dataTab;
     QGridLayout *gridLayout_6;
     QCustomPlot *dataWidget;
-    QGroupBox *groupBox;
-    QSlider *horizontalSlider;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QLabel *label;
-    QPushButton *pushButton_5;
+    QGroupBox *fileManagerBox;
+    QSlider *fileManagerSlider;
+    QPushButton *previousSignalButton;
+    QPushButton *nextSignalButton;
+    QLabel *fileManagerLabel;
+    QPushButton *nextFileButton;
+    QLabel *fileManagerNumber;
 
     void setupUi(QMainWindow *MainWindowClass)
     {
@@ -1182,7 +1183,7 @@ public:
 
         openFileButton = new QPushButton(controlButtons);
         openFileButton->setObjectName(QStringLiteral("openFileButton"));
-        openFileButton->setEnabled(false);
+        openFileButton->setEnabled(true);
         openFileButton->setMinimumSize(QSize(60, 60));
         openFileButton->setMaximumSize(QSize(60, 60));
         QIcon icon4;
@@ -1190,7 +1191,7 @@ public:
         icon4.addFile(QStringLiteral("../Desktop/CAEN-UI/aFolder.png"), QSize(), QIcon::Normal, QIcon::On);
         openFileButton->setIcon(icon4);
         openFileButton->setIconSize(QSize(50, 50));
-        openFileButton->setCheckable(true);
+        openFileButton->setCheckable(false);
 
         gridLayout_2->addWidget(openFileButton, 0, 6, 1, 1);
 
@@ -7517,10 +7518,11 @@ public:
         gridLayout_5->setSpacing(6);
         gridLayout_5->setContentsMargins(11, 11, 11, 11);
         gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
-        pushButton_4 = new QPushButton(spectrumTab);
-        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+        saveSpectrumButton = new QPushButton(spectrumTab);
+        saveSpectrumButton->setObjectName(QStringLiteral("saveSpectrumButton"));
+        saveSpectrumButton->setCheckable(true);
 
-        gridLayout_5->addWidget(pushButton_4, 1, 3, 1, 1);
+        gridLayout_5->addWidget(saveSpectrumButton, 1, 3, 1, 1);
 
         amplifySpectrumButton = new QPushButton(spectrumTab);
         amplifySpectrumButton->setObjectName(QStringLiteral("amplifySpectrumButton"));
@@ -7530,6 +7532,7 @@ public:
 
         pushButton_3 = new QPushButton(spectrumTab);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pushButton_3->setEnabled(false);
 
         gridLayout_5->addWidget(pushButton_3, 1, 2, 1, 1);
 
@@ -7560,31 +7563,36 @@ public:
 
         gridLayout_6->addWidget(dataWidget, 0, 0, 1, 1);
 
-        groupBox = new QGroupBox(dataTab);
-        groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setMinimumSize(QSize(0, 70));
-        groupBox->setMaximumSize(QSize(16777215, 100));
-        groupBox->setCheckable(false);
-        horizontalSlider = new QSlider(groupBox);
-        horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
-        horizontalSlider->setGeometry(QRect(10, 50, 151, 20));
-        horizontalSlider->setOrientation(Qt::Horizontal);
-        pushButton = new QPushButton(groupBox);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(10, 20, 75, 23));
-        pushButton_2 = new QPushButton(groupBox);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(90, 20, 75, 23));
-        label = new QLabel(groupBox);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(20, 70, 131, 21));
-        pushButton_5 = new QPushButton(groupBox);
-        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
-        pushButton_5->setGeometry(QRect(170, 20, 71, 71));
-        pushButton_5->setAutoFillBackground(false);
-        pushButton_5->setAutoDefault(false);
+        fileManagerBox = new QGroupBox(dataTab);
+        fileManagerBox->setObjectName(QStringLiteral("fileManagerBox"));
+        fileManagerBox->setMinimumSize(QSize(0, 70));
+        fileManagerBox->setMaximumSize(QSize(16777215, 100));
+        fileManagerBox->setCheckable(false);
+        fileManagerSlider = new QSlider(fileManagerBox);
+        fileManagerSlider->setObjectName(QStringLiteral("fileManagerSlider"));
+        fileManagerSlider->setEnabled(false);
+        fileManagerSlider->setGeometry(QRect(10, 50, 151, 20));
+        fileManagerSlider->setOrientation(Qt::Horizontal);
+        previousSignalButton = new QPushButton(fileManagerBox);
+        previousSignalButton->setObjectName(QStringLiteral("previousSignalButton"));
+        previousSignalButton->setGeometry(QRect(10, 20, 75, 23));
+        nextSignalButton = new QPushButton(fileManagerBox);
+        nextSignalButton->setObjectName(QStringLiteral("nextSignalButton"));
+        nextSignalButton->setGeometry(QRect(90, 20, 75, 23));
+        fileManagerLabel = new QLabel(fileManagerBox);
+        fileManagerLabel->setObjectName(QStringLiteral("fileManagerLabel"));
+        fileManagerLabel->setGeometry(QRect(20, 70, 81, 21));
+        nextFileButton = new QPushButton(fileManagerBox);
+        nextFileButton->setObjectName(QStringLiteral("nextFileButton"));
+        nextFileButton->setEnabled(false);
+        nextFileButton->setGeometry(QRect(170, 20, 71, 71));
+        nextFileButton->setAutoFillBackground(false);
+        nextFileButton->setAutoDefault(false);
+        fileManagerNumber = new QLabel(fileManagerBox);
+        fileManagerNumber->setObjectName(QStringLiteral("fileManagerNumber"));
+        fileManagerNumber->setGeometry(QRect(110, 70, 47, 21));
 
-        gridLayout_6->addWidget(groupBox, 1, 0, 1, 1);
+        gridLayout_6->addWidget(fileManagerBox, 1, 0, 1, 1);
 
         tabWidget->addTab(dataTab, QString());
 
@@ -7683,6 +7691,10 @@ public:
         QObject::connect(singleTriggerButton, SIGNAL(clicked()), MainWindowClass, SLOT(singleTriggerSlot()));
         QObject::connect(postTriggerSpinBox, SIGNAL(valueChanged(int)), MainWindowClass, SLOT(setPostTriggerLengthSlot(int)));
         QObject::connect(rossiAlphaSpectrumButton, SIGNAL(clicked()), MainWindowClass, SLOT(rossiAlphaSpectrumSlot()));
+        QObject::connect(openFileButton, SIGNAL(clicked()), MainWindowClass, SLOT(openFileSlot()));
+        QObject::connect(previousSignalButton, SIGNAL(clicked()), MainWindowClass, SLOT(previousSignalSlot()));
+        QObject::connect(nextSignalButton, SIGNAL(clicked()), MainWindowClass, SLOT(nextSignalSlot()));
+        QObject::connect(pushButton_3, SIGNAL(clicked()), MainWindowClass, SLOT(resetSpectrumGraphSlot()));
 
         exitButton->setDefault(false);
         tabWidget->setCurrentIndex(0);
@@ -10502,17 +10514,18 @@ public:
         statusLabel_9->setText(QApplication::translate("MainWindowClass", "\320\241\321\202\320\260\321\202\321\203\321\201", Q_NULLPTR));
         WDFTabWidget->setTabText(WDFTabWidget->indexOf(WDF9Widget), QApplication::translate("MainWindowClass", "\320\237\320\276\320\267\320\270\321\206\320\270\321\217 9", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(signalTab), QApplication::translate("MainWindowClass", "\320\241\320\270\320\263\320\275\320\260\320\273", Q_NULLPTR));
-        pushButton_4->setText(QApplication::translate("MainWindowClass", "PushButton", Q_NULLPTR));
+        saveSpectrumButton->setText(QApplication::translate("MainWindowClass", "\320\241\320\276\321\205\321\200\320\260\320\275\320\270\321\202\321\214 \321\201\320\277\320\265\320\272\321\202\321\200", Q_NULLPTR));
         amplifySpectrumButton->setText(QApplication::translate("MainWindowClass", "\320\220\320\274\320\277\320\273\320\270\321\202\321\203\320\264\320\275\321\213\320\271", Q_NULLPTR));
-        pushButton_3->setText(QApplication::translate("MainWindowClass", "PushButton", Q_NULLPTR));
+        pushButton_3->setText(QApplication::translate("MainWindowClass", "\320\241\320\261\321\200\320\276\321\201 \320\263\321\200\320\260\321\204\320\270\320\272\320\276\320\262", Q_NULLPTR));
         rossiAlphaSpectrumButton->setText(QApplication::translate("MainWindowClass", "\320\240\320\276\321\201\321\201\320\270-\320\220\320\273\321\214\321\204\320\260", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(spectrumTab), QApplication::translate("MainWindowClass", "\320\241\320\277\320\265\320\272\321\202\321\200", Q_NULLPTR));
-        groupBox->setTitle(QString());
-        pushButton->setText(QApplication::translate("MainWindowClass", "\320\235\320\260\320\267\320\260\320\264", Q_NULLPTR));
-        pushButton_2->setText(QApplication::translate("MainWindowClass", "\320\222\320\277\320\265\321\200\320\265\320\264", Q_NULLPTR));
-        label->setText(QApplication::translate("MainWindowClass", "\320\235\320\276\320\274\320\265\321\200 \321\201\320\270\320\263\320\275\320\260\320\273\320\260:", Q_NULLPTR));
-        pushButton_5->setText(QApplication::translate("MainWindowClass", "\320\241\320\273\320\265\320\264\321\203\321\216\321\211\320\270\320\271\n"
+        fileManagerBox->setTitle(QString());
+        previousSignalButton->setText(QApplication::translate("MainWindowClass", "\320\235\320\260\320\267\320\260\320\264", Q_NULLPTR));
+        nextSignalButton->setText(QApplication::translate("MainWindowClass", "\320\222\320\277\320\265\321\200\320\265\320\264", Q_NULLPTR));
+        fileManagerLabel->setText(QApplication::translate("MainWindowClass", "\320\235\320\276\320\274\320\265\321\200 \321\201\320\270\320\263\320\275\320\260\320\273\320\260:", Q_NULLPTR));
+        nextFileButton->setText(QApplication::translate("MainWindowClass", "\320\241\320\273\320\265\320\264\321\203\321\216\321\211\320\270\320\271\n"
 " \321\204\320\260\320\271\320\273", Q_NULLPTR));
+        fileManagerNumber->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(dataTab), QApplication::translate("MainWindowClass", "\320\236\320\261\321\200\320\260\320\261\320\276\321\202\320\272\320\260 \320\264\320\260\320\275\320\275\321\213\321\205", Q_NULLPTR));
     } // retranslateUi
 

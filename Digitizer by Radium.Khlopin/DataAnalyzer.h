@@ -28,9 +28,9 @@ class DataAnalyzer
 	 */
 	vector<future<bool>>						boardThreads;
 	/**
-	* \brief
-	* \param event ивент, который необходимо исследовать.
-	* \param channelNumber канал в ивенте, дл€ которого нужно найти нулевой уровень.
+	* \brief ћетод рассчитывает положение нулевого уровн€.
+	* \param event »вент, который необходимо исследовать.
+	* \param channelNumber  анал в ивенте, дл€ которого нужно найти нулевой уровень.
 	* \return ¬озвращает нулевой уровень (или 127, если нулевого уровн€ не удалось найти).
 	*/
 	static uint8_t								getZeroLevel(CAEN_DGTZ_UINT8_EVENT_t &event, uint8_t channelNumber);
@@ -55,8 +55,16 @@ public:
 	 * \return ¬ернет истину, если с данной платы есть, что считывать.
 	 */
 	bool										readDataOnBoard(uint32_t boardID, uint16_t boardNumber);
-	void										writeData();
+	/**
+	 * \brief ѕроизводит запись считанных данных в файл.
+	 * \param numberOfEventsInOneFile  оличество данных, необходимое дл€ старта записи. »ными словами,
+	 * когда накопитс€ numberOfEventsInOneFile событий - будет произведена запись.
+	 */
+	void										writeData(uint32_t numberOfEventsInOneFile) const;
 	chrono::microseconds						getTimeWindow() const;
+	/**
+	 * \brief ¬озвращает ссылку на последний используемый хэндлер.
+	 */
 	EventHandler&								getHandler() const;
 	/**
 	 * \brief 
@@ -78,7 +86,6 @@ public:
 	static int16_t								convertFromVMECountsTomV(uint8_t counts);
 	/**
 	 * \brief –ассчитывает временные отрезки между началами пиков по всем каналам.
-	 * \param window ¬ременное окно дл€ поиска следующих пиков.
 	 * \return ¬ременные отрезки между соседними пиками в микросекундах.
 	 */
 	vector<chrono::microseconds>				getTimeStepsBetweenPeaks();
@@ -88,4 +95,5 @@ public:
 	 * \param newTimeWindow Ќовое временное окно, в котором будет вестить поиск соседних импульсов.
 	 */
 	void										setTimeWindow(chrono::milliseconds newTimeWindow);
+	void										addHandler(EventHandler handler);
 };

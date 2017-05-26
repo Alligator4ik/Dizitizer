@@ -8,6 +8,7 @@
 #include <mutex>
 #include <future>
 
+class EventHandler;
 class DataAnalyzer;
 
 class MainWindow : public QMainWindow
@@ -22,12 +23,21 @@ public:
 	vector<vector<string>>&			getChannelColors();
 	vector<vector<Qt::PenStyle>>&	getStylesOfThresholdLines();
 	vector<vector<uint16_t>>&		getCrop();
+	/**
+	 * \brief Возвращает число событий, записываемое в один файл.
+	 */
+	uint32_t						getFileSize() const;
 
 	/**
 	* \brief Метод заменяет текущий кроп на новый. Кроп изменится только при перезапуске прослушки.
 	* \param newCrop Новый кроп-фактор.
 	*/
 	void							setCrop(vector<vector<uint16_t>> newCrop);
+	/**
+	 * \brief Метод прописывает минимальное число событий, записываемое в один файл.
+	 * \param numberOfEvents Минимальное число событий, записываемое в файл (по факту оно является точным, а не минимальным).
+	 */
+	void							setFileSize(uint32_t numberOfEvents);
 
 	mutex							colorBrushMutex;
 	mutex							thresholdLineStyleMutex;
@@ -56,9 +66,14 @@ private:
 	*/
 	vector<vector<uint16_t>>		cropFactorToWrite;
 	/**
+	 * \brief Количество событий, записываемое в один файл.
+	 */
+	uint32_t						numberOfEventsWritingToOneFile = 20;
+	/**
 	 * \brief Поле, содержащее указатель на линию, разделяющую предтриггерное пространство и посттриггерное
 	 */
 	QCPItemLine*					postTriggerLine = nullptr;
+	vector<EventHandler>			savedHandlers;
 	vector<vector<QCPItemLine*>>	thresholdLinesPointers;
 	vector<vector<bool>>			samplesSpinboxIsDisabled;
 	vector<vector<bool>>			thresholdsIsVisible;
@@ -89,6 +104,7 @@ private:
 	* \param vmeData Ссылка на обработчик данных, использующийся в данный момент.
 	*/
 	void							drawRossiAlphaSpectrum(DataAnalyzer& vmeData);
+	void							drawWrittenSignal(EventHandler& handler, uint32_t numberOfEvent);
 	/**
 	 * \brief Метод считывает настройки программы из файла настроек и задает параметры программы этими данными.
 	 */
@@ -118,6 +134,7 @@ private slots:
 	void							startStopWritingDataSlot();
 	void							openSettingsSlot();
 	void							openErrorsSlot();
+	void							openFileSlot();
 	void							changeTriggerSettingsSlot();
 	void							changeThresholdSlot(double newThreshold);
 	void							changeSampleSlot(int newSample);
@@ -134,6 +151,9 @@ private slots:
 	void							changePolaritySlot();
 	void							thresholdVisibilityChangedSlot();
 	void							graphVisibilityChangedSlot() const;
+	void							nextSignalSlot();
+	void							previousSignalSlot();
+	void							resetSpectrumGraphSlot() const;
 public slots:
 	void							mouseZoomSlot(QWheelEvent* wheelEvent) const;
 	void							drawThresholdLineSlot(int channelNumber, int boardNumber, int threshold, int recordLength, QColor& colorOfLine);

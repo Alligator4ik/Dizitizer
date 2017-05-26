@@ -55,7 +55,7 @@ class VMECommunication {
 	 * \param boardNumber Номер платы
 	 * \return Вовзращает код ошибки, возникший в результате настройки данной платы, или 0, если настройка прошла успешно.
 	 */
-	CAEN_DGTZ_ErrorCode	setup(uint16_t boardNumber);
+	CAEN_DGTZ_ErrorCode						setup(uint16_t boardNumber);
 public:
 	/**
 	 * \brief Флаг периодической триггерации.
