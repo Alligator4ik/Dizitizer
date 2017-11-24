@@ -56,11 +56,12 @@ public:
 	 */
 	bool										readDataOnBoard(uint32_t boardID, uint16_t boardNumber);
 	/**
-	 * \brief Производит запись считанных данных в файл.
+	 * \brief Производит запись сырых считанных данных в файл.
 	 * \param numberOfEventsInOneFile Количество данных, необходимое для старта записи. Иными словами,
 	 * когда накопится numberOfEventsInOneFile событий - будет произведена запись.
+	 * \param now True, если необходимо записать данные в любом случае (предыдущий параметр становится бесполезным)
 	 */
-	void										writeData(uint32_t numberOfEventsInOneFile) const;
+	void										writeData(bool now) const;
 	chrono::microseconds						getTimeWindow() const;
 	/**
 	 * \brief Возвращает ссылку на последний используемый хэндлер.
@@ -89,11 +90,15 @@ public:
 	 * \return Временные отрезки между соседними пиками в микросекундах.
 	 */
 	vector<chrono::microseconds>				getTimeStepsBetweenPeaks();
-
 	/**
 	 * \brief Устанавливает новое временное окно для поиска соседних пиков.
 	 * \param newTimeWindow Новое временное окно, в котором будет вестить поиск соседних импульсов.
 	 */
 	void										setTimeWindow(chrono::milliseconds newTimeWindow);
+	/**
+	 * \brief Устанавливает новый путь для записи файлов данных.
+	 * \param path Полный путь до папки, в которой создаются новые данные.
+	 */
+	void										setPath(string &path);
 	void										addHandler(EventHandler handler);
 };

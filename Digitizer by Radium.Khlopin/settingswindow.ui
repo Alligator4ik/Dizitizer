@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>635</width>
-    <height>364</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -58,7 +58,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <property name="iconSize">
        <size>
@@ -1665,7 +1665,7 @@ background-color: green;</string>
           <x>10</x>
           <y>160</y>
           <width>461</width>
-          <height>131</height>
+          <height>181</height>
          </rect>
         </property>
         <property name="title">
@@ -1860,6 +1860,42 @@ background-color: green;</string>
          <property name="value">
           <number>20</number>
          </property>
+        </widget>
+        <widget class="QWidget" name="horizontalLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>120</y>
+           <width>441</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="pathLayout">
+          <item>
+           <widget class="QLabel" name="pathLabel">
+            <property name="text">
+             <string>Путь на запись данных</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="pathLine">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>В папку с приложением</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="changeReadyPathButton">
+            <property name="text">
+             <string>Изменить</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </widget>
        <widget class="QLabel" name="currentWDFInReadWriteTabLabel">
@@ -2283,8 +2319,8 @@ background-color: rgb(192, 192, 192);</string>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>528</x>
-     <y>354</y>
+     <x>537</x>
+     <y>390</y>
     </hint>
     <hint type="destinationlabel">
      <x>519</x>
@@ -2299,8 +2335,8 @@ background-color: rgb(192, 192, 192);</string>
    <slot>acceptedSlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>512</x>
-     <y>354</y>
+     <x>521</x>
+     <y>390</y>
     </hint>
     <hint type="destinationlabel">
      <x>393</x>
@@ -2315,12 +2351,28 @@ background-color: rgb(192, 192, 192);</string>
    <slot>WDFChangedInChannelTabSlot(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>320</x>
-     <y>20</y>
+     <x>272</x>
+     <y>31</y>
     </hint>
     <hint type="destinationlabel">
      <x>339</x>
      <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>changeReadyPathButton</sender>
+   <signal>released()</signal>
+   <receiver>SettingsWindowController</receiver>
+   <slot>pathChangedSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>570</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>568</x>
+     <y>395</y>
     </hint>
    </hints>
   </connection>
@@ -2329,5 +2381,6 @@ background-color: rgb(192, 192, 192);</string>
   <slot>connectSlot()</slot>
   <slot>acceptedSlot()</slot>
   <slot>WDFChangedInChannelTabSlot(int)</slot>
+  <slot>pathChangedSlot()</slot>
  </slots>
 </ui>

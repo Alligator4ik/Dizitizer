@@ -4,11 +4,18 @@
 #include <thread>
 #include <ToRussianTextForQString.h>
 #include "DataAnalyzer.h"
+#include <iomanip>
+#include <sstream>
 
 MainWindow::MainWindow(QWidget *parent)
 : QMainWindow(parent, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowMinMaxButtonsHint) {
 	ui.setupUi(this);
 	readSettings();
+
+	//change default file folder to write into
+	this->writingPath = DEFAULTWRITINGPATH;
+	if (!QDir("Data").exists())
+		QDir().mkdir("Data");
 
 	//disable tabs
 	for (auto tabNumber = 0; tabNumber < vme.numberOfWDF; tabNumber++)
@@ -137,6 +144,7 @@ vector<vector<Qt::PenStyle>>& MainWindow::getStylesOfThresholdLines() {
 void MainWindow::updateData() {
 	vmeData = new DataAnalyzer(vme);
 	vmeData->setTimeWindow(chrono::milliseconds(timeWindow*1000));
+	vmeData->setPath(writingPath);
 	while (acquisitionWasStarted) {
 		if (vmeData->readData()) {					//if we have smth to show or analyze
 			if (ui.drawButton->isChecked()) {
@@ -151,10 +159,8 @@ void MainWindow::updateData() {
 				drawRossiAlphaSpectrum(*vmeData);
 				emit replot();
 			}
-			//todo: test commented and uncommented. if everything works ok, delete these lines
-			//vmeData->getTimeStepsBetweenPeaks();
 			if (ui.recordButton->isChecked())
-				vmeData->writeData(numberOfEventsWritingToOneFile);
+				vmeData->writeData(false);
 			else
 				vmeData->getHandler().deleteEvents();
 			if (vme.singleTriggerWasStarted) {
@@ -164,26 +170,33 @@ void MainWindow::updateData() {
 			}
 		}
 	}
-	//запишем спектр в файл, если нужно
+	//post-writing
+	//write a spectrum to a file, if needed
 	if (ui.saveSpectrumButton->isChecked() && (ui.amplifySpectrumButton->isChecked() || ui.rossiAlphaSpectrumButton->isChecked())) {
 		auto writingFunc = [&]() {
-			FILE* outData;
-			auto t = time(nullptr);   // get time now
-			auto now = localtime(&t);
-			auto nameOfFile = /*"D:/DigitizerWriteData/" + ".\\" + pathName + */".\\" + to_string(now->tm_year + 1900) + '-' + to_string(now->tm_mon + 1) + '-' + to_string(now->tm_mday) + '-' + to_string(now->tm_hour) + '-' + to_string(now->tm_min) + ".spctrmdrkdata";
-			fopen_s(&outData, nameOfFile.c_str(), "w");
-			if (ui.rossiAlphaSpectrumButton->isChecked()) {
-				//запишем количество стартовых импульсов
-				fprintf_s(outData, "Количество стартовых импульсов: %i\n", vmeData->getHandler().getNumberOfStartImpulses());
+			auto t = time(nullptr);
+			tm tm;
+			localtime_s(&tm, &t);
+			ostringstream date;
+			date << put_time(&tm, "%d.%m.%Y-%H_%M");
+			auto pathName = date.str();
+			auto fullPath = writingPath + "/" + pathName;
+			if (QDir(makeQString(fullPath.c_str())).exists()) {
+				pathName = date.str() + "_one_another";
+				fullPath = writingPath + "/" + pathName;
 			}
-			//далее запишем сам график спектра
-			auto graphCount = ui.spectrumWidget->graphCount();
-			for (auto graphNumber = 0; graphNumber < graphCount; graphNumber++) {
+			auto nameOfFile = fullPath + "/" + ".spctrmdrkdata";
+			FILE* outData;
+			fopen_s(&outData, nameOfFile.c_str(), "w");
+			//write number of start impulses
+			if (ui.rossiAlphaSpectrumButton->isChecked())
+				fprintf_s(outData, "Количество стартовых импульсов: %i\n", vmeData->getHandler().getNumberOfStartImpulses());
+			//next write a spectrum graph
+			for (auto graphNumber = 0; graphNumber < ui.spectrumWidget->graphCount(); graphNumber++) {
 				auto graphDataContainer = ui.spectrumWidget->graph(graphNumber)->data().data(); 
 				fprintf_s(outData, "new channel\n");
-				for each (auto data in *graphDataContainer) {
+				for each (auto data in *graphDataContainer)
 					fprintf_s(outData, "%d - %d\n", static_cast<uint32_t>(data.key), static_cast<uint32_t>(data.value));
-				}
 				fprintf_s(outData, "\n");
 			}
 			fclose(outData);
@@ -191,10 +204,16 @@ void MainWindow::updateData() {
 		std::thread writingThread(writingFunc);
 		writingThread.detach();
 	}
+	//write last signals (even if the last event handler wasn't filled)
+	if (ui.recordButton->isChecked()) {
+		vmeData->writeData(true);
+		ui.recordButton->setChecked(false);
+	}
 	//proceed to stop phase
 	makeSoftwareTriggerSlot();
 	if (!vme.stopAcquisition())
 		this->pulseErrorButton();
+	delete vmeData;
 }
 
 void MainWindow::drawSignal(DataAnalyzer& vmeData) {
@@ -349,7 +368,16 @@ void MainWindow::readSettings() {
 }
 
 void MainWindow::pulseErrorButton() {
-	//Not implemented
+	nextErrorIcon = QIcon(QString(":/MainWindow/CAEN-UI/aError.png"));
+	if (!errorPictureTimer) {
+		errorPictureTimer = new QTimer(this);
+		connect(errorPictureTimer, &QTimer::timeout, this, [&]{
+			auto temp = ui.errorButton->icon();
+			ui.errorButton->setIcon(nextErrorIcon);
+			nextErrorIcon = temp;
+		});
+	}
+	errorPictureTimer->start(500); //ms
 }
 
 void MainWindow::setCrop(vector<vector<uint16_t>> newCrop) {
@@ -357,7 +385,7 @@ void MainWindow::setCrop(vector<vector<uint16_t>> newCrop) {
 }
 
 void MainWindow::setFileSize(uint32_t numberOfEvents) {
-	numberOfEventsWritingToOneFile = numberOfEvents;
+	EventHandler::setFileSize(numberOfEvents);
 }
 
 void MainWindow::setControlsEnabledOnStartStop(bool enabled) const {
@@ -397,7 +425,15 @@ vector<vector<uint16_t>>& MainWindow::getCrop() {
 }
 
 uint32_t MainWindow::getFileSize() const {
-	return numberOfEventsWritingToOneFile;
+	return EventHandler::getFileSize();
+}
+
+string MainWindow::getWritingPath() const {
+	return writingPath;
+}
+
+void MainWindow::setWritingPath(string writingPath) {
+	this->writingPath = writingPath;
 }
 
 void MainWindow::clearGraphs() const {
@@ -418,8 +454,10 @@ void MainWindow::connectSlot() {
 					ui.WDFTabWidget->setTabText(i, modelName);
 				}
 			}
-		} else
+		} else {
 			ui.connectButton->setChecked(false);							//if connection wasn't established
+			pulseErrorButton();
+		}
 	}
 	else {
 		setControlsEnabledOnConnectDisconnect(false);
@@ -468,11 +506,19 @@ void MainWindow::startStopWritingDataSlot() {
 
 void MainWindow::openSettingsSlot() {
 	settings_window_controller = new SettingsWindowController(this);
+	settings_window_controller->setAttribute(Qt::WA_DeleteOnClose);
 	settings_window_controller->show();
 }
 
 void MainWindow::openErrorsSlot() {
+	//make error button inactive
+	if (errorPictureTimer) {
+		errorPictureTimer->stop();
+		ui.errorButton->setIcon(QIcon(QString(":/MainWindow/CAEN-UI/NoError.png")));
+	}
+	//error window construction
 	error_log_window_controller = new ErrorLogWindowController(this, vme.getboardErrors(), vme.getTimeOfBoardErrors(), vme.getStringErrors());
+	error_log_window_controller->setAttribute(Qt::WA_DeleteOnClose);
 	error_log_window_controller->show();
 }
 
@@ -483,7 +529,7 @@ void MainWindow::openFileSlot() {
 		//переход на вкладку работы с данными
 		ui.tabWidget->setCurrentIndex(2);
 		for (auto fileName : fileNames) {
-			savedHandlers.push_back(EventHandler::createHandlerWithFile(fileName.toStdString().c_str()));
+			savedHandlers.push_back(EventHandler(makeStdString(fileName).c_str()));
 		}
 		ui.fileManagerSlider->setMaximum(savedHandlers.front().eventsStored - 1);
 		ui.previousSignalButton->setEnabled(false);

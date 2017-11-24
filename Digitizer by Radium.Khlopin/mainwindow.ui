@@ -29,8 +29,8 @@
    <string>Digitizer by Khlopin Radium Institute</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../Desktop/CAEN-UI/Icon.png</normaloff>../Desktop/CAEN-UI/Icon.png</iconset>
+   <iconset resource="mainwindow.qrc">
+    <normaloff>:/MainWindow/CAEN-UI/icon.png</normaloff>:/MainWindow/CAEN-UI/icon.png</iconset>
   </property>
   <property name="iconSize">
    <size>
@@ -264,9 +264,9 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../Desktop/CAEN-UI/NoError.png</normaloff>
-           <normalon>../Desktop/CAEN-UI/aError.png</normalon>../Desktop/CAEN-UI/NoError.png</iconset>
+          <iconset resource="mainwindow.qrc">
+           <normaloff>:/MainWindow/CAEN-UI/NoError.png</normaloff>
+           <normalon>:/MainWindow/CAEN-UI/aError.png</normalon>:/MainWindow/CAEN-UI/NoError.png</iconset>
          </property>
          <property name="iconSize">
           <size>

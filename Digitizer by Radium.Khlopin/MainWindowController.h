@@ -8,6 +8,8 @@
 #include <mutex>
 #include <future>
 
+#define DEFAULTWRITINGPATH makeStdString(QDir::currentPath()) + string("/Data")
+
 class EventHandler;
 class DataAnalyzer;
 
@@ -27,7 +29,11 @@ public:
 	 * \brief Возвращает число событий, записываемое в один файл.
 	 */
 	uint32_t						getFileSize() const;
-
+	/**
+	 * \brief Возвращает полный путь до папки, в которую будут записываться данные.
+	 */
+	string							getWritingPath() const;
+	void							setWritingPath(string writingPath);
 	/**
 	* \brief Метод заменяет текущий кроп на новый. Кроп изменится только при перезапуске прослушки.
 	* \param newCrop Новый кроп-фактор.
@@ -66,10 +72,6 @@ private:
 	*/
 	vector<vector<uint16_t>>		cropFactorToWrite;
 	/**
-	 * \brief Количество событий, записываемое в один файл.
-	 */
-	uint32_t						numberOfEventsWritingToOneFile = 20;
-	/**
 	 * \brief Поле, содержащее указатель на линию, разделяющую предтриггерное пространство и посттриггерное
 	 */
 	QCPItemLine*					postTriggerLine = nullptr;
@@ -80,10 +82,16 @@ private:
 	vector<vector<string>>			channelsColors;
 	vector<vector<Qt::PenStyle>>	stylesOfThresholdLines;
 	future<void>					acquisitionThread;
+	string							writingPath;
 	/**
 	* \brief Таймер, запускающий софтверный триггер.
 	*/
 	QTimer*							autoTriggerTimer = nullptr;
+	QTimer*							errorPictureTimer = nullptr;
+	/**
+	 * \brief Следующая иконка при моргании лампы ошибки в приложении (чередующиеся синяя и красная кнопка).
+	 */
+	QIcon							nextErrorIcon;
 
 	/**
 	 * \brief Основной бэкраунд-метод прослушки.

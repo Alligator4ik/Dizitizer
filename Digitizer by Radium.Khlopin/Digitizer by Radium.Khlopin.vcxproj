@@ -133,7 +133,7 @@
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5UiTools.lib;Qt5Widgets.lib;Qt5PrintSupport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(DIGITIZERPATH)\lib\x86_64\CAENDigitizer.lib;qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5UiTools.lib;Qt5Widgets.lib;Qt5PrintSupport.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

@@ -18,8 +18,10 @@
 #include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
@@ -99,6 +101,11 @@ public:
     QTableWidget *cropWidget;
     QLabel *numberOfEventsToWriteLabel;
     QSpinBox *numberOfEventsToWriteInOneFile;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *pathLayout;
+    QLabel *pathLabel;
+    QLineEdit *pathLine;
+    QPushButton *changeReadyPathButton;
     QLabel *currentWDFInReadWriteTabLabel;
     QComboBox *currentWDFInReadWriteTab;
     QWidget *ViewerSetting;
@@ -124,7 +131,7 @@ public:
         if (SettingsWindowController->objectName().isEmpty())
             SettingsWindowController->setObjectName(QStringLiteral("SettingsWindowController"));
         SettingsWindowController->setEnabled(true);
-        SettingsWindowController->resize(635, 364);
+        SettingsWindowController->resize(635, 400);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -609,7 +616,7 @@ public:
         WriteBox = new QGroupBox(ReadWriteTab);
         WriteBox->setObjectName(QStringLiteral("WriteBox"));
         WriteBox->setEnabled(true);
-        WriteBox->setGeometry(QRect(10, 160, 461, 131));
+        WriteBox->setGeometry(QRect(10, 160, 461, 181));
         cropWidget = new QTableWidget(WriteBox);
         if (cropWidget->columnCount() < 8)
             cropWidget->setColumnCount(8);
@@ -679,6 +686,30 @@ public:
         numberOfEventsToWriteInOneFile->setMinimum(1);
         numberOfEventsToWriteInOneFile->setMaximum(1000);
         numberOfEventsToWriteInOneFile->setValue(20);
+        horizontalLayoutWidget = new QWidget(WriteBox);
+        horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
+        horizontalLayoutWidget->setGeometry(QRect(10, 120, 441, 41));
+        pathLayout = new QHBoxLayout(horizontalLayoutWidget);
+        pathLayout->setSpacing(6);
+        pathLayout->setContentsMargins(11, 11, 11, 11);
+        pathLayout->setObjectName(QStringLiteral("pathLayout"));
+        pathLayout->setContentsMargins(0, 0, 0, 0);
+        pathLabel = new QLabel(horizontalLayoutWidget);
+        pathLabel->setObjectName(QStringLiteral("pathLabel"));
+
+        pathLayout->addWidget(pathLabel);
+
+        pathLine = new QLineEdit(horizontalLayoutWidget);
+        pathLine->setObjectName(QStringLiteral("pathLine"));
+        pathLine->setEnabled(false);
+
+        pathLayout->addWidget(pathLine);
+
+        changeReadyPathButton = new QPushButton(horizontalLayoutWidget);
+        changeReadyPathButton->setObjectName(QStringLiteral("changeReadyPathButton"));
+
+        pathLayout->addWidget(changeReadyPathButton);
+
         currentWDFInReadWriteTabLabel = new QLabel(ReadWriteTab);
         currentWDFInReadWriteTabLabel->setObjectName(QStringLiteral("currentWDFInReadWriteTabLabel"));
         currentWDFInReadWriteTabLabel->setGeometry(QRect(15, 5, 85, 20));
@@ -775,8 +806,9 @@ public:
         QObject::connect(buttonBox, SIGNAL(rejected()), SettingsWindowController, SLOT(close()));
         QObject::connect(buttonBox, SIGNAL(accepted()), SettingsWindowController, SLOT(acceptedSlot()));
         QObject::connect(currentWDFInColorTab, SIGNAL(currentIndexChanged(int)), SettingsWindowController, SLOT(WDFChangedInChannelTabSlot(int)));
+        QObject::connect(changeReadyPathButton, SIGNAL(released()), SettingsWindowController, SLOT(pathChangedSlot()));
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(SettingsWindowController);
@@ -1074,6 +1106,9 @@ public:
 
         numberOfEventsToWriteLabel->setText(QApplication::translate("SettingsWindowController", "\320\232\320\276\320\273\320\270\321\207\320\265\321\201\321\202\320\262\320\276 \321\201\320\276\320\261\321\213\321\202\320\270\320\271, \320\267\320\260\320\277\320\270\321\201\321\213\320\262\320\260\320\265\320\274\320\276\320\265 \320\262 \320\276\320\264\320\270\320\275 \321\204\320\260\320\271\320\273", Q_NULLPTR));
         numberOfEventsToWriteInOneFile->setPrefix(QString());
+        pathLabel->setText(QApplication::translate("SettingsWindowController", "\320\237\321\203\321\202\321\214 \320\275\320\260 \320\267\320\260\320\277\320\270\321\201\321\214 \320\264\320\260\320\275\320\275\321\213\321\205", Q_NULLPTR));
+        pathLine->setText(QApplication::translate("SettingsWindowController", "\320\222 \320\277\320\260\320\277\320\272\321\203 \321\201 \320\277\321\200\320\270\320\273\320\276\320\266\320\265\320\275\320\270\320\265\320\274", Q_NULLPTR));
+        changeReadyPathButton->setText(QApplication::translate("SettingsWindowController", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", Q_NULLPTR));
         currentWDFInReadWriteTabLabel->setText(QApplication::translate("SettingsWindowController", "\320\242\320\265\320\272\321\203\321\211\320\260\321\217 \320\277\320\273\320\260\321\202\320\260:", Q_NULLPTR));
         currentWDFInReadWriteTab->clear();
         currentWDFInReadWriteTab->insertItems(0, QStringList()

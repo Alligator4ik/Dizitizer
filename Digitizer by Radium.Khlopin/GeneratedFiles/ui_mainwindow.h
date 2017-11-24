@@ -1116,7 +1116,7 @@ public:
         MainWindowClass->setMaximumSize(QSize(3840, 1080));
         MainWindowClass->setAcceptDrops(false);
         QIcon icon;
-        icon.addFile(QStringLiteral("../Desktop/CAEN-UI/Icon.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral(":/MainWindow/CAEN-UI/icon.png"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindowClass->setWindowIcon(icon);
         MainWindowClass->setIconSize(QSize(256, 256));
         MainWindowClass->setAnimated(true);
@@ -1201,8 +1201,8 @@ public:
         errorButton->setMinimumSize(QSize(60, 60));
         errorButton->setMaximumSize(QSize(60, 60));
         QIcon icon5;
-        icon5.addFile(QStringLiteral("../Desktop/CAEN-UI/NoError.png"), QSize(), QIcon::Normal, QIcon::Off);
-        icon5.addFile(QStringLiteral("../Desktop/CAEN-UI/aError.png"), QSize(), QIcon::Normal, QIcon::On);
+        icon5.addFile(QStringLiteral(":/MainWindow/CAEN-UI/NoError.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon5.addFile(QStringLiteral(":/MainWindow/CAEN-UI/aError.png"), QSize(), QIcon::Normal, QIcon::On);
         errorButton->setIcon(icon5);
         errorButton->setIconSize(QSize(50, 50));
         errorButton->setCheckable(false);

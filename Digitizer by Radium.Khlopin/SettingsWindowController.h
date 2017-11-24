@@ -17,9 +17,11 @@ private:
 	std::vector<std::vector<Qt::PenStyle>>&		stylesOfThresholdLines;
 	std::mutex&									thresholdlineStyleMutex;
 	std::vector<std::vector<uint16_t>>&			cropVector;
+	std::string									writingPath;
 
 private slots:
 	void acceptedSlot();
 	void WDFChangedInChannelTabSlot(int newWDFIndex) const;
 	void changeColorSlot() const;
+	void pathChangedSlot();
 };

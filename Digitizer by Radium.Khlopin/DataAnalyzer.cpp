@@ -24,7 +24,7 @@ vmeComm(vmeCommunication){
 			}
 		}
 	eventHandler = new vector<EventHandler>;
-	eventHandler->push_back(EventHandler(vmeComm.channelActiveEnableMask, vmeComm.channelTriggerEnableMask, vmeComm.getAllThresholds()));
+	eventHandler->push_back(EventHandler(vmeComm.WDFIsEnabled, vmeComm.channelActiveEnableMask, vmeComm.channelTriggerEnableMask, vmeComm.getAllThresholds()));
 }
 
 DataAnalyzer::~DataAnalyzer() {
@@ -43,6 +43,7 @@ DataAnalyzer::~DataAnalyzer() {
 				vmeComm.addStringError(boardNumber, toRussian("Уничтожении ивентов"));
 			}
 		}
+	delete eventHandler;
 }
 
 uint8_t DataAnalyzer::getZeroLevel(CAEN_DGTZ_UINT8_EVENT_t& event, uint8_t channelNumber) {
@@ -125,7 +126,9 @@ vector<uint32_t> DataAnalyzer::getImpulsesInEventHandler(EventHandler& eventHand
 										}
 									}
 									//поиск пиковой точки закончен!
-									//qInfo("peak was found, x:%i, channel number:%i", peakPoint.x, channelNumber);
+									#ifdef _DEBUG
+										qInfo("DATAANALYZEER::getImpulsesInEventHandler() peak was found, x:%i, channel number:%i", peakPoint.x, channelNumber);
+									#endif
 									//здесь мы точно знаем, что пик преодолел порог
 									//пора искать начало этого импульса!
 									//началом считаем приближение к нулю
@@ -156,7 +159,9 @@ vector<uint32_t> DataAnalyzer::getImpulsesInEventHandler(EventHandler& eventHand
 										//то ура, мы нашли начало импульса!
 										break;
 									}
-									//qInfo("start was found, x:%i, channel number:%i", startPoint.x, channelNumber);
+									#ifdef _DEBUG
+										qInfo("DATAANALYZEER::getImpulsesInEventHandler()start was found, x:%i, channel number:%i", startPoint.x, channelNumber);
+									#endif
 									impulses.push_back(startPoint.x);
 									//ищем спад до нуля или до возрастания
 									//перепрыгнем пик и окрестность (в них уж точно нет)
@@ -189,15 +194,16 @@ vector<uint32_t> DataAnalyzer::getImpulsesInEventHandler(EventHandler& eventHand
 										zeroLevelForDoublePeaks = endPoint.y;
 										break;
 									}
-									//qInfo("end was found, x:%i, channel number:%i", endPoint.x, channelNumber);
-									//qInfo("zero level is now %i\n", zeroLevelForDoublePeaks ? zeroLevelForDoublePeaks : zeroLevel);
+									#ifdef _DEBUG
+										qInfo("DATAANALYZEER::getImpulsesInEventHandler() end was found, x:%i, channel number:%i", endPoint.x, channelNumber);
+										qInfo("DATAANALYZEER::getImpulsesInEventHandler() zero level is now %i\n", zeroLevelForDoublePeaks ? zeroLevelForDoublePeaks : zeroLevel);
+									#endif
 									//по идее, на этом цикл можно закончить
 									// ReSharper disable once CppAssignedValueIsNeverUsed
 									valueNumber = endPoint.x;
 									//сбросим peakPoint на ноль
 									//todo: здесь надо глянуть, к чему лучше приравнять пикПойнт, так как, возможно, мы останемся выше порога (если хвост будет реально пологий)
 									peakPoint = endPoint;
-									//todo: а теперь все это надо протестить очень(!) много раз
 								}
 							}
 						}
@@ -231,7 +237,7 @@ bool DataAnalyzer::readDataOnBoard(uint32_t boardID, uint16_t boardNumber) {
 	CAEN_DGTZ_ErrorCode error;
 	eventHandler->back().eventsAddedAtLastIteration = 0;
 	if (eventHandler->back().getAllThresholds() != vmeComm.getAllThresholds())
-		eventHandler->push_back(EventHandler(vmeComm.channelActiveEnableMask, vmeComm.channelTriggerEnableMask, vmeComm.getAllThresholds()));
+		eventHandler->push_back(EventHandler(vmeComm.WDFIsEnabled, vmeComm.channelActiveEnableMask, vmeComm.channelTriggerEnableMask, vmeComm.getAllThresholds()));
 	if ((error = CAEN_DGTZ_IRQWait(boardID, 500)) != CAEN_DGTZ_Success) {
 		if (error == CAEN_DGTZ_Timeout)
 			return false;			//if there is nothing to read
@@ -263,7 +269,9 @@ bool DataAnalyzer::readDataOnBoard(uint32_t boardID, uint16_t boardNumber) {
 	if (numberOfEventsStored > 0) {
 		CAEN_DGTZ_EventInfo_t eventInfo;
 		char* eventPointer = nullptr;
-		//qInfo() << "Get " << numberOfEventsStored << " event(s)!";
+		#ifdef _DEBUG
+			qInfo() << "DATAANALYZER::readDataOnBoard() Get " << numberOfEventsStored << " event(s)!";
+		#endif
 		for (auto eventNumber = 0; eventNumber < numberOfEventsStored; eventNumber++) {
 			if ((error = CAEN_DGTZ_GetEventInfo(boardID, bufferToReadIn[boardNumber], sizeOfBufferInBytes[boardNumber], eventNumber, &eventInfo, &eventPointer)) != CAEN_DGTZ_Success) {
 				vmeComm.addTimeOfBoardError(boardNumber);
@@ -277,17 +285,16 @@ bool DataAnalyzer::readDataOnBoard(uint32_t boardID, uint16_t boardNumber) {
 				vmeComm.addStringError(boardNumber, toRussian("Раскодировании %1 ивента").arg(eventNumber));
 				return false;
 			}
-			eventHandler->back().addEvent(boardNumber, vmeComm.channelActiveEnableMask, *currentEvent, vmeComm.getBoardThresholds(boardNumber));
+			eventHandler->back().addEvent(boardNumber, vmeComm.channelActiveEnableMask, *currentEvent);
 			eventHandler->back().eventsAddedAtLastIteration++;
 		}
 	}
 	return true;		//if information read successfully
 }
 
-void DataAnalyzer::writeData(uint32_t numberOfEventsInOneFile) const {
-	if (eventHandler->back().eventsStored >= numberOfEventsInOneFile) {
+void DataAnalyzer::writeData(bool now) const {
+	if (eventHandler->back().eventsStored >= EventHandler::getFileSize() || now)
 		eventHandler->back().writeToFile();
-	}
 }
 
 EventHandler& DataAnalyzer::getHandler() const {
@@ -338,7 +345,9 @@ int16_t DataAnalyzer::convertFromVMECountsTomV(uint8_t counts) {
 vector<chrono::microseconds> DataAnalyzer::getTimeStepsBetweenPeaks() {
 	vector<chrono::microseconds> timeSteps;
 	auto starts = getImpulsesInEventHandler(eventHandler->back());
-	//qInfo("number of impulses: %i", starts.size());
+	#ifdef _DEBUG
+		qInfo("DATAANALYZER::getImpulsesInEventHandler() number of impulses: %i", starts.size());
+	#endif
 	auto startImpulses = 0;
 	if (starts.size()) {
 		sort(starts.begin(), starts.end(), [](uint32_t a, uint32_t b) {return a < b; });
@@ -353,12 +362,18 @@ vector<chrono::microseconds> DataAnalyzer::getTimeStepsBetweenPeaks() {
 				startImpulses++;
 	}
 	eventHandler->back().addSomeStartImpulses(startImpulses);
-	//qInfo("number of start impulses: %i", startImpulses);
+	#ifdef _DEBUG
+		qInfo("DATAANALYZER::getImpulsesInEventHandler() number of start impulses: %i", startImpulses);
+	#endif
 	return timeSteps;
 }
 
 void DataAnalyzer::setTimeWindow(chrono::milliseconds newTimeWindow) {
 	this->timeWindow = newTimeWindow;
+}
+
+void DataAnalyzer::setPath(string& path) {
+	eventHandler->back().setPath(path);
 }
 
 void DataAnalyzer::addHandler(EventHandler handler) {

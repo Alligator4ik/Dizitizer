@@ -1,4 +1,7 @@
 <RCC>
-    <qresource prefix="MainWindow">
-    </qresource>
+  <qresource lang="ru-RU" prefix="/MainWindow">
+    <file>CAEN-UI/icon.png</file>
+    <file>CAEN-UI/NoError.png</file>
+    <file>CAEN-UI/aError.png</file>
+  </qresource>
 </RCC>

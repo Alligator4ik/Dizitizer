@@ -1,6 +1,7 @@
 #include "SettingsWindowController.h"
 #include "MainWindowController.h"
 #include "DataAnalyzer.h"
+#include "ToRussianTextForQString.h"
 
 
 SettingsWindowController::SettingsWindowController(QWidget *parent)
@@ -55,6 +56,10 @@ SettingsWindowController::SettingsWindowController(QWidget *parent)
 	//get number of events writing to one file
 	auto fileSize = dynamic_cast<MainWindow*>(this->parent())->getFileSize();
 	ui.numberOfEventsToWriteInOneFile->setValue(fileSize);
+	//get writing directory
+	writingPath = dynamic_cast<MainWindow*>(this->parent())->getWritingPath().c_str();
+	if (writingPath != DEFAULTWRITINGPATH)
+		ui.pathLine->setText(makeQString(writingPath)); 
 	//get somthing else
 }
 
@@ -100,6 +105,8 @@ void SettingsWindowController::acceptedSlot() {
 	dynamic_cast<MainWindow*>(this->parent())->setCrop(cropVector);
 	//apply number of events writing to one file
 	dynamic_cast<MainWindow*>(this->parent())->setFileSize(ui.numberOfEventsToWriteInOneFile->value());
+	//apply writing path
+	dynamic_cast<MainWindow*>(this->parent())->setWritingPath(writingPath);
 	//apply other settings
 	this->close();
 }
@@ -131,4 +138,12 @@ void SettingsWindowController::changeColorSlot() const {
 	auto newColor = QColorDialog::getColor(colorLabel->palette().background().color());
 	if (newColor.isValid())
 		colorLabel->setStyleSheet("background-color: " + newColor.name());
+}
+
+void SettingsWindowController::pathChangedSlot() {
+	auto path = QFileDialog::getExistingDirectory(this, nullptr, nullptr, QFileDialog::ShowDirsOnly);
+	if (!path.isEmpty()) {
+		writingPath = makeStdString(path);
+		ui.pathLine->setText(path);
+	}
 }

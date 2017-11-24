@@ -1,11 +1,19 @@
 #pragma once
 #include <Resources/CAENDigitizerType.h>
 #include <vector>
+#include <mutex>
 
 class EventHandler
 {
 	std::vector<std::vector<CAEN_DGTZ_UINT8_EVENT_t>>	events;
 
+	/**
+	 * \brief Глобальная папка для записи данных
+	 */
+	std::string								writingPath;
+	/**
+	 * \brief Локальная папка для записи данных (конкретных записей)
+	 */
 	std::string								pathName;
 	uint32_t								numberOfStartImpulses = 0;
 	uint32_t								fileNumber = 0;
@@ -14,13 +22,17 @@ class EventHandler
 	std::vector<std::vector<int16_t>>		thresholds;
 	std::vector<bool>						enabledWDFs;
 	uint32_t								recordLength = 2048;
+	uint16_t								numberOfActiveChannels = 0;
+	void									calculateNumberOfActiveChannels();
+	std::shared_ptr<std::mutex>				eventsMutex;
+	static uint32_t							fileSize;
 public:
 	EventHandler();
-	explicit EventHandler(std::vector<int32_t> activeMask, std::vector<int32_t> triggerMask, std::vector<std::vector<int16_t>> thresholds);
+	explicit EventHandler(std::vector<bool> enabledWDFs, std::vector<int32_t> activeMask, std::vector<int32_t> triggerMask, std::vector<std::vector<int16_t>> thresholds);
 	explicit EventHandler(std::vector<std::vector<CAEN_DGTZ_UINT8_EVENT_t>> event, std::vector<int32_t> activeMask, std::vector<int32_t> triggerMask, std::vector<std::vector<int16_t>> thresholds, std::vector<bool> enabledWDFs);
+	explicit EventHandler(const char* name); 
 	~EventHandler();
 
-	static EventHandler						createHandlerWithFile(const char* name);
 
 	uint16_t								eventsStored = 0;
 	uint16_t								eventsAddedAtLastIteration = 0;
@@ -70,17 +82,28 @@ public:
 	bool									WDFIsEnabled(uint16_t boardNumber);
 	uint32_t								getRecordLength() const;
 	uint32_t								getNumberOfStartImpulses() const;
+	/**
+	* \return Number of events that are written in one file.
+	*/
+	static uint32_t							getFileSize();
 
 	//setters
 	void									setRecordLength(uint32_t samples);
 	void									setChannelMask(uint16_t boardNumber, int32_t mask);
 	void									setThresholds(uint16_t boardNumber, std::vector<int16_t> threshold);
 	void									setEnabledWDFs(std::vector<bool> enabledWDFs);
-	void									addEvent(uint16_t boardNumber, std::vector<int32_t> mask, CAEN_DGTZ_UINT8_EVENT_t event,  std::vector<int16_t> thresholds);
+	void									addEvent(uint16_t boardNumber, std::vector<int32_t> mask, CAEN_DGTZ_UINT8_EVENT_t event);
 	void									addSomeStartImpulses(uint32_t numberOfImpulses);
+	void									setPath(std::string& path);
 	/**
-	 * \brief Очищает внутреннее хранилище хэндлера.
+	* \brief Устанавливает минимальное число событий для записи в файл.
+	* \param fileSize Минимальный размер файла (в событиях)
+	*/
+	static void								setFileSize(uint32_t fileSize);
+	/**
+	 * \brief Очищает внутреннее хранилище хэндлера и освобождает память. Ивенты удаляются начиная с самого старшего.
+	 * \param numberOfEvents Количество ивентов, подлежащих удалению. По умолчанию удаляются все ивенты.
 	 */
-	void									deleteEvents();
+	void									deleteEvents(uint32_t numberOfEvents = 0);
 	void									writeToFile();
 };

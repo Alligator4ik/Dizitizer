@@ -352,14 +352,14 @@ bool VMECommunication::setChannelSample(ushort board, ushort channel, ushort new
 bool VMECommunication::setChannelOffset(ushort board, ushort channel, int16_t newOffsetInmV) {
 	auto newOffset = static_cast<uint32_t>(65535*(0.5-newOffsetInmV/1000.0)); //32767 = 0x7FFF => [-Vpp/2; Vpp/2]; from mV to hex
 	DCOffset[board][channel] = newOffset;
-	CAEN_DGTZ_ErrorCode error;
-	if ((error = CAEN_DGTZ_SetChannelDCOffset(WDFIdentificators[board], channel, newOffset)) != CAEN_DGTZ_Success) {
+	CAEN_DGTZ_ErrorCode errorWrite, errorRead;
+	if (((errorWrite = CAEN_DGTZ_SetChannelDCOffset(WDFIdentificators[board], channel, newOffset)) != CAEN_DGTZ_Success) ||
+		((errorRead = CAEN_DGTZ_GetChannelDCOffset(WDFIdentificators[board], channel, &newOffset)) != CAEN_DGTZ_Success)) {
 		timeOfBoardErrors[board].push_back(QTime::currentTime());
-		boardErrors[board].push_back(error);
+		boardErrors[board].push_back(errorWrite == CAEN_DGTZ_Success ? errorRead : errorWrite);
 		stringErrors[board].push_back(toRussian("Настройке смещения по напряжению"));
 		return false;
 	}
-	CAEN_DGTZ_GetChannelDCOffset(WDFIdentificators[board], channel, &newOffset);
 	return true;
 }
 

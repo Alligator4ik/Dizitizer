@@ -149,7 +149,6 @@ public:
 	bool									isConnected() const;
 	vector<vector<QTime>>&					getTimeOfBoardErrors();
 	vector<vector<CAEN_DGTZ_ErrorCode>>&	getboardErrors();
-	vector<vector<QTime>>&					getTimeOfStringErrors();
 	vector<vector<QString>>&				getStringErrors();
 	vector<int32_t>&						getWDFIdentificators();
 	uint32_t								getRecordLength();
