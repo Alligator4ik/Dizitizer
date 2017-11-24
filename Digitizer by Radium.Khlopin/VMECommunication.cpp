@@ -13,7 +13,6 @@ VMECommunication::VMECommunication() {
 	boardErrors.resize(numberOfWDF);
 	timeOfBoardErrors.resize(numberOfWDF);
 	stringErrors.resize(numberOfWDF);
-	timeOfStringErrors.resize(numberOfWDF);
 	threshold.resize(numberOfWDF);
 	for (auto i = 0; i < numberOfWDF; i++)
 		threshold[i] = vector<int16_t>(8, 133);						//8 - number of channels, 133 - default threshold (20 mV)
@@ -255,10 +254,6 @@ vector<vector<QTime>>& VMECommunication::getTimeOfBoardErrors() {
 
 vector<vector<CAEN_DGTZ_ErrorCode>>& VMECommunication::getboardErrors() {
 	return boardErrors;
-}
-
-vector<vector<QTime>>& VMECommunication::getTimeOfStringErrors() {
-	return timeOfStringErrors;
 }
 
 vector<vector<QString>>& VMECommunication::getStringErrors() {

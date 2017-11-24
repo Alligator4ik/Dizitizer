@@ -33,7 +33,6 @@ class VMECommunication {
 	 * \brief Описания процедур, в ходе которых возникли ошибки.
 	 */
 	vector<vector<QString>>					stringErrors;
-	vector<vector<QTime>>					timeOfStringErrors;
 	/**
 	 * \brief Максимальное количество ивентов, которое может быть передано за цикл чтения.
 	 */
